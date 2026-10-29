@@ -2,6 +2,7 @@ import { campoPresente } from "../../catalog/ficha";
 import type { Product } from "../../catalog/schema";
 import type { FonteCaixa } from "../architectures/types";
 import type { Params } from "../params";
+import { nomeProduto } from "./nome";
 
 /**
  * Converte um produto do catálogo na fonte usada pelos geradores.
@@ -19,7 +20,7 @@ export function fonteDeProduto(p: Product, params: Params): { ok: true; fonte: F
       fonte: {
         tipo: "produto",
         ref: p.id,
-        nome: `${p.marca} ${p.modelo}`,
+        nome: nomeProduto(p),
         cobertura: { H: tabela[0]!.H, V: tabela[0]!.V },
         nivel: { tipo: "pendente", motivo: "Nível definido pela configuração escolhida." },
         meiaAltura: 0,
@@ -36,7 +37,7 @@ export function fonteDeProduto(p: Product, params: Params): { ok: true; fonte: F
     fonte: {
       tipo: "produto",
       ref: p.id,
-      nome: `${p.marca} ${p.modelo}`,
+      nome: nomeProduto(p),
       cobertura: { H: p.especificacoes.coberturaH!.valor, V: p.especificacoes.coberturaV!.valor },
       nivel: { tipo: "pendente", motivo: "Nível definido pela montagem." },
       meiaAltura,

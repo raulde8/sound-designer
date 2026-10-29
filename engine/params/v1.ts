@@ -194,6 +194,13 @@ export const PARAMS_V1 = {
   // ---------------- Cálculos (C5) ----------------
   bordaCobertura: pendente("bordaCobertura", 10, SPEC("C5"), "Ponto até este ângulo fora da cobertura nominal é 'borda'.", "graus"),
   picoParaContinuo: pendente("picoParaContinuo", 6, SPEC("C5"), "Estimativa: SPL contínuo = pico - este valor, quando só existe pico.", "dB"),
+  foraMaxValidada: pendente(
+    "foraMaxValidada",
+    0.05,
+    "Decisão de implementação",
+    "Fração máxima da área de público fora da cobertura nominal para a geometria ser 'validada'. Acima disso: 'validada com aproximação'.",
+    "fração",
+  ),
   uniformidadeMax: pendente("uniformidadeMax", 6, SPEC("C5"), "Diferença máxima entre o maior e o menor nível na área coberta.", "dB"),
   toleranciaNivel: pendente("toleranciaNivel", 3, "Decisão de implementação (SPEC C5 cita 'tolerância' sem valor)", "Tolerância abaixo do alvo antes de gerar reforço/delay.", "dB"),
   velocidadeSom: referencia("velocidadeSom", 343, SPEC("C5"), "Velocidade do som a ~20 °C.", "m/s"),
