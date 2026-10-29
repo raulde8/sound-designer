@@ -29,6 +29,8 @@ export interface Candidato {
   quantidadeCaixas: number;
   /** Nível mínimo calculado - requerido (dB), quando a capacidade foi avaliada. */
   margemNivel?: number;
+  /** SPL máximo publicado (dB). Só desempata quando a capacidade não pôde ser calculada. */
+  splPublicado?: number;
   faixa?: FaixaUsada;
   /** Avisos do layout recalculado (pico estimado, meio espaço, suspensão...). */
   avisos: string[];
@@ -63,8 +65,9 @@ export function avaliarCaixa(ctx: ContextoArquitetura, gerador: ArchitectureGene
     faltando: [],
     quantidadeCaixas: 0,
     avisos: [],
+    ...(p.especificacoes.splMax ? { splPublicado: p.especificacoes.splMax.valor } : {}),
   };
-  const faixa = faixaDoProduto(cat, p.categoria, p.subcategoria, p.porte, dataReferencia);
+  const faixa = faixaDoProduto(cat, p.categoria, p.subcategoria, p.porte, dataReferencia, p.id);
   if (faixa) base.faixa = faixa;
 
   const f = fonteDeProduto(p, ctx.params);
@@ -101,6 +104,14 @@ export function avaliarCaixa(ctx: ContextoArquitetura, gerador: ArchitectureGene
     status = "parcial";
     motivos.push(`Capacidade sonora pendente: ${av.motivoCapacidade}`);
   }
+  if (av.capacidade === "estimada") {
+    status = "parcial";
+    motivos.push(`Capacidade sonora estimada: ${av.motivoCapacidade}`);
+  }
+  for (const e of f.fonte.estimativas ?? []) {
+    status = "parcial";
+    motivos.push(e);
+  }
   const outrosFaltando = faltando.filter((c) => !ficha.nivel.includes(c));
   if (outrosFaltando.length > 0) {
     status = "parcial";
@@ -110,7 +121,7 @@ export function avaliarCaixa(ctx: ContextoArquitetura, gerador: ArchitectureGene
   const avisos = [...cfg.avisos];
   if (av.nivel && av.nivel.uniformidade > ctx.params.uniformidadeMax.valor)
     avisos.push(`Variação de nível na área coberta de ${av.nivel.uniformidade.toFixed(1)} dB (critério: até ${ctx.params.uniformidadeMax.valor} dB). O modelo não atenua fora do eixo, então a variação real tende a ser diferente.`);
-  const margem = av.capacidade === "validada" && av.nivel ? av.nivel.min - ctx.alvo.requerido : undefined;
+  const margem = (av.capacidade === "validada" || av.capacidade === "estimada") && av.nivel ? av.nivel.min - ctx.alvo.requerido : undefined;
   return {
     ...base,
     status,
@@ -126,7 +137,8 @@ export function avaliarCaixa(ctx: ContextoArquitetura, gerador: ArchitectureGene
 
 /**
  * Ranking (SPEC C8 passo 4): (a) status; (b) menos caixas; (c) maior margem de nível,
- * limitada a +margemMax dB; (d) menor faixa de investimento. Sem bônus por marca.
+ * limitada a +margemMax dB; (c2) sem margem calculável, maior SPL máximo publicado (só ordena, não é cálculo);
+ * (d) menor faixa de investimento. Sem bônus por marca.
  * Desempate final pelo id, para o resultado ser determinístico.
  */
 export function ordenarCandidatos(c: Candidato[], margemMax: number): Candidato[] {
@@ -136,6 +148,7 @@ export function ordenarCandidatos(c: Candidato[], margemMax: number): Candidato[
       ORDEM_STATUS[a.status] - ORDEM_STATUS[b.status] ||
       a.quantidadeCaixas - b.quantidadeCaixas ||
       m(b) - m(a) ||
+      (a.margemNivel === undefined && b.margemNivel === undefined ? (b.splPublicado ?? -Infinity) - (a.splPublicado ?? -Infinity) : 0) ||
       (a.faixa?.minimo ?? Infinity) - (b.faixa?.minimo ?? Infinity) ||
       a.produtoId.localeCompare(b.produtoId),
   );

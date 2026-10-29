@@ -28,7 +28,9 @@ function alturaArray(fonte: FonteCaixa, cfg: ConfiguracaoArray | undefined, mont
   const teto = ctx.caso.sala.valor.peDireito - p.folgaTeto.valor;
   const coluna = montagem === "chao";
   const padrao = coluna ? p.alturaCentroColunaPadrao.valor : p.alturaCentroArrayPadrao.valor;
-  return Math.max(0.5, Math.min(cfg?.alturaCentro_m ?? padrao, teto));
+  // Torre/coluna com altura publicada: centro dos alto-falantes numa fração da altura (parâmetro pendente).
+  const daAltura = coluna && fonte.alturaTotal ? fonte.alturaTotal * p.fracaoAlturaCentroColuna.valor : undefined;
+  return Math.max(0.5, Math.min(cfg?.alturaCentro_m ?? daAltura ?? padrao, teto));
 }
 
 /** Escolhe a montagem do array. Coluna portátil: base no chão. */
@@ -70,7 +72,9 @@ export const AR2: ArchitectureGenerator = {
     let span: Span;
     let z: number;
 
-    if (fonte.tipo === "generico") {
+    const semTabela = fonte.tipo === "generico" || tabela.length === 0;
+    if (semTabela) {
+      // Perfil genérico, ou produto sem tabela publicada: geometria de referência, sem nível.
       z = alturaArray(fonte, undefined, montagem, ctx);
       span = spanVertical({ x: xs.L, y, z }, ctx, y0);
       // Se a cobertura vertical exigida passa da referência do perfil genérico, o array cobre a partir de alcanceFrontFill e entra front-fill.
@@ -106,6 +110,8 @@ export const AR2: ArchitectureGenerator = {
     const nivel: FonteCaixa["nivel"] =
       fonte.tipo === "generico"
         ? { tipo: "requisito" }
+        : semTabela
+          ? { tipo: "pendente", motivo: "O fabricante não publica o volume por distância deste array." }
         : escolhida?.spl_por_distancia && escolhida.spl_por_distancia.length > 0
           ? { tipo: "tabela", pontos: escolhida.spl_por_distancia }
           : { tipo: "pendente", motivo: "O fabricante não publica SPL por distância para esta configuração." };

@@ -23,10 +23,23 @@ export type SplUtil =
  * - sem condição de medição: pendente.
  * Valor de pico nunca é usado como contínuo.
  */
-export function splContinuoUtil(spl: SpecValue<number, CondicaoSpl> | undefined, montagem: Montagem, picoParaContinuo: number): SplUtil {
+export function splContinuoUtil(
+  spl: SpecValue<number, CondicaoSpl> | undefined,
+  montagem: Montagem,
+  picoParaContinuo: number,
+  desconhecidaComoPico = false,
+): SplUtil {
   if (!spl || spl.status === "desconhecido") return { status: "pendente", motivo: "O fabricante não publica SPL máximo." };
   const c = spl.condicaoMedicao;
-  if (!c || c === "desconhecida") return { status: "pendente", motivo: "SPL máximo sem condição de medição conhecida." };
+  if (!c || c === "desconhecida") {
+    if (!desconhecidaComoPico) return { status: "pendente", motivo: "SPL máximo sem condição de medição conhecida." };
+    return {
+      status: "estimado",
+      valor: spl.valor - picoParaContinuo,
+      estimado: true,
+      aviso: `O fabricante não informa se o volume máximo (${spl.valor} dB) é contínuo ou de pico. Por segurança, tratamos como pico: contínuo estimado = ${spl.valor} - ${picoParaContinuo} dB.`,
+    };
+  }
   const meio = c === "continuo_meio_espaco" || c === "pico_meio_espaco";
   if (meio && montagem !== "chao")
     return { status: "pendente", motivo: "SPL medido em meio espaço (plano ao terra). Só vale para caixa apoiada no chão." };

@@ -20,9 +20,18 @@ export function faixaVigente(f: FaixaInvestimento, dataReferencia: string): bool
   return d >= 0 && d <= f.validadeDias;
 }
 
-export function faixaDoProduto(cat: CatalogSnapshot, categoria: Categoria, subcategoria: string, porte: string | undefined, dataReferencia: string): FaixaUsada | undefined {
-  if (!porte) return undefined;
-  const f = cat.faixas.find((x) => x.categoria === categoria && x.subcategoria === subcategoria && x.porte === porte && faixaVigente(x, dataReferencia));
+export function faixaDoProduto(
+  cat: CatalogSnapshot,
+  categoria: Categoria,
+  subcategoria: string,
+  porte: string | undefined,
+  dataReferencia: string,
+  produtoId?: string,
+): FaixaUsada | undefined {
+  // Faixa específica do produto tem prioridade; depois, a faixa por categoria e porte.
+  const especifica = produtoId ? cat.faixas.find((x) => x.produtoId === produtoId && faixaVigente(x, dataReferencia)) : undefined;
+  if (!porte && !especifica) return undefined;
+  const f = especifica ?? cat.faixas.find((x) => !x.produtoId && x.categoria === categoria && x.subcategoria === subcategoria && x.porte === porte && faixaVigente(x, dataReferencia));
   return f ? { minimo: f.minimo, maximo: f.maximo, dataVerificacao: f.dataVerificacao, fonte: f.fonte, ids: [f.id] } : undefined;
 }
 

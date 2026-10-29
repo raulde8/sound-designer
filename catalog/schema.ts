@@ -105,6 +105,10 @@ export const Especificacoes = z
     canaisSimultaneos: sv(z.number().int().min(1)),
     varreduraAutomatica: sv(z.boolean()),
     mixagensPorTransmissor: sv(z.number().int().min(1)),
+    /** Transmissores (microfones) que vêm em cada sistema sem fio (ex.: duplo = 2). */
+    transmissoresPorSistema: sv(z.number().int().min(1)),
+    /** Microfones incluídos num kit (ex.: kit de bateria de 8 peças = 8). */
+    microfonesNoKit: sv(z.number().int().min(1)),
     // Microfone com fio
     tipoMicrofone: sv(z.enum(["dinamico", "condensador"])),
     // Acessórios
@@ -151,6 +155,8 @@ export type Offer = z.infer<typeof Offer>;
 /** Faixa de investimento por categoria e porte, por unidade, em R$. */
 export const FaixaInvestimento = z.object({
   id: z.string(),
+  /** Faixa de um produto específico (preço de vitrine a preço regular do site oficial). Opcional. */
+  produtoId: z.string().optional(),
   categoria: Categoria,
   subcategoria: z.string().default(""),
   porte: Porte,

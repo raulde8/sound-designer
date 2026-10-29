@@ -37,7 +37,7 @@ export function avaliarSubs(cat: CatalogSnapshot, topId: string | null, params: 
     }
     const par = p.especificacoes.pareamento?.valor;
     const casa = !!(topId && par && par.topIds.includes(topId));
-    const faixa = faixaDoProduto(cat, p.categoria, p.subcategoria, p.porte, dataReferencia);
+    const faixa = faixaDoProduto(cat, p.categoria, p.subcategoria, p.porte, dataReferencia, p.id);
     return {
       produtoId: p.id,
       nome: nomeProduto(p),

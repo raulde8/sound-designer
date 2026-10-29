@@ -108,6 +108,8 @@ export const CAMPOS_TEMPLATE: { campo: string; codec: Codec; unidade: string; fo
   { campo: "canaisSimultaneos", codec: int, unidade: "", formato: "inteiro" },
   { campo: "varreduraAutomatica", codec: bool, unidade: "", formato: "sim/nao" },
   { campo: "mixagensPorTransmissor", codec: int, unidade: "", formato: "inteiro" },
+  { campo: "transmissoresPorSistema", codec: int, unidade: "", formato: "inteiro (duplo = 2)" },
+  { campo: "microfonesNoKit", codec: int, unidade: "", formato: "inteiro" },
   { campo: "tipoMicrofone", codec: texto, unidade: "", formato: "dinamico | condensador" },
   { campo: "comprimento", codec: num, unidade: "m", formato: "número" },
 ];
@@ -134,7 +136,7 @@ export function colunasTemplate(): string[] {
 
 export const COLUNAS_ARRAY = ["produto_id", "modulos", "angulo_splay", "H", "V", "alcance_nominal_m", "altura_centro_m", "spl_por_distancia", "fonte", "data", "status"] as const;
 
-export const COLUNAS_FAIXAS = ["id", "categoria", "subcategoria", "porte", "minimo", "maximo", "fonte", "dataVerificacao", "validadeDias"] as const;
+export const COLUNAS_FAIXAS = ["id", "produtoId", "categoria", "subcategoria", "porte", "minimo", "maximo", "fonte", "dataVerificacao", "validadeDias"] as const;
 
 /** Converte uma linha do template em objeto de produto (ainda não validado). */
 export function linhaParaProduto(l: Record<string, string>): Record<string, unknown> {
@@ -213,6 +215,7 @@ export function anexarConfiguracoes(produtos: Record<string, unknown>[], linhas:
 export function linhaParaFaixa(l: Record<string, string>): Record<string, unknown> {
   return {
     id: l.id,
+    ...(l.produtoId ? { produtoId: l.produtoId } : {}),
     categoria: l.categoria,
     subcategoria: l.subcategoria ?? "",
     porte: l.porte,

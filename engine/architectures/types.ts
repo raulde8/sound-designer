@@ -36,6 +36,10 @@ export interface FonteCaixa {
   configuracaoArray?: ConfiguracaoArray;
   /** SPL máximo da ficha (fonte pontual de produto). O modelo de nível depende da montagem. */
   spl?: SpecValue<number, CondicaoSpl>;
+  /** Altura total do produto (m), quando publicada (torre/coluna). */
+  alturaTotal?: number;
+  /** Dados que o fabricante não publica e que o motor estimou (o produto nunca fica "compatível"). */
+  estimativas?: string[];
 }
 
 export interface Caixa {

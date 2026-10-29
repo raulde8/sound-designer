@@ -4,7 +4,8 @@ import type { Malha } from "../geometry/grid";
 import { angulosForaEixo, dist3 } from "../geometry/vec";
 import type { Caixa, Configuracao } from "./types";
 
-export type StatusCapacidade = "validada" | "pendente" | "insuficiente";
+/** "estimada": o nível foi calculado com dado estimado (ex.: SPL sem condição de medição publicada). */
+export type StatusCapacidade = "validada" | "estimada" | "pendente" | "insuficiente";
 
 export interface Avaliacao {
   /** Estado de cada ponto da malha (mesma ordem de malha.pontos). Subwoofers não entram. */
@@ -85,6 +86,13 @@ export function avaliar(cfg: Configuracao, malha: Malha, borda: number, requerid
   if (!temProduto) {
     capacidade = "pendente";
     motivo = "Perfil genérico: o nível é um requisito mínimo, não uma avaliação de produto.";
+  } else if (nivel && semNivel === 0 && caixas.some((c) => c.fonte.tipo === "produto" && c.fonte.nivel.tipo === "pontual" && c.fonte.nivel.estimado)) {
+    // Dado estimado: ausência de dado nunca reprova nem aprova (SPEC C7). A margem serve só para ordenar.
+    capacidade = "estimada";
+    motivo =
+      nivel.min >= requerido - 1e-9
+        ? `Com o dado estimado, o volume mínimo calculado (${nivel.min.toFixed(1)} dB) atende ao necessário (${requerido.toFixed(0)} dB). Confirme com a ficha do fabricante.`
+        : `Com o dado estimado, o volume mínimo calculado (${nivel.min.toFixed(1)} dB) fica abaixo do necessário (${requerido.toFixed(0)} dB). A estimativa é conservadora: confirme com a ficha do fabricante.`;
   } else if (nivel && nivel.min < requerido - 1e-9) {
     capacidade = "insuficiente";
     motivo = `Nível mínimo calculado ${nivel.min.toFixed(1)} dB abaixo do requerido ${requerido.toFixed(0)} dB.`;

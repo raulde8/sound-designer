@@ -83,10 +83,19 @@ describe("AR-1 com produto real", () => {
     if (!r.ok) throw new Error();
     expect(avaliar(r.configuracao, c.malha, 10, c.alvo.requerido).capacidade).toBe("pendente");
   });
-  it("Demo Ativa 10 Incompleta: não avaliável (sem cobertura V)", () => {
+  it("Demo Ativa 10 Incompleta (sem cobertura V): usa a referência e registra a estimativa", () => {
     const f = fonteDeProduto(produto("demo-ativa-10-incompleta"), PARAMS_V1);
+    expect(f.ok).toBe(true);
+    if (f.ok) {
+      expect(f.fonte.cobertura.V).toBe(PARAMS_V1.coberturaReferenciaPontual.valor.V);
+      expect(f.fonte.estimativas?.join()).toMatch(/não publica o ângulo/);
+    }
+  });
+  it("sem montagem publicada: não avaliável", () => {
+    const p = produto("demo-ativa-12");
+    const f = fonteDeProduto({ ...p, montagensPermitidas: undefined }, PARAMS_V1);
     expect(f.ok).toBe(false);
-    if (!f.ok) expect(f.faltando).toContain("coberturaV");
+    if (!f.ok) expect(f.faltando).toContain("montagensPermitidas");
   });
   it("Demo Ativa 15 (só pico): nível estimado com aviso", () => {
     const f = fonteDeProduto(produto("demo-ativa-15"), PARAMS_V1);

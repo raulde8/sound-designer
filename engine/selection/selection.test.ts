@@ -84,10 +84,11 @@ describe("seleção no motor", () => {
     expect(r.recomendacao!.produto!.status).toBe("compativel");
     expect(r.recomendacao!.statusValidacao.capacidade).toBe("validada");
   });
-  it("produto não avaliável nunca aparece como compatível", () => {
+  it("produto com dado de geometria estimado nunca aparece como compatível", () => {
     const r = rodar(IGREJA_PEQUENA);
     const c = r.recomendacao!.candidatos.find((x) => x.produtoId === "demo-ativa-10-incompleta")!;
-    expect(c.status).toBe("nao_avaliavel");
+    expect(c.status).toBe("parcial");
+    expect(c.motivos.join(" ")).toMatch(/não publica o ângulo/);
   });
   it("escolha do usuário troca o produto e mantém planta == lista", () => {
     const r = rodar({ ...IGREJA_PEQUENA, escolhas: { principal: "demo-ativa-15-pro" } });
@@ -186,7 +187,8 @@ describe("propriedades do motor", () => {
         const cat: CatalogSnapshot = { ...CATALOGO_DEMO, version: "teste", produtos };
         const r = rodar(IGREJA_PEQUENA, cat);
         const c = r.recomendacao!.candidatos.find((x) => x.produtoId === id)!;
-        return c.status === "nao_avaliavel" && r.recomendacao!.produto?.produtoId !== id;
+        // Sem o dado, o motor usa a referência: o produto pode aparecer, mas nunca como "compatível".
+        return c.status !== "compativel";
       }),
     );
   });

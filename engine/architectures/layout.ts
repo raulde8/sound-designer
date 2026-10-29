@@ -8,7 +8,7 @@ import type { Caixa, ContextoArquitetura, FonteCaixa, ModeloNivel, Papel } from 
 /** Modelo de nível de uma fonte pontual de produto, conforme a montagem (SPEC C5). */
 export function nivelPontual(fonte: FonteCaixa, montagem: Montagem, params: Params): ModeloNivel {
   if (fonte.tipo === "generico") return { tipo: "requisito" };
-  const u = splContinuoUtil(fonte.spl, montagem, params.picoParaContinuo.valor);
+  const u = splContinuoUtil(fonte.spl, montagem, params.picoParaContinuo.valor, params.splCondicaoDesconhecida.valor === "tratar_como_pico");
   if (u.status === "pendente") return { tipo: "pendente", motivo: u.motivo };
   return { tipo: "pontual", spl1m: u.valor, estimado: u.estimado, ...(u.aviso ? { aviso: u.aviso } : {}) };
 }

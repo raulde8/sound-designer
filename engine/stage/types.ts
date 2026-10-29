@@ -34,7 +34,18 @@ export interface ItemPalco {
   estimado: boolean;
 }
 
+/** Uma linha da lista de canais (input list) do palco. */
+export interface LinhaInput {
+  canal: number;
+  fonte: string;
+  captacao: string;
+  pedestal: string;
+  phantom: boolean;
+}
+
 export interface ResultadoPalco {
+  /** Lista de canais sugerida, na ordem usual: bateria, baixo, guitarra, teclado, violão, vozes, linhas. */
+  inputList: LinhaInput[];
   /** Perguntas respondidas com "não sei" e preenchidas pelo preset. */
   estimados: string[];
   entradas: LinhaEntrada[];

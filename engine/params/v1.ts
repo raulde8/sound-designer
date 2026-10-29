@@ -181,6 +181,13 @@ export const PARAMS_V1 = {
     "dB SPL",
   ),
   alturaCentroColunaPadrao: pendente("alturaCentroColunaPadrao", 1.5, "Decisão de implementação", "Altura do centro acústico de coluna portátil quando a tabela não informa.", "m"),
+  fracaoAlturaCentroColuna: pendente(
+    "fracaoAlturaCentroColuna",
+    0.7,
+    "Decisão de implementação",
+    "Torre/coluna com altura total publicada: o centro dos alto-falantes da coluna fica nesta fração da altura.",
+    "fração",
+  ),
   alturaCentroArrayPadrao: pendente("alturaCentroArrayPadrao", 3.0, "Decisão de implementação", "Altura do centro acústico de line array compacto quando a tabela não informa, limitada pelo pé-direito.", "m"),
   profundidadePreferenciaArray: pendente(
     "profundidadePreferenciaArray",
@@ -193,6 +200,18 @@ export const PARAMS_V1 = {
 
   // ---------------- Cálculos (C5) ----------------
   bordaCobertura: pendente("bordaCobertura", 10, SPEC("C5"), "Ponto até este ângulo fora da cobertura nominal é 'borda'.", "graus"),
+  coberturaAusente: pendente(
+    "coberturaAusente",
+    "usar_referencia",
+    "Decisão do dono do produto (29/10/2026): recomendar os modelos do catálogo mesmo sem ângulo de cobertura publicado",
+    "Quando o fabricante não publica o ângulo de cobertura, o motor usa coberturaReferenciaPontual (90° x 60°) e marca o produto como 'parcial' (nunca 'compatível').",
+  ),
+  splCondicaoDesconhecida: pendente(
+    "splCondicaoDesconhecida",
+    "tratar_como_pico",
+    "Decisão de implementação (conservadora)",
+    "Quando o fabricante publica o SPL máximo sem dizer se é contínuo ou de pico, o motor trata como pico (contínuo = valor - picoParaContinuo) e marca o nível como estimado.",
+  ),
   picoParaContinuo: pendente("picoParaContinuo", 6, SPEC("C5"), "Estimativa: SPL contínuo = pico - este valor, quando só existe pico.", "dB"),
   foraMaxValidada: pendente(
     "foraMaxValidada",

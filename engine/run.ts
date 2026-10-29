@@ -152,6 +152,10 @@ export function executarMotor(entradaBruta: unknown, op: OpcoesMotor): Resultado
       else avisos.push("O produto escolhido não atende a esta configuração. O sistema voltou para a recomendação.");
     }
     let cfg: Configuracao = produto?.configuracao ?? sol.generica;
+    if (produto && produto.avaliacao?.capacidade === "estimada" && (produto.margemNivel ?? 0) < 0)
+      avisos.push(
+        "Pela estimativa (feita com dados incompletos do fabricante), nenhum modelo do catálogo alcança com folga o volume pedido para este uso. Considere mais caixas, um sistema maior, ou confirme a ficha completa com o fabricante e um profissional.",
+      );
     if (produto && produto.status === "parcial" && produto.avaliacao?.capacidade === "pendente") {
       const insuf = sol.candidatos.filter((c) => c.status === "incompativel" && c.avaliacao?.capacidade === "insuficiente");
       if (insuf.length > 0)

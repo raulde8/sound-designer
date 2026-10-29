@@ -9,7 +9,7 @@ import type { Params } from "../params";
 import { ORDEM_STATUS, produtosElegiveis, type StatusCompat } from "../selection/compat";
 import { faixaDoProduto } from "../selection/investimento";
 import { nomeProduto } from "../selection/nome";
-import type { CandidatoMesa, ItemPalco, LinhaEntrada, ResultadoPalco } from "./types";
+import type { CandidatoMesa, ItemPalco, LinhaEntrada, LinhaInput, ResultadoPalco } from "./types";
 
 interface Respostas {
   vozesParadas: number;
@@ -77,6 +77,23 @@ function item(id: string, descricao: string, quantidade: number, p: Product | un
     estimado,
     ...(detalhe ? { detalhe } : {}),
   };
+}
+
+/**
+ * Melhor produto por critério técnico: ficha mínima completa primeiro; depois menor investimento total
+ * para a quantidade necessária (faixa mínima x unidades); desempate pelo id. Sem bônus de marca.
+ */
+function melhor(
+  cat: CatalogSnapshot,
+  categoria: Product["categoria"],
+  pred: (p: Product) => boolean,
+  data: string,
+  unidades: (p: Product) => number = () => 1,
+): Product | undefined {
+  const lista = produtosElegiveis(cat, categoria).filter(pred);
+  const falta = (p: Product) => [...FICHA_MINIMA[p.categoria].nivel, ...FICHA_MINIMA[p.categoria].outros].filter((c) => !campoPresente(p, c)).length;
+  const custo = (p: Product) => (faixaDoProduto(cat, p.categoria, p.subcategoria, p.porte, data, p.id)?.minimo ?? Infinity) * unidades(p);
+  return [...lista].sort((a, b) => falta(a) - falta(b) || custo(a) - custo(b) || a.id.localeCompare(b.id))[0];
 }
 
 function primeiro(cat: CatalogSnapshot, categoria: Product["categoria"], pred: (p: Product) => boolean = () => true): Product | undefined {
@@ -185,7 +202,7 @@ export function calcularPalco(t: Trilha2, ctx: CasoPreparado, cfg: Configuracao 
       if (phantom && e.phantom && !e.phantom.valor) viol.push("Sem phantom power.");
       if (R.controleRemoto && e.controleRemoto && !e.controleRemoto.valor) viol.push("Sem controle remoto.");
       const status: StatusCompat = viol.length > 0 ? "incompativel" : faltando.length > 0 ? "parcial" : "compativel";
-      const faixa = faixaDoProduto(cat, "mesa", m.subcategoria, m.porte, data);
+      const faixa = faixaDoProduto(cat, "mesa", m.subcategoria, m.porte, data, m.id);
       return {
         produtoId: m.id,
         nome: nomeProduto(m),
@@ -201,15 +218,35 @@ export function calcularPalco(t: Trilha2, ctx: CasoPreparado, cfg: Configuracao 
 
   // ---------------- Microfones ----------------
   const microfones: ItemPalco[] = [];
-  const micFio = primeiro(cat, "microfone_com_fio", (p) => p.subcategoria === "dinamico");
+  const micFio = melhor(cat, "microfone_com_fio", (p) => p.subcategoria === "dinamico", data);
   if (vozesComFio > 0) microfones.push(item("voz-fio", "Microfone de mão com fio para voz parada", vozesComFio, micFio, "GEN-MIC-FIO", est("vozes")));
   if (vozesSemFio > 0) {
-    const sf = primeiro(cat, "microfone_sem_fio", (p) => p.subcategoria === R.tipoSemFio) ?? primeiro(cat, "microfone_sem_fio");
+    // Sistemas sem fio podem trazer 1 ou 2 microfones: a quantidade é de sistemas.
+    const tps = (p: Product) => p.especificacoes.transmissoresPorSistema?.valor ?? 1;
+    const sistemas = (p: Product) => Math.ceil(vozesSemFio / tps(p));
+    const sf =
+      melhor(cat, "microfone_sem_fio", (p) => p.subcategoria === R.tipoSemFio, data, sistemas) ??
+      (R.tipoSemFio !== "mao" ? melhor(cat, "microfone_sem_fio", (p) => p.subcategoria === "misto", data, sistemas) : undefined) ??
+      melhor(cat, "microfone_sem_fio", () => true, data, sistemas);
     const tipoTxt = R.tipoSemFio === "mao" ? "de mão" : R.tipoSemFio;
-    microfones.push(item("voz-sem-fio", `Microfone sem fio (${tipoTxt}) para voz que anda${R.pregador ? " ou pregador" : ""}`, vozesSemFio, sf, "GEN-MIC-SEM-FIO", est("vozes")));
+    const qtd = sf ? sistemas(sf) : vozesSemFio;
+    microfones.push(
+      item(
+        "voz-sem-fio",
+        `Sistema de microfone sem fio (${tipoTxt}) para quem anda pelo palco${R.pregador ? " ou prega" : ""}`,
+        qtd,
+        sf,
+        "GEN-MIC-SEM-FIO",
+        est("vozes"),
+        sf ? `${vozesSemFio} microfone(s) sem fio; ${tps(sf)} microfone(s) por sistema` : undefined,
+      ),
+    );
   }
-  if (I.bateria_acustica > 0)
-    microfones.push(item("kit-bateria", `Kit de microfones de bateria (${R.kitBateria === "completo" ? 7 : 4} peças)`, I.bateria_acustica, primeiro(cat, "microfone_com_fio", (p) => p.subcategoria === "kit_bateria"), "GEN-KIT-BATERIA", est("instrumentos")));
+  if (I.bateria_acustica > 0) {
+    const pecas = R.kitBateria === "completo" ? tab.bateria_acustica_completo : tab.bateria_acustica_basico;
+    const kit = melhor(cat, "microfone_com_fio", (p) => p.subcategoria === "kit_bateria" && (p.especificacoes.microfonesNoKit?.valor ?? pecas) >= pecas, data);
+    microfones.push(item("kit-bateria", `Kit de microfones de bateria (pelo menos ${pecas} peças)`, I.bateria_acustica, kit, "GEN-KIT-BATERIA", est("instrumentos")));
+  }
   const micInst = I.guitarra + I.sopro + I.outros;
   if (micInst > 0) microfones.push(item("inst-mic", "Microfone dinâmico para instrumento (amplificador de guitarra, sopro, outros)", micInst, micFio, "GEN-MIC-FIO", est("instrumentos")));
 
@@ -218,16 +255,18 @@ export function calcularPalco(t: Trilha2, ctx: CasoPreparado, cfg: Configuracao 
 
   // ---------------- Retorno ----------------
   const retorno: ItemPalco[] = [];
-  const inEarProd = primeiro(cat, "in_ear");
+  const inEarTx = melhor(cat, "in_ear", (p) => p.subcategoria !== "receptor", data);
+  const inEarRx = melhor(cat, "in_ear", (p) => p.subcategoria === "receptor" || p.subcategoria === "sistema", data);
+  const inEarProd = inEarTx ?? inEarRx;
   if (mixInEar > 0) {
-    const porTx = inEarProd?.especificacoes.mixagensPorTransmissor?.valor ?? 1;
+    const porTx = inEarTx?.especificacoes.mixagensPorTransmissor?.valor ?? 1;
     const tx = Math.ceil(mixInEar / porTx);
-    retorno.push(item("in-ear-tx", "Transmissor de in-ear", tx, inEarProd, "GEN-IN-EAR", est("retorno"), `${mixInEar} mixagem(ns), ${porTx} por transmissor`));
-    retorno.push(item("in-ear-rx", "Receptor de in-ear (1 por músico)", receptores, inEarProd, "GEN-IN-EAR", est("retorno")));
+    retorno.push(item("in-ear-tx", "Transmissor de fone de retorno (in-ear)", tx, inEarTx, "GEN-IN-EAR", est("retorno"), `${mixInEar} mixagem(ns), ${porTx} por transmissor`));
+    retorno.push(item("in-ear-rx", "Receptor de fone de retorno (1 por músico; o fone é à parte)", receptores, inEarRx, "GEN-IN-EAR", est("retorno")));
   }
   if (mixMonitor > 0) {
     const mon =
-      primeiro(cat, "monitor_chao") ??
+      melhor(cat, "monitor_chao", () => true, data) ??
       primeiro(cat, "caixa_ativa", (p) => (p.subcategoria === "10" || p.subcategoria === "12") && p.especificacoes.modoMonitor?.valor === true);
     retorno.push(item("monitor", "Monitor de chão (1 por mixagem)", mixMonitor, mon, "GEN-MONITOR", est("retorno")));
   }
@@ -251,7 +290,7 @@ export function calcularPalco(t: Trilha2, ctx: CasoPreparado, cfg: Configuracao 
       orientacoes.push(`Com mais de ${params.limiarCoordenacao.valor} canais sem fio: use distribuidor de antenas e faça a coordenação de frequências com a ferramenta do fabricante ou com um técnico.`);
     if (nivelRf === "especialista") orientacoes.push(`Com mais de ${params.limiarEspecialista.valor} canais sem fio: procure um especialista em RF.`);
     orientacoes.push("O espectro livre varia por cidade. O sistema não verifica as frequências locais.");
-    for (const p of [primeiro(cat, "microfone_sem_fio"), inEarProd]) {
+    for (const p of [melhor(cat, "microfone_sem_fio", () => true, data), inEarProd]) {
       const f = p?.especificacoes.faixaFrequencia?.valor;
       if (p && f && f.maxMHz > fx.minMHz && f.minMHz < fx.maxMHz) avisos.push(`${nomeProduto(p)} opera em faixa que cruza ${fx.minMHz}-${fx.maxMHz} MHz.`);
     }
@@ -305,7 +344,59 @@ export function calcularPalco(t: Trilha2, ctx: CasoPreparado, cfg: Configuracao 
     acessorios.push(item("multicabo", `Multicabo/snake com pelo menos ${nTrajeto} vias`, 1, primeiro(cat, "acessorio", (p) => p.subcategoria === "multicabo"), "GEN-MULTICABO", false, `${nTrajeto} cabos no trajeto palco-mesa${c ? `; comprimento sugerido ${c} m` : ""}.`));
   }
 
+  // ---------------- Lista de canais (input list) ----------------
+  const L: Omit<LinhaInput, "canal">[] = [];
+  const rep = (n: number, f: (i: number) => Omit<LinhaInput, "canal">[]) => {
+    for (let i = 0; i < n; i++) L.push(...f(i + 1));
+  };
+  const suf = (n: number, i: number) => (n > 1 ? ` ${i}` : "");
+  rep(I.bateria_acustica, (i) => {
+    const b = `Bateria${suf(I.bateria_acustica, i)}`;
+    const base = [
+      { fonte: `${b} - bumbo`, captacao: "Microfone de bumbo", pedestal: "Pedestal baixo", phantom: false },
+      { fonte: `${b} - caixa`, captacao: "Microfone dinâmico", pedestal: "Clamp na caixa", phantom: false },
+    ];
+    const tons =
+      R.kitBateria === "completo"
+        ? [
+            { fonte: `${b} - tom 1`, captacao: "Microfone dinâmico", pedestal: "Clamp", phantom: false },
+            { fonte: `${b} - tom 2`, captacao: "Microfone dinâmico", pedestal: "Clamp", phantom: false },
+            { fonte: `${b} - surdo`, captacao: "Microfone dinâmico", pedestal: "Clamp", phantom: false },
+          ]
+        : [];
+    const oh = [
+      { fonte: `${b} - overhead esquerdo`, captacao: "Microfone condensador", pedestal: "Girafa alta", phantom: true },
+      { fonte: `${b} - overhead direito`, captacao: "Microfone condensador", pedestal: "Girafa alta", phantom: true },
+    ];
+    return [...base, ...tons, ...oh];
+  });
+  rep(I.bateria_eletronica, (i) => [
+    { fonte: `Bateria eletrônica${suf(I.bateria_eletronica, i)} L`, captacao: "Direct box", pedestal: "-", phantom: false },
+    { fonte: `Bateria eletrônica${suf(I.bateria_eletronica, i)} R`, captacao: "Direct box", pedestal: "-", phantom: false },
+  ]);
+  rep(I.baixo, (i) => [{ fonte: `Baixo${suf(I.baixo, i)}`, captacao: "Direct box", pedestal: "-", phantom: false }]);
+  rep(I.guitarra, (i) => [{ fonte: `Guitarra${suf(I.guitarra, i)}`, captacao: "Microfone dinâmico no amplificador", pedestal: "Pedestal baixo", phantom: false }]);
+  rep(I.teclado, (i) => [
+    { fonte: `Teclado${suf(I.teclado, i)} L`, captacao: "Direct box", pedestal: "-", phantom: false },
+    { fonte: `Teclado${suf(I.teclado, i)} R`, captacao: "Direct box", pedestal: "-", phantom: false },
+  ]);
+  rep(I.violao, (i) => [{ fonte: `Violão${suf(I.violao, i)}`, captacao: "Direct box", pedestal: "-", phantom: false }]);
+  rep(I.sopro, (i) => [{ fonte: `Sopro${suf(I.sopro, i)}`, captacao: "Microfone dinâmico", pedestal: "Pedestal girafa", phantom: false }]);
+  rep(I.outros, (i) => [{ fonte: `Outro instrumento${suf(I.outros, i)}`, captacao: "Microfone dinâmico", pedestal: "Pedestal girafa", phantom: false }]);
+  rep(vozesSemFio, (i) => [{ fonte: `Voz sem fio${suf(vozesSemFio, i)}${R.pregador && i === 1 ? " (pregador)" : ""}`, captacao: "Receptor sem fio", pedestal: "-", phantom: false }]);
+  rep(vozesComFio, (i) => [{ fonte: `Voz${suf(vozesComFio, i)}`, captacao: "Microfone de mão com fio", pedestal: "Pedestal girafa", phantom: false }]);
+  const linhaEstereo = (nome: string) => [
+    { fonte: `${nome} L`, captacao: "Cabo de linha (P2/RCA para P10)", pedestal: "-", phantom: false },
+    { fonte: `${nome} R`, captacao: "Cabo de linha (P2/RCA para P10)", pedestal: "-", phantom: false },
+  ];
+  if (R.fontes.playback) L.push(...linhaEstereo("Computador / playback"));
+  if (R.fontes.celular) L.push(...linhaEstereo("Celular"));
+  if (R.fontes.dj) L.push(...linhaEstereo("Controladora de DJ"));
+  if (R.fontes.video) L.push(...linhaEstereo("Vídeo"));
+  const inputList: LinhaInput[] = L.map((l, i) => ({ canal: i + 1, ...l }));
+
   return {
+    inputList,
     estimados: R.estimados,
     entradas,
     totalCanais,
