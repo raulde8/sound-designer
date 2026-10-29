@@ -5,9 +5,9 @@
   "type": "module",
   "scripts": {
     "dev": "next dev",
-    "dev:demo": "CATALOG_MODE=demo next dev",
-    "build": "npm run catalog:validate && next build",
-    "build:demo": "CATALOG_MODE=demo npm run catalog:validate && CATALOG_MODE=demo next build",
+    "dev:demo": "CATALOG_MODE=demo npm run -s catalog:snapshot && CATALOG_MODE=demo next dev",
+    "build": "npm run catalog:validate && npm run catalog:snapshot && next build",
+    "build:demo": "CATALOG_MODE=demo npm run catalog:validate && npm run catalog:snapshot && CATALOG_MODE=demo next build",
     "start": "next start",
     "test": "vitest run",
     "test:watch": "vitest",
@@ -17,7 +17,13 @@
     "catalog:import": "tsx scripts/catalog-import.ts",
     "catalog:validate": "tsx scripts/catalog-validate.ts",
     "catalog:snapshot": "tsx scripts/catalog-snapshot.ts",
-    "casos": "tsx scripts/casos-referencia.ts"
+    "casos": "tsx scripts/casos-referencia.ts",
+    "catalog:template": "tsx scripts/catalog-template.ts",
+    "predev": "npm run -s catalog:snapshot",
+    "pretest": "npm run -s catalog:snapshot",
+    "pretypecheck": "npm run -s catalog:snapshot",
+    "prelint": "npm run -s catalog:snapshot",
+    "postinstall": "tsx scripts/catalog-snapshot.ts"
   },
   "dependencies": {
     "lz-string": "1.5.0",
