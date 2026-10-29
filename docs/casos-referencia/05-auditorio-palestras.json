@@ -516,7 +516,7 @@
               "operador": "em",
               "valor": "pedestal",
               "unidade": "",
-              "texto": "Montagem permitida pelo fabricante: pedestal"
+              "texto": "Montagem: qualquer uma permitida pelo fabricante (o layout de referência usou pedestal)"
             },
             {
               "campo": "splContinuo1m",
@@ -1027,7 +1027,7 @@
                 "operador": "em",
                 "valor": "pedestal",
                 "unidade": "",
-                "texto": "Montagem permitida pelo fabricante: pedestal"
+                "texto": "Montagem: qualquer uma permitida pelo fabricante (o layout de referência usou pedestal)"
               },
               {
                 "campo": "splContinuo1m",
@@ -1104,7 +1104,7 @@
             "operador": "em",
             "valor": "pedestal",
             "unidade": "",
-            "texto": "Montagem permitida pelo fabricante: pedestal"
+            "texto": "Montagem: qualquer uma permitida pelo fabricante (o layout de referência usou pedestal)"
           },
           {
             "campo": "splContinuo1m",
@@ -1563,7 +1563,7 @@
                   "operador": "em",
                   "valor": "pedestal",
                   "unidade": "",
-                  "texto": "Montagem permitida pelo fabricante: pedestal"
+                  "texto": "Montagem: qualquer uma permitida pelo fabricante (o layout de referência usou pedestal)"
                 },
                 {
                   "campo": "splContinuo1m",
@@ -2314,7 +2314,7 @@
       {
         "id": "requisitos",
         "titulo": "Características mínimas de cada caixa",
-        "texto": "Características mínimas de cada caixa principal: Cobertura vertical publicada de pelo menos 24° numa configuração da tabela; Cobertura horizontal de referência: 100°; Alcance nominal de pelo menos 29 m; Montagem permitida pelo fabricante: pedestal; SPL contínuo publicado por distância que entregue 95 dB a 29 m.",
+        "texto": "Características mínimas de cada caixa principal: Cobertura vertical publicada de pelo menos 24° numa configuração da tabela; Cobertura horizontal de referência: 100°; Alcance nominal de pelo menos 29 m; Montagem: qualquer uma permitida pelo fabricante (o layout de referência usou pedestal); SPL contínuo publicado por distância que entregue 95 dB a 29 m.",
         "entradas": [],
         "regra": "C8 passo 2: requisitos calculados para o caso",
         "parametros": [
@@ -2475,7 +2475,7 @@
       {
         "id": "reverberacao",
         "titulo": "Acústica da sala",
-        "texto": "Classe média (3 pontos). Reverberação moderada. Mire as caixas no público e evite apontá-las para paredes lisas ou vidro.",
+        "texto": "Risco médio de reverberação (3 pontos). Reverberação moderada. Mire as caixas no público e evite apontá-las para paredes lisas ou vidro.",
         "entradas": [
           "Superfícies: mistas",
           "Palma ecoa: um_pouco",

@@ -20,17 +20,17 @@ Status: geometria validada_aproximacao; capacidade validada (Nível mínimo calc
 | 2 | principal | Demo Ativa 15 Pro | pedestal | 14,5 | 2,5 | 2,4 | -17,3 | -4,2 |
 | 3 | reforco | Demo Ativa 15 Pro | pedestal | 0,5 | 20,8 | 2,4 | 58,7 | -12,1 |
 | 4 | reforco | Demo Ativa 15 Pro | pedestal | 14,5 | 20,8 | 2,4 | -58,7 | -12,1 |
-| 5 | sub | Demo Sub 18 | chao | 1,1 | 2,5 | 0,3 | 0,0 | 0,0 |
-| 6 | sub | Demo Sub 18 | chao | 1,7 | 2,5 | 0,3 | 0,0 | 0,0 |
-| 7 | sub | Demo Sub 18 | chao | 13,9 | 2,5 | 0,3 | 0,0 | 0,0 |
-| 8 | sub | Demo Sub 18 | chao | 13,3 | 2,5 | 0,3 | 0,0 | 0,0 |
+| 5 | sub | Demo Sub 18 | chao | 1,4 | 2,5 | 0,3 | 0,0 | 0,0 |
+| 6 | sub | Demo Sub 18 | chao | 2,3 | 2,5 | 0,3 | 0,0 | 0,0 |
+| 7 | sub | Demo Sub 18 | chao | 13,6 | 2,5 | 0,3 | 0,0 | 0,0 |
+| 8 | sub | Demo Sub 18 | chao | 12,7 | 2,5 | 0,3 | 0,0 | 0,0 |
 
 Cobertura: 90% coberto, 4% borda, 5% fora.
 Atrasos de referência: RF-L 53,2 ms, RF-R 53,2 ms.
 
 ### Requisitos (perfil genérico)
 - SPL máximo contínuo a 1 m de pelo menos 133 dB (campo livre)
-- Montagem permitida pelo fabricante: parede
+- Montagem: qualquer uma permitida pelo fabricante (o layout de referência usou parede)
 - Peso de até 40 kg para parede
 - Cobertura usada no layout: 90° x 60° (H x V)
 
@@ -47,7 +47,7 @@ Produto escolhido: Demo Ativa 15 Pro. Sub: recomendado, 2 por lado (Demo Sub 18)
 Alternativas: menor custo: Demo Ativa 12 Sem SPL (AR-1); equilíbrio: Demo Ativa 15 Pro (AR-1)
 
 ## Reverberação: classe medio (3 pontos)
-Classe média (3 pontos). Reverberação moderada. Mire as caixas no público e evite apontá-las para paredes lisas ou vidro.
+Risco médio de reverberação (3 pontos). Reverberação moderada. Mire as caixas no público e evite apontá-las para paredes lisas ou vidro.
 
 ## PAG/NAG
 PAG 36,5 dB, NAG 27,6 dB, margem 8,8 dB: risco baixo.
@@ -69,7 +69,7 @@ R$ 65000 a R$ 109000 (ref. 10/2026).
 - 20x Cabo XLR 30 m (Cabo XLR balanceado (perfil genérico))
 - 3x Pedestal de microfone (voz parada) (Demo Pedestal de Microfone)
 - 4x Pedestal de caixa (Demo Pedestal de Caixa)
-- 6x Régua/filtro de linha (1 por posição de equipamento ativo) (Régua/filtro de linha (perfil genérico))
+- 8x Régua/filtro de linha (1 por posição de equipamento ativo) (Régua/filtro de linha (perfil genérico))
 - 1x Multicabo/snake com pelo menos 20 vias (Multicabo / snake (perfil genérico))
 RF: 3 canais, nível simples.
 

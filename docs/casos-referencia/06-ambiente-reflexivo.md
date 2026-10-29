@@ -27,7 +27,7 @@ Cobertura: 96% coberto, 4% borda, 0% fora.
 - Cobertura vertical publicada de pelo menos 22° numa configuração da tabela
 - Cobertura horizontal de referência: 100°
 - Alcance nominal de pelo menos 19 m
-- Montagem permitida pelo fabricante: pedestal
+- Montagem: qualquer uma permitida pelo fabricante (o layout de referência usou pedestal)
 - SPL contínuo publicado por distância que entregue 85 dB a 19 m
 
 ### Produtos do catálogo demo
@@ -39,7 +39,7 @@ Produto escolhido: Demo Coluna 8. Sub: nao_recomendado.
 Alternativas: menor custo: Demo Ativa 10 (AR-1); equilíbrio: Demo Coluna 8 (AR-2); maior capacidade: Demo Ativa 15 Pro (AR-1)
 
 ## Reverberação: classe alto (5 pontos)
-Classe alto (5 pontos). O ambiente tende a ser reverberante. Mais potência não resolve isso: priorize caixas com cobertura controlada e mire as caixas no público, não nas paredes. Tratamento acústico pode ser necessário.
+Risco alto de reverberação (5 pontos). O ambiente tende a ser reverberante. Mais potência não resolve isso: priorize caixas com cobertura controlada e mire as caixas no público, não nas paredes. Tratamento acústico pode ser necessário.
 
 ## PAG/NAG
 PAG 21,3 dB, NAG 25,4 dB, margem -4,2 dB: risco alto.

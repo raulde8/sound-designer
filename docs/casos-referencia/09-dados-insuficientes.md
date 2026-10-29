@@ -25,7 +25,7 @@ Cobertura: 100% coberto, 0% borda, 0% fora.
 - Cobertura vertical publicada de pelo menos 30° numa configuração da tabela
 - Cobertura horizontal de referência: 120°
 - Alcance nominal de pelo menos 11 m
-- Montagem permitida pelo fabricante: chao
+- Montagem: qualquer uma permitida pelo fabricante (o layout de referência usou chao)
 - SPL contínuo publicado por distância que entregue 85 dB a 11 m
 
 ### Produtos do catálogo demo
@@ -35,7 +35,7 @@ Cobertura: 100% coberto, 0% borda, 0% fora.
 Produto escolhido: Demo Coluna 8. Sub: nao_recomendado.
 
 ## Reverberação: classe medio (2 pontos)
-Classe média (2 pontos). Reverberação moderada. Mire as caixas no público e evite apontá-las para paredes lisas ou vidro.
+Risco médio de reverberação (2 pontos). Reverberação moderada. Mire as caixas no público e evite apontá-las para paredes lisas ou vidro.
 
 ## PAG/NAG
 PAG 23,5 dB, NAG 20,4 dB, margem 3,0 dB: risco baixo.

@@ -13,7 +13,7 @@ export default defineConfig({
   webServer: {
     command: "npm run -s build:demo && node scripts/serve-static.mjs 3100",
     url: "http://localhost:3100",
-    reuseExistingServer: !process.env.CI,
+    reuseExistingServer: false,
     timeout: 300_000,
   },
 });

@@ -228,7 +228,7 @@
               "operador": "em",
               "valor": "parede",
               "unidade": "",
-              "texto": "Montagem permitida pelo fabricante: parede"
+              "texto": "Montagem: qualquer uma permitida pelo fabricante (o layout de referência usou parede)"
             },
             {
               "campo": "pesoMax",
@@ -420,7 +420,7 @@
                 "operador": "em",
                 "valor": "parede",
                 "unidade": "",
-                "texto": "Montagem permitida pelo fabricante: parede"
+                "texto": "Montagem: qualquer uma permitida pelo fabricante (o layout de referência usou parede)"
               },
               {
                 "campo": "pesoMax",
@@ -480,7 +480,7 @@
             "operador": "em",
             "valor": "parede",
             "unidade": "",
-            "texto": "Montagem permitida pelo fabricante: parede"
+            "texto": "Montagem: qualquer uma permitida pelo fabricante (o layout de referência usou parede)"
           },
           {
             "campo": "pesoMax",
@@ -644,7 +644,7 @@
                   "operador": "em",
                   "valor": "parede",
                   "unidade": "",
-                  "texto": "Montagem permitida pelo fabricante: parede"
+                  "texto": "Montagem: qualquer uma permitida pelo fabricante (o layout de referência usou parede)"
                 },
                 {
                   "campo": "pesoMax",
@@ -823,7 +823,7 @@
                   "operador": "em",
                   "valor": "parede",
                   "unidade": "",
-                  "texto": "Montagem permitida pelo fabricante: parede"
+                  "texto": "Montagem: qualquer uma permitida pelo fabricante (o layout de referência usou parede)"
                 },
                 {
                   "campo": "pesoMax",
@@ -1003,7 +1003,7 @@
                   "operador": "em",
                   "valor": "pedestal",
                   "unidade": "",
-                  "texto": "Montagem permitida pelo fabricante: pedestal"
+                  "texto": "Montagem: qualquer uma permitida pelo fabricante (o layout de referência usou pedestal)"
                 },
                 {
                   "campo": "pesoMax",
@@ -1182,7 +1182,7 @@
                   "operador": "em",
                   "valor": "pedestal",
                   "unidade": "",
-                  "texto": "Montagem permitida pelo fabricante: pedestal"
+                  "texto": "Montagem: qualquer uma permitida pelo fabricante (o layout de referência usou pedestal)"
                 },
                 {
                   "campo": "pesoMax",
@@ -1343,7 +1343,7 @@
                   "operador": "em",
                   "valor": "parede",
                   "unidade": "",
-                  "texto": "Montagem permitida pelo fabricante: parede"
+                  "texto": "Montagem: qualquer uma permitida pelo fabricante (o layout de referência usou parede)"
                 },
                 {
                   "campo": "pesoMax",
@@ -1901,7 +1901,7 @@
       {
         "id": "requisitos",
         "titulo": "Características mínimas de cada caixa",
-        "texto": "Características mínimas de cada caixa principal: SPL máximo contínuo a 1 m de pelo menos 112 dB (campo livre); Montagem permitida pelo fabricante: parede; Peso de até 40 kg para parede; Cobertura usada no layout: 90° x 60° (H x V).",
+        "texto": "Características mínimas de cada caixa principal: SPL máximo contínuo a 1 m de pelo menos 112 dB (campo livre); Montagem: qualquer uma permitida pelo fabricante (o layout de referência usou parede); Peso de até 40 kg para parede; Cobertura usada no layout: 90° x 60° (H x V).",
         "entradas": [],
         "regra": "C8 passo 2: requisitos calculados para o caso",
         "parametros": [
@@ -2176,7 +2176,7 @@
       {
         "id": "reverberacao",
         "titulo": "Acústica da sala",
-        "texto": "Classe média (3 pontos). Reverberação moderada. Mire as caixas no público e evite apontá-las para paredes lisas ou vidro.",
+        "texto": "Risco médio de reverberação (3 pontos). Reverberação moderada. Mire as caixas no público e evite apontá-las para paredes lisas ou vidro.",
         "entradas": [
           "Superfícies: mistas",
           "Palma ecoa: um_pouco",

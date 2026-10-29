@@ -23,7 +23,7 @@ export function criarSubs(principais: Caixa[], fonte: FonteCaixa, porLado: numbe
         id: `SUB-${p.lado}-${k + 1}`,
         papel: "sub",
         lado: p.lado,
-        posicao: { x: p.posicao.x + dir * 0.6 * (k + 1), y: p.posicao.y, z: fonte.meiaAltura },
+        posicao: { x: p.posicao.x + dir * 0.9 * (k + 1), y: p.posicao.y, z: fonte.meiaAltura },
         mira: { yaw: 0, pitch: 0 },
         montagem: "chao",
         fonte,

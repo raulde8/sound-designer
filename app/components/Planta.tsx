@@ -111,7 +111,7 @@ export function Planta({ largura: W, profundidade: D, profundidadePalco, configu
           const y = pos.y;
           const yaw = (c.mira.yaw * Math.PI) / 180;
           const len = f * 2.2;
-          const r = c.papel === "front_fill" ? f * 0.38 : f * 0.5;
+          const r = c.papel === "front_fill" ? f * 0.38 : c.papel === "sub" ? f * 0.38 : f * 0.5;
           const movivel = !!onMover;
           return (
             <g

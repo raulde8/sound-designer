@@ -37,7 +37,7 @@ Cobertura: 94% coberto, 5% borda, 1% fora.
 Produto escolhido: nenhum (perfil genérico). Sub: nao_recomendado.
 
 ## Reverberação: classe medio (2 pontos)
-Classe média (2 pontos). Reverberação moderada. Mire as caixas no público e evite apontá-las para paredes lisas ou vidro.
+Risco médio de reverberação (2 pontos). Reverberação moderada. Mire as caixas no público e evite apontá-las para paredes lisas ou vidro.
 
 ## PAG/NAG
 PAG 20,2 dB, NAG 22,0 dB, margem -1,8 dB: risco alto.

@@ -429,7 +429,7 @@
               "operador": "em",
               "valor": "chao",
               "unidade": "",
-              "texto": "Montagem permitida pelo fabricante: chao"
+              "texto": "Montagem: qualquer uma permitida pelo fabricante (o layout de referência usou chao)"
             },
             {
               "campo": "splContinuo1m",
@@ -854,7 +854,7 @@
                 "operador": "em",
                 "valor": "chao",
                 "unidade": "",
-                "texto": "Montagem permitida pelo fabricante: chao"
+                "texto": "Montagem: qualquer uma permitida pelo fabricante (o layout de referência usou chao)"
               },
               {
                 "campo": "splContinuo1m",
@@ -931,7 +931,7 @@
             "operador": "em",
             "valor": "pedestal",
             "unidade": "",
-            "texto": "Montagem permitida pelo fabricante: pedestal"
+            "texto": "Montagem: qualquer uma permitida pelo fabricante (o layout de referência usou pedestal)"
           },
           {
             "campo": "splContinuo1m",
@@ -1305,7 +1305,7 @@
                   "operador": "em",
                   "valor": "chao",
                   "unidade": "",
-                  "texto": "Montagem permitida pelo fabricante: chao"
+                  "texto": "Montagem: qualquer uma permitida pelo fabricante (o layout de referência usou chao)"
                 },
                 {
                   "campo": "splContinuo1m",
@@ -1755,7 +1755,7 @@
                   "operador": "em",
                   "valor": "pedestal",
                   "unidade": "",
-                  "texto": "Montagem permitida pelo fabricante: pedestal"
+                  "texto": "Montagem: qualquer uma permitida pelo fabricante (o layout de referência usou pedestal)"
                 },
                 {
                   "campo": "splContinuo1m",
@@ -2378,7 +2378,7 @@
       {
         "id": "requisitos",
         "titulo": "Características mínimas de cada caixa",
-        "texto": "Características mínimas de cada caixa principal: Cobertura vertical publicada de pelo menos 22° numa configuração da tabela; Cobertura horizontal de referência: 100°; Alcance nominal de pelo menos 19 m; Montagem permitida pelo fabricante: pedestal; SPL contínuo publicado por distância que entregue 85 dB a 19 m.",
+        "texto": "Características mínimas de cada caixa principal: Cobertura vertical publicada de pelo menos 22° numa configuração da tabela; Cobertura horizontal de referência: 100°; Alcance nominal de pelo menos 19 m; Montagem: qualquer uma permitida pelo fabricante (o layout de referência usou pedestal); SPL contínuo publicado por distância que entregue 85 dB a 19 m.",
         "entradas": [],
         "regra": "C8 passo 2: requisitos calculados para o caso",
         "parametros": [
@@ -2542,7 +2542,7 @@
       {
         "id": "reverberacao",
         "titulo": "Acústica da sala",
-        "texto": "Classe alto (5 pontos). O ambiente tende a ser reverberante. Mais potência não resolve isso: priorize caixas com cobertura controlada e mire as caixas no público, não nas paredes. Tratamento acústico pode ser necessário.",
+        "texto": "Risco alto de reverberação (5 pontos). O ambiente tende a ser reverberante. Mais potência não resolve isso: priorize caixas com cobertura controlada e mire as caixas no público, não nas paredes. Tratamento acústico pode ser necessário.",
         "entradas": [
           "Superfícies: duras",
           "Palma ecoa: sim",

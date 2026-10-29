@@ -24,7 +24,7 @@ Cobertura: 91% coberto, 5% borda, 4% fora.
 
 ### Requisitos (perfil genérico)
 - SPL máximo contínuo a 1 m de pelo menos 112 dB (campo livre)
-- Montagem permitida pelo fabricante: parede
+- Montagem: qualquer uma permitida pelo fabricante (o layout de referência usou parede)
 - Peso de até 40 kg para parede
 - Cobertura usada no layout: 90° x 60° (H x V)
 
@@ -41,7 +41,7 @@ Produto escolhido: Demo Ativa 10. Sub: nao_recomendado.
 Alternativas: menor custo: Demo Ativa 10 (AR-1); maior capacidade: Demo Ativa 15 Pro (AR-1)
 
 ## Reverberação: classe medio (3 pontos)
-Classe média (3 pontos). Reverberação moderada. Mire as caixas no público e evite apontá-las para paredes lisas ou vidro.
+Risco médio de reverberação (3 pontos). Reverberação moderada. Mire as caixas no público e evite apontá-las para paredes lisas ou vidro.
 
 ## PAG/NAG
 PAG 26,7 dB, NAG 25,4 dB, margem 1,3 dB: risco moderado.

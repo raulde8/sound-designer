@@ -18,14 +18,14 @@ Status: geometria validada; capacidade pendente (O fabricante não publica SPL m
 |---|---|---|---|---|---|---|---|---|
 | 1 | principal | Demo Ativa 12 Sem SPL | parede | 0,2 | 2,5 | 3,4 | 20,5 | -8,6 |
 | 2 | principal | Demo Ativa 12 Sem SPL | parede | 11,8 | 2,5 | 3,4 | -20,5 | -8,6 |
-| 3 | sub | Demo Sub 15 | chao | 0,8 | 2,5 | 0,3 | 0,0 | 0,0 |
-| 4 | sub | Demo Sub 15 | chao | 11,2 | 2,5 | 0,3 | 0,0 | 0,0 |
+| 3 | sub | Demo Sub 15 | chao | 1,1 | 2,5 | 0,3 | 0,0 | 0,0 |
+| 4 | sub | Demo Sub 15 | chao | 10,9 | 2,5 | 0,3 | 0,0 | 0,0 |
 
 Cobertura: 94% coberto, 5% borda, 1% fora.
 
 ### Requisitos (perfil genérico)
 - SPL máximo contínuo a 1 m de pelo menos 136 dB (campo livre)
-- Montagem permitida pelo fabricante: parede
+- Montagem: qualquer uma permitida pelo fabricante (o layout de referência usou parede)
 - Peso de até 40 kg para parede
 - Cobertura usada no layout: 90° x 60° (H x V)
 
@@ -40,7 +40,7 @@ Cobertura: 94% coberto, 5% borda, 1% fora.
 Produto escolhido: Demo Ativa 12 Sem SPL. Sub: recomendado, 1 por lado (Demo Sub 15).
 
 ## Reverberação: classe medio (2 pontos)
-Classe média (2 pontos). Reverberação moderada. Mire as caixas no público e evite apontá-las para paredes lisas ou vidro.
+Risco médio de reverberação (2 pontos). Reverberação moderada. Mire as caixas no público e evite apontá-las para paredes lisas ou vidro.
 
 ## Investimento (faixas demo)
 R$ 12000 a R$ 19400 (ref. 10/2026).

@@ -41,12 +41,13 @@ Produto escolhido: Demo Ativa 10. Sub: nao_recomendado.
 Alternativas: menor custo: Demo Ativa 10 (AR-1); maior capacidade: Demo Ativa 12 (AR-1)
 
 ## Reverberação: classe medio (2 pontos)
-Classe média (2 pontos). Reverberação moderada. Mire as caixas no público e evite apontá-las para paredes lisas ou vidro.
+Risco médio de reverberação (2 pontos). Reverberação moderada. Mire as caixas no público e evite apontá-las para paredes lisas ou vidro.
 
 ## Investimento (faixas demo)
 R$ 3000 a R$ 5000 (ref. 10/2026).
 
 ## Avisos
+- Para música ambiente, um sistema distribuído (caixas de teto ou de parede espalhadas pelo salão) costuma dar som mais uniforme e em volume mais baixo. Essa arquitetura entra na próxima fase do sistema; consulte um profissional.
 
 ## Quando chamar um profissional
 - Este é um pré-dimensionamento. Os parâmetros marcados como 'pendente de validação' ainda não foram revisados por um projetista.

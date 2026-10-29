@@ -323,7 +323,7 @@
             "papel": "sub",
             "lado": "L",
             "posicao": {
-              "x": 1.1,
+              "x": 1.4,
               "y": 2.5,
               "z": 0.3
             },
@@ -357,7 +357,7 @@
             "papel": "sub",
             "lado": "L",
             "posicao": {
-              "x": 1.7,
+              "x": 2.3,
               "y": 2.5,
               "z": 0.3
             },
@@ -391,7 +391,7 @@
             "papel": "sub",
             "lado": "R",
             "posicao": {
-              "x": 13.9,
+              "x": 13.6,
               "y": 2.5,
               "z": 0.3
             },
@@ -425,7 +425,7 @@
             "papel": "sub",
             "lado": "R",
             "posicao": {
-              "x": 13.3,
+              "x": 12.7,
               "y": 2.5,
               "z": 0.3
             },
@@ -484,7 +484,7 @@
               "operador": "em",
               "valor": "pedestal",
               "unidade": "",
-              "texto": "Montagem permitida pelo fabricante: pedestal"
+              "texto": "Montagem: qualquer uma permitida pelo fabricante (o layout de referência usou pedestal)"
             },
             {
               "campo": "pesoMax",
@@ -514,7 +514,7 @@
               "operador": "em",
               "valor": "pedestal",
               "unidade": "",
-              "texto": "Montagem permitida pelo fabricante: pedestal"
+              "texto": "Montagem: qualquer uma permitida pelo fabricante (o layout de referência usou pedestal)"
             },
             {
               "campo": "pesoMax",
@@ -833,7 +833,7 @@
                 "operador": "em",
                 "valor": "pedestal",
                 "unidade": "",
-                "texto": "Montagem permitida pelo fabricante: pedestal"
+                "texto": "Montagem: qualquer uma permitida pelo fabricante (o layout de referência usou pedestal)"
               },
               {
                 "campo": "pesoMax",
@@ -863,7 +863,7 @@
                 "operador": "em",
                 "valor": "pedestal",
                 "unidade": "",
-                "texto": "Montagem permitida pelo fabricante: pedestal"
+                "texto": "Montagem: qualquer uma permitida pelo fabricante (o layout de referência usou pedestal)"
               },
               {
                 "campo": "pesoMax",
@@ -918,7 +918,7 @@
             "operador": "em",
             "valor": "parede",
             "unidade": "",
-            "texto": "Montagem permitida pelo fabricante: parede"
+            "texto": "Montagem: qualquer uma permitida pelo fabricante (o layout de referência usou parede)"
           },
           {
             "campo": "pesoMax",
@@ -1189,7 +1189,7 @@
                   "operador": "em",
                   "valor": "pedestal",
                   "unidade": "",
-                  "texto": "Montagem permitida pelo fabricante: pedestal"
+                  "texto": "Montagem: qualquer uma permitida pelo fabricante (o layout de referência usou pedestal)"
                 },
                 {
                   "campo": "pesoMax",
@@ -1219,7 +1219,7 @@
                   "operador": "em",
                   "valor": "pedestal",
                   "unidade": "",
-                  "texto": "Montagem permitida pelo fabricante: pedestal"
+                  "texto": "Montagem: qualquer uma permitida pelo fabricante (o layout de referência usou pedestal)"
                 },
                 {
                   "campo": "pesoMax",
@@ -1464,7 +1464,7 @@
                   "operador": "em",
                   "valor": "parede",
                   "unidade": "",
-                  "texto": "Montagem permitida pelo fabricante: parede"
+                  "texto": "Montagem: qualquer uma permitida pelo fabricante (o layout de referência usou parede)"
                 },
                 {
                   "campo": "pesoMax",
@@ -1494,7 +1494,7 @@
                   "operador": "em",
                   "valor": "parede",
                   "unidade": "",
-                  "texto": "Montagem permitida pelo fabricante: parede"
+                  "texto": "Montagem: qualquer uma permitida pelo fabricante (o layout de referência usou parede)"
                 },
                 {
                   "campo": "pesoMax",
@@ -1767,7 +1767,7 @@
                   "operador": "em",
                   "valor": "parede",
                   "unidade": "",
-                  "texto": "Montagem permitida pelo fabricante: parede"
+                  "texto": "Montagem: qualquer uma permitida pelo fabricante (o layout de referência usou parede)"
                 },
                 {
                   "campo": "pesoMax",
@@ -1797,7 +1797,7 @@
                   "operador": "em",
                   "valor": "parede",
                   "unidade": "",
-                  "texto": "Montagem permitida pelo fabricante: parede"
+                  "texto": "Montagem: qualquer uma permitida pelo fabricante (o layout de referência usou parede)"
                 },
                 {
                   "campo": "pesoMax",
@@ -2079,7 +2079,7 @@
                   "operador": "em",
                   "valor": "parede",
                   "unidade": "",
-                  "texto": "Montagem permitida pelo fabricante: parede"
+                  "texto": "Montagem: qualquer uma permitida pelo fabricante (o layout de referência usou parede)"
                 },
                 {
                   "campo": "pesoMax",
@@ -2109,7 +2109,7 @@
                   "operador": "em",
                   "valor": "parede",
                   "unidade": "",
-                  "texto": "Montagem permitida pelo fabricante: parede"
+                  "texto": "Montagem: qualquer uma permitida pelo fabricante (o layout de referência usou parede)"
                 },
                 {
                   "campo": "pesoMax",
@@ -2392,7 +2392,7 @@
                   "operador": "em",
                   "valor": "pedestal",
                   "unidade": "",
-                  "texto": "Montagem permitida pelo fabricante: pedestal"
+                  "texto": "Montagem: qualquer uma permitida pelo fabricante (o layout de referência usou pedestal)"
                 },
                 {
                   "campo": "pesoMax",
@@ -2422,7 +2422,7 @@
                   "operador": "em",
                   "valor": "pedestal",
                   "unidade": "",
-                  "texto": "Montagem permitida pelo fabricante: pedestal"
+                  "texto": "Montagem: qualquer uma permitida pelo fabricante (o layout de referência usou pedestal)"
                 },
                 {
                   "campo": "pesoMax",
@@ -3016,7 +3016,7 @@
         {
           "id": "regua",
           "descricao": "Régua/filtro de linha (1 por posição de equipamento ativo)",
-          "quantidade": 6,
+          "quantidade": 8,
           "ref": "GEN-REGUA",
           "nome": "Régua/filtro de linha (perfil genérico)",
           "tipo": "generico",
@@ -3399,7 +3399,7 @@
       {
         "id": "caixa:SUB-L-1",
         "titulo": "Caixa 5",
-        "texto": "Caixa 5 (subwoofer): apoiada no chão, centro acústico a 0,30 m de altura, em x = 1,10 m e y = 2,50 m. Direção: 0° na horizontal (0° = para o fundo) e 0° na vertical. O comportamento dos graves depende da sala. Ajuste no local.",
+        "texto": "Caixa 5 (subwoofer): apoiada no chão, centro acústico a 0,30 m de altura, em x = 1,40 m e y = 2,50 m. Direção: 0° na horizontal (0° = para o fundo) e 0° na vertical. O comportamento dos graves depende da sala. Ajuste no local.",
         "entradas": [
           "Sala: 15,0 m de largura x 25,0 m de profundidade x 6,0 m de pé-direito (informado)",
           "Palco: 3,0 m de profundidade (padrão)",
@@ -3421,7 +3421,7 @@
       {
         "id": "caixa:SUB-L-2",
         "titulo": "Caixa 6",
-        "texto": "Caixa 6 (subwoofer): apoiada no chão, centro acústico a 0,30 m de altura, em x = 1,70 m e y = 2,50 m. Direção: 0° na horizontal (0° = para o fundo) e 0° na vertical. O comportamento dos graves depende da sala. Ajuste no local.",
+        "texto": "Caixa 6 (subwoofer): apoiada no chão, centro acústico a 0,30 m de altura, em x = 2,30 m e y = 2,50 m. Direção: 0° na horizontal (0° = para o fundo) e 0° na vertical. O comportamento dos graves depende da sala. Ajuste no local.",
         "entradas": [
           "Sala: 15,0 m de largura x 25,0 m de profundidade x 6,0 m de pé-direito (informado)",
           "Palco: 3,0 m de profundidade (padrão)",
@@ -3443,7 +3443,7 @@
       {
         "id": "caixa:SUB-R-1",
         "titulo": "Caixa 7",
-        "texto": "Caixa 7 (subwoofer): apoiada no chão, centro acústico a 0,30 m de altura, em x = 13,90 m e y = 2,50 m. Direção: 0° na horizontal (0° = para o fundo) e 0° na vertical. O comportamento dos graves depende da sala. Ajuste no local.",
+        "texto": "Caixa 7 (subwoofer): apoiada no chão, centro acústico a 0,30 m de altura, em x = 13,60 m e y = 2,50 m. Direção: 0° na horizontal (0° = para o fundo) e 0° na vertical. O comportamento dos graves depende da sala. Ajuste no local.",
         "entradas": [
           "Sala: 15,0 m de largura x 25,0 m de profundidade x 6,0 m de pé-direito (informado)",
           "Palco: 3,0 m de profundidade (padrão)",
@@ -3465,7 +3465,7 @@
       {
         "id": "caixa:SUB-R-2",
         "titulo": "Caixa 8",
-        "texto": "Caixa 8 (subwoofer): apoiada no chão, centro acústico a 0,30 m de altura, em x = 13,30 m e y = 2,50 m. Direção: 0° na horizontal (0° = para o fundo) e 0° na vertical. O comportamento dos graves depende da sala. Ajuste no local.",
+        "texto": "Caixa 8 (subwoofer): apoiada no chão, centro acústico a 0,30 m de altura, em x = 12,70 m e y = 2,50 m. Direção: 0° na horizontal (0° = para o fundo) e 0° na vertical. O comportamento dos graves depende da sala. Ajuste no local.",
         "entradas": [
           "Sala: 15,0 m de largura x 25,0 m de profundidade x 6,0 m de pé-direito (informado)",
           "Palco: 3,0 m de profundidade (padrão)",
@@ -3558,7 +3558,7 @@
       {
         "id": "requisitos",
         "titulo": "Características mínimas de cada caixa",
-        "texto": "Características mínimas de cada caixa principal: SPL máximo contínuo a 1 m de pelo menos 133 dB (campo livre); Montagem permitida pelo fabricante: parede; Peso de até 40 kg para parede; Cobertura usada no layout: 90° x 60° (H x V).",
+        "texto": "Características mínimas de cada caixa principal: SPL máximo contínuo a 1 m de pelo menos 133 dB (campo livre); Montagem: qualquer uma permitida pelo fabricante (o layout de referência usou parede); Peso de até 40 kg para parede; Cobertura usada no layout: 90° x 60° (H x V).",
         "entradas": [],
         "regra": "C8 passo 2: requisitos calculados para o caso",
         "parametros": [
@@ -3865,7 +3865,7 @@
       {
         "id": "reverberacao",
         "titulo": "Acústica da sala",
-        "texto": "Classe média (3 pontos). Reverberação moderada. Mire as caixas no público e evite apontá-las para paredes lisas ou vidro.",
+        "texto": "Risco médio de reverberação (3 pontos). Reverberação moderada. Mire as caixas no público e evite apontá-las para paredes lisas ou vidro.",
         "entradas": [
           "Superfícies: mistas",
           "Palma ecoa: um_pouco",
