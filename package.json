@@ -7,7 +7,7 @@
     "dev": "next dev",
     "dev:demo": "CATALOG_MODE=demo npm run -s catalog:snapshot && CATALOG_MODE=demo next dev",
     "build": "npm run catalog:validate && npm run catalog:snapshot && next build",
-    "build:demo": "CATALOG_MODE=demo npm run catalog:validate && npm run catalog:snapshot && CATALOG_MODE=demo next build",
+    "build:demo": "CATALOG_MODE=demo npm run catalog:validate && CATALOG_MODE=demo npm run catalog:snapshot && CATALOG_MODE=demo next build",
     "start": "next start",
     "test": "vitest run",
     "test:watch": "vitest",
