@@ -1,0 +1,7 @@
+{
+  "fonte": "https://support.biamp.com/General/Audio/Calculating_PAG_and_NAG",
+  "nota": "PENDENTE: o site da Biamp estava bloqueado no ambiente de implementação. Preencha as distâncias do exemplo publicado (mesma unidade) e mude 'preenchido' para true. A SPEC diz que o resultado esperado é PAG 4 dB e NAG 9 dB; e PAG 15 dB no segundo exemplo com Ds = 0,4 m.",
+  "preenchido": false,
+  "exemplo1": { "D0": null, "D1": null, "D2": null, "D3": null, "Ds": null, "NOM": 1, "FSM": 6, "PAG": 4, "NAG": 9 },
+  "exemplo2": { "D0": null, "D1": null, "D2": null, "D3": null, "Ds": 0.4, "NOM": 1, "FSM": 6, "PAG": 15 }
+}

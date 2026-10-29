@@ -579,15 +579,15 @@
             "modulos": 2,
             "anguloSplay": 4,
             "H": 100,
-            "V": 30,
+            "V": 40,
             "alcanceNominal_m": 16
           },
           {
             "modulos": 4,
             "anguloSplay": 3,
             "H": 100,
-            "V": 22,
-            "alcanceNominal_m": 26,
+            "V": 30,
+            "alcanceNominal_m": 28,
             "spl_por_distancia": [
               {
                 "distancia_m": 5,
@@ -611,7 +611,7 @@
             "modulos": 6,
             "anguloSplay": 2,
             "H": 100,
-            "V": 16,
+            "V": 24,
             "alcanceNominal_m": 36,
             "spl_por_distancia": [
               {

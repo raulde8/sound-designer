@@ -10,11 +10,11 @@ export type SpecStatus = z.infer<typeof SpecStatus>;
 const dataISO = z.string().regex(/^\d{4}-\d{2}-\d{2}$/, { message: "Data no formato AAAA-MM-DD." });
 
 /** Valor de especificação com fonte e data (SpecValue<T>). Todo campo crítico usa este formato. */
-export function specValue<T extends z.ZodType, C extends z.ZodType = z.ZodString>(valor: T, condicao?: C) {
+export function specValue<T extends z.ZodType, C extends z.ZodType>(valor: T, condicao: C) {
   return z.object({
     valor,
     unidade: z.string(),
-    condicaoMedicao: (condicao ?? z.string()).optional(),
+    condicaoMedicao: condicao.optional(),
     /** URL ou nome de arquivo da ficha técnica. */
     fonte: z.string(),
     dataVerificacao: z.union([dataISO, z.literal("")]),
@@ -74,7 +74,11 @@ export const ConfiguracaoArray = z.object({
 });
 export type ConfiguracaoArray = z.infer<typeof ConfiguracaoArray>;
 
-const sv = specValue;
+function sv<T extends z.ZodType>(valor: T): ReturnType<typeof specValue<T, z.ZodString>>;
+function sv<T extends z.ZodType, C extends z.ZodType>(valor: T, condicao: C): ReturnType<typeof specValue<T, C>>;
+function sv(valor: z.ZodType, condicao?: z.ZodType) {
+  return specValue(valor, condicao ?? z.string());
+}
 
 export const Especificacoes = z
   .object({
