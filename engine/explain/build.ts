@@ -244,7 +244,7 @@ export function montarConclusoes(r: Parcial, ctx: CasoPreparado): { conclusoes: 
     c(
       "reverberacao",
       "Acústica da sala",
-      rv ? `Classe ${rv.classe === "medio" ? "média" : rv.classe} (${rv.pontos} pontos). ${render(rv.classe === "alto" ? "reverbAlto" : rv.classe === "medio" ? "reverbMedio" : "reverbBaixo")}${rv.estimado ? " " + render("reverbNaoSei") : ""}` : render("reverbNaoAplica"),
+      rv ? `Risco ${rv.classe === "medio" ? "médio" : rv.classe} de reverberação (${rv.pontos} pontos). ${render(rv.classe === "alto" ? "reverbAlto" : rv.classe === "medio" ? "reverbMedio" : "reverbBaixo")}${rv.estimado ? " " + render("reverbNaoSei") : ""}` : render("reverbNaoAplica"),
       {
         entradas: [
           `Superfícies: ${caso.acustica.superficies?.valor ?? "não sei"}`,

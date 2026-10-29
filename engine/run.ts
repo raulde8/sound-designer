@@ -272,6 +272,12 @@ export function executarMotor(entradaBruta: unknown, op: OpcoesMotor): Resultado
     avisos.push("Nenhuma arquitetura do MVP atende às preferências de instalação informadas.");
   }
 
+  // Música ambiente: a fase 1.1 (sistema distribuído) tende a ser melhor (SPEC C10 caso 3).
+  if (caso.usos.valor.every((u) => u === "musica_ambiente" || u === "fala") && caso.usos.valor.includes("musica_ambiente"))
+    avisos.push(
+      "Para música ambiente, um sistema distribuído (caixas de teto ou de parede espalhadas pelo salão) costuma dar som mais uniforme e em volume mais baixo. Essa arquitetura entra na próxima fase do sistema; consulte um profissional.",
+    );
+
   // Módulo de palco (trilha 2), com cabos medidos na planta.
   const palco = entrada.trilha2 ? calcularPalco(entrada.trilha2, ctx, recomendacao?.configuracao ?? null, cat, data) : null;
 

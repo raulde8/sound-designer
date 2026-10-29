@@ -21,3 +21,16 @@ Formato: data | decisão | motivo.
 - **Formação "acústica"** não tem linha na tabela de níveis. Usei a linha "voz e violão" (85 dB, sub opcional).
 - **Limites de entrada** (B5 diz "área > limite do envelope" sem valor): rejeito sala acima de 3.000 m², dimensão acima de 100 m e pé-direito acima de 30 m. Área de público acima de 600 m² fica "parcial", não erro.
 - **Uniformidade** (C5) é tratada como aviso, não como reprovação do produto, porque a SPEC C7 só reprova quando "algum dado presente viola um requisito" e a uniformidade depende da posição, não só do produto.
+- **Front-fill na AR-2** (não previsto na SPEC): quando nenhuma configuração da tabela cobre a partir da primeira fileira, o motor tenta cobrir a partir de `alcanceFrontFill` (3 m) e adiciona front-fill. Sem isso, nenhum array montado acima do público passaria.
+- **Front-fill da AR-1:** gatilho só pela cobertura **horizontal** nominal nas laterais da primeira fileira, como na SPEC. O front-fill usa perfil genérico e seu nível não entra no critério de capacidade.
+- **Reforço/delay** usa o mesmo modelo da caixa principal; só na AR-1.
+- **Interpolação da tabela de SPL** do array: linear em log10(distância) entre os pontos publicados; fora do intervalo publicado não há nível.
+- **Status "validada" da geometria:** produto real, sala medida e no máximo 5% da área fora da cobertura nominal (`foraMaxValidada`, pendente). Senão, "validada com aproximação".
+- **Ruído "não sei"** usa a opção do meio (+5 dB), coerente com "classe média" da SPEC B2 item 10.
+- **Sub opcional** não entra na configuração por padrão; o usuário inclui com um botão.
+- **Phantom power:** exigido quando há bateria acústica (overheads condensadores) — hipótese.
+- **Cabos XLR:** além de "1 por microfone com fio + 1 por caixa ativa" (SPEC), contam-se 1 por DI e 1 por monitor (o monitor é caixa ativa).
+- **Planta:** vista de cima com o palco no topo; a origem da SPEC (canto do palco à esquerda de quem olha para o público) fica no canto superior direito do desenho.
+- **Build estático** (`output: "export"`): o motor roda no navegador; nada depende de servidor. O registro de snapshots inclui só o modo do build, então o bundle de produção não contém dados demo.
+- **Data de referência** (validade das faixas) é lida pela UI e gravada no link; o motor não lê o relógio.
+- **Mudança de versão do motor:** links antigos com outra `engineVersion` não podem rodar o motor antigo (não fica embarcado). O relatório informa e oferece recálculo. Catálogos e parâmetros antigos ficam embarcados por hash/versão.

@@ -141,7 +141,16 @@ export const AR1: ArchitectureGenerator = {
     const reqR = reforcos.length > 0 ? Math.max(...reforcos.map((c) => splRequeridoPara(c, pontosReforco, alvo.requerido).spl)) : 0;
     const reqBase = (spl: number, m: Montagem): Requisito[] => [
       { campo: "splContinuo1m", operador: ">=", valor: spl, unidade: "dB SPL", texto: `SPL máximo contínuo a 1 m de pelo menos ${spl} dB (campo livre)` },
-      { campo: "montagem", operador: "em", valor: m, unidade: "", texto: `Montagem permitida pelo fabricante: ${m}` },
+      {
+        campo: "montagem",
+        operador: "em",
+        valor: m,
+        unidade: "",
+        texto:
+          caso.instalacao.forma === "sem_preferencia"
+            ? `Montagem: qualquer uma permitida pelo fabricante (o layout de referência usou ${m})`
+            : `Montagem permitida pelo fabricante: ${m}`,
+      },
       { campo: "pesoMax", operador: "<=", valor: params.pesoMaxPorMontagem.valor[m], unidade: "kg", texto: `Peso de até ${params.pesoMaxPorMontagem.valor[m]} kg para ${m}` },
     ];
 

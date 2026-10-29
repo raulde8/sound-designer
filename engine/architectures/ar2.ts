@@ -124,7 +124,16 @@ export const AR2: ArchitectureGenerator = {
       { campo: "coberturaV", operador: ">=", valor: Math.ceil(span.span), unidade: "graus", texto: `Cobertura vertical publicada de pelo menos ${Math.ceil(span.span)}° numa configuração da tabela` },
       { campo: "coberturaH", operador: ">=", valor: H, unidade: "graus", texto: `Cobertura horizontal de referência: ${H}°` },
       { campo: "alcance", operador: ">=", valor: Math.ceil(span.dUltima), unidade: "m", texto: `Alcance nominal de pelo menos ${Math.ceil(span.dUltima)} m` },
-      { campo: "montagem", operador: "em", valor: montagem, unidade: "", texto: `Montagem permitida pelo fabricante: ${montagem}` },
+      {
+        campo: "montagem",
+        operador: "em",
+        valor: montagem,
+        unidade: "",
+        texto:
+          caso.instalacao.forma === "sem_preferencia"
+            ? `Montagem: qualquer uma permitida pelo fabricante (o layout de referência usou ${montagem})`
+            : `Montagem permitida pelo fabricante: ${montagem}`,
+      },
       {
         campo: "splContinuo1m",
         operador: ">=",

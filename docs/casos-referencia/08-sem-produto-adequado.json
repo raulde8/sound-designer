@@ -1,0 +1,1557 @@
+{
+  "caso": {
+    "id": "08-sem-produto-adequado",
+    "titulo": "Catálogo sem produto adequado (vertical array na parede)",
+    "esperado": "Perfil genérico exibido.",
+    "entrada": {
+      "trilha1": {
+        "tipoEstabelecimento": "salao_eventos",
+        "usos": [
+          "fala"
+        ],
+        "dimensoes": {
+          "tipo": "medidas",
+          "comprimento": 14,
+          "largura": 10,
+          "peDireito": 4
+        },
+        "publico": {
+          "quantidade": 120
+        },
+        "acustica": {
+          "superficies": "mistas",
+          "palma": "um_pouco",
+          "conversa": "facil"
+        },
+        "instalacao": {
+          "forma": "parede",
+          "formato": "coluna"
+        }
+      }
+    }
+  },
+  "resultado": {
+    "ok": true,
+    "versoes": {
+      "engineVersion": "0.1.0",
+      "catalogVersion": "4a2c5541d3d59c3f",
+      "paramsVersion": "params-v1-2026-10-29"
+    },
+    "dataReferencia": "2026-10-29",
+    "caso": {
+      "tipo": "salao_eventos",
+      "sala": {
+        "largura": 10,
+        "profundidade": 14,
+        "peDireito": 4
+      },
+      "salaOrigem": "usuario",
+      "profundidadePalco": 3,
+      "areaPublicoM2": 110,
+      "alturaOuvinte": 1.2,
+      "publico": 120,
+      "disposicao": "sentado",
+      "usos": [
+        "fala"
+      ],
+      "usosOrigem": "usuario",
+      "formacao": null,
+      "ambiente": "fechado",
+      "formato": "retangular",
+      "instalacao": {
+        "forma": "parede",
+        "formato": "coluna"
+      },
+      "mobilidade": "fixa",
+      "passoMalha": 0.5,
+      "passoAumentado": false
+    },
+    "escopo": {
+      "status": "suportado",
+      "itens": [],
+      "geometriaForaDoModelo": false,
+      "recomendarProjetista": false,
+      "naoCalculado": []
+    },
+    "alvo": {
+      "alvo": 75,
+      "reserva": 10,
+      "requerido": 85,
+      "usoDominante": "fala",
+      "ajusteRuido": 0,
+      "ruidoEstimado": false,
+      "limitadoPeloTeto": false,
+      "avisoSegurancaAuditiva": false,
+      "sub": "nao"
+    },
+    "reverb": {
+      "classe": "medio",
+      "pontos": 2,
+      "estimado": false
+    },
+    "arquiteturas": [
+      {
+        "id": "AR-1",
+        "nome": "Caixas ativas na frente (fontes pontuais)",
+        "disponivel": false,
+        "motivo": "Você preferiu coluna/vertical array."
+      },
+      {
+        "id": "AR-2",
+        "nome": "Vertical array na frente (coluna ou line array compacto)",
+        "disponivel": true
+      }
+    ],
+    "recomendacao": {
+      "arquitetura": "AR-2",
+      "nome": "Vertical array na frente (coluna ou line array compacto)",
+      "nomeSimples": "Duas colunas (vertical array) na frente, uma de cada lado do palco",
+      "motivoEscolha": "Única arquitetura disponível para as respostas dadas.",
+      "configuracao": {
+        "arquitetura": "AR-2",
+        "variante": "base",
+        "caixas": [
+          {
+            "id": "P-L",
+            "papel": "principal",
+            "lado": "L",
+            "posicao": {
+              "x": 0.2,
+              "y": 2.5,
+              "z": 3
+            },
+            "mira": {
+              "yaw": 22.65523270867979,
+              "pitch": -17.717659630840036
+            },
+            "montagem": "parede",
+            "fonte": {
+              "tipo": "generico",
+              "ref": "GEN-LINE-COMPACTO",
+              "nome": "Line array compacto (perfil genérico)",
+              "cobertura": {
+                "H": 100,
+                "V": 20
+              },
+              "nivel": {
+                "tipo": "requisito"
+              },
+              "meiaAltura": 0,
+              "montagensPermitidas": null,
+              "subcategoria": "line_array_compacto"
+            },
+            "movida": false,
+            "numero": 1
+          },
+          {
+            "id": "P-R",
+            "papel": "principal",
+            "lado": "R",
+            "posicao": {
+              "x": 9.8,
+              "y": 2.5,
+              "z": 3
+            },
+            "mira": {
+              "yaw": -22.655232708679794,
+              "pitch": -17.717659630840036
+            },
+            "montagem": "parede",
+            "fonte": {
+              "tipo": "generico",
+              "ref": "GEN-LINE-COMPACTO",
+              "nome": "Line array compacto (perfil genérico)",
+              "cobertura": {
+                "H": 100,
+                "V": 20
+              },
+              "nivel": {
+                "tipo": "requisito"
+              },
+              "meiaAltura": 0,
+              "montagensPermitidas": null,
+              "subcategoria": "line_array_compacto"
+            },
+            "movida": false,
+            "numero": 2
+          },
+          {
+            "id": "FF-1",
+            "papel": "front_fill",
+            "lado": "C",
+            "posicao": {
+              "x": 2.5,
+              "y": 2.8,
+              "z": 0.3
+            },
+            "mira": {
+              "yaw": 0,
+              "pitch": 27.89727103094762
+            },
+            "montagem": "chao",
+            "fonte": {
+              "tipo": "generico",
+              "ref": "GEN-ATIVA-10",
+              "nome": "Front-fill compacto (perfil genérico)",
+              "cobertura": {
+                "H": 90,
+                "V": 60
+              },
+              "nivel": {
+                "tipo": "requisito"
+              },
+              "meiaAltura": 0.3,
+              "montagensPermitidas": null,
+              "subcategoria": "10"
+            },
+            "movida": false,
+            "numero": 3
+          },
+          {
+            "id": "FF-2",
+            "papel": "front_fill",
+            "lado": "C",
+            "posicao": {
+              "x": 7.5,
+              "y": 2.8,
+              "z": 0.3
+            },
+            "mira": {
+              "yaw": 0,
+              "pitch": 27.89727103094762
+            },
+            "montagem": "chao",
+            "fonte": {
+              "tipo": "generico",
+              "ref": "GEN-ATIVA-10",
+              "nome": "Front-fill compacto (perfil genérico)",
+              "cobertura": {
+                "H": 90,
+                "V": 60
+              },
+              "nivel": {
+                "tipo": "requisito"
+              },
+              "meiaAltura": 0.3,
+              "montagensPermitidas": null,
+              "subcategoria": "10"
+            },
+            "movida": false,
+            "numero": 4
+          }
+        ],
+        "atrasos": [],
+        "frontFill": true,
+        "configArray": {
+          "modulos": 0,
+          "H": 100,
+          "V": 20,
+          "coberturaAPartirDe": 6
+        },
+        "requisitos": {
+          "principal": [
+            {
+              "campo": "coberturaV",
+              "operador": ">=",
+              "valor": 19,
+              "unidade": "graus",
+              "texto": "Cobertura vertical publicada de pelo menos 19° numa configuração da tabela"
+            },
+            {
+              "campo": "coberturaH",
+              "operador": ">=",
+              "valor": 100,
+              "unidade": "graus",
+              "texto": "Cobertura horizontal de referência: 100°"
+            },
+            {
+              "campo": "alcance",
+              "operador": ">=",
+              "valor": 13,
+              "unidade": "m",
+              "texto": "Alcance nominal de pelo menos 13 m"
+            },
+            {
+              "campo": "montagem",
+              "operador": "em",
+              "valor": "parede",
+              "unidade": "",
+              "texto": "Montagem permitida pelo fabricante: parede"
+            },
+            {
+              "campo": "splContinuo1m",
+              "operador": ">=",
+              "valor": 85,
+              "unidade": "dB SPL",
+              "texto": "SPL contínuo publicado por distância que entregue 85 dB a 13 m"
+            }
+          ],
+          "front_fill": [
+            {
+              "campo": "montagem",
+              "operador": "em",
+              "valor": "chao",
+              "unidade": "",
+              "texto": "Caixa compacta apoiada na boca do palco"
+            }
+          ]
+        },
+        "avisos": [
+          "O array não cobre as primeiras fileiras a partir da altura de montagem. Ele cobre a partir de 3 m da primeira fileira; front-fill adicionado."
+        ]
+      },
+      "equipamentos": [
+        {
+          "ref": "GEN-LINE-COMPACTO",
+          "nome": "Line array compacto (perfil genérico)",
+          "tipo": "generico",
+          "papel": "principal",
+          "montagem": "parede",
+          "quantidade": 2,
+          "numeros": [
+            1,
+            2
+          ]
+        },
+        {
+          "ref": "GEN-ATIVA-10",
+          "nome": "Front-fill compacto (perfil genérico)",
+          "tipo": "generico",
+          "papel": "front_fill",
+          "montagem": "chao",
+          "quantidade": 2,
+          "numeros": [
+            3,
+            4
+          ]
+        }
+      ],
+      "avaliacao": {
+        "pct": {
+          "coberto": 0.9363636363636364,
+          "borda": 0.05,
+          "fora": 0.013636363636363636
+        },
+        "nivel": null,
+        "capacidade": "pendente",
+        "motivoCapacidade": "Perfil genérico: o nível é um requisito mínimo, não uma avaliação de produto."
+      },
+      "mapa": {
+        "passo": 0.5,
+        "x0": 0,
+        "y0": 3,
+        "nx": 20,
+        "ny": 22,
+        "celulas": "fffcbbcbbbbbbcbbcfffbbccccccbccbccccccbbbbccccccccccccccccbbbccccccccccccccccccbcccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccc"
+      },
+      "produto": null,
+      "perfilGenerico": {
+        "id": "GEN-LINE-COMPACTO",
+        "categoria": "vertical_array",
+        "subcategoria": "line_array_compacto",
+        "nome": "Line array compacto (perfil genérico)",
+        "rotulo": "Perfil genérico - especificação mínima, não é um produto.",
+        "requisitos": [
+          {
+            "campo": "coberturaV",
+            "operador": ">=",
+            "valor": 19,
+            "unidade": "graus",
+            "texto": "Cobertura vertical publicada de pelo menos 19° numa configuração da tabela"
+          },
+          {
+            "campo": "coberturaH",
+            "operador": ">=",
+            "valor": 100,
+            "unidade": "graus",
+            "texto": "Cobertura horizontal de referência: 100°"
+          },
+          {
+            "campo": "alcance",
+            "operador": ">=",
+            "valor": 13,
+            "unidade": "m",
+            "texto": "Alcance nominal de pelo menos 13 m"
+          },
+          {
+            "campo": "montagem",
+            "operador": "em",
+            "valor": "parede",
+            "unidade": "",
+            "texto": "Montagem permitida pelo fabricante: parede"
+          },
+          {
+            "campo": "splContinuo1m",
+            "operador": ">=",
+            "valor": 85,
+            "unidade": "dB SPL",
+            "texto": "SPL contínuo publicado por distância que entregue 85 dB a 13 m"
+          }
+        ],
+        "faixa": {
+          "minimo": 15000,
+          "maximo": 25000,
+          "dataVerificacao": "2026-10-01",
+          "fonte": "demo:ficticio (valores inventados)",
+          "ids": [
+            "demo-fx-line-p"
+          ]
+        }
+      },
+      "candidatos": [
+        {
+          "produtoId": "demo-coluna-8",
+          "nome": "Demo Coluna 8",
+          "marca": "Demo",
+          "categoria": "vertical_array",
+          "subcategoria": "coluna",
+          "porte": "intermediaria",
+          "status": "incompativel",
+          "motivos": [
+            "O fabricante não permite a montagem escolhida."
+          ],
+          "faltando": [],
+          "quantidadeCaixas": 0,
+          "avisos": [],
+          "faixa": {
+            "minimo": 6000,
+            "maximo": 9000,
+            "dataVerificacao": "2026-10-01",
+            "fonte": "demo:ficticio (valores inventados)",
+            "ids": [
+              "demo-fx-coluna-i"
+            ]
+          }
+        },
+        {
+          "produtoId": "demo-line-6",
+          "nome": "Demo Line 6",
+          "marca": "Demo",
+          "categoria": "vertical_array",
+          "subcategoria": "line_array_compacto",
+          "porte": "profissional",
+          "status": "incompativel",
+          "motivos": [
+            "O fabricante não permite a montagem escolhida."
+          ],
+          "faltando": [],
+          "quantidadeCaixas": 0,
+          "avisos": [],
+          "faixa": {
+            "minimo": 15000,
+            "maximo": 25000,
+            "dataVerificacao": "2026-10-01",
+            "fonte": "demo:ficticio (valores inventados)",
+            "ids": [
+              "demo-fx-line-p"
+            ]
+          }
+        }
+      ],
+      "semProdutoAdequado": true,
+      "sub": {
+        "regra": "nao_recomendado",
+        "incluido": false,
+        "escolhido": {
+          "produtoId": "demo-sub-15",
+          "nome": "Demo Sub 15",
+          "marca": "Demo",
+          "subcategoria": "15",
+          "porte": "intermediaria",
+          "status": "compativel",
+          "motivos": [],
+          "faltando": [],
+          "porLado": 1,
+          "pareamentoFabricante": false,
+          "faixa": {
+            "minimo": 4000,
+            "maximo": 6500,
+            "dataVerificacao": "2026-10-01",
+            "fonte": "demo:ficticio (valores inventados)",
+            "ids": [
+              "demo-fx-sub15-i"
+            ]
+          }
+        },
+        "perfilGenerico": null,
+        "candidatos": [
+          {
+            "produtoId": "demo-sub-15",
+            "nome": "Demo Sub 15",
+            "marca": "Demo",
+            "subcategoria": "15",
+            "porte": "intermediaria",
+            "status": "compativel",
+            "motivos": [],
+            "faltando": [],
+            "porLado": 1,
+            "pareamentoFabricante": false,
+            "faixa": {
+              "minimo": 4000,
+              "maximo": 6500,
+              "dataVerificacao": "2026-10-01",
+              "fonte": "demo:ficticio (valores inventados)",
+              "ids": [
+                "demo-fx-sub15-i"
+              ]
+            }
+          },
+          {
+            "produtoId": "demo-sub-18",
+            "nome": "Demo Sub 18",
+            "marca": "Demo",
+            "subcategoria": "18",
+            "porte": "profissional",
+            "status": "compativel",
+            "motivos": [],
+            "faltando": [],
+            "porLado": 1,
+            "pareamentoFabricante": false,
+            "faixa": {
+              "minimo": 8000,
+              "maximo": 13000,
+              "dataVerificacao": "2026-10-01",
+              "fonte": "demo:ficticio (valores inventados)",
+              "ids": [
+                "demo-fx-sub18-p"
+              ]
+            }
+          }
+        ],
+        "porLado": 1
+      },
+      "statusValidacao": {
+        "geometria": "validada_aproximacao",
+        "capacidade": "pendente",
+        "acustica": "medio"
+      },
+      "ajustada": false
+    },
+    "alternativas": [],
+    "pagNag": {
+      "distancias": {
+        "D0": 12.353643187335468,
+        "D1": 2.7892651361962706,
+        "D2": 11.214945385511246,
+        "D3": 0.9810708435174291,
+        "Ds": 0.1499999999999999,
+        "NOM": 1
+      },
+      "pag": 20.227928596232218,
+      "nag": 22.001893685621425,
+      "margem": -1.7739650893892076,
+      "risco": "alto",
+      "tipoMicrofone": "mao",
+      "microfone": {
+        "x": 5,
+        "y": 2.5,
+        "z": 1.5
+      },
+      "falante": {
+        "x": 5,
+        "y": 2.35,
+        "z": 1.5
+      },
+      "aplicavel": true
+    },
+    "investimento": {
+      "minimo": 33000,
+      "maximo": 55000,
+      "referencia": "10/2026",
+      "itensSemFaixa": [],
+      "completo": true
+    },
+    "orcamento": null,
+    "palco": null,
+    "avisos": [
+      "O array não cobre as primeiras fileiras a partir da altura de montagem. Ele cobre a partir de 3 m da primeira fileira; front-fill adicionado."
+    ],
+    "conclusoes": [
+      {
+        "id": "nivel-alvo",
+        "titulo": "Nível sonoro necessário",
+        "texto": "Nível-alvo médio de 75 dB SPL no ouvinte, com reserva dinâmica de 10 dB. A caixa precisa entregar 85 dB na área coberta. Ajuste por ruído do local: +0 dB.",
+        "entradas": [
+          "Usos: fala/pregação (informado)",
+          "Ruído com o local funcionando: facil"
+        ],
+        "regra": "C5: maior nível-alvo entre os usos + ajuste por ruído, com teto",
+        "parametros": [
+          {
+            "id": "niveisPorUso",
+            "valor": {
+              "fala": {
+                "alvo": 75,
+                "reserva": 10,
+                "sub": "nao"
+              },
+              "musica_ambiente": {
+                "alvo": 70,
+                "reserva": 6,
+                "sub": "nao"
+              },
+              "musica_primeiro_plano": {
+                "alvo": 85,
+                "reserva": 10,
+                "sub": "sim"
+              },
+              "voz_violao": {
+                "alvo": 85,
+                "reserva": 10,
+                "sub": "opcional"
+              },
+              "banda_bateria": {
+                "alvo": 95,
+                "reserva": 10,
+                "sub": "sim"
+              },
+              "dj": {
+                "alvo": 98,
+                "reserva": 10,
+                "sub": "sim"
+              },
+              "video": {
+                "alvo": 80,
+                "reserva": 15,
+                "sub": "opcional"
+              }
+            },
+            "status": "pendente_validacao"
+          },
+          {
+            "id": "ajusteRuido",
+            "valor": {
+              "facil": 0,
+              "dificil": 5,
+              "muito_dificil": 10
+            },
+            "status": "pendente_validacao"
+          },
+          {
+            "id": "tetoAlvo",
+            "valor": 100,
+            "status": "pendente_validacao"
+          },
+          {
+            "id": "limiarSegurancaAuditiva",
+            "valor": 95,
+            "status": "pendente_validacao"
+          }
+        ],
+        "hipoteses": [],
+        "limitacoes": [
+          "Nível médio contínuo de referência. Não garante limite de ruído para vizinhos nem segurança auditiva."
+        ]
+      },
+      {
+        "id": "escopo",
+        "titulo": "Dentro do modelo?",
+        "texto": "O ambiente está dentro do envelope do MVP.",
+        "entradas": [
+          "Sala: 10,0 m de largura x 14,0 m de profundidade x 4,0 m de pé-direito (informado)",
+          "Palco: 3,0 m de profundidade (padrão)",
+          "Público: 120 pessoas, sentadas (altura do ouvinte 1,2 m)"
+        ],
+        "regra": "B5: envelope do MVP",
+        "parametros": [
+          {
+            "id": "envelope",
+            "valor": {
+              "areaPublicoSuportada": 600,
+              "distanciaSuportada": 30,
+              "distanciaParcial": 45,
+              "peDireitoMin": 2.5,
+              "peDireitoMax": 10,
+              "publicoEncaminhar": 1000,
+              "profundidadeAbertoEncaminhar": 45
+            },
+            "status": "pendente_validacao"
+          },
+          {
+            "id": "areaPorPessoa",
+            "valor": {
+              "sentado": 0.8,
+              "em_pe": 0.5,
+              "mesas": 1.5
+            },
+            "status": "pendente_validacao"
+          }
+        ],
+        "hipoteses": [],
+        "limitacoes": []
+      },
+      {
+        "id": "arquitetura",
+        "titulo": "Configuração recomendada",
+        "texto": "Recomendação: Duas colunas (vertical array) na frente, uma de cada lado do palco. Única arquitetura disponível para as respostas dadas.",
+        "entradas": [
+          "Sala: 10,0 m de largura x 14,0 m de profundidade x 4,0 m de pé-direito (informado)",
+          "Palco: 3,0 m de profundidade (padrão)",
+          "Público: 120 pessoas, sentadas (altura do ouvinte 1,2 m)",
+          "Instalação: parede, formato coluna, fixa"
+        ],
+        "regra": "C4: AR-2; preferência por vertical array acima de 18 m de profundidade ou com reverberação alta",
+        "parametros": [
+          {
+            "id": "profundidadePreferenciaArray",
+            "valor": 18,
+            "status": "pendente_validacao"
+          }
+        ],
+        "hipoteses": [
+          "A preferência entre caixas convencionais e vertical array é uma regra inicial do produto."
+        ],
+        "limitacoes": [
+          "Sala modelada como retângulo, sem obstáculos.",
+          "Não calcula reflexões, RT60 nem STI."
+        ]
+      },
+      {
+        "id": "caixas",
+        "titulo": "Quantidade e tipo de caixas",
+        "texto": "2 x Line array compacto (perfil genérico) (principal, na parede); 2 x Front-fill compacto (perfil genérico) (front-fill, apoiada no chão). A quantidade sai da regra da arquitetura AR-2 e do recálculo com o perfil genérico.",
+        "entradas": [
+          "Sala: 10,0 m de largura x 14,0 m de profundidade x 4,0 m de pé-direito (informado)",
+          "Palco: 3,0 m de profundidade (padrão)",
+          "Público: 120 pessoas, sentadas (altura do ouvinte 1,2 m)"
+        ],
+        "regra": "C4 AR-2: 1 array por lado; configuração pela tabela do fabricante",
+        "parametros": [
+          {
+            "id": "afastamentoParedeLateral",
+            "valor": {
+              "parede": 0.2,
+              "outras": 0.5
+            },
+            "status": "pendente_validacao"
+          },
+          {
+            "id": "recuoPalco",
+            "valor": 0.5,
+            "status": "pendente_validacao"
+          },
+          {
+            "id": "folgaTeto",
+            "valor": 0.3,
+            "status": "pendente_validacao"
+          },
+          {
+            "id": "alturaMaxParede",
+            "valor": 3.5,
+            "status": "pendente_validacao"
+          },
+          {
+            "id": "distMaxPontual",
+            "valor": 20,
+            "status": "pendente_validacao"
+          },
+          {
+            "id": "faixaPrimeiraFileira",
+            "valor": 1,
+            "status": "pendente_validacao"
+          },
+          {
+            "id": "larguraPorFrontFill",
+            "valor": 8,
+            "status": "pendente_validacao"
+          }
+        ],
+        "hipoteses": [
+          "Front-fill na boca do palco: a cobertura horizontal nominal das caixas principais não alcança as laterais da primeira fileira."
+        ],
+        "limitacoes": [
+          "O array é avaliado só pela tabela publicada pelo fabricante. Sem fórmula genérica e sem soma de módulos."
+        ]
+      },
+      {
+        "id": "caixa:P-L",
+        "titulo": "Caixa 1",
+        "texto": "Caixa 1 (principal): na parede, centro acústico a 3,00 m de altura, em x = 0,20 m e y = 2,50 m. Direção: 23° na horizontal (0° = para o fundo) e -18° na vertical. A direção horizontal mira o centro da última fileira; a inclinação mira 2/3 da profundidade da área de público.",
+        "entradas": [
+          "Sala: 10,0 m de largura x 14,0 m de profundidade x 4,0 m de pé-direito (informado)",
+          "Palco: 3,0 m de profundidade (padrão)",
+          "Público: 120 pessoas, sentadas (altura do ouvinte 1,2 m)"
+        ],
+        "regra": "C4 AR-1/AR-2: posição, altura e direção",
+        "parametros": [
+          {
+            "id": "afastamentoParedeLateral",
+            "valor": {
+              "parede": 0.2,
+              "outras": 0.5
+            },
+            "status": "pendente_validacao"
+          },
+          {
+            "id": "recuoPalco",
+            "valor": 0.5,
+            "status": "pendente_validacao"
+          },
+          {
+            "id": "folgaTeto",
+            "valor": 0.3,
+            "status": "pendente_validacao"
+          },
+          {
+            "id": "alturaMaxParede",
+            "valor": 3.5,
+            "status": "pendente_validacao"
+          }
+        ],
+        "hipoteses": [
+          "Fonte: Line array compacto (perfil genérico) — Perfil genérico - especificação mínima, não é um produto."
+        ],
+        "limitacoes": [
+          "O sistema não dimensiona suporte, ancoragem nem estrutura."
+        ]
+      },
+      {
+        "id": "caixa:P-R",
+        "titulo": "Caixa 2",
+        "texto": "Caixa 2 (principal): na parede, centro acústico a 3,00 m de altura, em x = 9,80 m e y = 2,50 m. Direção: -23° na horizontal (0° = para o fundo) e -18° na vertical. A direção horizontal mira o centro da última fileira; a inclinação mira 2/3 da profundidade da área de público.",
+        "entradas": [
+          "Sala: 10,0 m de largura x 14,0 m de profundidade x 4,0 m de pé-direito (informado)",
+          "Palco: 3,0 m de profundidade (padrão)",
+          "Público: 120 pessoas, sentadas (altura do ouvinte 1,2 m)"
+        ],
+        "regra": "C4 AR-1/AR-2: posição, altura e direção",
+        "parametros": [
+          {
+            "id": "afastamentoParedeLateral",
+            "valor": {
+              "parede": 0.2,
+              "outras": 0.5
+            },
+            "status": "pendente_validacao"
+          },
+          {
+            "id": "recuoPalco",
+            "valor": 0.5,
+            "status": "pendente_validacao"
+          },
+          {
+            "id": "folgaTeto",
+            "valor": 0.3,
+            "status": "pendente_validacao"
+          },
+          {
+            "id": "alturaMaxParede",
+            "valor": 3.5,
+            "status": "pendente_validacao"
+          }
+        ],
+        "hipoteses": [
+          "Fonte: Line array compacto (perfil genérico) — Perfil genérico - especificação mínima, não é um produto."
+        ],
+        "limitacoes": [
+          "O sistema não dimensiona suporte, ancoragem nem estrutura."
+        ]
+      },
+      {
+        "id": "caixa:FF-1",
+        "titulo": "Caixa 3",
+        "texto": "Caixa 3 (front-fill): apoiada no chão, centro acústico a 0,30 m de altura, em x = 2,50 m e y = 2,80 m. Direção: 0° na horizontal (0° = para o fundo) e 28° na vertical.",
+        "entradas": [
+          "Sala: 10,0 m de largura x 14,0 m de profundidade x 4,0 m de pé-direito (informado)",
+          "Palco: 3,0 m de profundidade (padrão)",
+          "Público: 120 pessoas, sentadas (altura do ouvinte 1,2 m)"
+        ],
+        "regra": "C4 AR-1: front-fill",
+        "parametros": [
+          {
+            "id": "afastamentoParedeLateral",
+            "valor": {
+              "parede": 0.2,
+              "outras": 0.5
+            },
+            "status": "pendente_validacao"
+          },
+          {
+            "id": "recuoPalco",
+            "valor": 0.5,
+            "status": "pendente_validacao"
+          },
+          {
+            "id": "folgaTeto",
+            "valor": 0.3,
+            "status": "pendente_validacao"
+          },
+          {
+            "id": "alturaMaxParede",
+            "valor": 3.5,
+            "status": "pendente_validacao"
+          }
+        ],
+        "hipoteses": [
+          "Fonte: Front-fill compacto (perfil genérico) — Perfil genérico - especificação mínima, não é um produto."
+        ],
+        "limitacoes": []
+      },
+      {
+        "id": "caixa:FF-2",
+        "titulo": "Caixa 4",
+        "texto": "Caixa 4 (front-fill): apoiada no chão, centro acústico a 0,30 m de altura, em x = 7,50 m e y = 2,80 m. Direção: 0° na horizontal (0° = para o fundo) e 28° na vertical.",
+        "entradas": [
+          "Sala: 10,0 m de largura x 14,0 m de profundidade x 4,0 m de pé-direito (informado)",
+          "Palco: 3,0 m de profundidade (padrão)",
+          "Público: 120 pessoas, sentadas (altura do ouvinte 1,2 m)"
+        ],
+        "regra": "C4 AR-1: front-fill",
+        "parametros": [
+          {
+            "id": "afastamentoParedeLateral",
+            "valor": {
+              "parede": 0.2,
+              "outras": 0.5
+            },
+            "status": "pendente_validacao"
+          },
+          {
+            "id": "recuoPalco",
+            "valor": 0.5,
+            "status": "pendente_validacao"
+          },
+          {
+            "id": "folgaTeto",
+            "valor": 0.3,
+            "status": "pendente_validacao"
+          },
+          {
+            "id": "alturaMaxParede",
+            "valor": 3.5,
+            "status": "pendente_validacao"
+          }
+        ],
+        "hipoteses": [
+          "Fonte: Front-fill compacto (perfil genérico) — Perfil genérico - especificação mínima, não é um produto."
+        ],
+        "limitacoes": []
+      },
+      {
+        "id": "cobertura",
+        "titulo": "Cobertura nominal",
+        "texto": "94% da área de público fica dentro da cobertura nominal, 5% na borda e 1% fora. Cobertura nominal declarada pelo fabricante. Aproximação geométrica, não é medição.",
+        "entradas": [
+          "Sala: 10,0 m de largura x 14,0 m de profundidade x 4,0 m de pé-direito (informado)",
+          "Palco: 3,0 m de profundidade (padrão)",
+          "Público: 120 pessoas, sentadas (altura do ouvinte 1,2 m)",
+          "Cobertura usada: 100° x 20° (H x V)"
+        ],
+        "regra": "C5 nível A: ponto coberto se |h| <= H/2 e |v| <= V/2; borda até +10°",
+        "parametros": [
+          {
+            "id": "bordaCobertura",
+            "valor": 10,
+            "status": "pendente_validacao"
+          },
+          {
+            "id": "passoMalha",
+            "valor": 0.5,
+            "status": "referencia"
+          },
+          {
+            "id": "alturaOuvinteSentado",
+            "valor": 1.2,
+            "status": "pendente_validacao"
+          },
+          {
+            "id": "alturaOuvinteEmPe",
+            "valor": 1.7,
+            "status": "pendente_validacao"
+          },
+          {
+            "id": "foraMaxValidada",
+            "valor": 0.05,
+            "status": "pendente_validacao"
+          },
+          {
+            "id": "coberturaReferenciaPontual",
+            "valor": {
+              "H": 90,
+              "V": 60
+            },
+            "status": "pendente_validacao"
+          }
+        ],
+        "hipoteses": [
+          "Cobertura de referência do perfil genérico; o produto real recalcula o layout."
+        ],
+        "limitacoes": [
+          "Não atribui atenuação em dB fora do eixo.",
+          "Sala modelada como retângulo, sem obstáculos.",
+          "Não calcula reflexões, RT60 nem STI."
+        ]
+      },
+      {
+        "id": "capacidade",
+        "titulo": "Capacidade sonora",
+        "texto": "Recomendação geométrica disponível. Requisito de nível calculado: a caixa precisa de SPL contínuo de pelo menos 85 dB a 1 m. A validação depende do produto.",
+        "entradas": [
+          "Requerido: 85 dB (alvo 75 + reserva 10)"
+        ],
+        "regra": "C5 nível B: L(d) = SPL contínuo a 1 m - 20 log10(d), só dentro da cobertura nominal; cada ponto recebe a fonte mais forte",
+        "parametros": [
+          {
+            "id": "uniformidadeMax",
+            "valor": 6,
+            "status": "pendente_validacao"
+          },
+          {
+            "id": "toleranciaNivel",
+            "valor": 3,
+            "status": "pendente_validacao"
+          },
+          {
+            "id": "tamanhoPorSplRequerido",
+            "valor": [
+              {
+                "ate": 124,
+                "tamanho": 10
+              },
+              {
+                "ate": 128,
+                "tamanho": 12
+              },
+              {
+                "ate": 999,
+                "tamanho": 15
+              }
+            ],
+            "status": "pendente_validacao"
+          }
+        ],
+        "hipoteses": [],
+        "limitacoes": [
+          "O sistema não soma fontes (sinais correlacionados): o resultado é conservador.",
+          "Só nível direto, sem contribuição da sala."
+        ]
+      },
+      {
+        "id": "requisitos",
+        "titulo": "Características mínimas de cada caixa",
+        "texto": "Características mínimas de cada caixa principal: Cobertura vertical publicada de pelo menos 19° numa configuração da tabela; Cobertura horizontal de referência: 100°; Alcance nominal de pelo menos 13 m; Montagem permitida pelo fabricante: parede; SPL contínuo publicado por distância que entregue 85 dB a 13 m.",
+        "entradas": [],
+        "regra": "C8 passo 2: requisitos calculados para o caso",
+        "parametros": [
+          {
+            "id": "pesoMaxPorMontagem",
+            "valor": {
+              "pedestal": 30,
+              "parede": 40,
+              "suspensa": 60,
+              "chao": 999
+            },
+            "status": "pendente_validacao"
+          },
+          {
+            "id": "tamanhoPorSplRequerido",
+            "valor": [
+              {
+                "ate": 124,
+                "tamanho": 10
+              },
+              {
+                "ate": 128,
+                "tamanho": 12
+              },
+              {
+                "ate": 999,
+                "tamanho": 15
+              }
+            ],
+            "status": "pendente_validacao"
+          }
+        ],
+        "hipoteses": [
+          "Perfil genérico - especificação mínima, não é um produto."
+        ],
+        "limitacoes": [
+          "Peso máximo por montagem não é dimensionamento estrutural."
+        ]
+      },
+      {
+        "id": "produtos",
+        "titulo": "Produtos do catálogo",
+        "texto": "Nenhum modelo do nosso catálogo verificado atende a este requisito. 2 produto(s) do catálogo avaliado(s): 0 compatível(is), 0 parcial(is), 2 incompatível(is), 0 não avaliável(is). Ordem: (1) status de compatibilidade, (2) menos caixas, (3) maior margem de nível até +6 dB, (4) menor faixa de investimento. Nenhuma marca recebe bônus.",
+        "entradas": [],
+        "regra": "C7 status de compatibilidade; C8 ranking",
+        "parametros": [
+          {
+            "id": "margemNivelMaxRanking",
+            "valor": 6,
+            "status": "pendente_validacao"
+          }
+        ],
+        "hipoteses": [
+          "Ausência de dado nunca reprova nem aprova um produto."
+        ],
+        "limitacoes": [
+          "Só produtos do catálogo verificado são avaliados."
+        ]
+      },
+      {
+        "id": "produto:demo-coluna-8",
+        "titulo": "Demo Coluna 8",
+        "texto": "Status: incompativel. O fabricante não permite a montagem escolhida.",
+        "entradas": [],
+        "regra": "C7 status de compatibilidade",
+        "parametros": [
+          {
+            "id": "pesoMaxPorMontagem",
+            "valor": {
+              "pedestal": 30,
+              "parede": 40,
+              "suspensa": 60,
+              "chao": 999
+            },
+            "status": "pendente_validacao"
+          },
+          {
+            "id": "uniformidadeMax",
+            "valor": 6,
+            "status": "pendente_validacao"
+          }
+        ],
+        "hipoteses": [],
+        "limitacoes": []
+      },
+      {
+        "id": "produto:demo-line-6",
+        "titulo": "Demo Line 6",
+        "texto": "Status: incompativel. O fabricante não permite a montagem escolhida.",
+        "entradas": [],
+        "regra": "C7 status de compatibilidade",
+        "parametros": [
+          {
+            "id": "pesoMaxPorMontagem",
+            "valor": {
+              "pedestal": 30,
+              "parede": 40,
+              "suspensa": 60,
+              "chao": 999
+            },
+            "status": "pendente_validacao"
+          },
+          {
+            "id": "uniformidadeMax",
+            "valor": 6,
+            "status": "pendente_validacao"
+          }
+        ],
+        "hipoteses": [],
+        "limitacoes": []
+      },
+      {
+        "id": "sub",
+        "titulo": "Subwoofer",
+        "texto": "Subwoofer não recomendado para fala e música ambiente.",
+        "entradas": [
+          "Usos: fala/pregação (informado)"
+        ],
+        "regra": "C4 AR-3: regra por uso; quantidade pelo pareamento do fabricante",
+        "parametros": [
+          {
+            "id": "niveisPorUso",
+            "valor": {
+              "fala": {
+                "alvo": 75,
+                "reserva": 10,
+                "sub": "nao"
+              },
+              "musica_ambiente": {
+                "alvo": 70,
+                "reserva": 6,
+                "sub": "nao"
+              },
+              "musica_primeiro_plano": {
+                "alvo": 85,
+                "reserva": 10,
+                "sub": "sim"
+              },
+              "voz_violao": {
+                "alvo": 85,
+                "reserva": 10,
+                "sub": "opcional"
+              },
+              "banda_bateria": {
+                "alvo": 95,
+                "reserva": 10,
+                "sub": "sim"
+              },
+              "dj": {
+                "alvo": 98,
+                "reserva": 10,
+                "sub": "sim"
+              },
+              "video": {
+                "alvo": 80,
+                "reserva": 15,
+                "sub": "opcional"
+              }
+            },
+            "status": "pendente_validacao"
+          },
+          {
+            "id": "subPorLadoPadrao",
+            "valor": 1,
+            "status": "pendente_validacao"
+          }
+        ],
+        "hipoteses": [],
+        "limitacoes": [
+          "Sem mapa de graves."
+        ]
+      },
+      {
+        "id": "reverberacao",
+        "titulo": "Acústica da sala",
+        "texto": "Classe média (2 pontos). Reverberação moderada. Mire as caixas no público e evite apontá-las para paredes lisas ou vidro.",
+        "entradas": [
+          "Superfícies: mistas",
+          "Palma ecoa: um_pouco",
+          "Volume: 560 m³",
+          "Ambiente: fechado"
+        ],
+        "regra": "C5 nível C: pontuação qualitativa",
+        "parametros": [
+          {
+            "id": "reverberacao",
+            "valor": {
+              "superficies": {
+                "duras": 2,
+                "mistas": 1,
+                "absorventes": 0
+              },
+              "palma": {
+                "sim": 2,
+                "um_pouco": 1,
+                "nao": 0
+              },
+              "volumeLimiar": 1500,
+              "pontosVolume": 1,
+              "classes": {
+                "baixoAte": 1,
+                "medioAte": 3
+              }
+            },
+            "status": "pendente_validacao"
+          }
+        ],
+        "hipoteses": [],
+        "limitacoes": [
+          "O sistema não calcula RT60 nem STI: Sabine e Eyring assumem campo difuso, e essa hipótese falha em muitas salas reais."
+        ]
+      },
+      {
+        "id": "pagnag",
+        "titulo": "Risco de microfonia",
+        "texto": "PAG 20,2 dB, NAG 22,0 dB, margem -1,8 dB: risco alto de microfonia. Estimativa simplificada (lei do inverso do quadrado). Não substitui teste no local.",
+        "entradas": [
+          "D0 (falante -> ouvinte mais distante): 12,35 m",
+          "D1 (microfone -> caixa mais próxima): 2,79 m",
+          "D2 (ouvinte mais distante -> caixa mais próxima): 11,21 m",
+          "D3 (falante -> ouvinte mais próximo): 0,98 m",
+          "Ds (falante -> microfone): 0,15 m (microfone de mão)",
+          "NOM (microfones abertos): 1"
+        ],
+        "regra": "C5: PAG = 20log(D0·D1/(D2·Ds)) - 10log(NOM) - 6; NAG = 20log(D0/D3) (Biamp, Shure)",
+        "parametros": [
+          {
+            "id": "pagNag",
+            "valor": {
+              "dsMao": 0.15,
+              "dsGooseneck": 0.3,
+              "fsm": 6,
+              "margemBaixo": 3,
+              "margemModerado": 0
+            },
+            "status": "pendente_validacao"
+          },
+          {
+            "id": "posicaoMicrofone",
+            "valor": {
+              "recuoBordaPalco": 0.5,
+              "altura": 1.5
+            },
+            "status": "pendente_validacao"
+          }
+        ],
+        "hipoteses": [
+          "Componentes omnidirecionais: pior caso.",
+          "Microfone no centro, na frente do palco."
+        ],
+        "limitacoes": [
+          "Sinal de risco, não garantia."
+        ]
+      },
+      {
+        "id": "investimento",
+        "titulo": "Investimento estimado",
+        "texto": "Investimento estimado em equipamentos: R$ 33.000 a R$ 55.000 (referência de mercado em 10/2026, sem instalação).",
+        "entradas": [],
+        "regra": "C7: soma das faixas por categoria e porte; faixa vencida não aparece",
+        "parametros": [
+          {
+            "id": "validadeFaixaDias",
+            "valor": 90,
+            "status": "referencia"
+          }
+        ],
+        "hipoteses": [],
+        "limitacoes": [
+          "Não inclui instalação, frete nem acessórios sem faixa.",
+          "Não é preço de produto."
+        ]
+      }
+    ],
+    "profissional": [
+      "A capacidade sonora não foi validada com dados do fabricante: confirme o SPL com o fabricante ou com medição antes de comprar.",
+      "Risco alto de microfonia: teste o sistema no local com um técnico antes do uso.",
+      "Este é um pré-dimensionamento. Os parâmetros marcados como 'pendente de validação' ainda não foram revisados por um projetista."
+    ],
+    "parametrosPendentes": [
+      {
+        "id": "afastamentoParedeLateral",
+        "valor": {
+          "parede": 0.2,
+          "outras": 0.5
+        },
+        "status": "pendente_validacao"
+      },
+      {
+        "id": "ajusteRuido",
+        "valor": {
+          "facil": 0,
+          "dificil": 5,
+          "muito_dificil": 10
+        },
+        "status": "pendente_validacao"
+      },
+      {
+        "id": "alturaMaxParede",
+        "valor": 3.5,
+        "status": "pendente_validacao"
+      },
+      {
+        "id": "alturaOuvinteEmPe",
+        "valor": 1.7,
+        "status": "pendente_validacao"
+      },
+      {
+        "id": "alturaOuvinteSentado",
+        "valor": 1.2,
+        "status": "pendente_validacao"
+      },
+      {
+        "id": "areaPorPessoa",
+        "valor": {
+          "sentado": 0.8,
+          "em_pe": 0.5,
+          "mesas": 1.5
+        },
+        "status": "pendente_validacao"
+      },
+      {
+        "id": "bordaCobertura",
+        "valor": 10,
+        "status": "pendente_validacao"
+      },
+      {
+        "id": "coberturaReferenciaPontual",
+        "valor": {
+          "H": 90,
+          "V": 60
+        },
+        "status": "pendente_validacao"
+      },
+      {
+        "id": "distMaxPontual",
+        "valor": 20,
+        "status": "pendente_validacao"
+      },
+      {
+        "id": "envelope",
+        "valor": {
+          "areaPublicoSuportada": 600,
+          "distanciaSuportada": 30,
+          "distanciaParcial": 45,
+          "peDireitoMin": 2.5,
+          "peDireitoMax": 10,
+          "publicoEncaminhar": 1000,
+          "profundidadeAbertoEncaminhar": 45
+        },
+        "status": "pendente_validacao"
+      },
+      {
+        "id": "faixaPrimeiraFileira",
+        "valor": 1,
+        "status": "pendente_validacao"
+      },
+      {
+        "id": "folgaTeto",
+        "valor": 0.3,
+        "status": "pendente_validacao"
+      },
+      {
+        "id": "foraMaxValidada",
+        "valor": 0.05,
+        "status": "pendente_validacao"
+      },
+      {
+        "id": "larguraPorFrontFill",
+        "valor": 8,
+        "status": "pendente_validacao"
+      },
+      {
+        "id": "limiarSegurancaAuditiva",
+        "valor": 95,
+        "status": "pendente_validacao"
+      },
+      {
+        "id": "margemNivelMaxRanking",
+        "valor": 6,
+        "status": "pendente_validacao"
+      },
+      {
+        "id": "niveisPorUso",
+        "valor": {
+          "fala": {
+            "alvo": 75,
+            "reserva": 10,
+            "sub": "nao"
+          },
+          "musica_ambiente": {
+            "alvo": 70,
+            "reserva": 6,
+            "sub": "nao"
+          },
+          "musica_primeiro_plano": {
+            "alvo": 85,
+            "reserva": 10,
+            "sub": "sim"
+          },
+          "voz_violao": {
+            "alvo": 85,
+            "reserva": 10,
+            "sub": "opcional"
+          },
+          "banda_bateria": {
+            "alvo": 95,
+            "reserva": 10,
+            "sub": "sim"
+          },
+          "dj": {
+            "alvo": 98,
+            "reserva": 10,
+            "sub": "sim"
+          },
+          "video": {
+            "alvo": 80,
+            "reserva": 15,
+            "sub": "opcional"
+          }
+        },
+        "status": "pendente_validacao"
+      },
+      {
+        "id": "pagNag",
+        "valor": {
+          "dsMao": 0.15,
+          "dsGooseneck": 0.3,
+          "fsm": 6,
+          "margemBaixo": 3,
+          "margemModerado": 0
+        },
+        "status": "pendente_validacao"
+      },
+      {
+        "id": "pesoMaxPorMontagem",
+        "valor": {
+          "pedestal": 30,
+          "parede": 40,
+          "suspensa": 60,
+          "chao": 999
+        },
+        "status": "pendente_validacao"
+      },
+      {
+        "id": "posicaoMicrofone",
+        "valor": {
+          "recuoBordaPalco": 0.5,
+          "altura": 1.5
+        },
+        "status": "pendente_validacao"
+      },
+      {
+        "id": "profundidadePreferenciaArray",
+        "valor": 18,
+        "status": "pendente_validacao"
+      },
+      {
+        "id": "recuoPalco",
+        "valor": 0.5,
+        "status": "pendente_validacao"
+      },
+      {
+        "id": "reverberacao",
+        "valor": {
+          "superficies": {
+            "duras": 2,
+            "mistas": 1,
+            "absorventes": 0
+          },
+          "palma": {
+            "sim": 2,
+            "um_pouco": 1,
+            "nao": 0
+          },
+          "volumeLimiar": 1500,
+          "pontosVolume": 1,
+          "classes": {
+            "baixoAte": 1,
+            "medioAte": 3
+          }
+        },
+        "status": "pendente_validacao"
+      },
+      {
+        "id": "subPorLadoPadrao",
+        "valor": 1,
+        "status": "pendente_validacao"
+      },
+      {
+        "id": "tamanhoPorSplRequerido",
+        "valor": [
+          {
+            "ate": 124,
+            "tamanho": 10
+          },
+          {
+            "ate": 128,
+            "tamanho": 12
+          },
+          {
+            "ate": 999,
+            "tamanho": 15
+          }
+        ],
+        "status": "pendente_validacao"
+      },
+      {
+        "id": "tetoAlvo",
+        "valor": 100,
+        "status": "pendente_validacao"
+      },
+      {
+        "id": "toleranciaNivel",
+        "valor": 3,
+        "status": "pendente_validacao"
+      },
+      {
+        "id": "uniformidadeMax",
+        "valor": 6,
+        "status": "pendente_validacao"
+      }
+    ]
+  }
+}
