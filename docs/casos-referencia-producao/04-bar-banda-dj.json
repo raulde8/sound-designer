@@ -1,0 +1,3425 @@
+{
+  "caso": {
+    "id": "04-bar-banda-dj",
+    "titulo": "Bar 18 x 12 x 4 m, 180 pessoas, banda e DJ",
+    "esperado": "AR-1 ou AR-2 com sub; aviso de nível alto e segurança auditiva.",
+    "entrada": {
+      "trilha1": {
+        "tipoEstabelecimento": "bar",
+        "usos": [
+          "banda",
+          "dj"
+        ],
+        "formacaoBanda": "banda_bateria",
+        "dimensoes": {
+          "tipo": "medidas",
+          "comprimento": 18,
+          "largura": 12,
+          "peDireito": 4
+        },
+        "publico": {
+          "quantidade": 180,
+          "disposicao": "em_pe"
+        },
+        "acustica": {
+          "superficies": "mistas",
+          "palma": "um_pouco",
+          "conversa": "dificil"
+        }
+      }
+    }
+  },
+  "resultado": {
+    "ok": true,
+    "versoes": {
+      "engineVersion": "0.1.0",
+      "catalogVersion": "cb2deb34ea05d0eb",
+      "paramsVersion": "params-v1-2026-10-29"
+    },
+    "dataReferencia": "2026-10-29",
+    "caso": {
+      "tipo": "bar",
+      "sala": {
+        "largura": 12,
+        "profundidade": 18,
+        "peDireito": 4
+      },
+      "salaOrigem": "usuario",
+      "profundidadePalco": 3,
+      "areaPublicoM2": 180,
+      "alturaOuvinte": 1.7,
+      "publico": 180,
+      "disposicao": "em_pe",
+      "usos": [
+        "banda",
+        "dj"
+      ],
+      "usosOrigem": "usuario",
+      "formacao": "banda_bateria",
+      "ambiente": "fechado",
+      "formato": "retangular",
+      "instalacao": {
+        "forma": "sem_preferencia",
+        "formato": "sem_preferencia"
+      },
+      "mobilidade": "fixa",
+      "passoMalha": 0.5,
+      "passoAumentado": false
+    },
+    "escopo": {
+      "status": "suportado",
+      "itens": [],
+      "geometriaForaDoModelo": false,
+      "recomendarProjetista": false,
+      "naoCalculado": []
+    },
+    "alvo": {
+      "alvo": 100,
+      "reserva": 10,
+      "requerido": 110,
+      "usoDominante": "dj",
+      "ajusteRuido": 5,
+      "ruidoEstimado": false,
+      "limitadoPeloTeto": true,
+      "avisoSegurancaAuditiva": true,
+      "sub": "sim"
+    },
+    "reverb": {
+      "classe": "medio",
+      "pontos": 2,
+      "estimado": false
+    },
+    "arquiteturas": [
+      {
+        "id": "AR-1",
+        "nome": "Caixas ativas na frente (fontes pontuais)",
+        "disponivel": true
+      },
+      {
+        "id": "AR-2",
+        "nome": "Vertical array na frente (coluna ou line array compacto)",
+        "disponivel": true
+      }
+    ],
+    "recomendacao": {
+      "arquitetura": "AR-1",
+      "nome": "Caixas ativas na frente (fontes pontuais)",
+      "nomeSimples": "duas caixas de som na frente, uma de cada lado do palco",
+      "motivoEscolha": "O público ocupa 15 m de profundidade. Para essa distância, duas caixas comuns na frente resolvem bem (colunas passam a valer a pena acima de 18 m).",
+      "configuracao": {
+        "arquitetura": "AR-1",
+        "variante": "reforco",
+        "caixas": [
+          {
+            "id": "P-L",
+            "papel": "principal",
+            "lado": "L",
+            "posicao": {
+              "x": 0.5,
+              "y": 2.5,
+              "z": 2.3
+            },
+            "mira": {
+              "yaw": 19.536654938128386,
+              "pitch": -3.082572747476538
+            },
+            "montagem": "pedestal",
+            "fonte": {
+              "tipo": "produto",
+              "ref": "armer-evx15",
+              "nome": "Armer EVX 15",
+              "cobertura": {
+                "H": 90,
+                "V": 60
+              },
+              "nivel": {
+                "tipo": "pontual",
+                "spl1m": 122,
+                "estimado": true,
+                "aviso": "O fabricante não informa se o volume máximo (128 dB) é contínuo ou de pico. Por segurança, tratamos como pico: contínuo estimado = 128 - 6 dB."
+              },
+              "meiaAltura": 0.3,
+              "montagensPermitidas": [
+                "pedestal",
+                "suspensa"
+              ],
+              "subcategoria": "15",
+              "spl": {
+                "valor": 128,
+                "unidade": "dB SPL",
+                "condicaoMedicao": "desconhecida",
+                "fonte": "https://armer.com.br/produtos/caixa-de-som-ativa-profissional-armer-evx-15-1400w-bivolt/",
+                "dataVerificacao": "2026-10-29",
+                "status": "declarado_fabricante"
+              },
+              "estimativas": [
+                "O fabricante não publica o ângulo de cobertura. Usamos 90° x 60° (valor de referência de caixas de duas vias, pendente de confirmação)."
+              ]
+            },
+            "movida": false,
+            "numero": 1
+          },
+          {
+            "id": "P-R",
+            "papel": "principal",
+            "lado": "R",
+            "posicao": {
+              "x": 11.5,
+              "y": 2.5,
+              "z": 2.3
+            },
+            "mira": {
+              "yaw": -19.536654938128386,
+              "pitch": -3.082572747476538
+            },
+            "montagem": "pedestal",
+            "fonte": {
+              "tipo": "produto",
+              "ref": "armer-evx15",
+              "nome": "Armer EVX 15",
+              "cobertura": {
+                "H": 90,
+                "V": 60
+              },
+              "nivel": {
+                "tipo": "pontual",
+                "spl1m": 122,
+                "estimado": true,
+                "aviso": "O fabricante não informa se o volume máximo (128 dB) é contínuo ou de pico. Por segurança, tratamos como pico: contínuo estimado = 128 - 6 dB."
+              },
+              "meiaAltura": 0.3,
+              "montagensPermitidas": [
+                "pedestal",
+                "suspensa"
+              ],
+              "subcategoria": "15",
+              "spl": {
+                "valor": 128,
+                "unidade": "dB SPL",
+                "condicaoMedicao": "desconhecida",
+                "fonte": "https://armer.com.br/produtos/caixa-de-som-ativa-profissional-armer-evx-15-1400w-bivolt/",
+                "dataVerificacao": "2026-10-29",
+                "status": "declarado_fabricante"
+              },
+              "estimativas": [
+                "O fabricante não publica o ângulo de cobertura. Usamos 90° x 60° (valor de referência de caixas de duas vias, pendente de confirmação)."
+              ]
+            },
+            "movida": false,
+            "numero": 2
+          },
+          {
+            "id": "RF-L",
+            "papel": "reforco",
+            "lado": "L",
+            "posicao": {
+              "x": 0.5,
+              "y": 5,
+              "z": 2.3
+            },
+            "mira": {
+              "yaw": 22.932100437589785,
+              "pitch": -3.648198886971042
+            },
+            "montagem": "pedestal",
+            "fonte": {
+              "tipo": "produto",
+              "ref": "armer-evx15",
+              "nome": "Armer EVX 15",
+              "cobertura": {
+                "H": 90,
+                "V": 60
+              },
+              "nivel": {
+                "tipo": "pontual",
+                "spl1m": 122,
+                "estimado": true,
+                "aviso": "O fabricante não informa se o volume máximo (128 dB) é contínuo ou de pico. Por segurança, tratamos como pico: contínuo estimado = 128 - 6 dB."
+              },
+              "meiaAltura": 0.3,
+              "montagensPermitidas": [
+                "pedestal",
+                "suspensa"
+              ],
+              "subcategoria": "15",
+              "spl": {
+                "valor": 128,
+                "unidade": "dB SPL",
+                "condicaoMedicao": "desconhecida",
+                "fonte": "https://armer.com.br/produtos/caixa-de-som-ativa-profissional-armer-evx-15-1400w-bivolt/",
+                "dataVerificacao": "2026-10-29",
+                "status": "declarado_fabricante"
+              },
+              "estimativas": [
+                "O fabricante não publica o ângulo de cobertura. Usamos 90° x 60° (valor de referência de caixas de duas vias, pendente de confirmação)."
+              ]
+            },
+            "movida": false,
+            "numero": 3
+          },
+          {
+            "id": "RF-R",
+            "papel": "reforco",
+            "lado": "R",
+            "posicao": {
+              "x": 11.5,
+              "y": 5,
+              "z": 2.3
+            },
+            "mira": {
+              "yaw": -22.932100437589785,
+              "pitch": -3.648198886971042
+            },
+            "montagem": "pedestal",
+            "fonte": {
+              "tipo": "produto",
+              "ref": "armer-evx15",
+              "nome": "Armer EVX 15",
+              "cobertura": {
+                "H": 90,
+                "V": 60
+              },
+              "nivel": {
+                "tipo": "pontual",
+                "spl1m": 122,
+                "estimado": true,
+                "aviso": "O fabricante não informa se o volume máximo (128 dB) é contínuo ou de pico. Por segurança, tratamos como pico: contínuo estimado = 128 - 6 dB."
+              },
+              "meiaAltura": 0.3,
+              "montagensPermitidas": [
+                "pedestal",
+                "suspensa"
+              ],
+              "subcategoria": "15",
+              "spl": {
+                "valor": 128,
+                "unidade": "dB SPL",
+                "condicaoMedicao": "desconhecida",
+                "fonte": "https://armer.com.br/produtos/caixa-de-som-ativa-profissional-armer-evx-15-1400w-bivolt/",
+                "dataVerificacao": "2026-10-29",
+                "status": "declarado_fabricante"
+              },
+              "estimativas": [
+                "O fabricante não publica o ângulo de cobertura. Usamos 90° x 60° (valor de referência de caixas de duas vias, pendente de confirmação)."
+              ]
+            },
+            "movida": false,
+            "numero": 4
+          },
+          {
+            "id": "SUB-L-1",
+            "papel": "sub",
+            "lado": "L",
+            "posicao": {
+              "x": 1.4,
+              "y": 2.5,
+              "z": 0.3
+            },
+            "mira": {
+              "yaw": 0,
+              "pitch": 0
+            },
+            "montagem": "chao",
+            "fonte": {
+              "tipo": "produto",
+              "ref": "armer-evx18sub",
+              "nome": "Armer EVX18SUB",
+              "cobertura": {
+                "H": 360,
+                "V": 180
+              },
+              "nivel": {
+                "tipo": "requisito"
+              },
+              "meiaAltura": 0.3,
+              "montagensPermitidas": [
+                "chao"
+              ],
+              "subcategoria": "18"
+            },
+            "movida": false,
+            "numero": 5
+          },
+          {
+            "id": "SUB-R-1",
+            "papel": "sub",
+            "lado": "R",
+            "posicao": {
+              "x": 10.6,
+              "y": 2.5,
+              "z": 0.3
+            },
+            "mira": {
+              "yaw": 0,
+              "pitch": 0
+            },
+            "montagem": "chao",
+            "fonte": {
+              "tipo": "produto",
+              "ref": "armer-evx18sub",
+              "nome": "Armer EVX18SUB",
+              "cobertura": {
+                "H": 360,
+                "V": 180
+              },
+              "nivel": {
+                "tipo": "requisito"
+              },
+              "meiaAltura": 0.3,
+              "montagensPermitidas": [
+                "chao"
+              ],
+              "subcategoria": "18"
+            },
+            "movida": false,
+            "numero": 6
+          }
+        ],
+        "atrasos": [
+          {
+            "caixaId": "RF-L",
+            "referenciaId": "P-L",
+            "distanciaExtra": 2.5,
+            "ms": 7.3
+          },
+          {
+            "caixaId": "RF-R",
+            "referenciaId": "P-R",
+            "distanciaExtra": 2.5,
+            "ms": 7.3
+          }
+        ],
+        "frontFill": false,
+        "requisitos": {
+          "principal": [
+            {
+              "campo": "splContinuo1m",
+              "operador": ">=",
+              "valor": 132,
+              "unidade": "dB SPL",
+              "texto": "SPL máximo contínuo a 1 m de pelo menos 132 dB (campo livre)"
+            },
+            {
+              "campo": "montagem",
+              "operador": "em",
+              "valor": "pedestal",
+              "unidade": "",
+              "texto": "Montagem: qualquer uma permitida pelo fabricante (o layout de referência usou pedestal)"
+            },
+            {
+              "campo": "pesoMax",
+              "operador": "<=",
+              "valor": 30,
+              "unidade": "kg",
+              "texto": "Peso de até 30 kg para pedestal"
+            },
+            {
+              "campo": "coberturaH",
+              "operador": ">=",
+              "valor": 90,
+              "unidade": "graus",
+              "texto": "Cobertura usada no layout: 90° x 60° (H x V)"
+            }
+          ],
+          "reforco": [
+            {
+              "campo": "splContinuo1m",
+              "operador": ">=",
+              "valor": 135,
+              "unidade": "dB SPL",
+              "texto": "SPL máximo contínuo a 1 m de pelo menos 135 dB (campo livre)"
+            },
+            {
+              "campo": "montagem",
+              "operador": "em",
+              "valor": "pedestal",
+              "unidade": "",
+              "texto": "Montagem: qualquer uma permitida pelo fabricante (o layout de referência usou pedestal)"
+            },
+            {
+              "campo": "pesoMax",
+              "operador": "<=",
+              "valor": 30,
+              "unidade": "kg",
+              "texto": "Peso de até 30 kg para pedestal"
+            }
+          ]
+        },
+        "avisos": [
+          "O fabricante não informa se o volume máximo (128 dB) é contínuo ou de pico. Por segurança, tratamos como pico: contínuo estimado = 128 - 6 dB.",
+          "O nível na última fileira fica abaixo do alvo. Par de reforço adicionado."
+        ]
+      },
+      "equipamentos": [
+        {
+          "ref": "armer-evx15",
+          "nome": "Armer EVX 15",
+          "tipo": "produto",
+          "papel": "principal",
+          "montagem": "pedestal",
+          "quantidade": 2,
+          "numeros": [
+            1,
+            2
+          ]
+        },
+        {
+          "ref": "armer-evx15",
+          "nome": "Armer EVX 15",
+          "tipo": "produto",
+          "papel": "reforco",
+          "montagem": "pedestal",
+          "quantidade": 2,
+          "numeros": [
+            3,
+            4
+          ]
+        },
+        {
+          "ref": "armer-evx18sub",
+          "nome": "Armer EVX18SUB",
+          "tipo": "produto",
+          "papel": "sub",
+          "montagem": "chao",
+          "quantidade": 2,
+          "numeros": [
+            5,
+            6
+          ]
+        }
+      ],
+      "avaliacao": {
+        "pct": {
+          "coberto": 0.9416666666666667,
+          "borda": 0.03888888888888889,
+          "fora": 0.019444444444444445
+        },
+        "nivel": {
+          "min": 99.20139217750646,
+          "max": 120.28273546346769,
+          "uniformidade": 21.081343285961225
+        },
+        "capacidade": "estimada",
+        "motivoCapacidade": "Com o dado estimado, o volume mínimo calculado (99.2 dB) fica abaixo do necessário (110 dB). A estimativa é conservadora: confirme com a ficha do fabricante."
+      },
+      "mapa": {
+        "passo": 0.5,
+        "x0": 0,
+        "y0": 3,
+        "nx": 24,
+        "ny": 30,
+        "celulas": "bbccbbbffffffffffbbbccbbccccccbbbbffffbbbbccccccccccccccbbbbbbbbcccccccccccccccccccbbccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccc"
+      },
+      "produto": {
+        "produtoId": "armer-evx15",
+        "nome": "Armer EVX 15",
+        "marca": "Armer",
+        "categoria": "caixa_ativa",
+        "subcategoria": "15",
+        "porte": "intermediaria",
+        "status": "parcial",
+        "motivos": [
+          "Capacidade sonora estimada: Com o dado estimado, o volume mínimo calculado (99.2 dB) fica abaixo do necessário (110 dB). A estimativa é conservadora: confirme com a ficha do fabricante.",
+          "O fabricante não publica o ângulo de cobertura. Usamos 90° x 60° (valor de referência de caixas de duas vias, pendente de confirmação).",
+          "Com os dados reais deste produto, o layout precisa de 4 caixas (o perfil genérico usou 2)."
+        ],
+        "faltando": [],
+        "quantidadeCaixas": 4,
+        "avisos": [
+          "O fabricante não informa se o volume máximo (128 dB) é contínuo ou de pico. Por segurança, tratamos como pico: contínuo estimado = 128 - 6 dB.",
+          "O nível na última fileira fica abaixo do alvo. Par de reforço adicionado.",
+          "Variação de nível na área coberta de 21.1 dB (critério: até 6 dB). O modelo não atenua fora do eixo, então a variação real tende a ser diferente."
+        ],
+        "splPublicado": 128,
+        "faixa": {
+          "minimo": 3663.28,
+          "maximo": 5233.25,
+          "dataVerificacao": "2026-10-29",
+          "fonte": "https://armer.com.br/produtos/caixa-de-som-ativa-profissional-armer-evx-15-1400w-bivolt/ (Por = preço de vitrine; De = preço regular)",
+          "ids": [
+            "fx-armer-evx15"
+          ]
+        },
+        "configuracao": {
+          "arquitetura": "AR-1",
+          "variante": "reforco",
+          "caixas": [
+            {
+              "id": "P-L",
+              "papel": "principal",
+              "lado": "L",
+              "posicao": {
+                "x": 0.5,
+                "y": 2.5,
+                "z": 2.3
+              },
+              "mira": {
+                "yaw": 19.536654938128386,
+                "pitch": -3.082572747476538
+              },
+              "montagem": "pedestal",
+              "fonte": {
+                "tipo": "produto",
+                "ref": "armer-evx15",
+                "nome": "Armer EVX 15",
+                "cobertura": {
+                  "H": 90,
+                  "V": 60
+                },
+                "nivel": {
+                  "tipo": "pontual",
+                  "spl1m": 122,
+                  "estimado": true,
+                  "aviso": "O fabricante não informa se o volume máximo (128 dB) é contínuo ou de pico. Por segurança, tratamos como pico: contínuo estimado = 128 - 6 dB."
+                },
+                "meiaAltura": 0.3,
+                "montagensPermitidas": [
+                  "pedestal",
+                  "suspensa"
+                ],
+                "subcategoria": "15",
+                "spl": {
+                  "valor": 128,
+                  "unidade": "dB SPL",
+                  "condicaoMedicao": "desconhecida",
+                  "fonte": "https://armer.com.br/produtos/caixa-de-som-ativa-profissional-armer-evx-15-1400w-bivolt/",
+                  "dataVerificacao": "2026-10-29",
+                  "status": "declarado_fabricante"
+                },
+                "estimativas": [
+                  "O fabricante não publica o ângulo de cobertura. Usamos 90° x 60° (valor de referência de caixas de duas vias, pendente de confirmação)."
+                ]
+              },
+              "movida": false,
+              "numero": 1
+            },
+            {
+              "id": "P-R",
+              "papel": "principal",
+              "lado": "R",
+              "posicao": {
+                "x": 11.5,
+                "y": 2.5,
+                "z": 2.3
+              },
+              "mira": {
+                "yaw": -19.536654938128386,
+                "pitch": -3.082572747476538
+              },
+              "montagem": "pedestal",
+              "fonte": {
+                "tipo": "produto",
+                "ref": "armer-evx15",
+                "nome": "Armer EVX 15",
+                "cobertura": {
+                  "H": 90,
+                  "V": 60
+                },
+                "nivel": {
+                  "tipo": "pontual",
+                  "spl1m": 122,
+                  "estimado": true,
+                  "aviso": "O fabricante não informa se o volume máximo (128 dB) é contínuo ou de pico. Por segurança, tratamos como pico: contínuo estimado = 128 - 6 dB."
+                },
+                "meiaAltura": 0.3,
+                "montagensPermitidas": [
+                  "pedestal",
+                  "suspensa"
+                ],
+                "subcategoria": "15",
+                "spl": {
+                  "valor": 128,
+                  "unidade": "dB SPL",
+                  "condicaoMedicao": "desconhecida",
+                  "fonte": "https://armer.com.br/produtos/caixa-de-som-ativa-profissional-armer-evx-15-1400w-bivolt/",
+                  "dataVerificacao": "2026-10-29",
+                  "status": "declarado_fabricante"
+                },
+                "estimativas": [
+                  "O fabricante não publica o ângulo de cobertura. Usamos 90° x 60° (valor de referência de caixas de duas vias, pendente de confirmação)."
+                ]
+              },
+              "movida": false,
+              "numero": 2
+            },
+            {
+              "id": "RF-L",
+              "papel": "reforco",
+              "lado": "L",
+              "posicao": {
+                "x": 0.5,
+                "y": 5,
+                "z": 2.3
+              },
+              "mira": {
+                "yaw": 22.932100437589785,
+                "pitch": -3.648198886971042
+              },
+              "montagem": "pedestal",
+              "fonte": {
+                "tipo": "produto",
+                "ref": "armer-evx15",
+                "nome": "Armer EVX 15",
+                "cobertura": {
+                  "H": 90,
+                  "V": 60
+                },
+                "nivel": {
+                  "tipo": "pontual",
+                  "spl1m": 122,
+                  "estimado": true,
+                  "aviso": "O fabricante não informa se o volume máximo (128 dB) é contínuo ou de pico. Por segurança, tratamos como pico: contínuo estimado = 128 - 6 dB."
+                },
+                "meiaAltura": 0.3,
+                "montagensPermitidas": [
+                  "pedestal",
+                  "suspensa"
+                ],
+                "subcategoria": "15",
+                "spl": {
+                  "valor": 128,
+                  "unidade": "dB SPL",
+                  "condicaoMedicao": "desconhecida",
+                  "fonte": "https://armer.com.br/produtos/caixa-de-som-ativa-profissional-armer-evx-15-1400w-bivolt/",
+                  "dataVerificacao": "2026-10-29",
+                  "status": "declarado_fabricante"
+                },
+                "estimativas": [
+                  "O fabricante não publica o ângulo de cobertura. Usamos 90° x 60° (valor de referência de caixas de duas vias, pendente de confirmação)."
+                ]
+              },
+              "movida": false,
+              "numero": 3
+            },
+            {
+              "id": "RF-R",
+              "papel": "reforco",
+              "lado": "R",
+              "posicao": {
+                "x": 11.5,
+                "y": 5,
+                "z": 2.3
+              },
+              "mira": {
+                "yaw": -22.932100437589785,
+                "pitch": -3.648198886971042
+              },
+              "montagem": "pedestal",
+              "fonte": {
+                "tipo": "produto",
+                "ref": "armer-evx15",
+                "nome": "Armer EVX 15",
+                "cobertura": {
+                  "H": 90,
+                  "V": 60
+                },
+                "nivel": {
+                  "tipo": "pontual",
+                  "spl1m": 122,
+                  "estimado": true,
+                  "aviso": "O fabricante não informa se o volume máximo (128 dB) é contínuo ou de pico. Por segurança, tratamos como pico: contínuo estimado = 128 - 6 dB."
+                },
+                "meiaAltura": 0.3,
+                "montagensPermitidas": [
+                  "pedestal",
+                  "suspensa"
+                ],
+                "subcategoria": "15",
+                "spl": {
+                  "valor": 128,
+                  "unidade": "dB SPL",
+                  "condicaoMedicao": "desconhecida",
+                  "fonte": "https://armer.com.br/produtos/caixa-de-som-ativa-profissional-armer-evx-15-1400w-bivolt/",
+                  "dataVerificacao": "2026-10-29",
+                  "status": "declarado_fabricante"
+                },
+                "estimativas": [
+                  "O fabricante não publica o ângulo de cobertura. Usamos 90° x 60° (valor de referência de caixas de duas vias, pendente de confirmação)."
+                ]
+              },
+              "movida": false,
+              "numero": 4
+            }
+          ],
+          "atrasos": [
+            {
+              "caixaId": "RF-L",
+              "referenciaId": "P-L",
+              "distanciaExtra": 2.5,
+              "ms": 7.3
+            },
+            {
+              "caixaId": "RF-R",
+              "referenciaId": "P-R",
+              "distanciaExtra": 2.5,
+              "ms": 7.3
+            }
+          ],
+          "frontFill": false,
+          "requisitos": {
+            "principal": [
+              {
+                "campo": "splContinuo1m",
+                "operador": ">=",
+                "valor": 132,
+                "unidade": "dB SPL",
+                "texto": "SPL máximo contínuo a 1 m de pelo menos 132 dB (campo livre)"
+              },
+              {
+                "campo": "montagem",
+                "operador": "em",
+                "valor": "pedestal",
+                "unidade": "",
+                "texto": "Montagem: qualquer uma permitida pelo fabricante (o layout de referência usou pedestal)"
+              },
+              {
+                "campo": "pesoMax",
+                "operador": "<=",
+                "valor": 30,
+                "unidade": "kg",
+                "texto": "Peso de até 30 kg para pedestal"
+              },
+              {
+                "campo": "coberturaH",
+                "operador": ">=",
+                "valor": 90,
+                "unidade": "graus",
+                "texto": "Cobertura usada no layout: 90° x 60° (H x V)"
+              }
+            ],
+            "reforco": [
+              {
+                "campo": "splContinuo1m",
+                "operador": ">=",
+                "valor": 135,
+                "unidade": "dB SPL",
+                "texto": "SPL máximo contínuo a 1 m de pelo menos 135 dB (campo livre)"
+              },
+              {
+                "campo": "montagem",
+                "operador": "em",
+                "valor": "pedestal",
+                "unidade": "",
+                "texto": "Montagem: qualquer uma permitida pelo fabricante (o layout de referência usou pedestal)"
+              },
+              {
+                "campo": "pesoMax",
+                "operador": "<=",
+                "valor": 30,
+                "unidade": "kg",
+                "texto": "Peso de até 30 kg para pedestal"
+              }
+            ]
+          },
+          "avisos": [
+            "O fabricante não informa se o volume máximo (128 dB) é contínuo ou de pico. Por segurança, tratamos como pico: contínuo estimado = 128 - 6 dB.",
+            "O nível na última fileira fica abaixo do alvo. Par de reforço adicionado."
+          ]
+        },
+        "avaliacao": {
+          "estados": [],
+          "pct": {
+            "coberto": 0.9416666666666667,
+            "borda": 0.03888888888888889,
+            "fora": 0.019444444444444445
+          },
+          "nivel": {
+            "min": 99.20139217750646,
+            "max": 120.28273546346769,
+            "uniformidade": 21.081343285961225,
+            "pontosAvaliados": 678
+          },
+          "pontosSemNivel": 0,
+          "pontosSoGenericos": 0,
+          "capacidade": "estimada",
+          "motivoCapacidade": "Com o dado estimado, o volume mínimo calculado (99.2 dB) fica abaixo do necessário (110 dB). A estimativa é conservadora: confirme com a ficha do fabricante.",
+          "nivelPorLinha": []
+        },
+        "margemNivel": -10.798607822493537
+      },
+      "perfilGenerico": {
+        "id": "GEN-ATIVA-15",
+        "categoria": "caixa_ativa",
+        "subcategoria": "15",
+        "nome": "Caixa ativa 15\" (perfil genérico)",
+        "rotulo": "Perfil genérico - especificação mínima, não é um produto.",
+        "requisitos": [
+          {
+            "campo": "splContinuo1m",
+            "operador": ">=",
+            "valor": 136,
+            "unidade": "dB SPL",
+            "texto": "SPL máximo contínuo a 1 m de pelo menos 136 dB (campo livre)"
+          },
+          {
+            "campo": "montagem",
+            "operador": "em",
+            "valor": "parede",
+            "unidade": "",
+            "texto": "Montagem: qualquer uma permitida pelo fabricante (o layout de referência usou parede)"
+          },
+          {
+            "campo": "pesoMax",
+            "operador": "<=",
+            "valor": 40,
+            "unidade": "kg",
+            "texto": "Peso de até 40 kg para parede"
+          },
+          {
+            "campo": "coberturaH",
+            "operador": ">=",
+            "valor": 90,
+            "unidade": "graus",
+            "texto": "Cobertura usada no layout: 90° x 60° (H x V)"
+          }
+        ],
+        "faixa": {
+          "minimo": 3663.28,
+          "maximo": 5233.25,
+          "dataVerificacao": "2026-10-29",
+          "fonte": "https://armer.com.br/produtos/caixa-de-som-ativa-profissional-armer-evx-15-1400w-bivolt/ (Por = preço de vitrine; De = preço regular)",
+          "ids": [
+            "fx-armer-evx15"
+          ]
+        }
+      },
+      "candidatos": [
+        {
+          "produtoId": "armer-evx15",
+          "nome": "Armer EVX 15",
+          "marca": "Armer",
+          "categoria": "caixa_ativa",
+          "subcategoria": "15",
+          "porte": "intermediaria",
+          "status": "parcial",
+          "motivos": [
+            "Capacidade sonora estimada: Com o dado estimado, o volume mínimo calculado (99.2 dB) fica abaixo do necessário (110 dB). A estimativa é conservadora: confirme com a ficha do fabricante.",
+            "O fabricante não publica o ângulo de cobertura. Usamos 90° x 60° (valor de referência de caixas de duas vias, pendente de confirmação).",
+            "Com os dados reais deste produto, o layout precisa de 4 caixas (o perfil genérico usou 2)."
+          ],
+          "faltando": [],
+          "quantidadeCaixas": 4,
+          "avisos": [
+            "O fabricante não informa se o volume máximo (128 dB) é contínuo ou de pico. Por segurança, tratamos como pico: contínuo estimado = 128 - 6 dB.",
+            "O nível na última fileira fica abaixo do alvo. Par de reforço adicionado.",
+            "Variação de nível na área coberta de 21.1 dB (critério: até 6 dB). O modelo não atenua fora do eixo, então a variação real tende a ser diferente."
+          ],
+          "splPublicado": 128,
+          "faixa": {
+            "minimo": 3663.28,
+            "maximo": 5233.25,
+            "dataVerificacao": "2026-10-29",
+            "fonte": "https://armer.com.br/produtos/caixa-de-som-ativa-profissional-armer-evx-15-1400w-bivolt/ (Por = preço de vitrine; De = preço regular)",
+            "ids": [
+              "fx-armer-evx15"
+            ]
+          },
+          "configuracao": {
+            "arquitetura": "AR-1",
+            "variante": "reforco",
+            "caixas": [
+              {
+                "id": "P-L",
+                "papel": "principal",
+                "lado": "L",
+                "posicao": {
+                  "x": 0.5,
+                  "y": 2.5,
+                  "z": 2.3
+                },
+                "mira": {
+                  "yaw": 19.536654938128386,
+                  "pitch": -3.082572747476538
+                },
+                "montagem": "pedestal",
+                "fonte": {
+                  "tipo": "produto",
+                  "ref": "armer-evx15",
+                  "nome": "Armer EVX 15",
+                  "cobertura": {
+                    "H": 90,
+                    "V": 60
+                  },
+                  "nivel": {
+                    "tipo": "pontual",
+                    "spl1m": 122,
+                    "estimado": true,
+                    "aviso": "O fabricante não informa se o volume máximo (128 dB) é contínuo ou de pico. Por segurança, tratamos como pico: contínuo estimado = 128 - 6 dB."
+                  },
+                  "meiaAltura": 0.3,
+                  "montagensPermitidas": [
+                    "pedestal",
+                    "suspensa"
+                  ],
+                  "subcategoria": "15",
+                  "spl": {
+                    "valor": 128,
+                    "unidade": "dB SPL",
+                    "condicaoMedicao": "desconhecida",
+                    "fonte": "https://armer.com.br/produtos/caixa-de-som-ativa-profissional-armer-evx-15-1400w-bivolt/",
+                    "dataVerificacao": "2026-10-29",
+                    "status": "declarado_fabricante"
+                  },
+                  "estimativas": [
+                    "O fabricante não publica o ângulo de cobertura. Usamos 90° x 60° (valor de referência de caixas de duas vias, pendente de confirmação)."
+                  ]
+                },
+                "movida": false,
+                "numero": 1
+              },
+              {
+                "id": "P-R",
+                "papel": "principal",
+                "lado": "R",
+                "posicao": {
+                  "x": 11.5,
+                  "y": 2.5,
+                  "z": 2.3
+                },
+                "mira": {
+                  "yaw": -19.536654938128386,
+                  "pitch": -3.082572747476538
+                },
+                "montagem": "pedestal",
+                "fonte": {
+                  "tipo": "produto",
+                  "ref": "armer-evx15",
+                  "nome": "Armer EVX 15",
+                  "cobertura": {
+                    "H": 90,
+                    "V": 60
+                  },
+                  "nivel": {
+                    "tipo": "pontual",
+                    "spl1m": 122,
+                    "estimado": true,
+                    "aviso": "O fabricante não informa se o volume máximo (128 dB) é contínuo ou de pico. Por segurança, tratamos como pico: contínuo estimado = 128 - 6 dB."
+                  },
+                  "meiaAltura": 0.3,
+                  "montagensPermitidas": [
+                    "pedestal",
+                    "suspensa"
+                  ],
+                  "subcategoria": "15",
+                  "spl": {
+                    "valor": 128,
+                    "unidade": "dB SPL",
+                    "condicaoMedicao": "desconhecida",
+                    "fonte": "https://armer.com.br/produtos/caixa-de-som-ativa-profissional-armer-evx-15-1400w-bivolt/",
+                    "dataVerificacao": "2026-10-29",
+                    "status": "declarado_fabricante"
+                  },
+                  "estimativas": [
+                    "O fabricante não publica o ângulo de cobertura. Usamos 90° x 60° (valor de referência de caixas de duas vias, pendente de confirmação)."
+                  ]
+                },
+                "movida": false,
+                "numero": 2
+              },
+              {
+                "id": "RF-L",
+                "papel": "reforco",
+                "lado": "L",
+                "posicao": {
+                  "x": 0.5,
+                  "y": 5,
+                  "z": 2.3
+                },
+                "mira": {
+                  "yaw": 22.932100437589785,
+                  "pitch": -3.648198886971042
+                },
+                "montagem": "pedestal",
+                "fonte": {
+                  "tipo": "produto",
+                  "ref": "armer-evx15",
+                  "nome": "Armer EVX 15",
+                  "cobertura": {
+                    "H": 90,
+                    "V": 60
+                  },
+                  "nivel": {
+                    "tipo": "pontual",
+                    "spl1m": 122,
+                    "estimado": true,
+                    "aviso": "O fabricante não informa se o volume máximo (128 dB) é contínuo ou de pico. Por segurança, tratamos como pico: contínuo estimado = 128 - 6 dB."
+                  },
+                  "meiaAltura": 0.3,
+                  "montagensPermitidas": [
+                    "pedestal",
+                    "suspensa"
+                  ],
+                  "subcategoria": "15",
+                  "spl": {
+                    "valor": 128,
+                    "unidade": "dB SPL",
+                    "condicaoMedicao": "desconhecida",
+                    "fonte": "https://armer.com.br/produtos/caixa-de-som-ativa-profissional-armer-evx-15-1400w-bivolt/",
+                    "dataVerificacao": "2026-10-29",
+                    "status": "declarado_fabricante"
+                  },
+                  "estimativas": [
+                    "O fabricante não publica o ângulo de cobertura. Usamos 90° x 60° (valor de referência de caixas de duas vias, pendente de confirmação)."
+                  ]
+                },
+                "movida": false,
+                "numero": 3
+              },
+              {
+                "id": "RF-R",
+                "papel": "reforco",
+                "lado": "R",
+                "posicao": {
+                  "x": 11.5,
+                  "y": 5,
+                  "z": 2.3
+                },
+                "mira": {
+                  "yaw": -22.932100437589785,
+                  "pitch": -3.648198886971042
+                },
+                "montagem": "pedestal",
+                "fonte": {
+                  "tipo": "produto",
+                  "ref": "armer-evx15",
+                  "nome": "Armer EVX 15",
+                  "cobertura": {
+                    "H": 90,
+                    "V": 60
+                  },
+                  "nivel": {
+                    "tipo": "pontual",
+                    "spl1m": 122,
+                    "estimado": true,
+                    "aviso": "O fabricante não informa se o volume máximo (128 dB) é contínuo ou de pico. Por segurança, tratamos como pico: contínuo estimado = 128 - 6 dB."
+                  },
+                  "meiaAltura": 0.3,
+                  "montagensPermitidas": [
+                    "pedestal",
+                    "suspensa"
+                  ],
+                  "subcategoria": "15",
+                  "spl": {
+                    "valor": 128,
+                    "unidade": "dB SPL",
+                    "condicaoMedicao": "desconhecida",
+                    "fonte": "https://armer.com.br/produtos/caixa-de-som-ativa-profissional-armer-evx-15-1400w-bivolt/",
+                    "dataVerificacao": "2026-10-29",
+                    "status": "declarado_fabricante"
+                  },
+                  "estimativas": [
+                    "O fabricante não publica o ângulo de cobertura. Usamos 90° x 60° (valor de referência de caixas de duas vias, pendente de confirmação)."
+                  ]
+                },
+                "movida": false,
+                "numero": 4
+              }
+            ],
+            "atrasos": [
+              {
+                "caixaId": "RF-L",
+                "referenciaId": "P-L",
+                "distanciaExtra": 2.5,
+                "ms": 7.3
+              },
+              {
+                "caixaId": "RF-R",
+                "referenciaId": "P-R",
+                "distanciaExtra": 2.5,
+                "ms": 7.3
+              }
+            ],
+            "frontFill": false,
+            "requisitos": {
+              "principal": [
+                {
+                  "campo": "splContinuo1m",
+                  "operador": ">=",
+                  "valor": 132,
+                  "unidade": "dB SPL",
+                  "texto": "SPL máximo contínuo a 1 m de pelo menos 132 dB (campo livre)"
+                },
+                {
+                  "campo": "montagem",
+                  "operador": "em",
+                  "valor": "pedestal",
+                  "unidade": "",
+                  "texto": "Montagem: qualquer uma permitida pelo fabricante (o layout de referência usou pedestal)"
+                },
+                {
+                  "campo": "pesoMax",
+                  "operador": "<=",
+                  "valor": 30,
+                  "unidade": "kg",
+                  "texto": "Peso de até 30 kg para pedestal"
+                },
+                {
+                  "campo": "coberturaH",
+                  "operador": ">=",
+                  "valor": 90,
+                  "unidade": "graus",
+                  "texto": "Cobertura usada no layout: 90° x 60° (H x V)"
+                }
+              ],
+              "reforco": [
+                {
+                  "campo": "splContinuo1m",
+                  "operador": ">=",
+                  "valor": 135,
+                  "unidade": "dB SPL",
+                  "texto": "SPL máximo contínuo a 1 m de pelo menos 135 dB (campo livre)"
+                },
+                {
+                  "campo": "montagem",
+                  "operador": "em",
+                  "valor": "pedestal",
+                  "unidade": "",
+                  "texto": "Montagem: qualquer uma permitida pelo fabricante (o layout de referência usou pedestal)"
+                },
+                {
+                  "campo": "pesoMax",
+                  "operador": "<=",
+                  "valor": 30,
+                  "unidade": "kg",
+                  "texto": "Peso de até 30 kg para pedestal"
+                }
+              ]
+            },
+            "avisos": [
+              "O fabricante não informa se o volume máximo (128 dB) é contínuo ou de pico. Por segurança, tratamos como pico: contínuo estimado = 128 - 6 dB.",
+              "O nível na última fileira fica abaixo do alvo. Par de reforço adicionado."
+            ]
+          },
+          "avaliacao": {
+            "estados": [],
+            "pct": {
+              "coberto": 0.9416666666666667,
+              "borda": 0.03888888888888889,
+              "fora": 0.019444444444444445
+            },
+            "nivel": {
+              "min": 99.20139217750646,
+              "max": 120.28273546346769,
+              "uniformidade": 21.081343285961225,
+              "pontosAvaliados": 678
+            },
+            "pontosSemNivel": 0,
+            "pontosSoGenericos": 0,
+            "capacidade": "estimada",
+            "motivoCapacidade": "Com o dado estimado, o volume mínimo calculado (99.2 dB) fica abaixo do necessário (110 dB). A estimativa é conservadora: confirme com a ficha do fabricante.",
+            "nivelPorLinha": []
+          },
+          "margemNivel": -10.798607822493537
+        },
+        {
+          "produtoId": "armer-evx10",
+          "nome": "Armer EVX 10",
+          "marca": "Armer",
+          "categoria": "caixa_ativa",
+          "subcategoria": "10",
+          "porte": "intermediaria",
+          "status": "parcial",
+          "motivos": [
+            "Capacidade sonora estimada: Com o dado estimado, o volume mínimo calculado (97.2 dB) fica abaixo do necessário (110 dB). A estimativa é conservadora: confirme com a ficha do fabricante.",
+            "O fabricante não publica o ângulo de cobertura. Usamos 90° x 60° (valor de referência de caixas de duas vias, pendente de confirmação).",
+            "Com os dados reais deste produto, o layout precisa de 4 caixas (o perfil genérico usou 2)."
+          ],
+          "faltando": [],
+          "quantidadeCaixas": 4,
+          "avisos": [
+            "O fabricante não informa se o volume máximo (126 dB) é contínuo ou de pico. Por segurança, tratamos como pico: contínuo estimado = 126 - 6 dB.",
+            "O nível na última fileira fica abaixo do alvo. Par de reforço adicionado.",
+            "Variação de nível na área coberta de 21.1 dB (critério: até 6 dB). O modelo não atenua fora do eixo, então a variação real tende a ser diferente."
+          ],
+          "splPublicado": 126,
+          "faixa": {
+            "minimo": 2499.94,
+            "maximo": 4592.52,
+            "dataVerificacao": "2026-10-29",
+            "fonte": "https://armer.com.br/produtos/caixa-de-som-ativa-profissional-armer-evx-10-1000w-bivolt/ (Por = preço de vitrine; De = preço regular)",
+            "ids": [
+              "fx-armer-evx10"
+            ]
+          },
+          "configuracao": {
+            "arquitetura": "AR-1",
+            "variante": "reforco",
+            "caixas": [
+              {
+                "id": "P-L",
+                "papel": "principal",
+                "lado": "L",
+                "posicao": {
+                  "x": 0.5,
+                  "y": 2.5,
+                  "z": 2.3
+                },
+                "mira": {
+                  "yaw": 19.536654938128386,
+                  "pitch": -3.082572747476538
+                },
+                "montagem": "pedestal",
+                "fonte": {
+                  "tipo": "produto",
+                  "ref": "armer-evx10",
+                  "nome": "Armer EVX 10",
+                  "cobertura": {
+                    "H": 90,
+                    "V": 60
+                  },
+                  "nivel": {
+                    "tipo": "pontual",
+                    "spl1m": 120,
+                    "estimado": true,
+                    "aviso": "O fabricante não informa se o volume máximo (126 dB) é contínuo ou de pico. Por segurança, tratamos como pico: contínuo estimado = 126 - 6 dB."
+                  },
+                  "meiaAltura": 0.3,
+                  "montagensPermitidas": [
+                    "pedestal",
+                    "suspensa",
+                    "chao"
+                  ],
+                  "subcategoria": "10",
+                  "spl": {
+                    "valor": 126,
+                    "unidade": "dB SPL",
+                    "condicaoMedicao": "desconhecida",
+                    "fonte": "https://armer.com.br/produtos/caixa-de-som-ativa-profissional-armer-evx-10-1000w-bivolt/",
+                    "dataVerificacao": "2026-10-29",
+                    "status": "declarado_fabricante"
+                  },
+                  "estimativas": [
+                    "O fabricante não publica o ângulo de cobertura. Usamos 90° x 60° (valor de referência de caixas de duas vias, pendente de confirmação)."
+                  ]
+                },
+                "movida": false,
+                "numero": 1
+              },
+              {
+                "id": "P-R",
+                "papel": "principal",
+                "lado": "R",
+                "posicao": {
+                  "x": 11.5,
+                  "y": 2.5,
+                  "z": 2.3
+                },
+                "mira": {
+                  "yaw": -19.536654938128386,
+                  "pitch": -3.082572747476538
+                },
+                "montagem": "pedestal",
+                "fonte": {
+                  "tipo": "produto",
+                  "ref": "armer-evx10",
+                  "nome": "Armer EVX 10",
+                  "cobertura": {
+                    "H": 90,
+                    "V": 60
+                  },
+                  "nivel": {
+                    "tipo": "pontual",
+                    "spl1m": 120,
+                    "estimado": true,
+                    "aviso": "O fabricante não informa se o volume máximo (126 dB) é contínuo ou de pico. Por segurança, tratamos como pico: contínuo estimado = 126 - 6 dB."
+                  },
+                  "meiaAltura": 0.3,
+                  "montagensPermitidas": [
+                    "pedestal",
+                    "suspensa",
+                    "chao"
+                  ],
+                  "subcategoria": "10",
+                  "spl": {
+                    "valor": 126,
+                    "unidade": "dB SPL",
+                    "condicaoMedicao": "desconhecida",
+                    "fonte": "https://armer.com.br/produtos/caixa-de-som-ativa-profissional-armer-evx-10-1000w-bivolt/",
+                    "dataVerificacao": "2026-10-29",
+                    "status": "declarado_fabricante"
+                  },
+                  "estimativas": [
+                    "O fabricante não publica o ângulo de cobertura. Usamos 90° x 60° (valor de referência de caixas de duas vias, pendente de confirmação)."
+                  ]
+                },
+                "movida": false,
+                "numero": 2
+              },
+              {
+                "id": "RF-L",
+                "papel": "reforco",
+                "lado": "L",
+                "posicao": {
+                  "x": 0.5,
+                  "y": 5,
+                  "z": 2.3
+                },
+                "mira": {
+                  "yaw": 22.932100437589785,
+                  "pitch": -3.648198886971042
+                },
+                "montagem": "pedestal",
+                "fonte": {
+                  "tipo": "produto",
+                  "ref": "armer-evx10",
+                  "nome": "Armer EVX 10",
+                  "cobertura": {
+                    "H": 90,
+                    "V": 60
+                  },
+                  "nivel": {
+                    "tipo": "pontual",
+                    "spl1m": 120,
+                    "estimado": true,
+                    "aviso": "O fabricante não informa se o volume máximo (126 dB) é contínuo ou de pico. Por segurança, tratamos como pico: contínuo estimado = 126 - 6 dB."
+                  },
+                  "meiaAltura": 0.3,
+                  "montagensPermitidas": [
+                    "pedestal",
+                    "suspensa",
+                    "chao"
+                  ],
+                  "subcategoria": "10",
+                  "spl": {
+                    "valor": 126,
+                    "unidade": "dB SPL",
+                    "condicaoMedicao": "desconhecida",
+                    "fonte": "https://armer.com.br/produtos/caixa-de-som-ativa-profissional-armer-evx-10-1000w-bivolt/",
+                    "dataVerificacao": "2026-10-29",
+                    "status": "declarado_fabricante"
+                  },
+                  "estimativas": [
+                    "O fabricante não publica o ângulo de cobertura. Usamos 90° x 60° (valor de referência de caixas de duas vias, pendente de confirmação)."
+                  ]
+                },
+                "movida": false,
+                "numero": 3
+              },
+              {
+                "id": "RF-R",
+                "papel": "reforco",
+                "lado": "R",
+                "posicao": {
+                  "x": 11.5,
+                  "y": 5,
+                  "z": 2.3
+                },
+                "mira": {
+                  "yaw": -22.932100437589785,
+                  "pitch": -3.648198886971042
+                },
+                "montagem": "pedestal",
+                "fonte": {
+                  "tipo": "produto",
+                  "ref": "armer-evx10",
+                  "nome": "Armer EVX 10",
+                  "cobertura": {
+                    "H": 90,
+                    "V": 60
+                  },
+                  "nivel": {
+                    "tipo": "pontual",
+                    "spl1m": 120,
+                    "estimado": true,
+                    "aviso": "O fabricante não informa se o volume máximo (126 dB) é contínuo ou de pico. Por segurança, tratamos como pico: contínuo estimado = 126 - 6 dB."
+                  },
+                  "meiaAltura": 0.3,
+                  "montagensPermitidas": [
+                    "pedestal",
+                    "suspensa",
+                    "chao"
+                  ],
+                  "subcategoria": "10",
+                  "spl": {
+                    "valor": 126,
+                    "unidade": "dB SPL",
+                    "condicaoMedicao": "desconhecida",
+                    "fonte": "https://armer.com.br/produtos/caixa-de-som-ativa-profissional-armer-evx-10-1000w-bivolt/",
+                    "dataVerificacao": "2026-10-29",
+                    "status": "declarado_fabricante"
+                  },
+                  "estimativas": [
+                    "O fabricante não publica o ângulo de cobertura. Usamos 90° x 60° (valor de referência de caixas de duas vias, pendente de confirmação)."
+                  ]
+                },
+                "movida": false,
+                "numero": 4
+              }
+            ],
+            "atrasos": [
+              {
+                "caixaId": "RF-L",
+                "referenciaId": "P-L",
+                "distanciaExtra": 2.5,
+                "ms": 7.3
+              },
+              {
+                "caixaId": "RF-R",
+                "referenciaId": "P-R",
+                "distanciaExtra": 2.5,
+                "ms": 7.3
+              }
+            ],
+            "frontFill": false,
+            "requisitos": {
+              "principal": [
+                {
+                  "campo": "splContinuo1m",
+                  "operador": ">=",
+                  "valor": 132,
+                  "unidade": "dB SPL",
+                  "texto": "SPL máximo contínuo a 1 m de pelo menos 132 dB (campo livre)"
+                },
+                {
+                  "campo": "montagem",
+                  "operador": "em",
+                  "valor": "pedestal",
+                  "unidade": "",
+                  "texto": "Montagem: qualquer uma permitida pelo fabricante (o layout de referência usou pedestal)"
+                },
+                {
+                  "campo": "pesoMax",
+                  "operador": "<=",
+                  "valor": 30,
+                  "unidade": "kg",
+                  "texto": "Peso de até 30 kg para pedestal"
+                },
+                {
+                  "campo": "coberturaH",
+                  "operador": ">=",
+                  "valor": 90,
+                  "unidade": "graus",
+                  "texto": "Cobertura usada no layout: 90° x 60° (H x V)"
+                }
+              ],
+              "reforco": [
+                {
+                  "campo": "splContinuo1m",
+                  "operador": ">=",
+                  "valor": 135,
+                  "unidade": "dB SPL",
+                  "texto": "SPL máximo contínuo a 1 m de pelo menos 135 dB (campo livre)"
+                },
+                {
+                  "campo": "montagem",
+                  "operador": "em",
+                  "valor": "pedestal",
+                  "unidade": "",
+                  "texto": "Montagem: qualquer uma permitida pelo fabricante (o layout de referência usou pedestal)"
+                },
+                {
+                  "campo": "pesoMax",
+                  "operador": "<=",
+                  "valor": 30,
+                  "unidade": "kg",
+                  "texto": "Peso de até 30 kg para pedestal"
+                }
+              ]
+            },
+            "avisos": [
+              "O fabricante não informa se o volume máximo (126 dB) é contínuo ou de pico. Por segurança, tratamos como pico: contínuo estimado = 126 - 6 dB.",
+              "O nível na última fileira fica abaixo do alvo. Par de reforço adicionado."
+            ]
+          },
+          "avaliacao": {
+            "estados": [],
+            "pct": {
+              "coberto": 0.9416666666666667,
+              "borda": 0.03888888888888889,
+              "fora": 0.019444444444444445
+            },
+            "nivel": {
+              "min": 97.20139217750646,
+              "max": 118.28273546346769,
+              "uniformidade": 21.081343285961225,
+              "pontosAvaliados": 678
+            },
+            "pontosSemNivel": 0,
+            "pontosSoGenericos": 0,
+            "capacidade": "estimada",
+            "motivoCapacidade": "Com o dado estimado, o volume mínimo calculado (97.2 dB) fica abaixo do necessário (110 dB). A estimativa é conservadora: confirme com a ficha do fabricante.",
+            "nivelPorLinha": []
+          },
+          "margemNivel": -12.798607822493537
+        },
+        {
+          "produtoId": "az-z1-compact-pro",
+          "nome": "AZ Audio Z1 Compact Pro",
+          "marca": "AZ Audio",
+          "categoria": "caixa_ativa",
+          "subcategoria": "6.5",
+          "porte": "entrada",
+          "status": "parcial",
+          "motivos": [
+            "Capacidade sonora estimada: Com o dado estimado, o volume mínimo calculado (86.2 dB) fica abaixo do necessário (110 dB). A estimativa é conservadora: confirme com a ficha do fabricante.",
+            "O fabricante não publica o ângulo de cobertura. Usamos 90° x 60° (valor de referência de caixas de duas vias, pendente de confirmação).",
+            "Com os dados reais deste produto, o layout precisa de 4 caixas (o perfil genérico usou 2)."
+          ],
+          "faltando": [],
+          "quantidadeCaixas": 4,
+          "avisos": [
+            "O fabricante não informa se o volume máximo (115 dB) é contínuo ou de pico. Por segurança, tratamos como pico: contínuo estimado = 115 - 6 dB.",
+            "O nível na última fileira fica abaixo do alvo. Par de reforço adicionado.",
+            "Variação de nível na área coberta de 23.6 dB (critério: até 6 dB). O modelo não atenua fora do eixo, então a variação real tende a ser diferente."
+          ],
+          "splPublicado": 115,
+          "faixa": {
+            "minimo": 2119.2,
+            "maximo": 2444.38,
+            "dataVerificacao": "2026-10-29",
+            "fonte": "https://azaudio.com.br/produtos/caixa-de-som-ativa-portatil-profissional-az-audio-z1-compact-pro-bluetooth-c-bateria-recarregavel/ (Por = preço de vitrine; De = preço regular)",
+            "ids": [
+              "fx-az-z1-compact-pro"
+            ]
+          },
+          "configuracao": {
+            "arquitetura": "AR-1",
+            "variante": "reforco",
+            "caixas": [
+              {
+                "id": "P-L",
+                "papel": "principal",
+                "lado": "L",
+                "posicao": {
+                  "x": 0.5,
+                  "y": 2.5,
+                  "z": 2.16
+                },
+                "mira": {
+                  "yaw": 19.536654938128386,
+                  "pitch": -2.364245866174654
+                },
+                "montagem": "pedestal",
+                "fonte": {
+                  "tipo": "produto",
+                  "ref": "az-z1-compact-pro",
+                  "nome": "AZ Audio Z1 Compact Pro",
+                  "cobertura": {
+                    "H": 90,
+                    "V": 60
+                  },
+                  "nivel": {
+                    "tipo": "pontual",
+                    "spl1m": 109,
+                    "estimado": true,
+                    "aviso": "O fabricante não informa se o volume máximo (115 dB) é contínuo ou de pico. Por segurança, tratamos como pico: contínuo estimado = 115 - 6 dB."
+                  },
+                  "meiaAltura": 0.16,
+                  "montagensPermitidas": [
+                    "pedestal"
+                  ],
+                  "subcategoria": "6.5",
+                  "spl": {
+                    "valor": 115,
+                    "unidade": "dB SPL",
+                    "condicaoMedicao": "desconhecida",
+                    "fonte": "https://azaudio.com.br/produtos/caixa-de-som-ativa-portatil-profissional-az-audio-z1-compact-pro-bluetooth-c-bateria-recarregavel/",
+                    "dataVerificacao": "2026-10-29",
+                    "status": "declarado_fabricante"
+                  },
+                  "estimativas": [
+                    "O fabricante não publica o ângulo de cobertura. Usamos 90° x 60° (valor de referência de caixas de duas vias, pendente de confirmação)."
+                  ]
+                },
+                "movida": false,
+                "numero": 1
+              },
+              {
+                "id": "P-R",
+                "papel": "principal",
+                "lado": "R",
+                "posicao": {
+                  "x": 11.5,
+                  "y": 2.5,
+                  "z": 2.16
+                },
+                "mira": {
+                  "yaw": -19.536654938128386,
+                  "pitch": -2.364245866174654
+                },
+                "montagem": "pedestal",
+                "fonte": {
+                  "tipo": "produto",
+                  "ref": "az-z1-compact-pro",
+                  "nome": "AZ Audio Z1 Compact Pro",
+                  "cobertura": {
+                    "H": 90,
+                    "V": 60
+                  },
+                  "nivel": {
+                    "tipo": "pontual",
+                    "spl1m": 109,
+                    "estimado": true,
+                    "aviso": "O fabricante não informa se o volume máximo (115 dB) é contínuo ou de pico. Por segurança, tratamos como pico: contínuo estimado = 115 - 6 dB."
+                  },
+                  "meiaAltura": 0.16,
+                  "montagensPermitidas": [
+                    "pedestal"
+                  ],
+                  "subcategoria": "6.5",
+                  "spl": {
+                    "valor": 115,
+                    "unidade": "dB SPL",
+                    "condicaoMedicao": "desconhecida",
+                    "fonte": "https://azaudio.com.br/produtos/caixa-de-som-ativa-portatil-profissional-az-audio-z1-compact-pro-bluetooth-c-bateria-recarregavel/",
+                    "dataVerificacao": "2026-10-29",
+                    "status": "declarado_fabricante"
+                  },
+                  "estimativas": [
+                    "O fabricante não publica o ângulo de cobertura. Usamos 90° x 60° (valor de referência de caixas de duas vias, pendente de confirmação)."
+                  ]
+                },
+                "movida": false,
+                "numero": 2
+              },
+              {
+                "id": "RF-L",
+                "papel": "reforco",
+                "lado": "L",
+                "posicao": {
+                  "x": 0.5,
+                  "y": 5,
+                  "z": 2.16
+                },
+                "mira": {
+                  "yaw": 22.932100437589785,
+                  "pitch": -2.798510920167802
+                },
+                "montagem": "pedestal",
+                "fonte": {
+                  "tipo": "produto",
+                  "ref": "az-z1-compact-pro",
+                  "nome": "AZ Audio Z1 Compact Pro",
+                  "cobertura": {
+                    "H": 90,
+                    "V": 60
+                  },
+                  "nivel": {
+                    "tipo": "pontual",
+                    "spl1m": 109,
+                    "estimado": true,
+                    "aviso": "O fabricante não informa se o volume máximo (115 dB) é contínuo ou de pico. Por segurança, tratamos como pico: contínuo estimado = 115 - 6 dB."
+                  },
+                  "meiaAltura": 0.16,
+                  "montagensPermitidas": [
+                    "pedestal"
+                  ],
+                  "subcategoria": "6.5",
+                  "spl": {
+                    "valor": 115,
+                    "unidade": "dB SPL",
+                    "condicaoMedicao": "desconhecida",
+                    "fonte": "https://azaudio.com.br/produtos/caixa-de-som-ativa-portatil-profissional-az-audio-z1-compact-pro-bluetooth-c-bateria-recarregavel/",
+                    "dataVerificacao": "2026-10-29",
+                    "status": "declarado_fabricante"
+                  },
+                  "estimativas": [
+                    "O fabricante não publica o ângulo de cobertura. Usamos 90° x 60° (valor de referência de caixas de duas vias, pendente de confirmação)."
+                  ]
+                },
+                "movida": false,
+                "numero": 3
+              },
+              {
+                "id": "RF-R",
+                "papel": "reforco",
+                "lado": "R",
+                "posicao": {
+                  "x": 11.5,
+                  "y": 5,
+                  "z": 2.16
+                },
+                "mira": {
+                  "yaw": -22.932100437589785,
+                  "pitch": -2.798510920167802
+                },
+                "montagem": "pedestal",
+                "fonte": {
+                  "tipo": "produto",
+                  "ref": "az-z1-compact-pro",
+                  "nome": "AZ Audio Z1 Compact Pro",
+                  "cobertura": {
+                    "H": 90,
+                    "V": 60
+                  },
+                  "nivel": {
+                    "tipo": "pontual",
+                    "spl1m": 109,
+                    "estimado": true,
+                    "aviso": "O fabricante não informa se o volume máximo (115 dB) é contínuo ou de pico. Por segurança, tratamos como pico: contínuo estimado = 115 - 6 dB."
+                  },
+                  "meiaAltura": 0.16,
+                  "montagensPermitidas": [
+                    "pedestal"
+                  ],
+                  "subcategoria": "6.5",
+                  "spl": {
+                    "valor": 115,
+                    "unidade": "dB SPL",
+                    "condicaoMedicao": "desconhecida",
+                    "fonte": "https://azaudio.com.br/produtos/caixa-de-som-ativa-portatil-profissional-az-audio-z1-compact-pro-bluetooth-c-bateria-recarregavel/",
+                    "dataVerificacao": "2026-10-29",
+                    "status": "declarado_fabricante"
+                  },
+                  "estimativas": [
+                    "O fabricante não publica o ângulo de cobertura. Usamos 90° x 60° (valor de referência de caixas de duas vias, pendente de confirmação)."
+                  ]
+                },
+                "movida": false,
+                "numero": 4
+              }
+            ],
+            "atrasos": [
+              {
+                "caixaId": "RF-L",
+                "referenciaId": "P-L",
+                "distanciaExtra": 2.5,
+                "ms": 7.3
+              },
+              {
+                "caixaId": "RF-R",
+                "referenciaId": "P-R",
+                "distanciaExtra": 2.5,
+                "ms": 7.3
+              }
+            ],
+            "frontFill": false,
+            "requisitos": {
+              "principal": [
+                {
+                  "campo": "splContinuo1m",
+                  "operador": ">=",
+                  "valor": 132,
+                  "unidade": "dB SPL",
+                  "texto": "SPL máximo contínuo a 1 m de pelo menos 132 dB (campo livre)"
+                },
+                {
+                  "campo": "montagem",
+                  "operador": "em",
+                  "valor": "pedestal",
+                  "unidade": "",
+                  "texto": "Montagem: qualquer uma permitida pelo fabricante (o layout de referência usou pedestal)"
+                },
+                {
+                  "campo": "pesoMax",
+                  "operador": "<=",
+                  "valor": 30,
+                  "unidade": "kg",
+                  "texto": "Peso de até 30 kg para pedestal"
+                },
+                {
+                  "campo": "coberturaH",
+                  "operador": ">=",
+                  "valor": 90,
+                  "unidade": "graus",
+                  "texto": "Cobertura usada no layout: 90° x 60° (H x V)"
+                }
+              ],
+              "reforco": [
+                {
+                  "campo": "splContinuo1m",
+                  "operador": ">=",
+                  "valor": 135,
+                  "unidade": "dB SPL",
+                  "texto": "SPL máximo contínuo a 1 m de pelo menos 135 dB (campo livre)"
+                },
+                {
+                  "campo": "montagem",
+                  "operador": "em",
+                  "valor": "pedestal",
+                  "unidade": "",
+                  "texto": "Montagem: qualquer uma permitida pelo fabricante (o layout de referência usou pedestal)"
+                },
+                {
+                  "campo": "pesoMax",
+                  "operador": "<=",
+                  "valor": 30,
+                  "unidade": "kg",
+                  "texto": "Peso de até 30 kg para pedestal"
+                }
+              ]
+            },
+            "avisos": [
+              "O fabricante não informa se o volume máximo (115 dB) é contínuo ou de pico. Por segurança, tratamos como pico: contínuo estimado = 115 - 6 dB.",
+              "O nível na última fileira fica abaixo do alvo. Par de reforço adicionado."
+            ]
+          },
+          "avaliacao": {
+            "estados": [],
+            "pct": {
+              "coberto": 0.9472222222222222,
+              "borda": 0.03333333333333333,
+              "fora": 0.019444444444444445
+            },
+            "nivel": {
+              "min": 86.20477692797107,
+              "max": 109.77482139755388,
+              "uniformidade": 23.57004446958281,
+              "pontosAvaliados": 682
+            },
+            "pontosSemNivel": 0,
+            "pontosSoGenericos": 0,
+            "capacidade": "estimada",
+            "motivoCapacidade": "Com o dado estimado, o volume mínimo calculado (86.2 dB) fica abaixo do necessário (110 dB). A estimativa é conservadora: confirme com a ficha do fabricante.",
+            "nivelPorLinha": []
+          },
+          "margemNivel": -23.795223072028932
+        },
+        {
+          "produtoId": "armer-evx8go",
+          "nome": "Armer EVX8GO",
+          "marca": "Armer",
+          "categoria": "caixa_ativa",
+          "subcategoria": "8",
+          "porte": "entrada",
+          "status": "parcial",
+          "motivos": [
+            "Capacidade sonora estimada: Com o dado estimado, o volume mínimo calculado (86.2 dB) fica abaixo do necessário (110 dB). A estimativa é conservadora: confirme com a ficha do fabricante.",
+            "O fabricante não publica o ângulo de cobertura. Usamos 90° x 60° (valor de referência de caixas de duas vias, pendente de confirmação).",
+            "Com os dados reais deste produto, o layout precisa de 4 caixas (o perfil genérico usou 2)."
+          ],
+          "faltando": [],
+          "quantidadeCaixas": 4,
+          "avisos": [
+            "O fabricante não informa se o volume máximo (115 dB) é contínuo ou de pico. Por segurança, tratamos como pico: contínuo estimado = 115 - 6 dB.",
+            "O nível na última fileira fica abaixo do alvo. Par de reforço adicionado.",
+            "Variação de nível na área coberta de 21.1 dB (critério: até 6 dB). O modelo não atenua fora do eixo, então a variação real tende a ser diferente."
+          ],
+          "splPublicado": 115,
+          "faixa": {
+            "minimo": 2389.94,
+            "maximo": 3066.59,
+            "dataVerificacao": "2026-10-29",
+            "fonte": "https://armer.com.br/produtos/caixa-de-som-ativa-profissional-8-portatil-armer-evx8go-240w-c-bateria-bluetooth-dsp/ (Por = preço de vitrine; De = preço regular)",
+            "ids": [
+              "fx-armer-evx8go"
+            ]
+          },
+          "configuracao": {
+            "arquitetura": "AR-1",
+            "variante": "reforco",
+            "caixas": [
+              {
+                "id": "P-L",
+                "papel": "principal",
+                "lado": "L",
+                "posicao": {
+                  "x": 0.5,
+                  "y": 2.5,
+                  "z": 2.3
+                },
+                "mira": {
+                  "yaw": 19.536654938128386,
+                  "pitch": -3.082572747476538
+                },
+                "montagem": "pedestal",
+                "fonte": {
+                  "tipo": "produto",
+                  "ref": "armer-evx8go",
+                  "nome": "Armer EVX8GO",
+                  "cobertura": {
+                    "H": 90,
+                    "V": 60
+                  },
+                  "nivel": {
+                    "tipo": "pontual",
+                    "spl1m": 109,
+                    "estimado": true,
+                    "aviso": "O fabricante não informa se o volume máximo (115 dB) é contínuo ou de pico. Por segurança, tratamos como pico: contínuo estimado = 115 - 6 dB."
+                  },
+                  "meiaAltura": 0.3,
+                  "montagensPermitidas": [
+                    "pedestal"
+                  ],
+                  "subcategoria": "8",
+                  "spl": {
+                    "valor": 115,
+                    "unidade": "dB SPL (pico)",
+                    "condicaoMedicao": "desconhecida",
+                    "fonte": "https://armer.com.br/produtos/caixa-de-som-ativa-profissional-8-portatil-armer-evx8go-240w-c-bateria-bluetooth-dsp/",
+                    "dataVerificacao": "2026-10-29",
+                    "status": "declarado_fabricante"
+                  },
+                  "estimativas": [
+                    "O fabricante não publica o ângulo de cobertura. Usamos 90° x 60° (valor de referência de caixas de duas vias, pendente de confirmação)."
+                  ]
+                },
+                "movida": false,
+                "numero": 1
+              },
+              {
+                "id": "P-R",
+                "papel": "principal",
+                "lado": "R",
+                "posicao": {
+                  "x": 11.5,
+                  "y": 2.5,
+                  "z": 2.3
+                },
+                "mira": {
+                  "yaw": -19.536654938128386,
+                  "pitch": -3.082572747476538
+                },
+                "montagem": "pedestal",
+                "fonte": {
+                  "tipo": "produto",
+                  "ref": "armer-evx8go",
+                  "nome": "Armer EVX8GO",
+                  "cobertura": {
+                    "H": 90,
+                    "V": 60
+                  },
+                  "nivel": {
+                    "tipo": "pontual",
+                    "spl1m": 109,
+                    "estimado": true,
+                    "aviso": "O fabricante não informa se o volume máximo (115 dB) é contínuo ou de pico. Por segurança, tratamos como pico: contínuo estimado = 115 - 6 dB."
+                  },
+                  "meiaAltura": 0.3,
+                  "montagensPermitidas": [
+                    "pedestal"
+                  ],
+                  "subcategoria": "8",
+                  "spl": {
+                    "valor": 115,
+                    "unidade": "dB SPL (pico)",
+                    "condicaoMedicao": "desconhecida",
+                    "fonte": "https://armer.com.br/produtos/caixa-de-som-ativa-profissional-8-portatil-armer-evx8go-240w-c-bateria-bluetooth-dsp/",
+                    "dataVerificacao": "2026-10-29",
+                    "status": "declarado_fabricante"
+                  },
+                  "estimativas": [
+                    "O fabricante não publica o ângulo de cobertura. Usamos 90° x 60° (valor de referência de caixas de duas vias, pendente de confirmação)."
+                  ]
+                },
+                "movida": false,
+                "numero": 2
+              },
+              {
+                "id": "RF-L",
+                "papel": "reforco",
+                "lado": "L",
+                "posicao": {
+                  "x": 0.5,
+                  "y": 5,
+                  "z": 2.3
+                },
+                "mira": {
+                  "yaw": 22.932100437589785,
+                  "pitch": -3.648198886971042
+                },
+                "montagem": "pedestal",
+                "fonte": {
+                  "tipo": "produto",
+                  "ref": "armer-evx8go",
+                  "nome": "Armer EVX8GO",
+                  "cobertura": {
+                    "H": 90,
+                    "V": 60
+                  },
+                  "nivel": {
+                    "tipo": "pontual",
+                    "spl1m": 109,
+                    "estimado": true,
+                    "aviso": "O fabricante não informa se o volume máximo (115 dB) é contínuo ou de pico. Por segurança, tratamos como pico: contínuo estimado = 115 - 6 dB."
+                  },
+                  "meiaAltura": 0.3,
+                  "montagensPermitidas": [
+                    "pedestal"
+                  ],
+                  "subcategoria": "8",
+                  "spl": {
+                    "valor": 115,
+                    "unidade": "dB SPL (pico)",
+                    "condicaoMedicao": "desconhecida",
+                    "fonte": "https://armer.com.br/produtos/caixa-de-som-ativa-profissional-8-portatil-armer-evx8go-240w-c-bateria-bluetooth-dsp/",
+                    "dataVerificacao": "2026-10-29",
+                    "status": "declarado_fabricante"
+                  },
+                  "estimativas": [
+                    "O fabricante não publica o ângulo de cobertura. Usamos 90° x 60° (valor de referência de caixas de duas vias, pendente de confirmação)."
+                  ]
+                },
+                "movida": false,
+                "numero": 3
+              },
+              {
+                "id": "RF-R",
+                "papel": "reforco",
+                "lado": "R",
+                "posicao": {
+                  "x": 11.5,
+                  "y": 5,
+                  "z": 2.3
+                },
+                "mira": {
+                  "yaw": -22.932100437589785,
+                  "pitch": -3.648198886971042
+                },
+                "montagem": "pedestal",
+                "fonte": {
+                  "tipo": "produto",
+                  "ref": "armer-evx8go",
+                  "nome": "Armer EVX8GO",
+                  "cobertura": {
+                    "H": 90,
+                    "V": 60
+                  },
+                  "nivel": {
+                    "tipo": "pontual",
+                    "spl1m": 109,
+                    "estimado": true,
+                    "aviso": "O fabricante não informa se o volume máximo (115 dB) é contínuo ou de pico. Por segurança, tratamos como pico: contínuo estimado = 115 - 6 dB."
+                  },
+                  "meiaAltura": 0.3,
+                  "montagensPermitidas": [
+                    "pedestal"
+                  ],
+                  "subcategoria": "8",
+                  "spl": {
+                    "valor": 115,
+                    "unidade": "dB SPL (pico)",
+                    "condicaoMedicao": "desconhecida",
+                    "fonte": "https://armer.com.br/produtos/caixa-de-som-ativa-profissional-8-portatil-armer-evx8go-240w-c-bateria-bluetooth-dsp/",
+                    "dataVerificacao": "2026-10-29",
+                    "status": "declarado_fabricante"
+                  },
+                  "estimativas": [
+                    "O fabricante não publica o ângulo de cobertura. Usamos 90° x 60° (valor de referência de caixas de duas vias, pendente de confirmação)."
+                  ]
+                },
+                "movida": false,
+                "numero": 4
+              }
+            ],
+            "atrasos": [
+              {
+                "caixaId": "RF-L",
+                "referenciaId": "P-L",
+                "distanciaExtra": 2.5,
+                "ms": 7.3
+              },
+              {
+                "caixaId": "RF-R",
+                "referenciaId": "P-R",
+                "distanciaExtra": 2.5,
+                "ms": 7.3
+              }
+            ],
+            "frontFill": false,
+            "requisitos": {
+              "principal": [
+                {
+                  "campo": "splContinuo1m",
+                  "operador": ">=",
+                  "valor": 132,
+                  "unidade": "dB SPL",
+                  "texto": "SPL máximo contínuo a 1 m de pelo menos 132 dB (campo livre)"
+                },
+                {
+                  "campo": "montagem",
+                  "operador": "em",
+                  "valor": "pedestal",
+                  "unidade": "",
+                  "texto": "Montagem: qualquer uma permitida pelo fabricante (o layout de referência usou pedestal)"
+                },
+                {
+                  "campo": "pesoMax",
+                  "operador": "<=",
+                  "valor": 30,
+                  "unidade": "kg",
+                  "texto": "Peso de até 30 kg para pedestal"
+                },
+                {
+                  "campo": "coberturaH",
+                  "operador": ">=",
+                  "valor": 90,
+                  "unidade": "graus",
+                  "texto": "Cobertura usada no layout: 90° x 60° (H x V)"
+                }
+              ],
+              "reforco": [
+                {
+                  "campo": "splContinuo1m",
+                  "operador": ">=",
+                  "valor": 135,
+                  "unidade": "dB SPL",
+                  "texto": "SPL máximo contínuo a 1 m de pelo menos 135 dB (campo livre)"
+                },
+                {
+                  "campo": "montagem",
+                  "operador": "em",
+                  "valor": "pedestal",
+                  "unidade": "",
+                  "texto": "Montagem: qualquer uma permitida pelo fabricante (o layout de referência usou pedestal)"
+                },
+                {
+                  "campo": "pesoMax",
+                  "operador": "<=",
+                  "valor": 30,
+                  "unidade": "kg",
+                  "texto": "Peso de até 30 kg para pedestal"
+                }
+              ]
+            },
+            "avisos": [
+              "O fabricante não informa se o volume máximo (115 dB) é contínuo ou de pico. Por segurança, tratamos como pico: contínuo estimado = 115 - 6 dB.",
+              "O nível na última fileira fica abaixo do alvo. Par de reforço adicionado."
+            ]
+          },
+          "avaliacao": {
+            "estados": [],
+            "pct": {
+              "coberto": 0.9416666666666667,
+              "borda": 0.03888888888888889,
+              "fora": 0.019444444444444445
+            },
+            "nivel": {
+              "min": 86.20139217750646,
+              "max": 107.28273546346769,
+              "uniformidade": 21.081343285961225,
+              "pontosAvaliados": 678
+            },
+            "pontosSemNivel": 0,
+            "pontosSoGenericos": 0,
+            "capacidade": "estimada",
+            "motivoCapacidade": "Com o dado estimado, o volume mínimo calculado (86.2 dB) fica abaixo do necessário (110 dB). A estimativa é conservadora: confirme com a ficha do fabricante.",
+            "nivelPorLinha": []
+          },
+          "margemNivel": -23.798607822493537
+        },
+        {
+          "produtoId": "armer-evx215",
+          "nome": "Armer EVX215",
+          "marca": "Armer",
+          "categoria": "caixa_ativa",
+          "subcategoria": "2x15",
+          "porte": "intermediaria",
+          "status": "nao_avaliavel",
+          "motivos": [
+            "Falta dado de geometria na ficha: montagensPermitidas."
+          ],
+          "faltando": [
+            "montagensPermitidas"
+          ],
+          "quantidadeCaixas": 0,
+          "avisos": [],
+          "splPublicado": 134
+        },
+        {
+          "produtoId": "armer-evx12",
+          "nome": "Armer EVX 12",
+          "marca": "Armer",
+          "categoria": "caixa_ativa",
+          "subcategoria": "12",
+          "porte": "intermediaria",
+          "status": "nao_avaliavel",
+          "motivos": [
+            "Falta dado de geometria na ficha: montagensPermitidas."
+          ],
+          "faltando": [
+            "montagensPermitidas"
+          ],
+          "quantidadeCaixas": 0,
+          "avisos": [],
+          "splPublicado": 127
+        }
+      ],
+      "semProdutoAdequado": false,
+      "sub": {
+        "regra": "recomendado",
+        "incluido": true,
+        "escolhido": {
+          "produtoId": "armer-evx18sub",
+          "nome": "Armer EVX18SUB",
+          "marca": "Armer",
+          "subcategoria": "18",
+          "porte": "profissional",
+          "status": "parcial",
+          "motivos": [
+            "Falta na ficha: respostaFrequencia."
+          ],
+          "faltando": [
+            "respostaFrequencia"
+          ],
+          "porLado": 1,
+          "pareamentoFabricante": true,
+          "faixa": {
+            "minimo": 6399.95,
+            "maximo": 9285.64,
+            "dataVerificacao": "2026-10-29",
+            "fonte": "https://armer.com.br/produtos/caixa-de-som-profissional-subwoofer-ativo-18-armer-evx18sub-600w-para-sistema-pa/ (Por = preço de vitrine; De = preço regular)",
+            "ids": [
+              "fx-armer-evx18sub"
+            ]
+          }
+        },
+        "perfilGenerico": {
+          "id": "GEN-SUB",
+          "categoria": "subwoofer",
+          "subcategoria": "",
+          "nome": "Subwoofer ativo (perfil genérico)",
+          "rotulo": "Perfil genérico - especificação mínima, não é um produto.",
+          "requisitos": [
+            {
+              "campo": "montagem",
+              "operador": "em",
+              "valor": "chao",
+              "unidade": "",
+              "texto": "Subwoofer ativo apoiado no chão"
+            },
+            {
+              "campo": "splContinuo1m",
+              "operador": ">=",
+              "valor": "publicado",
+              "unidade": "",
+              "texto": "SPL máximo com condição de medição publicada"
+            },
+            {
+              "campo": "alcance",
+              "operador": "em",
+              "valor": "pareamento",
+              "unidade": "",
+              "texto": "Pareamento recomendado pelo fabricante da caixa principal, quando houver"
+            }
+          ],
+          "faixa": {
+            "minimo": 6399.95,
+            "maximo": 9285.64,
+            "dataVerificacao": "2026-10-29",
+            "fonte": "https://armer.com.br/produtos/caixa-de-som-profissional-subwoofer-ativo-18-armer-evx18sub-600w-para-sistema-pa/ (Por = preço de vitrine; De = preço regular)",
+            "ids": [
+              "fx-armer-evx18sub"
+            ]
+          }
+        },
+        "candidatos": [
+          {
+            "produtoId": "armer-evx18sub",
+            "nome": "Armer EVX18SUB",
+            "marca": "Armer",
+            "subcategoria": "18",
+            "porte": "profissional",
+            "status": "parcial",
+            "motivos": [
+              "Falta na ficha: respostaFrequencia."
+            ],
+            "faltando": [
+              "respostaFrequencia"
+            ],
+            "porLado": 1,
+            "pareamentoFabricante": true,
+            "faixa": {
+              "minimo": 6399.95,
+              "maximo": 9285.64,
+              "dataVerificacao": "2026-10-29",
+              "fonte": "https://armer.com.br/produtos/caixa-de-som-profissional-subwoofer-ativo-18-armer-evx18sub-600w-para-sistema-pa/ (Por = preço de vitrine; De = preço regular)",
+              "ids": [
+                "fx-armer-evx18sub"
+              ]
+            }
+          }
+        ],
+        "porLado": 1
+      },
+      "statusValidacao": {
+        "geometria": "validada",
+        "capacidade": "estimada",
+        "acustica": "medio"
+      },
+      "ajustada": false
+    },
+    "alternativas": [
+      {
+        "rotulo": "menor custo",
+        "arquitetura": "AR-1",
+        "nome": "AZ Audio Z1 Compact Pro",
+        "produtoId": "az-z1-compact-pro",
+        "quantidadeCaixas": 4,
+        "status": "parcial",
+        "margemNivel": -23.795223072028932,
+        "faixa": {
+          "minimo": 2119.2,
+          "maximo": 2444.38,
+          "dataVerificacao": "2026-10-29",
+          "fonte": "https://azaudio.com.br/produtos/caixa-de-som-ativa-portatil-profissional-az-audio-z1-compact-pro-bluetooth-c-bateria-recarregavel/ (Por = preço de vitrine; De = preço regular)",
+          "ids": [
+            "fx-az-z1-compact-pro"
+          ]
+        }
+      },
+      {
+        "rotulo": "equilíbrio",
+        "arquitetura": "AR-1",
+        "nome": "Armer EVX 15",
+        "produtoId": "armer-evx15",
+        "quantidadeCaixas": 4,
+        "status": "parcial",
+        "margemNivel": -10.798607822493537,
+        "faixa": {
+          "minimo": 3663.28,
+          "maximo": 5233.25,
+          "dataVerificacao": "2026-10-29",
+          "fonte": "https://armer.com.br/produtos/caixa-de-som-ativa-profissional-armer-evx-15-1400w-bivolt/ (Por = preço de vitrine; De = preço regular)",
+          "ids": [
+            "fx-armer-evx15"
+          ]
+        }
+      }
+    ],
+    "pagNag": null,
+    "investimento": {
+      "minimo": 27453.02,
+      "maximo": 39504.28,
+      "referencia": "10/2026",
+      "itensSemFaixa": [],
+      "completo": true
+    },
+    "orcamento": null,
+    "palco": null,
+    "avisos": [
+      "Pela estimativa (feita com dados incompletos do fabricante), nenhum modelo do catálogo alcança com folga o volume pedido para este uso. Considere mais caixas, um sistema maior, ou confirme a ficha completa com o fabricante e um profissional.",
+      "O comportamento dos graves depende da sala. Ajuste no local.",
+      "O fabricante não informa se o volume máximo (128 dB) é contínuo ou de pico. Por segurança, tratamos como pico: contínuo estimado = 128 - 6 dB.",
+      "O nível na última fileira fica abaixo do alvo. Par de reforço adicionado."
+    ],
+    "conclusoes": [
+      {
+        "id": "nivel-alvo",
+        "titulo": "Volume necessário",
+        "texto": "Para este uso, o som precisa chegar a cerca de 100 dB em quem está sentado, com folga de 10 dB para os momentos mais fortes. Ou seja, a caixa precisa entregar 110 dB na área do público. Como o local tem mais de um uso, valeu o mais exigente (DJ). Somamos 5 dB por causa do barulho do local. Limitamos o volume a 100 dB, por segurança. Atenção: acima de 95 dB, ficar muito tempo exposto pode prejudicar a audição. Controle o volume e o tempo.",
+        "entradas": [
+          "Usos: banda ao vivo, DJ (informado)",
+          "Formação da banda: banda_bateria",
+          "Ruído com o local funcionando: dificil"
+        ],
+        "regra": "C5: maior nível-alvo entre os usos + ajuste por ruído, com teto",
+        "parametros": [
+          {
+            "id": "niveisPorUso",
+            "valor": {
+              "fala": {
+                "alvo": 75,
+                "reserva": 10,
+                "sub": "nao"
+              },
+              "musica_ambiente": {
+                "alvo": 70,
+                "reserva": 6,
+                "sub": "nao"
+              },
+              "musica_primeiro_plano": {
+                "alvo": 85,
+                "reserva": 10,
+                "sub": "sim"
+              },
+              "voz_violao": {
+                "alvo": 85,
+                "reserva": 10,
+                "sub": "opcional"
+              },
+              "banda_bateria": {
+                "alvo": 95,
+                "reserva": 10,
+                "sub": "sim"
+              },
+              "dj": {
+                "alvo": 98,
+                "reserva": 10,
+                "sub": "sim"
+              },
+              "video": {
+                "alvo": 80,
+                "reserva": 15,
+                "sub": "opcional"
+              }
+            },
+            "status": "pendente_validacao"
+          },
+          {
+            "id": "ajusteRuido",
+            "valor": {
+              "facil": 0,
+              "dificil": 5,
+              "muito_dificil": 10
+            },
+            "status": "pendente_validacao"
+          },
+          {
+            "id": "tetoAlvo",
+            "valor": 100,
+            "status": "pendente_validacao"
+          },
+          {
+            "id": "limiarSegurancaAuditiva",
+            "valor": 95,
+            "status": "pendente_validacao"
+          }
+        ],
+        "hipoteses": [],
+        "limitacoes": [
+          "Nível médio contínuo de referência. Não garante limite de ruído para vizinhos nem segurança auditiva."
+        ]
+      },
+      {
+        "id": "escopo",
+        "titulo": "O sistema consegue calcular o seu espaço?",
+        "texto": "O seu espaço está dentro do que o sistema calcula.",
+        "entradas": [
+          "Sala: 12,0 m de largura x 18,0 m de profundidade x 4,0 m de pé-direito (informado)",
+          "Palco: 3,0 m de profundidade (padrão)",
+          "Público: 180 pessoas, em pé (altura do ouvinte 1,7 m)"
+        ],
+        "regra": "B5: envelope do MVP",
+        "parametros": [
+          {
+            "id": "envelope",
+            "valor": {
+              "areaPublicoSuportada": 600,
+              "distanciaSuportada": 30,
+              "distanciaParcial": 45,
+              "peDireitoMin": 2.5,
+              "peDireitoMax": 10,
+              "publicoEncaminhar": 1000,
+              "profundidadeAbertoEncaminhar": 45
+            },
+            "status": "pendente_validacao"
+          },
+          {
+            "id": "areaPorPessoa",
+            "valor": {
+              "sentado": 0.8,
+              "em_pe": 0.5,
+              "mesas": 1.5
+            },
+            "status": "pendente_validacao"
+          }
+        ],
+        "hipoteses": [],
+        "limitacoes": []
+      },
+      {
+        "id": "arquitetura",
+        "titulo": "Sistema recomendado",
+        "texto": "Recomendamos duas caixas de som na frente, uma de cada lado do palco. O público ocupa 15 m de profundidade. Para essa distância, duas caixas comuns na frente resolvem bem (colunas passam a valer a pena acima de 18 m).",
+        "entradas": [
+          "Sala: 12,0 m de largura x 18,0 m de profundidade x 4,0 m de pé-direito (informado)",
+          "Palco: 3,0 m de profundidade (padrão)",
+          "Público: 180 pessoas, em pé (altura do ouvinte 1,7 m)",
+          "Instalação: sem_preferencia, formato sem_preferencia, fixa"
+        ],
+        "regra": "C4: AR-1; preferência por vertical array acima de 18 m de profundidade ou com reverberação alta",
+        "parametros": [
+          {
+            "id": "profundidadePreferenciaArray",
+            "valor": 18,
+            "status": "pendente_validacao"
+          }
+        ],
+        "hipoteses": [
+          "A preferência entre caixas convencionais e vertical array é uma regra inicial do produto."
+        ],
+        "limitacoes": [
+          "Sala modelada como retângulo, sem obstáculos.",
+          "Não calcula reflexões, RT60 nem STI."
+        ]
+      },
+      {
+        "id": "caixas",
+        "titulo": "Quantas caixas e de que tipo",
+        "texto": "Você vai precisar de: 2 x Armer EVX 15 (caixa principal, em pedestal); 2 x Armer EVX 15 (caixa de apoio do meio do salão, em pedestal); 2 x Armer EVX18SUB (subwoofer, apoiada no chão). A quantidade sai do tamanho da sala e foi conferida com os dados do modelo escolhido.",
+        "entradas": [
+          "Sala: 12,0 m de largura x 18,0 m de profundidade x 4,0 m de pé-direito (informado)",
+          "Palco: 3,0 m de profundidade (padrão)",
+          "Público: 180 pessoas, em pé (altura do ouvinte 1,7 m)"
+        ],
+        "regra": "C4 AR-1: 2 caixas L/R; front-fill e reforço quando necessários",
+        "parametros": [
+          {
+            "id": "afastamentoParedeLateral",
+            "valor": {
+              "parede": 0.2,
+              "outras": 0.5
+            },
+            "status": "pendente_validacao"
+          },
+          {
+            "id": "recuoPalco",
+            "valor": 0.5,
+            "status": "pendente_validacao"
+          },
+          {
+            "id": "folgaTeto",
+            "valor": 0.3,
+            "status": "pendente_validacao"
+          },
+          {
+            "id": "alturaBasePedestal",
+            "valor": 2,
+            "status": "pendente_validacao"
+          },
+          {
+            "id": "distMaxPontual",
+            "valor": 20,
+            "status": "pendente_validacao"
+          }
+        ],
+        "hipoteses": [],
+        "limitacoes": []
+      },
+      {
+        "id": "caixa:P-L",
+        "titulo": "Caixa 1",
+        "texto": "Caixa 1 (caixa principal), em pedestal. Altura: 2,30 m do chão até o centro da caixa. Posição: 0,50 m da parede lateral e 2,50 m da parede do palco. Direção: 20° para o lado e -3° para baixo. Ela aponta para o centro da última fileira e fica levemente inclinada para baixo, mirando o público e não as paredes.",
+        "entradas": [
+          "Sala: 12,0 m de largura x 18,0 m de profundidade x 4,0 m de pé-direito (informado)",
+          "Palco: 3,0 m de profundidade (padrão)",
+          "Público: 180 pessoas, em pé (altura do ouvinte 1,7 m)"
+        ],
+        "regra": "C4 AR-1/AR-2: posição, altura e direção",
+        "parametros": [
+          {
+            "id": "afastamentoParedeLateral",
+            "valor": {
+              "parede": 0.2,
+              "outras": 0.5
+            },
+            "status": "pendente_validacao"
+          },
+          {
+            "id": "recuoPalco",
+            "valor": 0.5,
+            "status": "pendente_validacao"
+          },
+          {
+            "id": "folgaTeto",
+            "valor": 0.3,
+            "status": "pendente_validacao"
+          },
+          {
+            "id": "alturaBasePedestal",
+            "valor": 2,
+            "status": "pendente_validacao"
+          }
+        ],
+        "hipoteses": [
+          "Fonte: Armer EVX 15"
+        ],
+        "limitacoes": []
+      },
+      {
+        "id": "caixa:P-R",
+        "titulo": "Caixa 2",
+        "texto": "Caixa 2 (caixa principal), em pedestal. Altura: 2,30 m do chão até o centro da caixa. Posição: 11,50 m da parede lateral e 2,50 m da parede do palco. Direção: -20° para o lado e -3° para baixo. Ela aponta para o centro da última fileira e fica levemente inclinada para baixo, mirando o público e não as paredes.",
+        "entradas": [
+          "Sala: 12,0 m de largura x 18,0 m de profundidade x 4,0 m de pé-direito (informado)",
+          "Palco: 3,0 m de profundidade (padrão)",
+          "Público: 180 pessoas, em pé (altura do ouvinte 1,7 m)"
+        ],
+        "regra": "C4 AR-1/AR-2: posição, altura e direção",
+        "parametros": [
+          {
+            "id": "afastamentoParedeLateral",
+            "valor": {
+              "parede": 0.2,
+              "outras": 0.5
+            },
+            "status": "pendente_validacao"
+          },
+          {
+            "id": "recuoPalco",
+            "valor": 0.5,
+            "status": "pendente_validacao"
+          },
+          {
+            "id": "folgaTeto",
+            "valor": 0.3,
+            "status": "pendente_validacao"
+          },
+          {
+            "id": "alturaBasePedestal",
+            "valor": 2,
+            "status": "pendente_validacao"
+          }
+        ],
+        "hipoteses": [
+          "Fonte: Armer EVX 15"
+        ],
+        "limitacoes": []
+      },
+      {
+        "id": "caixa:RF-L",
+        "titulo": "Caixa 3",
+        "texto": "Caixa 3 (caixa de apoio do meio do salão), em pedestal. Altura: 2,30 m do chão até o centro da caixa. Posição: 0,50 m da parede lateral e 5,00 m da parede do palco. Direção: 23° para o lado e -4° para baixo. Ela aponta para o centro da última fileira e fica levemente inclinada para baixo, mirando o público e não as paredes.",
+        "entradas": [
+          "Sala: 12,0 m de largura x 18,0 m de profundidade x 4,0 m de pé-direito (informado)",
+          "Palco: 3,0 m de profundidade (padrão)",
+          "Público: 180 pessoas, em pé (altura do ouvinte 1,7 m)"
+        ],
+        "regra": "C4 AR-1/AR-2: posição, altura e direção",
+        "parametros": [
+          {
+            "id": "afastamentoParedeLateral",
+            "valor": {
+              "parede": 0.2,
+              "outras": 0.5
+            },
+            "status": "pendente_validacao"
+          },
+          {
+            "id": "recuoPalco",
+            "valor": 0.5,
+            "status": "pendente_validacao"
+          },
+          {
+            "id": "folgaTeto",
+            "valor": 0.3,
+            "status": "pendente_validacao"
+          },
+          {
+            "id": "alturaBasePedestal",
+            "valor": 2,
+            "status": "pendente_validacao"
+          }
+        ],
+        "hipoteses": [
+          "Fonte: Armer EVX 15"
+        ],
+        "limitacoes": []
+      },
+      {
+        "id": "caixa:RF-R",
+        "titulo": "Caixa 4",
+        "texto": "Caixa 4 (caixa de apoio do meio do salão), em pedestal. Altura: 2,30 m do chão até o centro da caixa. Posição: 11,50 m da parede lateral e 5,00 m da parede do palco. Direção: -23° para o lado e -4° para baixo. Ela aponta para o centro da última fileira e fica levemente inclinada para baixo, mirando o público e não as paredes.",
+        "entradas": [
+          "Sala: 12,0 m de largura x 18,0 m de profundidade x 4,0 m de pé-direito (informado)",
+          "Palco: 3,0 m de profundidade (padrão)",
+          "Público: 180 pessoas, em pé (altura do ouvinte 1,7 m)"
+        ],
+        "regra": "C4 AR-1/AR-2: posição, altura e direção",
+        "parametros": [
+          {
+            "id": "afastamentoParedeLateral",
+            "valor": {
+              "parede": 0.2,
+              "outras": 0.5
+            },
+            "status": "pendente_validacao"
+          },
+          {
+            "id": "recuoPalco",
+            "valor": 0.5,
+            "status": "pendente_validacao"
+          },
+          {
+            "id": "folgaTeto",
+            "valor": 0.3,
+            "status": "pendente_validacao"
+          },
+          {
+            "id": "alturaBasePedestal",
+            "valor": 2,
+            "status": "pendente_validacao"
+          }
+        ],
+        "hipoteses": [
+          "Fonte: Armer EVX 15"
+        ],
+        "limitacoes": []
+      },
+      {
+        "id": "caixa:SUB-L-1",
+        "titulo": "Caixa 5",
+        "texto": "Caixa 5 (subwoofer), apoiada no chão. Altura: 0,30 m do chão até o centro da caixa. Posição: 1,40 m da parede lateral e 2,50 m da parede do palco. Direção: 0° para o lado e 0° para baixo. O grave se comporta diferente em cada sala: ajuste no local.",
+        "entradas": [
+          "Sala: 12,0 m de largura x 18,0 m de profundidade x 4,0 m de pé-direito (informado)",
+          "Palco: 3,0 m de profundidade (padrão)",
+          "Público: 180 pessoas, em pé (altura do ouvinte 1,7 m)"
+        ],
+        "regra": "C4 AR-3: no chão, sob ou ao lado das caixas principais",
+        "parametros": [
+          {
+            "id": "subPorLadoPadrao",
+            "valor": 1,
+            "status": "pendente_validacao"
+          }
+        ],
+        "hipoteses": [
+          "Fonte: Armer EVX18SUB"
+        ],
+        "limitacoes": []
+      },
+      {
+        "id": "caixa:SUB-R-1",
+        "titulo": "Caixa 6",
+        "texto": "Caixa 6 (subwoofer), apoiada no chão. Altura: 0,30 m do chão até o centro da caixa. Posição: 10,60 m da parede lateral e 2,50 m da parede do palco. Direção: 0° para o lado e 0° para baixo. O grave se comporta diferente em cada sala: ajuste no local.",
+        "entradas": [
+          "Sala: 12,0 m de largura x 18,0 m de profundidade x 4,0 m de pé-direito (informado)",
+          "Palco: 3,0 m de profundidade (padrão)",
+          "Público: 180 pessoas, em pé (altura do ouvinte 1,7 m)"
+        ],
+        "regra": "C4 AR-3: no chão, sob ou ao lado das caixas principais",
+        "parametros": [
+          {
+            "id": "subPorLadoPadrao",
+            "valor": 1,
+            "status": "pendente_validacao"
+          }
+        ],
+        "hipoteses": [
+          "Fonte: Armer EVX18SUB"
+        ],
+        "limitacoes": []
+      },
+      {
+        "id": "cobertura",
+        "titulo": "Onde o som chega bem",
+        "texto": "O som chega bem em 94% da área do público, mais fraco em 4% e fica fora do alcance principal em 2%. A área vem do ângulo que o fabricante declara para a caixa. É uma conta de geometria, não uma medição.",
+        "entradas": [
+          "Sala: 12,0 m de largura x 18,0 m de profundidade x 4,0 m de pé-direito (informado)",
+          "Palco: 3,0 m de profundidade (padrão)",
+          "Público: 180 pessoas, em pé (altura do ouvinte 1,7 m)",
+          "Cobertura usada: 90° x 60° (H x V)"
+        ],
+        "regra": "C5 nível A: ponto coberto se |h| <= H/2 e |v| <= V/2; borda até +10°",
+        "parametros": [
+          {
+            "id": "bordaCobertura",
+            "valor": 10,
+            "status": "pendente_validacao"
+          },
+          {
+            "id": "passoMalha",
+            "valor": 0.5,
+            "status": "referencia"
+          },
+          {
+            "id": "alturaOuvinteSentado",
+            "valor": 1.2,
+            "status": "pendente_validacao"
+          },
+          {
+            "id": "alturaOuvinteEmPe",
+            "valor": 1.7,
+            "status": "pendente_validacao"
+          },
+          {
+            "id": "foraMaxValidada",
+            "valor": 0.05,
+            "status": "pendente_validacao"
+          }
+        ],
+        "hipoteses": [],
+        "limitacoes": [
+          "Cobertura nominal declarada pelo fabricante. Aproximação geométrica, não é medição.",
+          "Não atribui atenuação em dB fora do eixo.",
+          "Sala modelada como retângulo, sem obstáculos.",
+          "Não calcula reflexões, RT60 nem STI."
+        ]
+      },
+      {
+        "id": "capacidade",
+        "titulo": "O volume é suficiente?",
+        "texto": "A posição das caixas está calculada. Pela estimativa, o volume mínimo calculado (99.2 dB) fica abaixo do necessário (110 dB). A estimativa é conservadora: confirme com a ficha do fabricante.",
+        "entradas": [
+          "Requerido: 110 dB (alvo 100 + reserva 10)"
+        ],
+        "regra": "C5 nível B: L(d) = SPL contínuo a 1 m - 20 log10(d), só dentro da cobertura nominal; cada ponto recebe a fonte mais forte",
+        "parametros": [
+          {
+            "id": "uniformidadeMax",
+            "valor": 6,
+            "status": "pendente_validacao"
+          },
+          {
+            "id": "toleranciaNivel",
+            "valor": 3,
+            "status": "pendente_validacao"
+          },
+          {
+            "id": "picoParaContinuo",
+            "valor": 6,
+            "status": "pendente_validacao"
+          }
+        ],
+        "hipoteses": [
+          "SPL contínuo estimado a partir do pico."
+        ],
+        "limitacoes": [
+          "O sistema não soma fontes (sinais correlacionados): o resultado é conservador.",
+          "Só nível direto, sem contribuição da sala."
+        ]
+      },
+      {
+        "id": "requisitos",
+        "titulo": "O que a caixa precisa ter",
+        "texto": "O que a caixa principal precisa ter: SPL máximo contínuo a 1 m de pelo menos 136 dB (campo livre); Montagem: qualquer uma permitida pelo fabricante (o layout de referência usou parede); Peso de até 40 kg para parede; Cobertura usada no layout: 90° x 60° (H x V).",
+        "entradas": [],
+        "regra": "C8 passo 2: requisitos calculados para o caso",
+        "parametros": [
+          {
+            "id": "pesoMaxPorMontagem",
+            "valor": {
+              "pedestal": 30,
+              "parede": 40,
+              "suspensa": 60,
+              "chao": 999
+            },
+            "status": "pendente_validacao"
+          }
+        ],
+        "hipoteses": [
+          "Perfil genérico - especificação mínima, não é um produto."
+        ],
+        "limitacoes": [
+          "Peso máximo por montagem não é dimensionamento estrutural."
+        ]
+      },
+      {
+        "id": "produtos",
+        "titulo": "Produtos do catálogo",
+        "texto": "Avaliamos 6 modelo(s): 0 atende(m), 4 atende(m) com dados a confirmar, 0 não atende(m) e 2 sem dados suficientes. A ordem segue só critérios técnicos: (1) se atende, (2) menos caixas, (3) mais folga de volume (até +6 dB), (4) menor investimento. Nenhuma marca ganha ponto extra.",
+        "entradas": [],
+        "regra": "C7 status de compatibilidade; C8 ranking",
+        "parametros": [
+          {
+            "id": "margemNivelMaxRanking",
+            "valor": 6,
+            "status": "pendente_validacao"
+          }
+        ],
+        "hipoteses": [
+          "Ausência de dado nunca reprova nem aprova um produto."
+        ],
+        "limitacoes": [
+          "Só produtos do catálogo verificado são avaliados."
+        ]
+      },
+      {
+        "id": "produto:armer-evx15",
+        "titulo": "Armer EVX 15",
+        "texto": "Status: parcial. Capacidade sonora estimada: Com o dado estimado, o volume mínimo calculado (99.2 dB) fica abaixo do necessário (110 dB). A estimativa é conservadora: confirme com a ficha do fabricante. O fabricante não publica o ângulo de cobertura. Usamos 90° x 60° (valor de referência de caixas de duas vias, pendente de confirmação). Com os dados reais deste produto, o layout precisa de 4 caixas (o perfil genérico usou 2).",
+        "entradas": [],
+        "regra": "C7 status de compatibilidade",
+        "parametros": [
+          {
+            "id": "pesoMaxPorMontagem",
+            "valor": {
+              "pedestal": 30,
+              "parede": 40,
+              "suspensa": 60,
+              "chao": 999
+            },
+            "status": "pendente_validacao"
+          },
+          {
+            "id": "uniformidadeMax",
+            "valor": 6,
+            "status": "pendente_validacao"
+          }
+        ],
+        "hipoteses": [],
+        "limitacoes": [
+          "O fabricante não informa se o volume máximo (128 dB) é contínuo ou de pico. Por segurança, tratamos como pico: contínuo estimado = 128 - 6 dB.",
+          "O nível na última fileira fica abaixo do alvo. Par de reforço adicionado.",
+          "Variação de nível na área coberta de 21.1 dB (critério: até 6 dB). O modelo não atenua fora do eixo, então a variação real tende a ser diferente."
+        ]
+      },
+      {
+        "id": "produto:armer-evx10",
+        "titulo": "Armer EVX 10",
+        "texto": "Status: parcial. Capacidade sonora estimada: Com o dado estimado, o volume mínimo calculado (97.2 dB) fica abaixo do necessário (110 dB). A estimativa é conservadora: confirme com a ficha do fabricante. O fabricante não publica o ângulo de cobertura. Usamos 90° x 60° (valor de referência de caixas de duas vias, pendente de confirmação). Com os dados reais deste produto, o layout precisa de 4 caixas (o perfil genérico usou 2).",
+        "entradas": [],
+        "regra": "C7 status de compatibilidade",
+        "parametros": [
+          {
+            "id": "pesoMaxPorMontagem",
+            "valor": {
+              "pedestal": 30,
+              "parede": 40,
+              "suspensa": 60,
+              "chao": 999
+            },
+            "status": "pendente_validacao"
+          },
+          {
+            "id": "uniformidadeMax",
+            "valor": 6,
+            "status": "pendente_validacao"
+          }
+        ],
+        "hipoteses": [],
+        "limitacoes": [
+          "O fabricante não informa se o volume máximo (126 dB) é contínuo ou de pico. Por segurança, tratamos como pico: contínuo estimado = 126 - 6 dB.",
+          "O nível na última fileira fica abaixo do alvo. Par de reforço adicionado.",
+          "Variação de nível na área coberta de 21.1 dB (critério: até 6 dB). O modelo não atenua fora do eixo, então a variação real tende a ser diferente."
+        ]
+      },
+      {
+        "id": "produto:az-z1-compact-pro",
+        "titulo": "AZ Audio Z1 Compact Pro",
+        "texto": "Status: parcial. Capacidade sonora estimada: Com o dado estimado, o volume mínimo calculado (86.2 dB) fica abaixo do necessário (110 dB). A estimativa é conservadora: confirme com a ficha do fabricante. O fabricante não publica o ângulo de cobertura. Usamos 90° x 60° (valor de referência de caixas de duas vias, pendente de confirmação). Com os dados reais deste produto, o layout precisa de 4 caixas (o perfil genérico usou 2).",
+        "entradas": [],
+        "regra": "C7 status de compatibilidade",
+        "parametros": [
+          {
+            "id": "pesoMaxPorMontagem",
+            "valor": {
+              "pedestal": 30,
+              "parede": 40,
+              "suspensa": 60,
+              "chao": 999
+            },
+            "status": "pendente_validacao"
+          },
+          {
+            "id": "uniformidadeMax",
+            "valor": 6,
+            "status": "pendente_validacao"
+          }
+        ],
+        "hipoteses": [],
+        "limitacoes": [
+          "O fabricante não informa se o volume máximo (115 dB) é contínuo ou de pico. Por segurança, tratamos como pico: contínuo estimado = 115 - 6 dB.",
+          "O nível na última fileira fica abaixo do alvo. Par de reforço adicionado.",
+          "Variação de nível na área coberta de 23.6 dB (critério: até 6 dB). O modelo não atenua fora do eixo, então a variação real tende a ser diferente."
+        ]
+      },
+      {
+        "id": "produto:armer-evx8go",
+        "titulo": "Armer EVX8GO",
+        "texto": "Status: parcial. Capacidade sonora estimada: Com o dado estimado, o volume mínimo calculado (86.2 dB) fica abaixo do necessário (110 dB). A estimativa é conservadora: confirme com a ficha do fabricante. O fabricante não publica o ângulo de cobertura. Usamos 90° x 60° (valor de referência de caixas de duas vias, pendente de confirmação). Com os dados reais deste produto, o layout precisa de 4 caixas (o perfil genérico usou 2).",
+        "entradas": [],
+        "regra": "C7 status de compatibilidade",
+        "parametros": [
+          {
+            "id": "pesoMaxPorMontagem",
+            "valor": {
+              "pedestal": 30,
+              "parede": 40,
+              "suspensa": 60,
+              "chao": 999
+            },
+            "status": "pendente_validacao"
+          },
+          {
+            "id": "uniformidadeMax",
+            "valor": 6,
+            "status": "pendente_validacao"
+          }
+        ],
+        "hipoteses": [],
+        "limitacoes": [
+          "O fabricante não informa se o volume máximo (115 dB) é contínuo ou de pico. Por segurança, tratamos como pico: contínuo estimado = 115 - 6 dB.",
+          "O nível na última fileira fica abaixo do alvo. Par de reforço adicionado.",
+          "Variação de nível na área coberta de 21.1 dB (critério: até 6 dB). O modelo não atenua fora do eixo, então a variação real tende a ser diferente."
+        ]
+      },
+      {
+        "id": "produto:armer-evx215",
+        "titulo": "Armer EVX215",
+        "texto": "Status: nao avaliavel. Falta dado de geometria na ficha: montagensPermitidas.",
+        "entradas": [
+          "Falta na ficha: montagensPermitidas"
+        ],
+        "regra": "C7 status de compatibilidade",
+        "parametros": [
+          {
+            "id": "pesoMaxPorMontagem",
+            "valor": {
+              "pedestal": 30,
+              "parede": 40,
+              "suspensa": 60,
+              "chao": 999
+            },
+            "status": "pendente_validacao"
+          },
+          {
+            "id": "uniformidadeMax",
+            "valor": 6,
+            "status": "pendente_validacao"
+          }
+        ],
+        "hipoteses": [],
+        "limitacoes": []
+      },
+      {
+        "id": "produto:armer-evx12",
+        "titulo": "Armer EVX 12",
+        "texto": "Status: nao avaliavel. Falta dado de geometria na ficha: montagensPermitidas.",
+        "entradas": [
+          "Falta na ficha: montagensPermitidas"
+        ],
+        "regra": "C7 status de compatibilidade",
+        "parametros": [
+          {
+            "id": "pesoMaxPorMontagem",
+            "valor": {
+              "pedestal": 30,
+              "parede": 40,
+              "suspensa": 60,
+              "chao": 999
+            },
+            "status": "pendente_validacao"
+          },
+          {
+            "id": "uniformidadeMax",
+            "valor": 6,
+            "status": "pendente_validacao"
+          }
+        ],
+        "hipoteses": [],
+        "limitacoes": []
+      },
+      {
+        "id": "sub",
+        "titulo": "Subwoofer",
+        "texto": "Recomendamos subwoofer porque o uso inclui banda com bateria, DJ, que pede grave forte. 1 por lado (pareamento publicado pelo fabricante), no chão, ao lado das caixas principais. O grave se comporta diferente em cada sala: ajuste no local.",
+        "entradas": [
+          "Usos: banda ao vivo, DJ (informado)",
+          "Formação da banda: banda_bateria"
+        ],
+        "regra": "C4 AR-3: regra por uso; quantidade pelo pareamento do fabricante",
+        "parametros": [
+          {
+            "id": "niveisPorUso",
+            "valor": {
+              "fala": {
+                "alvo": 75,
+                "reserva": 10,
+                "sub": "nao"
+              },
+              "musica_ambiente": {
+                "alvo": 70,
+                "reserva": 6,
+                "sub": "nao"
+              },
+              "musica_primeiro_plano": {
+                "alvo": 85,
+                "reserva": 10,
+                "sub": "sim"
+              },
+              "voz_violao": {
+                "alvo": 85,
+                "reserva": 10,
+                "sub": "opcional"
+              },
+              "banda_bateria": {
+                "alvo": 95,
+                "reserva": 10,
+                "sub": "sim"
+              },
+              "dj": {
+                "alvo": 98,
+                "reserva": 10,
+                "sub": "sim"
+              },
+              "video": {
+                "alvo": 80,
+                "reserva": 15,
+                "sub": "opcional"
+              }
+            },
+            "status": "pendente_validacao"
+          },
+          {
+            "id": "subPorLadoPadrao",
+            "valor": 1,
+            "status": "pendente_validacao"
+          }
+        ],
+        "hipoteses": [],
+        "limitacoes": [
+          "Sem mapa de graves."
+        ]
+      },
+      {
+        "id": "reforco",
+        "titulo": "Caixas de apoio no meio do salão",
+        "texto": "Para quem senta longe, colocamos um segundo par de caixas a 5,0 m do palco. Atraso inicial sugerido: 7,3 ms. Esse valor é só um ponto de partida e deve ser ajustado no local.",
+        "entradas": [],
+        "regra": "C5: reforço na posição em que o nível cai abaixo do alvo, ou na distância máxima da fonte pontual",
+        "parametros": [
+          {
+            "id": "distMaxPontual",
+            "valor": 20,
+            "status": "pendente_validacao"
+          },
+          {
+            "id": "toleranciaNivel",
+            "valor": 3,
+            "status": "pendente_validacao"
+          },
+          {
+            "id": "velocidadeSom",
+            "valor": 343,
+            "status": "referencia"
+          }
+        ],
+        "hipoteses": [],
+        "limitacoes": [
+          "O atraso é só referência. O valor final de delay e EQ é ajustado com medição no local."
+        ]
+      },
+      {
+        "id": "reverberacao",
+        "titulo": "Eco da sala",
+        "texto": "Eco da sala: médio (2 de 5 pontos). A sala tem um pouco de eco. Aponte as caixas para o público e evite mirar em paredes lisas ou vidro.",
+        "entradas": [
+          "Superfícies: mistas",
+          "Palma ecoa: um_pouco",
+          "Volume: 864 m³",
+          "Ambiente: fechado"
+        ],
+        "regra": "C5 nível C: pontuação qualitativa",
+        "parametros": [
+          {
+            "id": "reverberacao",
+            "valor": {
+              "superficies": {
+                "duras": 2,
+                "mistas": 1,
+                "absorventes": 0
+              },
+              "palma": {
+                "sim": 2,
+                "um_pouco": 1,
+                "nao": 0
+              },
+              "volumeLimiar": 1500,
+              "pontosVolume": 1,
+              "classes": {
+                "baixoAte": 1,
+                "medioAte": 3
+              }
+            },
+            "status": "pendente_validacao"
+          }
+        ],
+        "hipoteses": [],
+        "limitacoes": [
+          "O sistema não calcula RT60 nem STI: Sabine e Eyring assumem campo difuso, e essa hipótese falha em muitas salas reais."
+        ]
+      },
+      {
+        "id": "investimento",
+        "titulo": "Investimento estimado",
+        "texto": "Investimento estimado em equipamentos: R$ 27.453 a R$ 39.504 (referência de preço de 10/2026, sem instalação).",
+        "entradas": [],
+        "regra": "C7: soma das faixas por categoria e porte; faixa vencida não aparece",
+        "parametros": [
+          {
+            "id": "validadeFaixaDias",
+            "valor": 90,
+            "status": "referencia"
+          }
+        ],
+        "hipoteses": [],
+        "limitacoes": [
+          "Não inclui instalação, frete nem acessórios sem faixa.",
+          "Não é preço de produto."
+        ]
+      }
+    ],
+    "profissional": [
+      "Nível acima de 95 dB: avalie limites de exposição e de ruído para a vizinhança com um profissional.",
+      "A capacidade sonora não foi validada com dados do fabricante: confirme o SPL com o fabricante ou com medição antes de comprar.",
+      "Há caixas de reforço/delay: o ajuste final de atraso e equalização precisa de medição no local.",
+      "Este é um pré-dimensionamento. Os parâmetros marcados como 'pendente de validação' ainda não foram revisados por um projetista."
+    ],
+    "parametrosPendentes": [
+      {
+        "id": "afastamentoParedeLateral",
+        "valor": {
+          "parede": 0.2,
+          "outras": 0.5
+        },
+        "status": "pendente_validacao"
+      },
+      {
+        "id": "ajusteRuido",
+        "valor": {
+          "facil": 0,
+          "dificil": 5,
+          "muito_dificil": 10
+        },
+        "status": "pendente_validacao"
+      },
+      {
+        "id": "alturaBasePedestal",
+        "valor": 2,
+        "status": "pendente_validacao"
+      },
+      {
+        "id": "alturaOuvinteEmPe",
+        "valor": 1.7,
+        "status": "pendente_validacao"
+      },
+      {
+        "id": "alturaOuvinteSentado",
+        "valor": 1.2,
+        "status": "pendente_validacao"
+      },
+      {
+        "id": "areaPorPessoa",
+        "valor": {
+          "sentado": 0.8,
+          "em_pe": 0.5,
+          "mesas": 1.5
+        },
+        "status": "pendente_validacao"
+      },
+      {
+        "id": "bordaCobertura",
+        "valor": 10,
+        "status": "pendente_validacao"
+      },
+      {
+        "id": "distMaxPontual",
+        "valor": 20,
+        "status": "pendente_validacao"
+      },
+      {
+        "id": "envelope",
+        "valor": {
+          "areaPublicoSuportada": 600,
+          "distanciaSuportada": 30,
+          "distanciaParcial": 45,
+          "peDireitoMin": 2.5,
+          "peDireitoMax": 10,
+          "publicoEncaminhar": 1000,
+          "profundidadeAbertoEncaminhar": 45
+        },
+        "status": "pendente_validacao"
+      },
+      {
+        "id": "folgaTeto",
+        "valor": 0.3,
+        "status": "pendente_validacao"
+      },
+      {
+        "id": "foraMaxValidada",
+        "valor": 0.05,
+        "status": "pendente_validacao"
+      },
+      {
+        "id": "limiarSegurancaAuditiva",
+        "valor": 95,
+        "status": "pendente_validacao"
+      },
+      {
+        "id": "margemNivelMaxRanking",
+        "valor": 6,
+        "status": "pendente_validacao"
+      },
+      {
+        "id": "niveisPorUso",
+        "valor": {
+          "fala": {
+            "alvo": 75,
+            "reserva": 10,
+            "sub": "nao"
+          },
+          "musica_ambiente": {
+            "alvo": 70,
+            "reserva": 6,
+            "sub": "nao"
+          },
+          "musica_primeiro_plano": {
+            "alvo": 85,
+            "reserva": 10,
+            "sub": "sim"
+          },
+          "voz_violao": {
+            "alvo": 85,
+            "reserva": 10,
+            "sub": "opcional"
+          },
+          "banda_bateria": {
+            "alvo": 95,
+            "reserva": 10,
+            "sub": "sim"
+          },
+          "dj": {
+            "alvo": 98,
+            "reserva": 10,
+            "sub": "sim"
+          },
+          "video": {
+            "alvo": 80,
+            "reserva": 15,
+            "sub": "opcional"
+          }
+        },
+        "status": "pendente_validacao"
+      },
+      {
+        "id": "pesoMaxPorMontagem",
+        "valor": {
+          "pedestal": 30,
+          "parede": 40,
+          "suspensa": 60,
+          "chao": 999
+        },
+        "status": "pendente_validacao"
+      },
+      {
+        "id": "picoParaContinuo",
+        "valor": 6,
+        "status": "pendente_validacao"
+      },
+      {
+        "id": "profundidadePreferenciaArray",
+        "valor": 18,
+        "status": "pendente_validacao"
+      },
+      {
+        "id": "recuoPalco",
+        "valor": 0.5,
+        "status": "pendente_validacao"
+      },
+      {
+        "id": "reverberacao",
+        "valor": {
+          "superficies": {
+            "duras": 2,
+            "mistas": 1,
+            "absorventes": 0
+          },
+          "palma": {
+            "sim": 2,
+            "um_pouco": 1,
+            "nao": 0
+          },
+          "volumeLimiar": 1500,
+          "pontosVolume": 1,
+          "classes": {
+            "baixoAte": 1,
+            "medioAte": 3
+          }
+        },
+        "status": "pendente_validacao"
+      },
+      {
+        "id": "subPorLadoPadrao",
+        "valor": 1,
+        "status": "pendente_validacao"
+      },
+      {
+        "id": "tetoAlvo",
+        "valor": 100,
+        "status": "pendente_validacao"
+      },
+      {
+        "id": "toleranciaNivel",
+        "valor": 3,
+        "status": "pendente_validacao"
+      },
+      {
+        "id": "uniformidadeMax",
+        "valor": 6,
+        "status": "pendente_validacao"
+      }
+    ]
+  }
+}

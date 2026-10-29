@@ -9,8 +9,8 @@ Versões: motor 0.1.0, catálogo 4a2c5541d3d59c3f, parâmetros params-v1-2026-10
 ## Nível
 Alvo 100 dB + reserva 10 dB = 110 dB. Sub: sim. Aviso de segurança auditiva: sim.
 
-## Recomendação: AR-1 - Duas caixas ativas na frente, uma de cada lado do palco
-Caixas convencionais preferidas: a área de público tem 15 m de profundidade (limite de preferência do vertical array: 18 m).
+## Recomendação: AR-1 - duas caixas de som na frente, uma de cada lado do palco
+O público ocupa 15 m de profundidade. Para essa distância, duas caixas comuns na frente resolvem bem (colunas passam a valer a pena acima de 18 m).
 
 Status: geometria validada; capacidade pendente (O fabricante não publica SPL máximo.); acústica medio.
 
@@ -31,16 +31,18 @@ Cobertura: 94% coberto, 5% borda, 1% fora.
 
 ### Produtos do catálogo demo
 - Demo Ativa 12 Sem SPL: **parcial** Capacidade sonora pendente: O fabricante não publica SPL máximo.
-- Demo Ativa 10: **incompativel** Nível mínimo calculado 98.1 dB abaixo do requerido 110 dB.
-- Demo Ativa 12: **incompativel** Nível mínimo calculado 103.2 dB abaixo do requerido 110 dB.
-- Demo Ativa 15: **incompativel** Nível mínimo calculado 107.6 dB abaixo do requerido 110 dB.
+- Demo Ativa 15: **parcial** Capacidade sonora estimada: Com o dado estimado, o volume mínimo calculado (107.6 dB) fica abaixo do necessário (110 dB). A estimativa é conservadora: confirme com a ficha do fabricante. Com os dados reais deste produto, o layout precisa de 4 caixas (o perfil genérico usou 2).
 - Demo Ativa 15 Pro: **incompativel** Nível mínimo calculado 109.2 dB abaixo do requerido 110 dB.
-- Demo Ativa 10 Incompleta: **nao_avaliavel** Falta dado de geometria na ficha: coberturaV.
+- Demo Ativa 12: **incompativel** Nível mínimo calculado 103.2 dB abaixo do requerido 110 dB.
+- Demo Ativa 10: **incompativel** Nível mínimo calculado 98.1 dB abaixo do requerido 110 dB.
+- Demo Ativa 10 Incompleta: **incompativel** Nível mínimo calculado 97.1 dB abaixo do requerido 110 dB.
 
 Produto escolhido: Demo Ativa 12 Sem SPL. Sub: recomendado, 1 por lado (Demo Sub 15).
 
+Alternativas: menor custo: Demo Ativa 12 Sem SPL (AR-1); maior capacidade: Demo Ativa 15 (AR-1)
+
 ## Reverberação: classe medio (2 pontos)
-Risco médio de reverberação (2 pontos). Reverberação moderada. Mire as caixas no público e evite apontá-las para paredes lisas ou vidro.
+Eco da sala: médio (2 de 5 pontos). A sala tem um pouco de eco. Aponte as caixas para o público e evite mirar em paredes lisas ou vidro.
 
 ## Investimento (faixas demo)
 R$ 12000 a R$ 19400 (ref. 10/2026).

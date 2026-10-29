@@ -105,8 +105,8 @@
     "recomendacao": {
       "arquitetura": "AR-2",
       "nome": "Vertical array na frente (coluna ou line array compacto)",
-      "nomeSimples": "Duas colunas (vertical array) na frente, uma de cada lado do palco",
-      "motivoEscolha": "Única arquitetura disponível para as respostas dadas.",
+      "nomeSimples": "duas colunas de som na frente, uma de cada lado do palco",
+      "motivoEscolha": "É a única opção que combina com as preferências de instalação informadas.",
       "configuracao": {
         "arquitetura": "AR-2",
         "variante": "base",
@@ -400,30 +400,6 @@
       },
       "candidatos": [
         {
-          "produtoId": "demo-coluna-8",
-          "nome": "Demo Coluna 8",
-          "marca": "Demo",
-          "categoria": "vertical_array",
-          "subcategoria": "coluna",
-          "porte": "intermediaria",
-          "status": "incompativel",
-          "motivos": [
-            "O fabricante não permite a montagem escolhida."
-          ],
-          "faltando": [],
-          "quantidadeCaixas": 0,
-          "avisos": [],
-          "faixa": {
-            "minimo": 6000,
-            "maximo": 9000,
-            "dataVerificacao": "2026-10-01",
-            "fonte": "demo:ficticio (valores inventados)",
-            "ids": [
-              "demo-fx-coluna-i"
-            ]
-          }
-        },
-        {
           "produtoId": "demo-line-6",
           "nome": "Demo Line 6",
           "marca": "Demo",
@@ -437,6 +413,7 @@
           "faltando": [],
           "quantidadeCaixas": 0,
           "avisos": [],
+          "splPublicado": 130,
           "faixa": {
             "minimo": 15000,
             "maximo": 25000,
@@ -444,6 +421,31 @@
             "fonte": "demo:ficticio (valores inventados)",
             "ids": [
               "demo-fx-line-p"
+            ]
+          }
+        },
+        {
+          "produtoId": "demo-coluna-8",
+          "nome": "Demo Coluna 8",
+          "marca": "Demo",
+          "categoria": "vertical_array",
+          "subcategoria": "coluna",
+          "porte": "intermediaria",
+          "status": "incompativel",
+          "motivos": [
+            "O fabricante não permite a montagem escolhida."
+          ],
+          "faltando": [],
+          "quantidadeCaixas": 0,
+          "avisos": [],
+          "splPublicado": 124,
+          "faixa": {
+            "minimo": 6000,
+            "maximo": 9000,
+            "dataVerificacao": "2026-10-01",
+            "fonte": "demo:ficticio (valores inventados)",
+            "ids": [
+              "demo-fx-coluna-i"
             ]
           }
         }
@@ -569,8 +571,8 @@
     "conclusoes": [
       {
         "id": "nivel-alvo",
-        "titulo": "Nível sonoro necessário",
-        "texto": "Nível-alvo médio de 75 dB SPL no ouvinte, com reserva dinâmica de 10 dB. A caixa precisa entregar 85 dB na área coberta. Ajuste por ruído do local: +0 dB.",
+        "titulo": "Volume necessário",
+        "texto": "Para este uso, o som precisa chegar a cerca de 75 dB em quem está sentado, com folga de 10 dB para os momentos mais fortes. Ou seja, a caixa precisa entregar 85 dB na área do público. Somamos 0 dB por causa do barulho do local.",
         "entradas": [
           "Usos: fala/pregação (informado)",
           "Ruído com o local funcionando: facil"
@@ -645,8 +647,8 @@
       },
       {
         "id": "escopo",
-        "titulo": "Dentro do modelo?",
-        "texto": "O ambiente está dentro do envelope do MVP.",
+        "titulo": "O sistema consegue calcular o seu espaço?",
+        "texto": "O seu espaço está dentro do que o sistema calcula.",
         "entradas": [
           "Sala: 10,0 m de largura x 14,0 m de profundidade x 4,0 m de pé-direito (informado)",
           "Palco: 3,0 m de profundidade (padrão)",
@@ -682,8 +684,8 @@
       },
       {
         "id": "arquitetura",
-        "titulo": "Configuração recomendada",
-        "texto": "Recomendação: Duas colunas (vertical array) na frente, uma de cada lado do palco. Única arquitetura disponível para as respostas dadas.",
+        "titulo": "Sistema recomendado",
+        "texto": "Recomendamos duas colunas de som na frente, uma de cada lado do palco. É a única opção que combina com as preferências de instalação informadas.",
         "entradas": [
           "Sala: 10,0 m de largura x 14,0 m de profundidade x 4,0 m de pé-direito (informado)",
           "Palco: 3,0 m de profundidade (padrão)",
@@ -708,8 +710,8 @@
       },
       {
         "id": "caixas",
-        "titulo": "Quantidade e tipo de caixas",
-        "texto": "2 x Line array compacto (perfil genérico) (principal, na parede); 2 x Front-fill compacto (perfil genérico) (front-fill, apoiada no chão). A quantidade sai da regra da arquitetura AR-2 e do recálculo com o perfil genérico.",
+        "titulo": "Quantas caixas e de que tipo",
+        "texto": "Você vai precisar de: 2 x Line array compacto (perfil genérico) (caixa principal, na parede); 2 x Front-fill compacto (perfil genérico) (caixa de apoio da frente, apoiada no chão). A quantidade sai do tamanho da sala e foi conferida com um perfil de referência (sem marca).",
         "entradas": [
           "Sala: 10,0 m de largura x 14,0 m de profundidade x 4,0 m de pé-direito (informado)",
           "Palco: 3,0 m de profundidade (padrão)",
@@ -757,7 +759,7 @@
           }
         ],
         "hipoteses": [
-          "Front-fill na boca do palco: a cobertura horizontal nominal das caixas principais não alcança as laterais da primeira fileira."
+          "As primeiras fileiras ficam muito perto e fora do ângulo das caixas principais. Por isso entra uma caixa de apoio na beira do palco."
         ],
         "limitacoes": [
           "O array é avaliado só pela tabela publicada pelo fabricante. Sem fórmula genérica e sem soma de módulos."
@@ -766,7 +768,7 @@
       {
         "id": "caixa:P-L",
         "titulo": "Caixa 1",
-        "texto": "Caixa 1 (principal): na parede, centro acústico a 3,00 m de altura, em x = 0,20 m e y = 2,50 m. Direção: 23° na horizontal (0° = para o fundo) e -18° na vertical. A direção horizontal mira o centro da última fileira; a inclinação mira 2/3 da profundidade da área de público.",
+        "texto": "Caixa 1 (caixa principal), na parede. Altura: 3,00 m do chão até o centro da caixa. Posição: 0,20 m da parede lateral e 2,50 m da parede do palco. Direção: 23° para o lado e -18° para baixo. Ela aponta para o centro da última fileira e fica levemente inclinada para baixo, mirando o público e não as paredes.",
         "entradas": [
           "Sala: 10,0 m de largura x 14,0 m de profundidade x 4,0 m de pé-direito (informado)",
           "Palco: 3,0 m de profundidade (padrão)",
@@ -808,7 +810,7 @@
       {
         "id": "caixa:P-R",
         "titulo": "Caixa 2",
-        "texto": "Caixa 2 (principal): na parede, centro acústico a 3,00 m de altura, em x = 9,80 m e y = 2,50 m. Direção: -23° na horizontal (0° = para o fundo) e -18° na vertical. A direção horizontal mira o centro da última fileira; a inclinação mira 2/3 da profundidade da área de público.",
+        "texto": "Caixa 2 (caixa principal), na parede. Altura: 3,00 m do chão até o centro da caixa. Posição: 9,80 m da parede lateral e 2,50 m da parede do palco. Direção: -23° para o lado e -18° para baixo. Ela aponta para o centro da última fileira e fica levemente inclinada para baixo, mirando o público e não as paredes.",
         "entradas": [
           "Sala: 10,0 m de largura x 14,0 m de profundidade x 4,0 m de pé-direito (informado)",
           "Palco: 3,0 m de profundidade (padrão)",
@@ -850,7 +852,7 @@
       {
         "id": "caixa:FF-1",
         "titulo": "Caixa 3",
-        "texto": "Caixa 3 (front-fill): apoiada no chão, centro acústico a 0,30 m de altura, em x = 2,50 m e y = 2,80 m. Direção: 0° na horizontal (0° = para o fundo) e 28° na vertical.",
+        "texto": "Caixa 3 (caixa de apoio da frente), apoiada no chão. Altura: 0,30 m do chão até o centro da caixa. Posição: 2,50 m da parede lateral e 2,80 m da parede do palco. Direção: 0° para o lado e 28° para baixo.",
         "entradas": [
           "Sala: 10,0 m de largura x 14,0 m de profundidade x 4,0 m de pé-direito (informado)",
           "Palco: 3,0 m de profundidade (padrão)",
@@ -890,7 +892,7 @@
       {
         "id": "caixa:FF-2",
         "titulo": "Caixa 4",
-        "texto": "Caixa 4 (front-fill): apoiada no chão, centro acústico a 0,30 m de altura, em x = 7,50 m e y = 2,80 m. Direção: 0° na horizontal (0° = para o fundo) e 28° na vertical.",
+        "texto": "Caixa 4 (caixa de apoio da frente), apoiada no chão. Altura: 0,30 m do chão até o centro da caixa. Posição: 7,50 m da parede lateral e 2,80 m da parede do palco. Direção: 0° para o lado e 28° para baixo.",
         "entradas": [
           "Sala: 10,0 m de largura x 14,0 m de profundidade x 4,0 m de pé-direito (informado)",
           "Palco: 3,0 m de profundidade (padrão)",
@@ -929,8 +931,8 @@
       },
       {
         "id": "cobertura",
-        "titulo": "Cobertura nominal",
-        "texto": "94% da área de público fica dentro da cobertura nominal, 5% na borda e 1% fora. Cobertura nominal declarada pelo fabricante. Aproximação geométrica, não é medição.",
+        "titulo": "Onde o som chega bem",
+        "texto": "O som chega bem em 94% da área do público, mais fraco em 5% e fica fora do alcance principal em 1%. A área vem do ângulo que o fabricante declara para a caixa. É uma conta de geometria, não uma medição.",
         "entradas": [
           "Sala: 10,0 m de largura x 14,0 m de profundidade x 4,0 m de pé-direito (informado)",
           "Palco: 3,0 m de profundidade (padrão)",
@@ -977,6 +979,7 @@
           "Cobertura de referência do perfil genérico; o produto real recalcula o layout."
         ],
         "limitacoes": [
+          "Cobertura nominal declarada pelo fabricante. Aproximação geométrica, não é medição.",
           "Não atribui atenuação em dB fora do eixo.",
           "Sala modelada como retângulo, sem obstáculos.",
           "Não calcula reflexões, RT60 nem STI."
@@ -984,8 +987,8 @@
       },
       {
         "id": "capacidade",
-        "titulo": "Capacidade sonora",
-        "texto": "Recomendação geométrica disponível. Requisito de nível calculado: a caixa precisa de SPL contínuo de pelo menos 85 dB a 1 m. A validação depende do produto.",
+        "titulo": "O volume é suficiente?",
+        "texto": "A posição das caixas está calculada. A caixa precisa fazer pelo menos 85 dB a 1 metro (volume contínuo). Quando escolher o modelo, confira esse número.",
         "entradas": [
           "Requerido: 85 dB (alvo 75 + reserva 10)"
         ],
@@ -1028,8 +1031,8 @@
       },
       {
         "id": "requisitos",
-        "titulo": "Características mínimas de cada caixa",
-        "texto": "Características mínimas de cada caixa principal: Cobertura vertical publicada de pelo menos 19° numa configuração da tabela; Cobertura horizontal de referência: 100°; Alcance nominal de pelo menos 13 m; Montagem permitida pelo fabricante: parede; SPL contínuo publicado por distância que entregue 85 dB a 13 m.",
+        "titulo": "O que a caixa precisa ter",
+        "texto": "O que a caixa principal precisa ter: Cobertura vertical publicada de pelo menos 19° numa configuração da tabela; Cobertura horizontal de referência: 100°; Alcance nominal de pelo menos 13 m; Montagem permitida pelo fabricante: parede; SPL contínuo publicado por distância que entregue 85 dB a 13 m.",
         "entradas": [],
         "regra": "C8 passo 2: requisitos calculados para o caso",
         "parametros": [
@@ -1072,7 +1075,7 @@
       {
         "id": "produtos",
         "titulo": "Produtos do catálogo",
-        "texto": "Nenhum modelo do nosso catálogo verificado atende a este requisito. 2 produto(s) do catálogo avaliado(s): 0 compatível(is), 0 parcial(is), 2 incompatível(is), 0 não avaliável(is). Ordem: (1) status de compatibilidade, (2) menos caixas, (3) maior margem de nível até +6 dB, (4) menor faixa de investimento. Nenhuma marca recebe bônus.",
+        "texto": "Nenhum modelo do nosso catálogo atende a este requisito. Avaliamos 2 modelo(s): 0 atende(m), 0 atende(m) com dados a confirmar, 2 não atende(m) e 0 sem dados suficientes. A ordem segue só critérios técnicos: (1) se atende, (2) menos caixas, (3) mais folga de volume (até +6 dB), (4) menor investimento. Nenhuma marca ganha ponto extra.",
         "entradas": [],
         "regra": "C7 status de compatibilidade; C8 ranking",
         "parametros": [
@@ -1088,32 +1091,6 @@
         "limitacoes": [
           "Só produtos do catálogo verificado são avaliados."
         ]
-      },
-      {
-        "id": "produto:demo-coluna-8",
-        "titulo": "Demo Coluna 8",
-        "texto": "Status: incompativel. O fabricante não permite a montagem escolhida.",
-        "entradas": [],
-        "regra": "C7 status de compatibilidade",
-        "parametros": [
-          {
-            "id": "pesoMaxPorMontagem",
-            "valor": {
-              "pedestal": 30,
-              "parede": 40,
-              "suspensa": 60,
-              "chao": 999
-            },
-            "status": "pendente_validacao"
-          },
-          {
-            "id": "uniformidadeMax",
-            "valor": 6,
-            "status": "pendente_validacao"
-          }
-        ],
-        "hipoteses": [],
-        "limitacoes": []
       },
       {
         "id": "produto:demo-line-6",
@@ -1142,9 +1119,35 @@
         "limitacoes": []
       },
       {
+        "id": "produto:demo-coluna-8",
+        "titulo": "Demo Coluna 8",
+        "texto": "Status: incompativel. O fabricante não permite a montagem escolhida.",
+        "entradas": [],
+        "regra": "C7 status de compatibilidade",
+        "parametros": [
+          {
+            "id": "pesoMaxPorMontagem",
+            "valor": {
+              "pedestal": 30,
+              "parede": 40,
+              "suspensa": 60,
+              "chao": 999
+            },
+            "status": "pendente_validacao"
+          },
+          {
+            "id": "uniformidadeMax",
+            "valor": 6,
+            "status": "pendente_validacao"
+          }
+        ],
+        "hipoteses": [],
+        "limitacoes": []
+      },
+      {
         "id": "sub",
         "titulo": "Subwoofer",
-        "texto": "Subwoofer não recomendado para fala e música ambiente.",
+        "texto": "Não precisa de subwoofer para fala e música ambiente.",
         "entradas": [
           "Usos: fala/pregação (informado)"
         ],
@@ -1204,8 +1207,8 @@
       },
       {
         "id": "reverberacao",
-        "titulo": "Acústica da sala",
-        "texto": "Risco médio de reverberação (2 pontos). Reverberação moderada. Mire as caixas no público e evite apontá-las para paredes lisas ou vidro.",
+        "titulo": "Eco da sala",
+        "texto": "Eco da sala: médio (2 de 5 pontos). A sala tem um pouco de eco. Aponte as caixas para o público e evite mirar em paredes lisas ou vidro.",
         "entradas": [
           "Superfícies: mistas",
           "Palma ecoa: um_pouco",
@@ -1244,8 +1247,8 @@
       },
       {
         "id": "pagnag",
-        "titulo": "Risco de microfonia",
-        "texto": "PAG 20,2 dB, NAG 22,0 dB, margem -1,8 dB: risco alto de microfonia. Estimativa simplificada (lei do inverso do quadrado). Não substitui teste no local.",
+        "titulo": "Risco de microfonia (apito)",
+        "texto": "Risco de microfonia (apito): alto. Folga calculada de -1,8 dB. É uma estimativa simples, pelas distâncias. Teste sempre no local.",
         "entradas": [
           "D0 (falante -> ouvinte mais distante): 12,35 m",
           "D1 (microfone -> caixa mais próxima): 2,79 m",
@@ -1281,13 +1284,14 @@
           "Microfone no centro, na frente do palco."
         ],
         "limitacoes": [
+          "Estimativa simplificada (lei do inverso do quadrado). Não substitui teste no local.",
           "Sinal de risco, não garantia."
         ]
       },
       {
         "id": "investimento",
         "titulo": "Investimento estimado",
-        "texto": "Investimento estimado em equipamentos: R$ 33.000 a R$ 55.000 (referência de mercado em 10/2026, sem instalação).",
+        "texto": "Investimento estimado em equipamentos: R$ 33.000 a R$ 55.000 (referência de preço de 10/2026, sem instalação).",
         "entradas": [],
         "regra": "C7: soma das faixas por categoria e porte; faixa vencida não aparece",
         "parametros": [

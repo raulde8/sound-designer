@@ -3,6 +3,7 @@
 import { useEffect, useRef, useState } from "react";
 import { useRouter } from "next/navigation";
 import { Escolha, Contador } from "./Campos";
+import { Info, Termo } from "./Info";
 import { analytics } from "@/lib/analytics";
 import { codificar, type EstadoUrl } from "@/lib/state";
 import { estadoAtual } from "@/lib/rodar";
@@ -52,6 +53,13 @@ export function t2ParaEntrada(r: RascunhoT2): Record<string, unknown> {
 }
 
 const PASSOS = ["Vozes", "Instrumentos", "Outras fontes", "Retorno", "Operação"];
+const POR_QUE = [
+  "Cada voz usa um microfone e um canal da mesa. Quem anda pelo palco ou prega precisa de microfone sem fio.",
+  "Cada instrumento usa um ou mais canais. Violão, baixo e teclado entram por direct box; guitarra e bateria usam microfone.",
+  "Computador, celular e DJ entram na mesa em estéreo (2 canais).",
+  "Cada músico com mistura própria precisa de uma saída da mesa (auxiliar). Fone (in-ear) usa duas.",
+  "Quem opera e o controle pelo celular decidem entre mesa analógica (mais simples) e digital (mais recursos).",
+];
 const ROT: Record<Inst, string> = {
   violao: "Violão",
   guitarra: "Guitarra",
@@ -104,6 +112,11 @@ export function Trilha2({ estado }: { estado: EstadoUrl }) {
         </div>
         <div className="progresso" aria-hidden="true">
           <div style={{ width: `${((passo + 1) / PASSOS.length) * 100}%` }} />
+        </div>
+        <div style={{ float: "right" }}>
+          <Info titulo="Por que perguntamos" rotulo="por que perguntamos">
+            <span className="p">{POR_QUE[passo]}</span>
+          </Info>
         </div>
         {passo === 0 ? (
           <>
@@ -187,7 +200,9 @@ export function Trilha2({ estado }: { estado: EstadoUrl }) {
         ) : null}
         {passo === 3 ? (
           <>
-            <h1>Retorno para os músicos</h1>
+            <h1>
+              Retorno para os músicos <Termo id="retorno">{""}</Termo>
+            </h1>
             <div className={r.retornoNaoSei ? "desatualizado" : ""}>
               <Contador id="mixagens" rotulo="Músicos com mixagem própria" valor={r.mixagens} onChange={(v) => set({ mixagens: v })} />
               <Escolha
@@ -197,7 +212,7 @@ export function Trilha2({ estado }: { estado: EstadoUrl }) {
                 colunas="tres"
                 opcoes={[
                   { valor: "monitor", rotulo: "Caixa de retorno no chão" },
-                  { valor: "in_ear", rotulo: "In-ear (fone)" },
+                  { valor: "in_ear", rotulo: "Fone no ouvido (in-ear)" },
                   { valor: "misto", rotulo: "Os dois" },
                 ]}
               />

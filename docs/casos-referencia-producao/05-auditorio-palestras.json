@@ -1,0 +1,1819 @@
+{
+  "caso": {
+    "id": "05-auditorio-palestras",
+    "titulo": "Auditório 30 x 18 x 7 m, 450 pessoas, palestras",
+    "esperado": "AR-2 preferido; distância no limite; reforço provável; revisão profissional recomendada.",
+    "entrada": {
+      "trilha1": {
+        "tipoEstabelecimento": "auditorio",
+        "usos": [
+          "fala",
+          "video"
+        ],
+        "dimensoes": {
+          "tipo": "medidas",
+          "comprimento": 30,
+          "largura": 18,
+          "peDireito": 7
+        },
+        "publico": {
+          "quantidade": 450
+        },
+        "acustica": {
+          "superficies": "mistas",
+          "palma": "um_pouco",
+          "conversa": "facil"
+        }
+      }
+    }
+  },
+  "resultado": {
+    "ok": true,
+    "versoes": {
+      "engineVersion": "0.1.0",
+      "catalogVersion": "cb2deb34ea05d0eb",
+      "paramsVersion": "params-v1-2026-10-29"
+    },
+    "dataReferencia": "2026-10-29",
+    "caso": {
+      "tipo": "auditorio",
+      "sala": {
+        "largura": 18,
+        "profundidade": 30,
+        "peDireito": 7
+      },
+      "salaOrigem": "usuario",
+      "profundidadePalco": 3,
+      "areaPublicoM2": 486,
+      "alturaOuvinte": 1.2,
+      "publico": 450,
+      "disposicao": "sentado",
+      "usos": [
+        "fala",
+        "video"
+      ],
+      "usosOrigem": "usuario",
+      "formacao": null,
+      "ambiente": "fechado",
+      "formato": "retangular",
+      "instalacao": {
+        "forma": "sem_preferencia",
+        "formato": "sem_preferencia"
+      },
+      "mobilidade": "fixa",
+      "passoMalha": 0.5,
+      "passoAumentado": false
+    },
+    "escopo": {
+      "status": "suportado",
+      "itens": [],
+      "geometriaForaDoModelo": false,
+      "recomendarProjetista": false,
+      "naoCalculado": []
+    },
+    "alvo": {
+      "alvo": 80,
+      "reserva": 15,
+      "requerido": 95,
+      "usoDominante": "video",
+      "ajusteRuido": 0,
+      "ruidoEstimado": false,
+      "limitadoPeloTeto": false,
+      "avisoSegurancaAuditiva": false,
+      "sub": "opcional"
+    },
+    "reverb": {
+      "classe": "medio",
+      "pontos": 3,
+      "estimado": false
+    },
+    "arquiteturas": [
+      {
+        "id": "AR-1",
+        "nome": "Caixas ativas na frente (fontes pontuais)",
+        "disponivel": true
+      },
+      {
+        "id": "AR-2",
+        "nome": "Vertical array na frente (coluna ou line array compacto)",
+        "disponivel": true
+      }
+    ],
+    "recomendacao": {
+      "arquitetura": "AR-2",
+      "nome": "Vertical array na frente (coluna ou line array compacto)",
+      "nomeSimples": "duas colunas de som na frente, uma de cada lado do palco",
+      "motivoEscolha": "O público ocupa 27 m de profundidade. Colunas levam o som mais longe e jogam menos som nas paredes.",
+      "configuracao": {
+        "arquitetura": "AR-2",
+        "variante": "base",
+        "caixas": [
+          {
+            "id": "P-L",
+            "papel": "principal",
+            "lado": "L",
+            "posicao": {
+              "x": 0.5,
+              "y": 2.5,
+              "z": 1.4
+            },
+            "mira": {
+              "yaw": 17.175903615746744,
+              "pitch": -11.099758045471573
+            },
+            "montagem": "chao",
+            "fonte": {
+              "tipo": "produto",
+              "ref": "armer-la1221dsp",
+              "nome": "Armer LA1221DSP",
+              "cobertura": {
+                "H": 120,
+                "V": 25
+              },
+              "nivel": {
+                "tipo": "pendente",
+                "motivo": "O fabricante não publica o volume por distância deste array."
+              },
+              "meiaAltura": 0,
+              "montagensPermitidas": [
+                "chao"
+              ],
+              "subcategoria": "coluna",
+              "alturaTotal": 2,
+              "estimativas": [
+                "O fabricante não publica a tabela de cobertura por configuração. Usamos a cobertura de referência de colunas e não calculamos o volume por distância."
+              ]
+            },
+            "movida": false,
+            "numero": 1
+          },
+          {
+            "id": "P-R",
+            "papel": "principal",
+            "lado": "R",
+            "posicao": {
+              "x": 17.5,
+              "y": 2.5,
+              "z": 1.4
+            },
+            "mira": {
+              "yaw": -17.175903615746744,
+              "pitch": -11.099758045471573
+            },
+            "montagem": "chao",
+            "fonte": {
+              "tipo": "produto",
+              "ref": "armer-la1221dsp",
+              "nome": "Armer LA1221DSP",
+              "cobertura": {
+                "H": 120,
+                "V": 25
+              },
+              "nivel": {
+                "tipo": "pendente",
+                "motivo": "O fabricante não publica o volume por distância deste array."
+              },
+              "meiaAltura": 0,
+              "montagensPermitidas": [
+                "chao"
+              ],
+              "subcategoria": "coluna",
+              "alturaTotal": 2,
+              "estimativas": [
+                "O fabricante não publica a tabela de cobertura por configuração. Usamos a cobertura de referência de colunas e não calculamos o volume por distância."
+              ]
+            },
+            "movida": false,
+            "numero": 2
+          }
+        ],
+        "atrasos": [],
+        "frontFill": false,
+        "configArray": {
+          "modulos": 0,
+          "H": 120,
+          "V": 25,
+          "coberturaAPartirDe": 3
+        },
+        "requisitos": {
+          "principal": [
+            {
+              "campo": "coberturaV",
+              "operador": ">=",
+              "valor": 22,
+              "unidade": "graus",
+              "texto": "Cobertura vertical publicada de pelo menos 22° numa configuração da tabela"
+            },
+            {
+              "campo": "coberturaH",
+              "operador": ">=",
+              "valor": 120,
+              "unidade": "graus",
+              "texto": "Cobertura horizontal de referência: 120°"
+            },
+            {
+              "campo": "alcance",
+              "operador": ">=",
+              "valor": 29,
+              "unidade": "m",
+              "texto": "Alcance nominal de pelo menos 29 m"
+            },
+            {
+              "campo": "montagem",
+              "operador": "em",
+              "valor": "chao",
+              "unidade": "",
+              "texto": "Montagem: qualquer uma permitida pelo fabricante (o layout de referência usou chao)"
+            },
+            {
+              "campo": "splContinuo1m",
+              "operador": ">=",
+              "valor": 95,
+              "unidade": "dB SPL",
+              "texto": "SPL contínuo publicado por distância que entregue 95 dB a 29 m"
+            }
+          ]
+        },
+        "avisos": []
+      },
+      "equipamentos": [
+        {
+          "ref": "armer-la1221dsp",
+          "nome": "Armer LA1221DSP",
+          "tipo": "produto",
+          "papel": "principal",
+          "montagem": "chao",
+          "quantidade": 2,
+          "numeros": [
+            1,
+            2
+          ]
+        }
+      ],
+      "avaliacao": {
+        "pct": {
+          "coberto": 0.9814814814814815,
+          "borda": 0.018518518518518517,
+          "fora": 0
+        },
+        "nivel": null,
+        "capacidade": "pendente",
+        "motivoCapacidade": "O fabricante não publica o volume por distância deste array."
+      },
+      "mapa": {
+        "passo": 0.5,
+        "x0": 0,
+        "y0": 3,
+        "nx": 36,
+        "ny": 54,
+        "celulas": "ccccccccbbbbbbbbbbbbbbbbbbbbccccccccccccccccccccbbbbbbbbbbbbccccccccccccccccccccccccccccbbbbcccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccc"
+      },
+      "produto": {
+        "produtoId": "armer-la1221dsp",
+        "nome": "Armer LA1221DSP",
+        "marca": "Armer",
+        "categoria": "vertical_array",
+        "subcategoria": "coluna",
+        "porte": "profissional",
+        "status": "parcial",
+        "motivos": [
+          "Capacidade sonora pendente: O fabricante não publica o volume por distância deste array.",
+          "O fabricante não publica a tabela de cobertura por configuração. Usamos a cobertura de referência de colunas e não calculamos o volume por distância."
+        ],
+        "faltando": [],
+        "quantidadeCaixas": 2,
+        "avisos": [],
+        "splPublicado": 128,
+        "faixa": {
+          "minimo": 6555.5,
+          "maximo": 9365,
+          "dataVerificacao": "2026-10-29",
+          "fonte": "https://armer.com.br/produtos/torre-de-som-array-ativo-profissional-armer-la1221dsp-800w-rms-bluetooth-c-sub-12-e-dsp/ (Por = preço de vitrine; De = preço regular)",
+          "ids": [
+            "fx-armer-la1221dsp"
+          ]
+        },
+        "configuracao": {
+          "arquitetura": "AR-2",
+          "variante": "base",
+          "caixas": [
+            {
+              "id": "P-L",
+              "papel": "principal",
+              "lado": "L",
+              "posicao": {
+                "x": 0.5,
+                "y": 2.5,
+                "z": 1.4
+              },
+              "mira": {
+                "yaw": 17.175903615746744,
+                "pitch": -11.099758045471573
+              },
+              "montagem": "chao",
+              "fonte": {
+                "tipo": "produto",
+                "ref": "armer-la1221dsp",
+                "nome": "Armer LA1221DSP",
+                "cobertura": {
+                  "H": 120,
+                  "V": 25
+                },
+                "nivel": {
+                  "tipo": "pendente",
+                  "motivo": "O fabricante não publica o volume por distância deste array."
+                },
+                "meiaAltura": 0,
+                "montagensPermitidas": [
+                  "chao"
+                ],
+                "subcategoria": "coluna",
+                "alturaTotal": 2,
+                "estimativas": [
+                  "O fabricante não publica a tabela de cobertura por configuração. Usamos a cobertura de referência de colunas e não calculamos o volume por distância."
+                ]
+              },
+              "movida": false,
+              "numero": 1
+            },
+            {
+              "id": "P-R",
+              "papel": "principal",
+              "lado": "R",
+              "posicao": {
+                "x": 17.5,
+                "y": 2.5,
+                "z": 1.4
+              },
+              "mira": {
+                "yaw": -17.175903615746744,
+                "pitch": -11.099758045471573
+              },
+              "montagem": "chao",
+              "fonte": {
+                "tipo": "produto",
+                "ref": "armer-la1221dsp",
+                "nome": "Armer LA1221DSP",
+                "cobertura": {
+                  "H": 120,
+                  "V": 25
+                },
+                "nivel": {
+                  "tipo": "pendente",
+                  "motivo": "O fabricante não publica o volume por distância deste array."
+                },
+                "meiaAltura": 0,
+                "montagensPermitidas": [
+                  "chao"
+                ],
+                "subcategoria": "coluna",
+                "alturaTotal": 2,
+                "estimativas": [
+                  "O fabricante não publica a tabela de cobertura por configuração. Usamos a cobertura de referência de colunas e não calculamos o volume por distância."
+                ]
+              },
+              "movida": false,
+              "numero": 2
+            }
+          ],
+          "atrasos": [],
+          "frontFill": false,
+          "configArray": {
+            "modulos": 0,
+            "H": 120,
+            "V": 25,
+            "coberturaAPartirDe": 3
+          },
+          "requisitos": {
+            "principal": [
+              {
+                "campo": "coberturaV",
+                "operador": ">=",
+                "valor": 22,
+                "unidade": "graus",
+                "texto": "Cobertura vertical publicada de pelo menos 22° numa configuração da tabela"
+              },
+              {
+                "campo": "coberturaH",
+                "operador": ">=",
+                "valor": 120,
+                "unidade": "graus",
+                "texto": "Cobertura horizontal de referência: 120°"
+              },
+              {
+                "campo": "alcance",
+                "operador": ">=",
+                "valor": 29,
+                "unidade": "m",
+                "texto": "Alcance nominal de pelo menos 29 m"
+              },
+              {
+                "campo": "montagem",
+                "operador": "em",
+                "valor": "chao",
+                "unidade": "",
+                "texto": "Montagem: qualquer uma permitida pelo fabricante (o layout de referência usou chao)"
+              },
+              {
+                "campo": "splContinuo1m",
+                "operador": ">=",
+                "valor": 95,
+                "unidade": "dB SPL",
+                "texto": "SPL contínuo publicado por distância que entregue 95 dB a 29 m"
+              }
+            ]
+          },
+          "avisos": []
+        },
+        "avaliacao": {
+          "estados": [],
+          "pct": {
+            "coberto": 0.9814814814814815,
+            "borda": 0.018518518518518517,
+            "fora": 0
+          },
+          "nivel": null,
+          "pontosSemNivel": 1908,
+          "pontosSoGenericos": 0,
+          "capacidade": "pendente",
+          "motivoCapacidade": "O fabricante não publica o volume por distância deste array.",
+          "nivelPorLinha": []
+        }
+      },
+      "perfilGenerico": {
+        "id": "GEN-LINE-COMPACTO",
+        "categoria": "vertical_array",
+        "subcategoria": "line_array_compacto",
+        "nome": "Line array compacto (perfil genérico)",
+        "rotulo": "Perfil genérico - especificação mínima, não é um produto.",
+        "requisitos": [
+          {
+            "campo": "coberturaV",
+            "operador": ">=",
+            "valor": 24,
+            "unidade": "graus",
+            "texto": "Cobertura vertical publicada de pelo menos 24° numa configuração da tabela"
+          },
+          {
+            "campo": "coberturaH",
+            "operador": ">=",
+            "valor": 100,
+            "unidade": "graus",
+            "texto": "Cobertura horizontal de referência: 100°"
+          },
+          {
+            "campo": "alcance",
+            "operador": ">=",
+            "valor": 29,
+            "unidade": "m",
+            "texto": "Alcance nominal de pelo menos 29 m"
+          },
+          {
+            "campo": "montagem",
+            "operador": "em",
+            "valor": "pedestal",
+            "unidade": "",
+            "texto": "Montagem: qualquer uma permitida pelo fabricante (o layout de referência usou pedestal)"
+          },
+          {
+            "campo": "splContinuo1m",
+            "operador": ">=",
+            "valor": 95,
+            "unidade": "dB SPL",
+            "texto": "SPL contínuo publicado por distância que entregue 95 dB a 29 m"
+          }
+        ]
+      },
+      "candidatos": [
+        {
+          "produtoId": "armer-la1221dsp",
+          "nome": "Armer LA1221DSP",
+          "marca": "Armer",
+          "categoria": "vertical_array",
+          "subcategoria": "coluna",
+          "porte": "profissional",
+          "status": "parcial",
+          "motivos": [
+            "Capacidade sonora pendente: O fabricante não publica o volume por distância deste array.",
+            "O fabricante não publica a tabela de cobertura por configuração. Usamos a cobertura de referência de colunas e não calculamos o volume por distância."
+          ],
+          "faltando": [],
+          "quantidadeCaixas": 2,
+          "avisos": [],
+          "splPublicado": 128,
+          "faixa": {
+            "minimo": 6555.5,
+            "maximo": 9365,
+            "dataVerificacao": "2026-10-29",
+            "fonte": "https://armer.com.br/produtos/torre-de-som-array-ativo-profissional-armer-la1221dsp-800w-rms-bluetooth-c-sub-12-e-dsp/ (Por = preço de vitrine; De = preço regular)",
+            "ids": [
+              "fx-armer-la1221dsp"
+            ]
+          },
+          "configuracao": {
+            "arquitetura": "AR-2",
+            "variante": "base",
+            "caixas": [
+              {
+                "id": "P-L",
+                "papel": "principal",
+                "lado": "L",
+                "posicao": {
+                  "x": 0.5,
+                  "y": 2.5,
+                  "z": 1.4
+                },
+                "mira": {
+                  "yaw": 17.175903615746744,
+                  "pitch": -11.099758045471573
+                },
+                "montagem": "chao",
+                "fonte": {
+                  "tipo": "produto",
+                  "ref": "armer-la1221dsp",
+                  "nome": "Armer LA1221DSP",
+                  "cobertura": {
+                    "H": 120,
+                    "V": 25
+                  },
+                  "nivel": {
+                    "tipo": "pendente",
+                    "motivo": "O fabricante não publica o volume por distância deste array."
+                  },
+                  "meiaAltura": 0,
+                  "montagensPermitidas": [
+                    "chao"
+                  ],
+                  "subcategoria": "coluna",
+                  "alturaTotal": 2,
+                  "estimativas": [
+                    "O fabricante não publica a tabela de cobertura por configuração. Usamos a cobertura de referência de colunas e não calculamos o volume por distância."
+                  ]
+                },
+                "movida": false,
+                "numero": 1
+              },
+              {
+                "id": "P-R",
+                "papel": "principal",
+                "lado": "R",
+                "posicao": {
+                  "x": 17.5,
+                  "y": 2.5,
+                  "z": 1.4
+                },
+                "mira": {
+                  "yaw": -17.175903615746744,
+                  "pitch": -11.099758045471573
+                },
+                "montagem": "chao",
+                "fonte": {
+                  "tipo": "produto",
+                  "ref": "armer-la1221dsp",
+                  "nome": "Armer LA1221DSP",
+                  "cobertura": {
+                    "H": 120,
+                    "V": 25
+                  },
+                  "nivel": {
+                    "tipo": "pendente",
+                    "motivo": "O fabricante não publica o volume por distância deste array."
+                  },
+                  "meiaAltura": 0,
+                  "montagensPermitidas": [
+                    "chao"
+                  ],
+                  "subcategoria": "coluna",
+                  "alturaTotal": 2,
+                  "estimativas": [
+                    "O fabricante não publica a tabela de cobertura por configuração. Usamos a cobertura de referência de colunas e não calculamos o volume por distância."
+                  ]
+                },
+                "movida": false,
+                "numero": 2
+              }
+            ],
+            "atrasos": [],
+            "frontFill": false,
+            "configArray": {
+              "modulos": 0,
+              "H": 120,
+              "V": 25,
+              "coberturaAPartirDe": 3
+            },
+            "requisitos": {
+              "principal": [
+                {
+                  "campo": "coberturaV",
+                  "operador": ">=",
+                  "valor": 22,
+                  "unidade": "graus",
+                  "texto": "Cobertura vertical publicada de pelo menos 22° numa configuração da tabela"
+                },
+                {
+                  "campo": "coberturaH",
+                  "operador": ">=",
+                  "valor": 120,
+                  "unidade": "graus",
+                  "texto": "Cobertura horizontal de referência: 120°"
+                },
+                {
+                  "campo": "alcance",
+                  "operador": ">=",
+                  "valor": 29,
+                  "unidade": "m",
+                  "texto": "Alcance nominal de pelo menos 29 m"
+                },
+                {
+                  "campo": "montagem",
+                  "operador": "em",
+                  "valor": "chao",
+                  "unidade": "",
+                  "texto": "Montagem: qualquer uma permitida pelo fabricante (o layout de referência usou chao)"
+                },
+                {
+                  "campo": "splContinuo1m",
+                  "operador": ">=",
+                  "valor": 95,
+                  "unidade": "dB SPL",
+                  "texto": "SPL contínuo publicado por distância que entregue 95 dB a 29 m"
+                }
+              ]
+            },
+            "avisos": []
+          },
+          "avaliacao": {
+            "estados": [],
+            "pct": {
+              "coberto": 0.9814814814814815,
+              "borda": 0.018518518518518517,
+              "fora": 0
+            },
+            "nivel": null,
+            "pontosSemNivel": 1908,
+            "pontosSoGenericos": 0,
+            "capacidade": "pendente",
+            "motivoCapacidade": "O fabricante não publica o volume por distância deste array.",
+            "nivelPorLinha": []
+          }
+        },
+        {
+          "produtoId": "az-neo-pro8",
+          "nome": "AZ Audio Neo Pro8",
+          "marca": "AZ Audio",
+          "categoria": "vertical_array",
+          "subcategoria": "coluna",
+          "porte": "intermediaria",
+          "status": "parcial",
+          "motivos": [
+            "Capacidade sonora pendente: O fabricante não publica o volume por distância deste array.",
+            "O fabricante não publica a tabela de cobertura por configuração. Usamos a cobertura de referência de colunas e não calculamos o volume por distância."
+          ],
+          "faltando": [],
+          "quantidadeCaixas": 2,
+          "avisos": [],
+          "splPublicado": 115,
+          "faixa": {
+            "minimo": 4399.94,
+            "maximo": 5099.99,
+            "dataVerificacao": "2026-10-29",
+            "fonte": "https://azaudio.com.br/produtos/caixa-de-som-ativa-torre-bluetooth-profissional-portatil-az-audio-neo-pro8/ (Por = preço de vitrine; De = preço regular)",
+            "ids": [
+              "fx-az-neo-pro8"
+            ]
+          },
+          "configuracao": {
+            "arquitetura": "AR-2",
+            "variante": "base",
+            "caixas": [
+              {
+                "id": "P-L",
+                "papel": "principal",
+                "lado": "L",
+                "posicao": {
+                  "x": 0.5,
+                  "y": 2.5,
+                  "z": 1.484
+                },
+                "mira": {
+                  "yaw": 17.175903615746744,
+                  "pitch": -15.080938584878563
+                },
+                "montagem": "chao",
+                "fonte": {
+                  "tipo": "produto",
+                  "ref": "az-neo-pro8",
+                  "nome": "AZ Audio Neo Pro8",
+                  "cobertura": {
+                    "H": 120,
+                    "V": 30
+                  },
+                  "nivel": {
+                    "tipo": "pendente",
+                    "motivo": "O fabricante não publica o volume por distância deste array."
+                  },
+                  "meiaAltura": 0,
+                  "montagensPermitidas": [
+                    "chao"
+                  ],
+                  "subcategoria": "coluna",
+                  "alturaTotal": 2.12,
+                  "estimativas": [
+                    "O fabricante não publica a tabela de cobertura por configuração. Usamos a cobertura de referência de colunas e não calculamos o volume por distância."
+                  ]
+                },
+                "movida": false,
+                "numero": 1
+              },
+              {
+                "id": "P-R",
+                "papel": "principal",
+                "lado": "R",
+                "posicao": {
+                  "x": 17.5,
+                  "y": 2.5,
+                  "z": 1.484
+                },
+                "mira": {
+                  "yaw": -17.175903615746744,
+                  "pitch": -15.080938584878563
+                },
+                "montagem": "chao",
+                "fonte": {
+                  "tipo": "produto",
+                  "ref": "az-neo-pro8",
+                  "nome": "AZ Audio Neo Pro8",
+                  "cobertura": {
+                    "H": 120,
+                    "V": 30
+                  },
+                  "nivel": {
+                    "tipo": "pendente",
+                    "motivo": "O fabricante não publica o volume por distância deste array."
+                  },
+                  "meiaAltura": 0,
+                  "montagensPermitidas": [
+                    "chao"
+                  ],
+                  "subcategoria": "coluna",
+                  "alturaTotal": 2.12,
+                  "estimativas": [
+                    "O fabricante não publica a tabela de cobertura por configuração. Usamos a cobertura de referência de colunas e não calculamos o volume por distância."
+                  ]
+                },
+                "movida": false,
+                "numero": 2
+              }
+            ],
+            "atrasos": [],
+            "frontFill": false,
+            "configArray": {
+              "modulos": 0,
+              "H": 120,
+              "V": 30,
+              "coberturaAPartirDe": 3
+            },
+            "requisitos": {
+              "principal": [
+                {
+                  "campo": "coberturaV",
+                  "operador": ">=",
+                  "valor": 30,
+                  "unidade": "graus",
+                  "texto": "Cobertura vertical publicada de pelo menos 30° numa configuração da tabela"
+                },
+                {
+                  "campo": "coberturaH",
+                  "operador": ">=",
+                  "valor": 120,
+                  "unidade": "graus",
+                  "texto": "Cobertura horizontal de referência: 120°"
+                },
+                {
+                  "campo": "alcance",
+                  "operador": ">=",
+                  "valor": 29,
+                  "unidade": "m",
+                  "texto": "Alcance nominal de pelo menos 29 m"
+                },
+                {
+                  "campo": "montagem",
+                  "operador": "em",
+                  "valor": "chao",
+                  "unidade": "",
+                  "texto": "Montagem: qualquer uma permitida pelo fabricante (o layout de referência usou chao)"
+                },
+                {
+                  "campo": "splContinuo1m",
+                  "operador": ">=",
+                  "valor": 95,
+                  "unidade": "dB SPL",
+                  "texto": "SPL contínuo publicado por distância que entregue 95 dB a 29 m"
+                }
+              ]
+            },
+            "avisos": []
+          },
+          "avaliacao": {
+            "estados": [],
+            "pct": {
+              "coberto": 0.9814814814814815,
+              "borda": 0.018518518518518517,
+              "fora": 0
+            },
+            "nivel": null,
+            "pontosSemNivel": 1908,
+            "pontosSoGenericos": 0,
+            "capacidade": "pendente",
+            "motivoCapacidade": "O fabricante não publica o volume por distância deste array.",
+            "nivelPorLinha": []
+          }
+        }
+      ],
+      "semProdutoAdequado": false,
+      "sub": {
+        "regra": "opcional",
+        "incluido": false,
+        "escolhido": {
+          "produtoId": "armer-evx18sub",
+          "nome": "Armer EVX18SUB",
+          "marca": "Armer",
+          "subcategoria": "18",
+          "porte": "profissional",
+          "status": "parcial",
+          "motivos": [
+            "Falta na ficha: respostaFrequencia."
+          ],
+          "faltando": [
+            "respostaFrequencia"
+          ],
+          "porLado": 1,
+          "pareamentoFabricante": false,
+          "faixa": {
+            "minimo": 6399.95,
+            "maximo": 9285.64,
+            "dataVerificacao": "2026-10-29",
+            "fonte": "https://armer.com.br/produtos/caixa-de-som-profissional-subwoofer-ativo-18-armer-evx18sub-600w-para-sistema-pa/ (Por = preço de vitrine; De = preço regular)",
+            "ids": [
+              "fx-armer-evx18sub"
+            ]
+          }
+        },
+        "perfilGenerico": {
+          "id": "GEN-SUB",
+          "categoria": "subwoofer",
+          "subcategoria": "",
+          "nome": "Subwoofer ativo (perfil genérico)",
+          "rotulo": "Perfil genérico - especificação mínima, não é um produto.",
+          "requisitos": [
+            {
+              "campo": "montagem",
+              "operador": "em",
+              "valor": "chao",
+              "unidade": "",
+              "texto": "Subwoofer ativo apoiado no chão"
+            },
+            {
+              "campo": "splContinuo1m",
+              "operador": ">=",
+              "valor": "publicado",
+              "unidade": "",
+              "texto": "SPL máximo com condição de medição publicada"
+            },
+            {
+              "campo": "alcance",
+              "operador": "em",
+              "valor": "pareamento",
+              "unidade": "",
+              "texto": "Pareamento recomendado pelo fabricante da caixa principal, quando houver"
+            }
+          ],
+          "faixa": {
+            "minimo": 6399.95,
+            "maximo": 9285.64,
+            "dataVerificacao": "2026-10-29",
+            "fonte": "https://armer.com.br/produtos/caixa-de-som-profissional-subwoofer-ativo-18-armer-evx18sub-600w-para-sistema-pa/ (Por = preço de vitrine; De = preço regular)",
+            "ids": [
+              "fx-armer-evx18sub"
+            ]
+          }
+        },
+        "candidatos": [
+          {
+            "produtoId": "armer-evx18sub",
+            "nome": "Armer EVX18SUB",
+            "marca": "Armer",
+            "subcategoria": "18",
+            "porte": "profissional",
+            "status": "parcial",
+            "motivos": [
+              "Falta na ficha: respostaFrequencia."
+            ],
+            "faltando": [
+              "respostaFrequencia"
+            ],
+            "porLado": 1,
+            "pareamentoFabricante": false,
+            "faixa": {
+              "minimo": 6399.95,
+              "maximo": 9285.64,
+              "dataVerificacao": "2026-10-29",
+              "fonte": "https://armer.com.br/produtos/caixa-de-som-profissional-subwoofer-ativo-18-armer-evx18sub-600w-para-sistema-pa/ (Por = preço de vitrine; De = preço regular)",
+              "ids": [
+                "fx-armer-evx18sub"
+              ]
+            }
+          }
+        ],
+        "porLado": 1
+      },
+      "statusValidacao": {
+        "geometria": "validada",
+        "capacidade": "pendente",
+        "acustica": "medio"
+      },
+      "ajustada": false
+    },
+    "alternativas": [
+      {
+        "rotulo": "menor custo",
+        "arquitetura": "AR-1",
+        "nome": "AZ Audio Z1 Compact Pro",
+        "produtoId": "az-z1-compact-pro",
+        "quantidadeCaixas": 4,
+        "status": "parcial",
+        "margemNivel": -14.255780617950307,
+        "faixa": {
+          "minimo": 2119.2,
+          "maximo": 2444.38,
+          "dataVerificacao": "2026-10-29",
+          "fonte": "https://azaudio.com.br/produtos/caixa-de-som-ativa-portatil-profissional-az-audio-z1-compact-pro-bluetooth-c-bateria-recarregavel/ (Por = preço de vitrine; De = preço regular)",
+          "ids": [
+            "fx-az-z1-compact-pro"
+          ]
+        }
+      },
+      {
+        "rotulo": "equilíbrio",
+        "arquitetura": "AR-2",
+        "nome": "Armer LA1221DSP",
+        "produtoId": "armer-la1221dsp",
+        "quantidadeCaixas": 2,
+        "status": "parcial",
+        "faixa": {
+          "minimo": 6555.5,
+          "maximo": 9365,
+          "dataVerificacao": "2026-10-29",
+          "fonte": "https://armer.com.br/produtos/torre-de-som-array-ativo-profissional-armer-la1221dsp-800w-rms-bluetooth-c-sub-12-e-dsp/ (Por = preço de vitrine; De = preço regular)",
+          "ids": [
+            "fx-armer-la1221dsp"
+          ]
+        }
+      },
+      {
+        "rotulo": "maior capacidade",
+        "arquitetura": "AR-1",
+        "nome": "Armer EVX 15",
+        "produtoId": "armer-evx15",
+        "quantidadeCaixas": 4,
+        "status": "parcial",
+        "margemNivel": 1.1529006410518718,
+        "faixa": {
+          "minimo": 3663.28,
+          "maximo": 5233.25,
+          "dataVerificacao": "2026-10-29",
+          "fonte": "https://armer.com.br/produtos/caixa-de-som-ativa-profissional-armer-evx-15-1400w-bivolt/ (Por = preço de vitrine; De = preço regular)",
+          "ids": [
+            "fx-armer-evx15"
+          ]
+        }
+      }
+    ],
+    "pagNag": {
+      "distancias": {
+        "D0": 28.764778810204675,
+        "D1": 8.500588214941363,
+        "D2": 27.25188066904741,
+        "D3": 0.9810708435174291,
+        "Ds": 0.1499999999999999,
+        "NOM": 1
+      },
+      "pag": 29.53644559610681,
+      "nag": 29.343213394618857,
+      "margem": 0.19323220148795173,
+      "risco": "moderado",
+      "tipoMicrofone": "mao",
+      "microfone": {
+        "x": 9,
+        "y": 2.5,
+        "z": 1.5
+      },
+      "falante": {
+        "x": 9,
+        "y": 2.35,
+        "z": 1.5
+      },
+      "aplicavel": true
+    },
+    "investimento": {
+      "minimo": 13111,
+      "maximo": 18730,
+      "referencia": "10/2026",
+      "itensSemFaixa": [],
+      "completo": true
+    },
+    "orcamento": null,
+    "palco": null,
+    "avisos": [],
+    "conclusoes": [
+      {
+        "id": "nivel-alvo",
+        "titulo": "Volume necessário",
+        "texto": "Para este uso, o som precisa chegar a cerca de 80 dB em quem está sentado, com folga de 15 dB para os momentos mais fortes. Ou seja, a caixa precisa entregar 95 dB na área do público. Como o local tem mais de um uso, valeu o mais exigente (vídeo). Somamos 0 dB por causa do barulho do local.",
+        "entradas": [
+          "Usos: fala/pregação, vídeo (informado)",
+          "Ruído com o local funcionando: facil"
+        ],
+        "regra": "C5: maior nível-alvo entre os usos + ajuste por ruído, com teto",
+        "parametros": [
+          {
+            "id": "niveisPorUso",
+            "valor": {
+              "fala": {
+                "alvo": 75,
+                "reserva": 10,
+                "sub": "nao"
+              },
+              "musica_ambiente": {
+                "alvo": 70,
+                "reserva": 6,
+                "sub": "nao"
+              },
+              "musica_primeiro_plano": {
+                "alvo": 85,
+                "reserva": 10,
+                "sub": "sim"
+              },
+              "voz_violao": {
+                "alvo": 85,
+                "reserva": 10,
+                "sub": "opcional"
+              },
+              "banda_bateria": {
+                "alvo": 95,
+                "reserva": 10,
+                "sub": "sim"
+              },
+              "dj": {
+                "alvo": 98,
+                "reserva": 10,
+                "sub": "sim"
+              },
+              "video": {
+                "alvo": 80,
+                "reserva": 15,
+                "sub": "opcional"
+              }
+            },
+            "status": "pendente_validacao"
+          },
+          {
+            "id": "ajusteRuido",
+            "valor": {
+              "facil": 0,
+              "dificil": 5,
+              "muito_dificil": 10
+            },
+            "status": "pendente_validacao"
+          },
+          {
+            "id": "tetoAlvo",
+            "valor": 100,
+            "status": "pendente_validacao"
+          },
+          {
+            "id": "limiarSegurancaAuditiva",
+            "valor": 95,
+            "status": "pendente_validacao"
+          }
+        ],
+        "hipoteses": [],
+        "limitacoes": [
+          "Nível médio contínuo de referência. Não garante limite de ruído para vizinhos nem segurança auditiva."
+        ]
+      },
+      {
+        "id": "escopo",
+        "titulo": "O sistema consegue calcular o seu espaço?",
+        "texto": "O seu espaço está dentro do que o sistema calcula.",
+        "entradas": [
+          "Sala: 18,0 m de largura x 30,0 m de profundidade x 7,0 m de pé-direito (informado)",
+          "Palco: 3,0 m de profundidade (padrão)",
+          "Público: 450 pessoas, sentadas (altura do ouvinte 1,2 m)"
+        ],
+        "regra": "B5: envelope do MVP",
+        "parametros": [
+          {
+            "id": "envelope",
+            "valor": {
+              "areaPublicoSuportada": 600,
+              "distanciaSuportada": 30,
+              "distanciaParcial": 45,
+              "peDireitoMin": 2.5,
+              "peDireitoMax": 10,
+              "publicoEncaminhar": 1000,
+              "profundidadeAbertoEncaminhar": 45
+            },
+            "status": "pendente_validacao"
+          },
+          {
+            "id": "areaPorPessoa",
+            "valor": {
+              "sentado": 0.8,
+              "em_pe": 0.5,
+              "mesas": 1.5
+            },
+            "status": "pendente_validacao"
+          }
+        ],
+        "hipoteses": [],
+        "limitacoes": []
+      },
+      {
+        "id": "arquitetura",
+        "titulo": "Sistema recomendado",
+        "texto": "Recomendamos duas colunas de som na frente, uma de cada lado do palco. O público ocupa 27 m de profundidade. Colunas levam o som mais longe e jogam menos som nas paredes.",
+        "entradas": [
+          "Sala: 18,0 m de largura x 30,0 m de profundidade x 7,0 m de pé-direito (informado)",
+          "Palco: 3,0 m de profundidade (padrão)",
+          "Público: 450 pessoas, sentadas (altura do ouvinte 1,2 m)",
+          "Instalação: sem_preferencia, formato sem_preferencia, fixa"
+        ],
+        "regra": "C4: AR-2; preferência por vertical array acima de 18 m de profundidade ou com reverberação alta",
+        "parametros": [
+          {
+            "id": "profundidadePreferenciaArray",
+            "valor": 18,
+            "status": "pendente_validacao"
+          }
+        ],
+        "hipoteses": [
+          "A preferência entre caixas convencionais e vertical array é uma regra inicial do produto."
+        ],
+        "limitacoes": [
+          "Sala modelada como retângulo, sem obstáculos.",
+          "Não calcula reflexões, RT60 nem STI."
+        ]
+      },
+      {
+        "id": "caixas",
+        "titulo": "Quantas caixas e de que tipo",
+        "texto": "Você vai precisar de: 2 x Armer LA1221DSP (caixa principal, apoiada no chão). A quantidade sai do tamanho da sala e foi conferida com os dados do modelo escolhido.",
+        "entradas": [
+          "Sala: 18,0 m de largura x 30,0 m de profundidade x 7,0 m de pé-direito (informado)",
+          "Palco: 3,0 m de profundidade (padrão)",
+          "Público: 450 pessoas, sentadas (altura do ouvinte 1,2 m)"
+        ],
+        "regra": "C4 AR-2: 1 array por lado; configuração pela tabela do fabricante",
+        "parametros": [
+          {
+            "id": "afastamentoParedeLateral",
+            "valor": {
+              "parede": 0.2,
+              "outras": 0.5
+            },
+            "status": "pendente_validacao"
+          },
+          {
+            "id": "recuoPalco",
+            "valor": 0.5,
+            "status": "pendente_validacao"
+          },
+          {
+            "id": "folgaTeto",
+            "valor": 0.3,
+            "status": "pendente_validacao"
+          },
+          {
+            "id": "distMaxPontual",
+            "valor": 20,
+            "status": "pendente_validacao"
+          }
+        ],
+        "hipoteses": [],
+        "limitacoes": [
+          "O array é avaliado só pela tabela publicada pelo fabricante. Sem fórmula genérica e sem soma de módulos."
+        ]
+      },
+      {
+        "id": "caixa:P-L",
+        "titulo": "Caixa 1",
+        "texto": "Caixa 1 (caixa principal), apoiada no chão. Altura: 1,40 m do chão até o centro da caixa. Posição: 0,50 m da parede lateral e 2,50 m da parede do palco. Direção: 17° para o lado e -11° para baixo. Ela aponta para o centro da última fileira e fica levemente inclinada para baixo, mirando o público e não as paredes.",
+        "entradas": [
+          "Sala: 18,0 m de largura x 30,0 m de profundidade x 7,0 m de pé-direito (informado)",
+          "Palco: 3,0 m de profundidade (padrão)",
+          "Público: 450 pessoas, sentadas (altura do ouvinte 1,2 m)"
+        ],
+        "regra": "C4 AR-1/AR-2: posição, altura e direção",
+        "parametros": [
+          {
+            "id": "afastamentoParedeLateral",
+            "valor": {
+              "parede": 0.2,
+              "outras": 0.5
+            },
+            "status": "pendente_validacao"
+          },
+          {
+            "id": "recuoPalco",
+            "valor": 0.5,
+            "status": "pendente_validacao"
+          },
+          {
+            "id": "folgaTeto",
+            "valor": 0.3,
+            "status": "pendente_validacao"
+          }
+        ],
+        "hipoteses": [
+          "Fonte: Armer LA1221DSP"
+        ],
+        "limitacoes": []
+      },
+      {
+        "id": "caixa:P-R",
+        "titulo": "Caixa 2",
+        "texto": "Caixa 2 (caixa principal), apoiada no chão. Altura: 1,40 m do chão até o centro da caixa. Posição: 17,50 m da parede lateral e 2,50 m da parede do palco. Direção: -17° para o lado e -11° para baixo. Ela aponta para o centro da última fileira e fica levemente inclinada para baixo, mirando o público e não as paredes.",
+        "entradas": [
+          "Sala: 18,0 m de largura x 30,0 m de profundidade x 7,0 m de pé-direito (informado)",
+          "Palco: 3,0 m de profundidade (padrão)",
+          "Público: 450 pessoas, sentadas (altura do ouvinte 1,2 m)"
+        ],
+        "regra": "C4 AR-1/AR-2: posição, altura e direção",
+        "parametros": [
+          {
+            "id": "afastamentoParedeLateral",
+            "valor": {
+              "parede": 0.2,
+              "outras": 0.5
+            },
+            "status": "pendente_validacao"
+          },
+          {
+            "id": "recuoPalco",
+            "valor": 0.5,
+            "status": "pendente_validacao"
+          },
+          {
+            "id": "folgaTeto",
+            "valor": 0.3,
+            "status": "pendente_validacao"
+          }
+        ],
+        "hipoteses": [
+          "Fonte: Armer LA1221DSP"
+        ],
+        "limitacoes": []
+      },
+      {
+        "id": "cobertura",
+        "titulo": "Onde o som chega bem",
+        "texto": "O som chega bem em 98% da área do público, mais fraco em 2% e fica fora do alcance principal em 0%. A área vem do ângulo que o fabricante declara para a caixa. É uma conta de geometria, não uma medição.",
+        "entradas": [
+          "Sala: 18,0 m de largura x 30,0 m de profundidade x 7,0 m de pé-direito (informado)",
+          "Palco: 3,0 m de profundidade (padrão)",
+          "Público: 450 pessoas, sentadas (altura do ouvinte 1,2 m)",
+          "Cobertura usada: 120° x 25° (H x V)"
+        ],
+        "regra": "C5 nível A: ponto coberto se |h| <= H/2 e |v| <= V/2; borda até +10°",
+        "parametros": [
+          {
+            "id": "bordaCobertura",
+            "valor": 10,
+            "status": "pendente_validacao"
+          },
+          {
+            "id": "passoMalha",
+            "valor": 0.5,
+            "status": "referencia"
+          },
+          {
+            "id": "alturaOuvinteSentado",
+            "valor": 1.2,
+            "status": "pendente_validacao"
+          },
+          {
+            "id": "alturaOuvinteEmPe",
+            "valor": 1.7,
+            "status": "pendente_validacao"
+          },
+          {
+            "id": "foraMaxValidada",
+            "valor": 0.05,
+            "status": "pendente_validacao"
+          }
+        ],
+        "hipoteses": [],
+        "limitacoes": [
+          "Cobertura nominal declarada pelo fabricante. Aproximação geométrica, não é medição.",
+          "Não atribui atenuação em dB fora do eixo.",
+          "Sala modelada como retângulo, sem obstáculos.",
+          "Não calcula reflexões, RT60 nem STI."
+        ]
+      },
+      {
+        "id": "capacidade",
+        "titulo": "O volume é suficiente?",
+        "texto": "A posição das caixas está calculada. Ainda não dá para confirmar o volume: O fabricante não publica o volume por distância deste array.",
+        "entradas": [
+          "Requerido: 95 dB (alvo 80 + reserva 15)"
+        ],
+        "regra": "C5 nível B: L(d) = SPL contínuo a 1 m - 20 log10(d), só dentro da cobertura nominal; cada ponto recebe a fonte mais forte",
+        "parametros": [
+          {
+            "id": "uniformidadeMax",
+            "valor": 6,
+            "status": "pendente_validacao"
+          },
+          {
+            "id": "toleranciaNivel",
+            "valor": 3,
+            "status": "pendente_validacao"
+          }
+        ],
+        "hipoteses": [],
+        "limitacoes": [
+          "O sistema não soma fontes (sinais correlacionados): o resultado é conservador.",
+          "Só nível direto, sem contribuição da sala."
+        ]
+      },
+      {
+        "id": "requisitos",
+        "titulo": "O que a caixa precisa ter",
+        "texto": "O que a caixa principal precisa ter: Cobertura vertical publicada de pelo menos 24° numa configuração da tabela; Cobertura horizontal de referência: 100°; Alcance nominal de pelo menos 29 m; Montagem: qualquer uma permitida pelo fabricante (o layout de referência usou pedestal); SPL contínuo publicado por distância que entregue 95 dB a 29 m.",
+        "entradas": [],
+        "regra": "C8 passo 2: requisitos calculados para o caso",
+        "parametros": [
+          {
+            "id": "pesoMaxPorMontagem",
+            "valor": {
+              "pedestal": 30,
+              "parede": 40,
+              "suspensa": 60,
+              "chao": 999
+            },
+            "status": "pendente_validacao"
+          }
+        ],
+        "hipoteses": [
+          "Perfil genérico - especificação mínima, não é um produto."
+        ],
+        "limitacoes": [
+          "Peso máximo por montagem não é dimensionamento estrutural."
+        ]
+      },
+      {
+        "id": "produtos",
+        "titulo": "Produtos do catálogo",
+        "texto": "Avaliamos 2 modelo(s): 0 atende(m), 2 atende(m) com dados a confirmar, 0 não atende(m) e 0 sem dados suficientes. A ordem segue só critérios técnicos: (1) se atende, (2) menos caixas, (3) mais folga de volume (até +6 dB), (4) menor investimento. Nenhuma marca ganha ponto extra.",
+        "entradas": [],
+        "regra": "C7 status de compatibilidade; C8 ranking",
+        "parametros": [
+          {
+            "id": "margemNivelMaxRanking",
+            "valor": 6,
+            "status": "pendente_validacao"
+          }
+        ],
+        "hipoteses": [
+          "Ausência de dado nunca reprova nem aprova um produto."
+        ],
+        "limitacoes": [
+          "Só produtos do catálogo verificado são avaliados."
+        ]
+      },
+      {
+        "id": "produto:armer-la1221dsp",
+        "titulo": "Armer LA1221DSP",
+        "texto": "Status: parcial. Capacidade sonora pendente: O fabricante não publica o volume por distância deste array. O fabricante não publica a tabela de cobertura por configuração. Usamos a cobertura de referência de colunas e não calculamos o volume por distância.",
+        "entradas": [],
+        "regra": "C7 status de compatibilidade",
+        "parametros": [
+          {
+            "id": "pesoMaxPorMontagem",
+            "valor": {
+              "pedestal": 30,
+              "parede": 40,
+              "suspensa": 60,
+              "chao": 999
+            },
+            "status": "pendente_validacao"
+          },
+          {
+            "id": "uniformidadeMax",
+            "valor": 6,
+            "status": "pendente_validacao"
+          }
+        ],
+        "hipoteses": [],
+        "limitacoes": []
+      },
+      {
+        "id": "produto:az-neo-pro8",
+        "titulo": "AZ Audio Neo Pro8",
+        "texto": "Status: parcial. Capacidade sonora pendente: O fabricante não publica o volume por distância deste array. O fabricante não publica a tabela de cobertura por configuração. Usamos a cobertura de referência de colunas e não calculamos o volume por distância.",
+        "entradas": [],
+        "regra": "C7 status de compatibilidade",
+        "parametros": [
+          {
+            "id": "pesoMaxPorMontagem",
+            "valor": {
+              "pedestal": 30,
+              "parede": 40,
+              "suspensa": 60,
+              "chao": 999
+            },
+            "status": "pendente_validacao"
+          },
+          {
+            "id": "uniformidadeMax",
+            "valor": 6,
+            "status": "pendente_validacao"
+          }
+        ],
+        "hipoteses": [],
+        "limitacoes": []
+      },
+      {
+        "id": "sub",
+        "titulo": "Subwoofer",
+        "texto": "O subwoofer é opcional para este uso: ajuda na música, mas não é essencial.",
+        "entradas": [
+          "Usos: fala/pregação, vídeo (informado)"
+        ],
+        "regra": "C4 AR-3: regra por uso; quantidade pelo pareamento do fabricante",
+        "parametros": [
+          {
+            "id": "niveisPorUso",
+            "valor": {
+              "fala": {
+                "alvo": 75,
+                "reserva": 10,
+                "sub": "nao"
+              },
+              "musica_ambiente": {
+                "alvo": 70,
+                "reserva": 6,
+                "sub": "nao"
+              },
+              "musica_primeiro_plano": {
+                "alvo": 85,
+                "reserva": 10,
+                "sub": "sim"
+              },
+              "voz_violao": {
+                "alvo": 85,
+                "reserva": 10,
+                "sub": "opcional"
+              },
+              "banda_bateria": {
+                "alvo": 95,
+                "reserva": 10,
+                "sub": "sim"
+              },
+              "dj": {
+                "alvo": 98,
+                "reserva": 10,
+                "sub": "sim"
+              },
+              "video": {
+                "alvo": 80,
+                "reserva": 15,
+                "sub": "opcional"
+              }
+            },
+            "status": "pendente_validacao"
+          },
+          {
+            "id": "subPorLadoPadrao",
+            "valor": 1,
+            "status": "pendente_validacao"
+          }
+        ],
+        "hipoteses": [],
+        "limitacoes": [
+          "Sem mapa de graves."
+        ]
+      },
+      {
+        "id": "reverberacao",
+        "titulo": "Eco da sala",
+        "texto": "Eco da sala: médio (3 de 5 pontos). A sala tem um pouco de eco. Aponte as caixas para o público e evite mirar em paredes lisas ou vidro.",
+        "entradas": [
+          "Superfícies: mistas",
+          "Palma ecoa: um_pouco",
+          "Volume: 3.780 m³",
+          "Ambiente: fechado"
+        ],
+        "regra": "C5 nível C: pontuação qualitativa",
+        "parametros": [
+          {
+            "id": "reverberacao",
+            "valor": {
+              "superficies": {
+                "duras": 2,
+                "mistas": 1,
+                "absorventes": 0
+              },
+              "palma": {
+                "sim": 2,
+                "um_pouco": 1,
+                "nao": 0
+              },
+              "volumeLimiar": 1500,
+              "pontosVolume": 1,
+              "classes": {
+                "baixoAte": 1,
+                "medioAte": 3
+              }
+            },
+            "status": "pendente_validacao"
+          }
+        ],
+        "hipoteses": [],
+        "limitacoes": [
+          "O sistema não calcula RT60 nem STI: Sabine e Eyring assumem campo difuso, e essa hipótese falha em muitas salas reais."
+        ]
+      },
+      {
+        "id": "pagnag",
+        "titulo": "Risco de microfonia (apito)",
+        "texto": "Risco de microfonia (apito): moderado. Folga calculada de 0,2 dB. É uma estimativa simples, pelas distâncias. Teste sempre no local.",
+        "entradas": [
+          "D0 (falante -> ouvinte mais distante): 28,76 m",
+          "D1 (microfone -> caixa mais próxima): 8,50 m",
+          "D2 (ouvinte mais distante -> caixa mais próxima): 27,25 m",
+          "D3 (falante -> ouvinte mais próximo): 0,98 m",
+          "Ds (falante -> microfone): 0,15 m (microfone de mão)",
+          "NOM (microfones abertos): 1"
+        ],
+        "regra": "C5: PAG = 20log(D0·D1/(D2·Ds)) - 10log(NOM) - 6; NAG = 20log(D0/D3) (Biamp, Shure)",
+        "parametros": [
+          {
+            "id": "pagNag",
+            "valor": {
+              "dsMao": 0.15,
+              "dsGooseneck": 0.3,
+              "fsm": 6,
+              "margemBaixo": 3,
+              "margemModerado": 0
+            },
+            "status": "pendente_validacao"
+          },
+          {
+            "id": "posicaoMicrofone",
+            "valor": {
+              "recuoBordaPalco": 0.5,
+              "altura": 1.5
+            },
+            "status": "pendente_validacao"
+          }
+        ],
+        "hipoteses": [
+          "Componentes omnidirecionais: pior caso.",
+          "Microfone no centro, na frente do palco."
+        ],
+        "limitacoes": [
+          "Estimativa simplificada (lei do inverso do quadrado). Não substitui teste no local.",
+          "Sinal de risco, não garantia."
+        ]
+      },
+      {
+        "id": "investimento",
+        "titulo": "Investimento estimado",
+        "texto": "Investimento estimado em equipamentos: R$ 13.111 a R$ 18.730 (referência de preço de 10/2026, sem instalação).",
+        "entradas": [],
+        "regra": "C7: soma das faixas por categoria e porte; faixa vencida não aparece",
+        "parametros": [
+          {
+            "id": "validadeFaixaDias",
+            "valor": 90,
+            "status": "referencia"
+          }
+        ],
+        "hipoteses": [],
+        "limitacoes": [
+          "Não inclui instalação, frete nem acessórios sem faixa.",
+          "Não é preço de produto."
+        ]
+      }
+    ],
+    "profissional": [
+      "A capacidade sonora não foi validada com dados do fabricante: confirme o SPL com o fabricante ou com medição antes de comprar.",
+      "Este é um pré-dimensionamento. Os parâmetros marcados como 'pendente de validação' ainda não foram revisados por um projetista."
+    ],
+    "parametrosPendentes": [
+      {
+        "id": "afastamentoParedeLateral",
+        "valor": {
+          "parede": 0.2,
+          "outras": 0.5
+        },
+        "status": "pendente_validacao"
+      },
+      {
+        "id": "ajusteRuido",
+        "valor": {
+          "facil": 0,
+          "dificil": 5,
+          "muito_dificil": 10
+        },
+        "status": "pendente_validacao"
+      },
+      {
+        "id": "alturaOuvinteEmPe",
+        "valor": 1.7,
+        "status": "pendente_validacao"
+      },
+      {
+        "id": "alturaOuvinteSentado",
+        "valor": 1.2,
+        "status": "pendente_validacao"
+      },
+      {
+        "id": "areaPorPessoa",
+        "valor": {
+          "sentado": 0.8,
+          "em_pe": 0.5,
+          "mesas": 1.5
+        },
+        "status": "pendente_validacao"
+      },
+      {
+        "id": "bordaCobertura",
+        "valor": 10,
+        "status": "pendente_validacao"
+      },
+      {
+        "id": "distMaxPontual",
+        "valor": 20,
+        "status": "pendente_validacao"
+      },
+      {
+        "id": "envelope",
+        "valor": {
+          "areaPublicoSuportada": 600,
+          "distanciaSuportada": 30,
+          "distanciaParcial": 45,
+          "peDireitoMin": 2.5,
+          "peDireitoMax": 10,
+          "publicoEncaminhar": 1000,
+          "profundidadeAbertoEncaminhar": 45
+        },
+        "status": "pendente_validacao"
+      },
+      {
+        "id": "folgaTeto",
+        "valor": 0.3,
+        "status": "pendente_validacao"
+      },
+      {
+        "id": "foraMaxValidada",
+        "valor": 0.05,
+        "status": "pendente_validacao"
+      },
+      {
+        "id": "limiarSegurancaAuditiva",
+        "valor": 95,
+        "status": "pendente_validacao"
+      },
+      {
+        "id": "margemNivelMaxRanking",
+        "valor": 6,
+        "status": "pendente_validacao"
+      },
+      {
+        "id": "niveisPorUso",
+        "valor": {
+          "fala": {
+            "alvo": 75,
+            "reserva": 10,
+            "sub": "nao"
+          },
+          "musica_ambiente": {
+            "alvo": 70,
+            "reserva": 6,
+            "sub": "nao"
+          },
+          "musica_primeiro_plano": {
+            "alvo": 85,
+            "reserva": 10,
+            "sub": "sim"
+          },
+          "voz_violao": {
+            "alvo": 85,
+            "reserva": 10,
+            "sub": "opcional"
+          },
+          "banda_bateria": {
+            "alvo": 95,
+            "reserva": 10,
+            "sub": "sim"
+          },
+          "dj": {
+            "alvo": 98,
+            "reserva": 10,
+            "sub": "sim"
+          },
+          "video": {
+            "alvo": 80,
+            "reserva": 15,
+            "sub": "opcional"
+          }
+        },
+        "status": "pendente_validacao"
+      },
+      {
+        "id": "pagNag",
+        "valor": {
+          "dsMao": 0.15,
+          "dsGooseneck": 0.3,
+          "fsm": 6,
+          "margemBaixo": 3,
+          "margemModerado": 0
+        },
+        "status": "pendente_validacao"
+      },
+      {
+        "id": "pesoMaxPorMontagem",
+        "valor": {
+          "pedestal": 30,
+          "parede": 40,
+          "suspensa": 60,
+          "chao": 999
+        },
+        "status": "pendente_validacao"
+      },
+      {
+        "id": "posicaoMicrofone",
+        "valor": {
+          "recuoBordaPalco": 0.5,
+          "altura": 1.5
+        },
+        "status": "pendente_validacao"
+      },
+      {
+        "id": "profundidadePreferenciaArray",
+        "valor": 18,
+        "status": "pendente_validacao"
+      },
+      {
+        "id": "recuoPalco",
+        "valor": 0.5,
+        "status": "pendente_validacao"
+      },
+      {
+        "id": "reverberacao",
+        "valor": {
+          "superficies": {
+            "duras": 2,
+            "mistas": 1,
+            "absorventes": 0
+          },
+          "palma": {
+            "sim": 2,
+            "um_pouco": 1,
+            "nao": 0
+          },
+          "volumeLimiar": 1500,
+          "pontosVolume": 1,
+          "classes": {
+            "baixoAte": 1,
+            "medioAte": 3
+          }
+        },
+        "status": "pendente_validacao"
+      },
+      {
+        "id": "subPorLadoPadrao",
+        "valor": 1,
+        "status": "pendente_validacao"
+      },
+      {
+        "id": "tetoAlvo",
+        "valor": 100,
+        "status": "pendente_validacao"
+      },
+      {
+        "id": "toleranciaNivel",
+        "valor": 3,
+        "status": "pendente_validacao"
+      },
+      {
+        "id": "uniformidadeMax",
+        "valor": 6,
+        "status": "pendente_validacao"
+      }
+    ]
+  }
+}

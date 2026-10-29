@@ -10,8 +10,8 @@ export { AR1, AR2 };
 export const GERADORES: ArchitectureGenerator[] = [AR1, AR2];
 
 export const NOMES_SIMPLES: Record<ArquiteturaId, string> = {
-  "AR-1": "Duas caixas ativas na frente, uma de cada lado do palco",
-  "AR-2": "Duas colunas (vertical array) na frente, uma de cada lado do palco",
+  "AR-1": "duas caixas de som na frente, uma de cada lado do palco",
+  "AR-2": "duas colunas de som na frente, uma de cada lado do palco",
   "AR-4": "Caixas distribuídas no teto (fase 1.1)",
   "AR-5": "Caixas distribuídas nas paredes (fase 1.1)",
 };

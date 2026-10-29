@@ -106,8 +106,8 @@
     "recomendacao": {
       "arquitetura": "AR-2",
       "nome": "Vertical array na frente (coluna ou line array compacto)",
-      "nomeSimples": "Duas colunas (vertical array) na frente, uma de cada lado do palco",
-      "motivoEscolha": "Única arquitetura disponível para as respostas dadas.",
+      "nomeSimples": "duas colunas de som na frente, uma de cada lado do palco",
+      "motivoEscolha": "É a única opção que combina com as preferências de instalação informadas.",
       "configuracao": {
         "arquitetura": "AR-2",
         "variante": "base",
@@ -360,6 +360,7 @@
         "faltando": [],
         "quantidadeCaixas": 2,
         "avisos": [],
+        "splPublicado": 124,
         "faixa": {
           "minimo": 6000,
           "maximo": 9000,
@@ -658,6 +659,7 @@
           "faltando": [],
           "quantidadeCaixas": 2,
           "avisos": [],
+          "splPublicado": 124,
           "faixa": {
             "minimo": 6000,
             "maximo": 9000,
@@ -905,6 +907,7 @@
           "avisos": [
             "O array não cobre as primeiras fileiras a partir da altura de montagem. Ele cobre a partir de 3 m da primeira fileira; front-fill adicionado."
           ],
+          "splPublicado": 130,
           "faixa": {
             "minimo": 15000,
             "maximo": 25000,
@@ -1383,8 +1386,8 @@
     "conclusoes": [
       {
         "id": "nivel-alvo",
-        "titulo": "Nível sonoro necessário",
-        "texto": "Nível-alvo médio de 75 dB SPL no ouvinte, com reserva dinâmica de 10 dB. A caixa precisa entregar 85 dB na área coberta. Ajuste por ruído do local: +0 dB.",
+        "titulo": "Volume necessário",
+        "texto": "Para este uso, o som precisa chegar a cerca de 75 dB em quem está sentado, com folga de 10 dB para os momentos mais fortes. Ou seja, a caixa precisa entregar 85 dB na área do público. Somamos 0 dB por causa do barulho do local.",
         "entradas": [
           "Usos: fala/pregação (informado)",
           "Ruído com o local funcionando: facil"
@@ -1459,8 +1462,8 @@
       },
       {
         "id": "escopo",
-        "titulo": "Dentro do modelo?",
-        "texto": "O ambiente está dentro do envelope do MVP.",
+        "titulo": "O sistema consegue calcular o seu espaço?",
+        "texto": "O seu espaço está dentro do que o sistema calcula.",
         "entradas": [
           "Sala: 9,0 m de largura x 12,0 m de profundidade x 3,5 m de pé-direito (informado)",
           "Palco: 3,0 m de profundidade (padrão)",
@@ -1496,8 +1499,8 @@
       },
       {
         "id": "arquitetura",
-        "titulo": "Configuração recomendada",
-        "texto": "Recomendação: Duas colunas (vertical array) na frente, uma de cada lado do palco. Única arquitetura disponível para as respostas dadas.",
+        "titulo": "Sistema recomendado",
+        "texto": "Recomendamos duas colunas de som na frente, uma de cada lado do palco. É a única opção que combina com as preferências de instalação informadas.",
         "entradas": [
           "Sala: 9,0 m de largura x 12,0 m de profundidade x 3,5 m de pé-direito (informado)",
           "Palco: 3,0 m de profundidade (padrão)",
@@ -1522,8 +1525,8 @@
       },
       {
         "id": "caixas",
-        "titulo": "Quantidade e tipo de caixas",
-        "texto": "2 x Demo Coluna 8 (principal, apoiada no chão). A quantidade sai da regra da arquitetura AR-2 e do recálculo com os dados reais do produto.",
+        "titulo": "Quantas caixas e de que tipo",
+        "texto": "Você vai precisar de: 2 x Demo Coluna 8 (caixa principal, apoiada no chão). A quantidade sai do tamanho da sala e foi conferida com os dados do modelo escolhido.",
         "entradas": [
           "Sala: 9,0 m de largura x 12,0 m de profundidade x 3,5 m de pé-direito (informado)",
           "Palco: 3,0 m de profundidade (padrão)",
@@ -1563,7 +1566,7 @@
       {
         "id": "caixa:P-L",
         "titulo": "Caixa 1",
-        "texto": "Caixa 1 (principal): apoiada no chão, centro acústico a 1,50 m de altura, em x = 0,50 m e y = 2,50 m. Direção: 23° na horizontal (0° = para o fundo) e -16° na vertical. A direção horizontal mira o centro da última fileira; a inclinação mira 2/3 da profundidade da área de público.",
+        "texto": "Caixa 1 (caixa principal), apoiada no chão. Altura: 1,50 m do chão até o centro da caixa. Posição: 0,50 m da parede lateral e 2,50 m da parede do palco. Direção: 23° para o lado e -16° para baixo. Ela aponta para o centro da última fileira e fica levemente inclinada para baixo, mirando o público e não as paredes.",
         "entradas": [
           "Sala: 9,0 m de largura x 12,0 m de profundidade x 3,5 m de pé-direito (informado)",
           "Palco: 3,0 m de profundidade (padrão)",
@@ -1598,7 +1601,7 @@
       {
         "id": "caixa:P-R",
         "titulo": "Caixa 2",
-        "texto": "Caixa 2 (principal): apoiada no chão, centro acústico a 1,50 m de altura, em x = 8,50 m e y = 2,50 m. Direção: -23° na horizontal (0° = para o fundo) e -16° na vertical. A direção horizontal mira o centro da última fileira; a inclinação mira 2/3 da profundidade da área de público.",
+        "texto": "Caixa 2 (caixa principal), apoiada no chão. Altura: 1,50 m do chão até o centro da caixa. Posição: 8,50 m da parede lateral e 2,50 m da parede do palco. Direção: -23° para o lado e -16° para baixo. Ela aponta para o centro da última fileira e fica levemente inclinada para baixo, mirando o público e não as paredes.",
         "entradas": [
           "Sala: 9,0 m de largura x 12,0 m de profundidade x 3,5 m de pé-direito (informado)",
           "Palco: 3,0 m de profundidade (padrão)",
@@ -1632,8 +1635,8 @@
       },
       {
         "id": "cobertura",
-        "titulo": "Cobertura nominal",
-        "texto": "100% da área de público fica dentro da cobertura nominal, 0% na borda e 0% fora. Cobertura nominal declarada pelo fabricante. Aproximação geométrica, não é medição.",
+        "titulo": "Onde o som chega bem",
+        "texto": "O som chega bem em 100% da área do público, mais fraco em 0% e fica fora do alcance principal em 0%. A área vem do ângulo que o fabricante declara para a caixa. É uma conta de geometria, não uma medição.",
         "entradas": [
           "Sala: 9,0 m de largura x 12,0 m de profundidade x 3,5 m de pé-direito (informado)",
           "Palco: 3,0 m de profundidade (padrão)",
@@ -1670,6 +1673,7 @@
         ],
         "hipoteses": [],
         "limitacoes": [
+          "Cobertura nominal declarada pelo fabricante. Aproximação geométrica, não é medição.",
           "Não atribui atenuação em dB fora do eixo.",
           "Sala modelada como retângulo, sem obstáculos.",
           "Não calcula reflexões, RT60 nem STI."
@@ -1677,8 +1681,8 @@
       },
       {
         "id": "capacidade",
-        "titulo": "Capacidade sonora",
-        "texto": "Recomendação geométrica disponível. Validação de capacidade sonora pendente: O fabricante não publica SPL por distância para esta configuração.",
+        "titulo": "O volume é suficiente?",
+        "texto": "A posição das caixas está calculada. Ainda não dá para confirmar o volume: O fabricante não publica SPL por distância para esta configuração.",
         "entradas": [
           "Requerido: 85 dB (alvo 75 + reserva 10)"
         ],
@@ -1703,8 +1707,8 @@
       },
       {
         "id": "requisitos",
-        "titulo": "Características mínimas de cada caixa",
-        "texto": "Características mínimas de cada caixa principal: Cobertura vertical publicada de pelo menos 30° numa configuração da tabela; Cobertura horizontal de referência: 120°; Alcance nominal de pelo menos 11 m; Montagem: qualquer uma permitida pelo fabricante (o layout de referência usou chao); SPL contínuo publicado por distância que entregue 85 dB a 11 m.",
+        "titulo": "O que a caixa precisa ter",
+        "texto": "O que a caixa principal precisa ter: Cobertura vertical publicada de pelo menos 30° numa configuração da tabela; Cobertura horizontal de referência: 120°; Alcance nominal de pelo menos 11 m; Montagem: qualquer uma permitida pelo fabricante (o layout de referência usou chao); SPL contínuo publicado por distância que entregue 85 dB a 11 m.",
         "entradas": [],
         "regra": "C8 passo 2: requisitos calculados para o caso",
         "parametros": [
@@ -1729,7 +1733,7 @@
       {
         "id": "produtos",
         "titulo": "Produtos do catálogo",
-        "texto": "2 produto(s) do catálogo avaliado(s): 0 compatível(is), 2 parcial(is), 0 incompatível(is), 0 não avaliável(is). Ordem: (1) status de compatibilidade, (2) menos caixas, (3) maior margem de nível até +6 dB, (4) menor faixa de investimento. Nenhuma marca recebe bônus.",
+        "texto": "Avaliamos 2 modelo(s): 0 atende(m), 2 atende(m) com dados a confirmar, 0 não atende(m) e 0 sem dados suficientes. A ordem segue só critérios técnicos: (1) se atende, (2) menos caixas, (3) mais folga de volume (até +6 dB), (4) menor investimento. Nenhuma marca ganha ponto extra.",
         "entradas": [],
         "regra": "C7 status de compatibilidade; C8 ranking",
         "parametros": [
@@ -1803,7 +1807,7 @@
       {
         "id": "sub",
         "titulo": "Subwoofer",
-        "texto": "Subwoofer não recomendado para fala e música ambiente.",
+        "texto": "Não precisa de subwoofer para fala e música ambiente.",
         "entradas": [
           "Usos: fala/pregação (informado)"
         ],
@@ -1863,8 +1867,8 @@
       },
       {
         "id": "reverberacao",
-        "titulo": "Acústica da sala",
-        "texto": "Risco médio de reverberação (2 pontos). Reverberação moderada. Mire as caixas no público e evite apontá-las para paredes lisas ou vidro.",
+        "titulo": "Eco da sala",
+        "texto": "Eco da sala: médio (2 de 5 pontos). A sala tem um pouco de eco. Aponte as caixas para o público e evite mirar em paredes lisas ou vidro.",
         "entradas": [
           "Superfícies: mistas",
           "Palma ecoa: um_pouco",
@@ -1903,8 +1907,8 @@
       },
       {
         "id": "pagnag",
-        "titulo": "Risco de microfonia",
-        "texto": "PAG 23,5 dB, NAG 20,4 dB, margem 3,0 dB: risco baixo de microfonia. Estimativa simplificada (lei do inverso do quadrado). Não substitui teste no local.",
+        "titulo": "Risco de microfonia (apito)",
+        "texto": "Risco de microfonia (apito): baixo. Folga calculada de 3,0 dB. É uma estimativa simples, pelas distâncias. Teste sempre no local.",
         "entradas": [
           "D0 (falante -> ouvinte mais distante): 10,32 m",
           "D1 (microfone -> caixa mais próxima): 4,00 m",
@@ -1940,13 +1944,14 @@
           "Microfone no centro, na frente do palco."
         ],
         "limitacoes": [
+          "Estimativa simplificada (lei do inverso do quadrado). Não substitui teste no local.",
           "Sinal de risco, não garantia."
         ]
       },
       {
         "id": "investimento",
         "titulo": "Investimento estimado",
-        "texto": "Investimento estimado em equipamentos: R$ 12.000 a R$ 18.000 (referência de mercado em 10/2026, sem instalação).",
+        "texto": "Investimento estimado em equipamentos: R$ 12.000 a R$ 18.000 (referência de preço de 10/2026, sem instalação).",
         "entradas": [],
         "regra": "C7: soma das faixas por categoria e porte; faixa vencida não aparece",
         "parametros": [

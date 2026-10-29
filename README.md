@@ -40,19 +40,19 @@ npm run casos          # roda os 10 casos de referência e grava docs/casos-refe
 ```
 
 ## Catálogo
-O catálogo de produção (`catalog/data/`) começa **vazio**. Só o dono do produto inclui fichas, com fonte e data em cada campo crítico.
+O catálogo de produção (`catalog/data/`) tem as caixas e microfones Armer/AZ enviados pelo dono do produto em 29/10/2026. Só o dono do produto inclui fichas, com fonte e data em cada campo crítico. Campos ausentes (ex.: ângulo de cobertura) viram estimativa marcada e o produto fica "parcial".
 ```bash
 npm run catalog:import -- produtos.csv configuracoes-array.csv --faixas faixas.csv
 npm run catalog:validate          # falha se produto publicado tiver campo crítico sem fonte/data, ou se houver item demo
 CATALOG_MODE=demo npm run catalog:validate
 ```
-Passo a passo e ficha mínima: [`docs/CATALOGO.md`](docs/CATALOGO.md). Com o catálogo vazio, o build de produção funciona e avisa: “Catálogo de produção vazio. O site vai mostrar só perfis genéricos.”
+Passo a passo e ficha mínima: [`docs/CATALOGO.md`](docs/CATALOGO.md).
 
 Cada build gera `catalog/snapshots/<modo>-<hash>.json`. **Faça commit desses arquivos e não os apague**: os links antigos reproduzem o resultado com o catálogo do hash gravado no link.
 
 ## Deploy
 O build é estático (`output: "export"`): a pasta `out/` pode ir para qualquer hospedagem de arquivos estáticos (Vercel, Netlify, Cloudflare Pages, S3 + CDN). Não há banco, servidor nem segredo.
-- Vercel: o `vercel.json` já define preset "Other", build `npm run build:demo` e saída `out` (a demo). Para produção, troque `buildCommand` para `npm run build`. O preset Next.js do Vercel não serve para o build estático: ele procura arquivos de servidor e falha.
+- Vercel: o `vercel.json` já define preset "Other", build `npm run build` (catálogo de produção) e saída `out`. Para a demo fictícia, troque para `npm run build:demo`. O preset Next.js do Vercel não serve para o build estático: ele procura arquivos de servidor e falha.
 - Outro host: `npm run build` e publique `out/`.
 Nada foi publicado em produção por este trabalho.
 

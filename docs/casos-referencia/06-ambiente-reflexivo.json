@@ -100,8 +100,8 @@
     "recomendacao": {
       "arquitetura": "AR-2",
       "nome": "Vertical array na frente (coluna ou line array compacto)",
-      "nomeSimples": "Duas colunas (vertical array) na frente, uma de cada lado do palco",
-      "motivoEscolha": "Vertical array preferido: a área de público tem 17 m de profundidade e a sala tem risco alto de reverberação.",
+      "nomeSimples": "duas colunas de som na frente, uma de cada lado do palco",
+      "motivoEscolha": "O público ocupa 17 m de profundidade e a sala tem bastante eco. Colunas levam o som mais longe e jogam menos som nas paredes.",
       "configuracao": {
         "arquitetura": "AR-2",
         "variante": "base",
@@ -113,103 +113,129 @@
             "posicao": {
               "x": 0.5,
               "y": 2.5,
-              "z": 1.9
+              "z": 3
             },
             "mira": {
               "yaw": 17.447188423282203,
-              "pitch": -6.74763234811029
+              "pitch": -16.410161500131274
             },
-            "montagem": "chao",
+            "montagem": "pedestal",
             "fonte": {
               "tipo": "produto",
-              "ref": "demo-coluna-8",
-              "nome": "Demo Coluna 8",
+              "ref": "demo-line-6",
+              "nome": "Demo Line 6",
               "cobertura": {
-                "H": 120,
-                "V": 20
+                "H": 100,
+                "V": 30
               },
               "nivel": {
                 "tipo": "tabela",
                 "pontos": [
                   {
-                    "distancia_m": 4,
-                    "spl_db": 112
+                    "distancia_m": 5,
+                    "spl_db": 114
                   },
                   {
-                    "distancia_m": 8,
-                    "spl_db": 107
+                    "distancia_m": 10,
+                    "spl_db": 110
                   },
                   {
-                    "distancia_m": 16,
-                    "spl_db": 102
+                    "distancia_m": 20,
+                    "spl_db": 106
                   },
                   {
-                    "distancia_m": 24,
-                    "spl_db": 99
+                    "distancia_m": 30,
+                    "spl_db": 103
                   }
                 ]
               },
               "meiaAltura": 0,
               "montagensPermitidas": [
-                "chao"
+                "pedestal",
+                "suspensa"
               ],
-              "subcategoria": "coluna",
+              "subcategoria": "line_array_compacto",
               "tabelaArray": [
                 {
-                  "modulos": 1,
-                  "H": 120,
-                  "V": 30,
-                  "alcanceNominal_m": 14,
-                  "alturaCentro_m": 1.5
+                  "modulos": 2,
+                  "anguloSplay": 4,
+                  "H": 100,
+                  "V": 40,
+                  "alcanceNominal_m": 16
                 },
                 {
-                  "modulos": 2,
-                  "H": 120,
-                  "V": 20,
-                  "alcanceNominal_m": 22,
-                  "alturaCentro_m": 1.9,
+                  "modulos": 4,
+                  "anguloSplay": 3,
+                  "H": 100,
+                  "V": 30,
+                  "alcanceNominal_m": 28,
                   "spl_por_distancia": [
                     {
-                      "distancia_m": 4,
-                      "spl_db": 112
+                      "distancia_m": 5,
+                      "spl_db": 114
                     },
                     {
-                      "distancia_m": 8,
-                      "spl_db": 107
+                      "distancia_m": 10,
+                      "spl_db": 110
                     },
                     {
-                      "distancia_m": 16,
-                      "spl_db": 102
+                      "distancia_m": 20,
+                      "spl_db": 106
                     },
                     {
-                      "distancia_m": 24,
-                      "spl_db": 99
+                      "distancia_m": 30,
+                      "spl_db": 103
+                    }
+                  ]
+                },
+                {
+                  "modulos": 6,
+                  "anguloSplay": 2,
+                  "H": 100,
+                  "V": 24,
+                  "alcanceNominal_m": 36,
+                  "spl_por_distancia": [
+                    {
+                      "distancia_m": 5,
+                      "spl_db": 117
+                    },
+                    {
+                      "distancia_m": 10,
+                      "spl_db": 113
+                    },
+                    {
+                      "distancia_m": 20,
+                      "spl_db": 109
+                    },
+                    {
+                      "distancia_m": 40,
+                      "spl_db": 104
                     }
                   ]
                 }
               ],
               "configuracaoArray": {
-                "modulos": 2,
-                "H": 120,
-                "V": 20,
-                "alcanceNominal_m": 22,
-                "alturaCentro_m": 1.9,
+                "modulos": 4,
+                "anguloSplay": 3,
+                "H": 100,
+                "V": 30,
+                "alcanceNominal_m": 28,
                 "spl_por_distancia": [
                   {
-                    "distancia_m": 4,
-                    "spl_db": 112
+                    "distancia_m": 5,
+                    "spl_db": 114
                   },
                   {
-                    "distancia_m": 8,
-                    "spl_db": 107
+                    "distancia_m": 10,
+                    "spl_db": 110
                   },
                   {
-                    "distancia_m": 16,
-                    "spl_db": 102
+                    "distancia_m": 20,
+                    "spl_db": 106
                   },
                   {
-                    "distancia_m": 24,
-                    "spl_db": 99
+                    "distancia_m": 30,
+                    "spl_db": 103
                   }
                 ]
               }
@@ -224,103 +250,129 @@
             "posicao": {
               "x": 11.5,
               "y": 2.5,
-              "z": 1.9
+              "z": 3
             },
             "mira": {
               "yaw": -17.447188423282203,
-              "pitch": -6.74763234811029
+              "pitch": -16.410161500131274
             },
-            "montagem": "chao",
+            "montagem": "pedestal",
             "fonte": {
               "tipo": "produto",
-              "ref": "demo-coluna-8",
-              "nome": "Demo Coluna 8",
+              "ref": "demo-line-6",
+              "nome": "Demo Line 6",
               "cobertura": {
-                "H": 120,
-                "V": 20
+                "H": 100,
+                "V": 30
               },
               "nivel": {
                 "tipo": "tabela",
                 "pontos": [
                   {
-                    "distancia_m": 4,
-                    "spl_db": 112
+                    "distancia_m": 5,
+                    "spl_db": 114
                   },
                   {
-                    "distancia_m": 8,
-                    "spl_db": 107
+                    "distancia_m": 10,
+                    "spl_db": 110
                   },
                   {
-                    "distancia_m": 16,
-                    "spl_db": 102
+                    "distancia_m": 20,
+                    "spl_db": 106
                   },
                   {
-                    "distancia_m": 24,
-                    "spl_db": 99
+                    "distancia_m": 30,
+                    "spl_db": 103
                   }
                 ]
               },
               "meiaAltura": 0,
               "montagensPermitidas": [
-                "chao"
+                "pedestal",
+                "suspensa"
               ],
-              "subcategoria": "coluna",
+              "subcategoria": "line_array_compacto",
               "tabelaArray": [
                 {
-                  "modulos": 1,
-                  "H": 120,
-                  "V": 30,
-                  "alcanceNominal_m": 14,
-                  "alturaCentro_m": 1.5
+                  "modulos": 2,
+                  "anguloSplay": 4,
+                  "H": 100,
+                  "V": 40,
+                  "alcanceNominal_m": 16
                 },
                 {
-                  "modulos": 2,
-                  "H": 120,
-                  "V": 20,
-                  "alcanceNominal_m": 22,
-                  "alturaCentro_m": 1.9,
+                  "modulos": 4,
+                  "anguloSplay": 3,
+                  "H": 100,
+                  "V": 30,
+                  "alcanceNominal_m": 28,
                   "spl_por_distancia": [
                     {
-                      "distancia_m": 4,
-                      "spl_db": 112
+                      "distancia_m": 5,
+                      "spl_db": 114
                     },
                     {
-                      "distancia_m": 8,
-                      "spl_db": 107
+                      "distancia_m": 10,
+                      "spl_db": 110
                     },
                     {
-                      "distancia_m": 16,
-                      "spl_db": 102
+                      "distancia_m": 20,
+                      "spl_db": 106
                     },
                     {
-                      "distancia_m": 24,
-                      "spl_db": 99
+                      "distancia_m": 30,
+                      "spl_db": 103
+                    }
+                  ]
+                },
+                {
+                  "modulos": 6,
+                  "anguloSplay": 2,
+                  "H": 100,
+                  "V": 24,
+                  "alcanceNominal_m": 36,
+                  "spl_por_distancia": [
+                    {
+                      "distancia_m": 5,
+                      "spl_db": 117
+                    },
+                    {
+                      "distancia_m": 10,
+                      "spl_db": 113
+                    },
+                    {
+                      "distancia_m": 20,
+                      "spl_db": 109
+                    },
+                    {
+                      "distancia_m": 40,
+                      "spl_db": 104
                     }
                   ]
                 }
               ],
               "configuracaoArray": {
-                "modulos": 2,
-                "H": 120,
-                "V": 20,
-                "alcanceNominal_m": 22,
-                "alturaCentro_m": 1.9,
+                "modulos": 4,
+                "anguloSplay": 3,
+                "H": 100,
+                "V": 30,
+                "alcanceNominal_m": 28,
                 "spl_por_distancia": [
                   {
-                    "distancia_m": 4,
-                    "spl_db": 112
+                    "distancia_m": 5,
+                    "spl_db": 114
                   },
                   {
-                    "distancia_m": 8,
-                    "spl_db": 107
+                    "distancia_m": 10,
+                    "spl_db": 110
                   },
                   {
-                    "distancia_m": 16,
-                    "spl_db": 102
+                    "distancia_m": 20,
+                    "spl_db": 106
                   },
                   {
-                    "distancia_m": 24,
-                    "spl_db": 99
+                    "distancia_m": 30,
+                    "spl_db": 103
                   }
                 ]
               }
@@ -396,9 +448,10 @@
         "atrasos": [],
         "frontFill": true,
         "configArray": {
-          "modulos": 2,
-          "H": 120,
-          "V": 20,
+          "modulos": 4,
+          "anguloSplay": 3,
+          "H": 100,
+          "V": 30,
           "coberturaAPartirDe": 6
         },
         "requisitos": {
@@ -406,16 +459,16 @@
             {
               "campo": "coberturaV",
               "operador": ">=",
-              "valor": 10,
+              "valor": 22,
               "unidade": "graus",
-              "texto": "Cobertura vertical publicada de pelo menos 10° numa configuração da tabela"
+              "texto": "Cobertura vertical publicada de pelo menos 22° numa configuração da tabela"
             },
             {
               "campo": "coberturaH",
               "operador": ">=",
-              "valor": 120,
+              "valor": 100,
               "unidade": "graus",
-              "texto": "Cobertura horizontal de referência: 120°"
+              "texto": "Cobertura horizontal de referência: 100°"
             },
             {
               "campo": "alcance",
@@ -427,9 +480,9 @@
             {
               "campo": "montagem",
               "operador": "em",
-              "valor": "chao",
+              "valor": "pedestal",
               "unidade": "",
-              "texto": "Montagem: qualquer uma permitida pelo fabricante (o layout de referência usou chao)"
+              "texto": "Montagem: qualquer uma permitida pelo fabricante (o layout de referência usou pedestal)"
             },
             {
               "campo": "splContinuo1m",
@@ -455,11 +508,11 @@
       },
       "equipamentos": [
         {
-          "ref": "demo-coluna-8",
-          "nome": "Demo Coluna 8",
+          "ref": "demo-line-6",
+          "nome": "Demo Line 6",
           "tipo": "produto",
           "papel": "principal",
-          "montagem": "chao",
+          "montagem": "pedestal",
           "quantidade": 2,
           "numeros": [
             1,
@@ -481,14 +534,14 @@
       ],
       "avaliacao": {
         "pct": {
-          "coberto": 0.9558823529411765,
-          "borda": 0.04411764705882353,
-          "fora": 0
+          "coberto": 0.9436274509803921,
+          "borda": 0.03676470588235294,
+          "fora": 0.0196078431372549
         },
         "nivel": {
-          "min": 101.11013949447067,
-          "max": 111.97416929178794,
-          "uniformidade": 10.864029797317272
+          "min": 106.56939927937026,
+          "max": 113.90185380669139,
+          "uniformidade": 7.332454527321133
         },
         "capacidade": "pendente",
         "motivoCapacidade": "O fabricante não publica SPL para toda a distância necessária. O motor não extrapola."
@@ -499,15 +552,15 @@
         "y0": 3,
         "nx": 24,
         "ny": 34,
-        "celulas": "bbbbcbbcbbbbbbbbcbbcbbbbbbbccccccccccccccccccbbbbbbccccccccccccccccccbbbbbccccccccccccccccccccbbcccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccc"
+        "celulas": "ffffcbbcbbbffbbbcbbcffffffbccccccbbbbbbccccccbfffbbccccccccbbccccccccbbfbbccccccccccccccccccccbbbccccccccccccccccccccccbcccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccc"
       },
       "produto": {
-        "produtoId": "demo-coluna-8",
-        "nome": "Demo Coluna 8",
+        "produtoId": "demo-line-6",
+        "nome": "Demo Line 6",
         "marca": "Demo",
         "categoria": "vertical_array",
-        "subcategoria": "coluna",
-        "porte": "intermediaria",
+        "subcategoria": "line_array_compacto",
+        "porte": "profissional",
         "status": "parcial",
         "motivos": [
           "Capacidade sonora pendente: O fabricante não publica SPL para toda a distância necessária. O motor não extrapola."
@@ -516,15 +569,16 @@
         "quantidadeCaixas": 4,
         "avisos": [
           "O array não cobre as primeiras fileiras a partir da altura de montagem. Ele cobre a partir de 3 m da primeira fileira; front-fill adicionado.",
-          "Variação de nível na área coberta de 10.9 dB (critério: até 6 dB). O modelo não atenua fora do eixo, então a variação real tende a ser diferente."
+          "Variação de nível na área coberta de 7.3 dB (critério: até 6 dB). O modelo não atenua fora do eixo, então a variação real tende a ser diferente."
         ],
+        "splPublicado": 130,
         "faixa": {
-          "minimo": 6000,
-          "maximo": 9000,
+          "minimo": 15000,
+          "maximo": 25000,
           "dataVerificacao": "2026-10-01",
           "fonte": "demo:ficticio (valores inventados)",
           "ids": [
-            "demo-fx-coluna-i"
+            "demo-fx-line-p"
           ]
         },
         "configuracao": {
@@ -538,103 +592,129 @@
               "posicao": {
                 "x": 0.5,
                 "y": 2.5,
-                "z": 1.9
+                "z": 3
               },
               "mira": {
                 "yaw": 17.447188423282203,
-                "pitch": -6.74763234811029
+                "pitch": -16.410161500131274
               },
-              "montagem": "chao",
+              "montagem": "pedestal",
               "fonte": {
                 "tipo": "produto",
-                "ref": "demo-coluna-8",
-                "nome": "Demo Coluna 8",
+                "ref": "demo-line-6",
+                "nome": "Demo Line 6",
                 "cobertura": {
-                  "H": 120,
-                  "V": 20
+                  "H": 100,
+                  "V": 30
                 },
                 "nivel": {
                   "tipo": "tabela",
                   "pontos": [
                     {
-                      "distancia_m": 4,
-                      "spl_db": 112
+                      "distancia_m": 5,
+                      "spl_db": 114
                     },
                     {
-                      "distancia_m": 8,
-                      "spl_db": 107
+                      "distancia_m": 10,
+                      "spl_db": 110
                     },
                     {
-                      "distancia_m": 16,
-                      "spl_db": 102
+                      "distancia_m": 20,
+                      "spl_db": 106
                     },
                     {
-                      "distancia_m": 24,
-                      "spl_db": 99
+                      "distancia_m": 30,
+                      "spl_db": 103
                     }
                   ]
                 },
                 "meiaAltura": 0,
                 "montagensPermitidas": [
-                  "chao"
+                  "pedestal",
+                  "suspensa"
                 ],
-                "subcategoria": "coluna",
+                "subcategoria": "line_array_compacto",
                 "tabelaArray": [
                   {
-                    "modulos": 1,
-                    "H": 120,
-                    "V": 30,
-                    "alcanceNominal_m": 14,
-                    "alturaCentro_m": 1.5
+                    "modulos": 2,
+                    "anguloSplay": 4,
+                    "H": 100,
+                    "V": 40,
+                    "alcanceNominal_m": 16
                   },
                   {
-                    "modulos": 2,
-                    "H": 120,
-                    "V": 20,
-                    "alcanceNominal_m": 22,
-                    "alturaCentro_m": 1.9,
+                    "modulos": 4,
+                    "anguloSplay": 3,
+                    "H": 100,
+                    "V": 30,
+                    "alcanceNominal_m": 28,
                     "spl_por_distancia": [
                       {
-                        "distancia_m": 4,
-                        "spl_db": 112
+                        "distancia_m": 5,
+                        "spl_db": 114
                       },
                       {
-                        "distancia_m": 8,
-                        "spl_db": 107
+                        "distancia_m": 10,
+                        "spl_db": 110
                       },
                       {
-                        "distancia_m": 16,
-                        "spl_db": 102
+                        "distancia_m": 20,
+                        "spl_db": 106
                       },
                       {
-                        "distancia_m": 24,
-                        "spl_db": 99
+                        "distancia_m": 30,
+                        "spl_db": 103
+                      }
+                    ]
+                  },
+                  {
+                    "modulos": 6,
+                    "anguloSplay": 2,
+                    "H": 100,
+                    "V": 24,
+                    "alcanceNominal_m": 36,
+                    "spl_por_distancia": [
+                      {
+                        "distancia_m": 5,
+                        "spl_db": 117
+                      },
+                      {
+                        "distancia_m": 10,
+                        "spl_db": 113
+                      },
+                      {
+                        "distancia_m": 20,
+                        "spl_db": 109
+                      },
+                      {
+                        "distancia_m": 40,
+                        "spl_db": 104
                       }
                     ]
                   }
                 ],
                 "configuracaoArray": {
-                  "modulos": 2,
-                  "H": 120,
-                  "V": 20,
-                  "alcanceNominal_m": 22,
-                  "alturaCentro_m": 1.9,
+                  "modulos": 4,
+                  "anguloSplay": 3,
+                  "H": 100,
+                  "V": 30,
+                  "alcanceNominal_m": 28,
                   "spl_por_distancia": [
                     {
-                      "distancia_m": 4,
-                      "spl_db": 112
+                      "distancia_m": 5,
+                      "spl_db": 114
                     },
                     {
-                      "distancia_m": 8,
-                      "spl_db": 107
+                      "distancia_m": 10,
+                      "spl_db": 110
                     },
                     {
-                      "distancia_m": 16,
-                      "spl_db": 102
+                      "distancia_m": 20,
+                      "spl_db": 106
                     },
                     {
-                      "distancia_m": 24,
-                      "spl_db": 99
+                      "distancia_m": 30,
+                      "spl_db": 103
                     }
                   ]
                 }
@@ -649,103 +729,129 @@
               "posicao": {
                 "x": 11.5,
                 "y": 2.5,
-                "z": 1.9
+                "z": 3
               },
               "mira": {
                 "yaw": -17.447188423282203,
-                "pitch": -6.74763234811029
+                "pitch": -16.410161500131274
               },
-              "montagem": "chao",
+              "montagem": "pedestal",
               "fonte": {
                 "tipo": "produto",
-                "ref": "demo-coluna-8",
-                "nome": "Demo Coluna 8",
+                "ref": "demo-line-6",
+                "nome": "Demo Line 6",
                 "cobertura": {
-                  "H": 120,
-                  "V": 20
+                  "H": 100,
+                  "V": 30
                 },
                 "nivel": {
                   "tipo": "tabela",
                   "pontos": [
                     {
-                      "distancia_m": 4,
-                      "spl_db": 112
+                      "distancia_m": 5,
+                      "spl_db": 114
                     },
                     {
-                      "distancia_m": 8,
-                      "spl_db": 107
+                      "distancia_m": 10,
+                      "spl_db": 110
                     },
                     {
-                      "distancia_m": 16,
-                      "spl_db": 102
+                      "distancia_m": 20,
+                      "spl_db": 106
                     },
                     {
-                      "distancia_m": 24,
-                      "spl_db": 99
+                      "distancia_m": 30,
+                      "spl_db": 103
                     }
                   ]
                 },
                 "meiaAltura": 0,
                 "montagensPermitidas": [
-                  "chao"
+                  "pedestal",
+                  "suspensa"
                 ],
-                "subcategoria": "coluna",
+                "subcategoria": "line_array_compacto",
                 "tabelaArray": [
                   {
-                    "modulos": 1,
-                    "H": 120,
-                    "V": 30,
-                    "alcanceNominal_m": 14,
-                    "alturaCentro_m": 1.5
+                    "modulos": 2,
+                    "anguloSplay": 4,
+                    "H": 100,
+                    "V": 40,
+                    "alcanceNominal_m": 16
                   },
                   {
-                    "modulos": 2,
-                    "H": 120,
-                    "V": 20,
-                    "alcanceNominal_m": 22,
-                    "alturaCentro_m": 1.9,
+                    "modulos": 4,
+                    "anguloSplay": 3,
+                    "H": 100,
+                    "V": 30,
+                    "alcanceNominal_m": 28,
                     "spl_por_distancia": [
                       {
-                        "distancia_m": 4,
-                        "spl_db": 112
+                        "distancia_m": 5,
+                        "spl_db": 114
                       },
                       {
-                        "distancia_m": 8,
-                        "spl_db": 107
+                        "distancia_m": 10,
+                        "spl_db": 110
                       },
                       {
-                        "distancia_m": 16,
-                        "spl_db": 102
+                        "distancia_m": 20,
+                        "spl_db": 106
                       },
                       {
-                        "distancia_m": 24,
-                        "spl_db": 99
+                        "distancia_m": 30,
+                        "spl_db": 103
+                      }
+                    ]
+                  },
+                  {
+                    "modulos": 6,
+                    "anguloSplay": 2,
+                    "H": 100,
+                    "V": 24,
+                    "alcanceNominal_m": 36,
+                    "spl_por_distancia": [
+                      {
+                        "distancia_m": 5,
+                        "spl_db": 117
+                      },
+                      {
+                        "distancia_m": 10,
+                        "spl_db": 113
+                      },
+                      {
+                        "distancia_m": 20,
+                        "spl_db": 109
+                      },
+                      {
+                        "distancia_m": 40,
+                        "spl_db": 104
                       }
                     ]
                   }
                 ],
                 "configuracaoArray": {
-                  "modulos": 2,
-                  "H": 120,
-                  "V": 20,
-                  "alcanceNominal_m": 22,
-                  "alturaCentro_m": 1.9,
+                  "modulos": 4,
+                  "anguloSplay": 3,
+                  "H": 100,
+                  "V": 30,
+                  "alcanceNominal_m": 28,
                   "spl_por_distancia": [
                     {
-                      "distancia_m": 4,
-                      "spl_db": 112
+                      "distancia_m": 5,
+                      "spl_db": 114
                     },
                     {
-                      "distancia_m": 8,
-                      "spl_db": 107
+                      "distancia_m": 10,
+                      "spl_db": 110
                     },
                     {
-                      "distancia_m": 16,
-                      "spl_db": 102
+                      "distancia_m": 20,
+                      "spl_db": 106
                     },
                     {
-                      "distancia_m": 24,
-                      "spl_db": 99
+                      "distancia_m": 30,
+                      "spl_db": 103
                     }
                   ]
                 }
@@ -821,9 +927,10 @@
           "atrasos": [],
           "frontFill": true,
           "configArray": {
-            "modulos": 2,
-            "H": 120,
-            "V": 20,
+            "modulos": 4,
+            "anguloSplay": 3,
+            "H": 100,
+            "V": 30,
             "coberturaAPartirDe": 6
           },
           "requisitos": {
@@ -831,16 +938,16 @@
               {
                 "campo": "coberturaV",
                 "operador": ">=",
-                "valor": 10,
+                "valor": 22,
                 "unidade": "graus",
-                "texto": "Cobertura vertical publicada de pelo menos 10° numa configuração da tabela"
+                "texto": "Cobertura vertical publicada de pelo menos 22° numa configuração da tabela"
               },
               {
                 "campo": "coberturaH",
                 "operador": ">=",
-                "valor": 120,
+                "valor": 100,
                 "unidade": "graus",
-                "texto": "Cobertura horizontal de referência: 120°"
+                "texto": "Cobertura horizontal de referência: 100°"
               },
               {
                 "campo": "alcance",
@@ -852,9 +959,9 @@
               {
                 "campo": "montagem",
                 "operador": "em",
-                "valor": "chao",
+                "valor": "pedestal",
                 "unidade": "",
-                "texto": "Montagem: qualquer uma permitida pelo fabricante (o layout de referência usou chao)"
+                "texto": "Montagem: qualquer uma permitida pelo fabricante (o layout de referência usou pedestal)"
               },
               {
                 "campo": "splContinuo1m",
@@ -881,18 +988,18 @@
         "avaliacao": {
           "estados": [],
           "pct": {
-            "coberto": 0.9558823529411765,
-            "borda": 0.04411764705882353,
-            "fora": 0
+            "coberto": 0.9436274509803921,
+            "borda": 0.03676470588235294,
+            "fora": 0.0196078431372549
           },
           "nivel": {
-            "min": 101.11013949447067,
-            "max": 111.97416929178794,
-            "uniformidade": 10.864029797317272,
-            "pontosAvaliados": 758
+            "min": 106.56939927937026,
+            "max": 113.90185380669139,
+            "uniformidade": 7.332454527321133,
+            "pontosAvaliados": 686
           },
-          "pontosSemNivel": 12,
-          "pontosSoGenericos": 10,
+          "pontosSemNivel": 52,
+          "pontosSoGenericos": 32,
           "capacidade": "pendente",
           "motivoCapacidade": "O fabricante não publica SPL para toda a distância necessária. O motor não extrapola.",
           "nivelPorLinha": []
@@ -953,403 +1060,6 @@
       },
       "candidatos": [
         {
-          "produtoId": "demo-coluna-8",
-          "nome": "Demo Coluna 8",
-          "marca": "Demo",
-          "categoria": "vertical_array",
-          "subcategoria": "coluna",
-          "porte": "intermediaria",
-          "status": "parcial",
-          "motivos": [
-            "Capacidade sonora pendente: O fabricante não publica SPL para toda a distância necessária. O motor não extrapola."
-          ],
-          "faltando": [],
-          "quantidadeCaixas": 4,
-          "avisos": [
-            "O array não cobre as primeiras fileiras a partir da altura de montagem. Ele cobre a partir de 3 m da primeira fileira; front-fill adicionado.",
-            "Variação de nível na área coberta de 10.9 dB (critério: até 6 dB). O modelo não atenua fora do eixo, então a variação real tende a ser diferente."
-          ],
-          "faixa": {
-            "minimo": 6000,
-            "maximo": 9000,
-            "dataVerificacao": "2026-10-01",
-            "fonte": "demo:ficticio (valores inventados)",
-            "ids": [
-              "demo-fx-coluna-i"
-            ]
-          },
-          "configuracao": {
-            "arquitetura": "AR-2",
-            "variante": "base",
-            "caixas": [
-              {
-                "id": "P-L",
-                "papel": "principal",
-                "lado": "L",
-                "posicao": {
-                  "x": 0.5,
-                  "y": 2.5,
-                  "z": 1.9
-                },
-                "mira": {
-                  "yaw": 17.447188423282203,
-                  "pitch": -6.74763234811029
-                },
-                "montagem": "chao",
-                "fonte": {
-                  "tipo": "produto",
-                  "ref": "demo-coluna-8",
-                  "nome": "Demo Coluna 8",
-                  "cobertura": {
-                    "H": 120,
-                    "V": 20
-                  },
-                  "nivel": {
-                    "tipo": "tabela",
-                    "pontos": [
-                      {
-                        "distancia_m": 4,
-                        "spl_db": 112
-                      },
-                      {
-                        "distancia_m": 8,
-                        "spl_db": 107
-                      },
-                      {
-                        "distancia_m": 16,
-                        "spl_db": 102
-                      },
-                      {
-                        "distancia_m": 24,
-                        "spl_db": 99
-                      }
-                    ]
-                  },
-                  "meiaAltura": 0,
-                  "montagensPermitidas": [
-                    "chao"
-                  ],
-                  "subcategoria": "coluna",
-                  "tabelaArray": [
-                    {
-                      "modulos": 1,
-                      "H": 120,
-                      "V": 30,
-                      "alcanceNominal_m": 14,
-                      "alturaCentro_m": 1.5
-                    },
-                    {
-                      "modulos": 2,
-                      "H": 120,
-                      "V": 20,
-                      "alcanceNominal_m": 22,
-                      "alturaCentro_m": 1.9,
-                      "spl_por_distancia": [
-                        {
-                          "distancia_m": 4,
-                          "spl_db": 112
-                        },
-                        {
-                          "distancia_m": 8,
-                          "spl_db": 107
-                        },
-                        {
-                          "distancia_m": 16,
-                          "spl_db": 102
-                        },
-                        {
-                          "distancia_m": 24,
-                          "spl_db": 99
-                        }
-                      ]
-                    }
-                  ],
-                  "configuracaoArray": {
-                    "modulos": 2,
-                    "H": 120,
-                    "V": 20,
-                    "alcanceNominal_m": 22,
-                    "alturaCentro_m": 1.9,
-                    "spl_por_distancia": [
-                      {
-                        "distancia_m": 4,
-                        "spl_db": 112
-                      },
-                      {
-                        "distancia_m": 8,
-                        "spl_db": 107
-                      },
-                      {
-                        "distancia_m": 16,
-                        "spl_db": 102
-                      },
-                      {
-                        "distancia_m": 24,
-                        "spl_db": 99
-                      }
-                    ]
-                  }
-                },
-                "movida": false,
-                "numero": 1
-              },
-              {
-                "id": "P-R",
-                "papel": "principal",
-                "lado": "R",
-                "posicao": {
-                  "x": 11.5,
-                  "y": 2.5,
-                  "z": 1.9
-                },
-                "mira": {
-                  "yaw": -17.447188423282203,
-                  "pitch": -6.74763234811029
-                },
-                "montagem": "chao",
-                "fonte": {
-                  "tipo": "produto",
-                  "ref": "demo-coluna-8",
-                  "nome": "Demo Coluna 8",
-                  "cobertura": {
-                    "H": 120,
-                    "V": 20
-                  },
-                  "nivel": {
-                    "tipo": "tabela",
-                    "pontos": [
-                      {
-                        "distancia_m": 4,
-                        "spl_db": 112
-                      },
-                      {
-                        "distancia_m": 8,
-                        "spl_db": 107
-                      },
-                      {
-                        "distancia_m": 16,
-                        "spl_db": 102
-                      },
-                      {
-                        "distancia_m": 24,
-                        "spl_db": 99
-                      }
-                    ]
-                  },
-                  "meiaAltura": 0,
-                  "montagensPermitidas": [
-                    "chao"
-                  ],
-                  "subcategoria": "coluna",
-                  "tabelaArray": [
-                    {
-                      "modulos": 1,
-                      "H": 120,
-                      "V": 30,
-                      "alcanceNominal_m": 14,
-                      "alturaCentro_m": 1.5
-                    },
-                    {
-                      "modulos": 2,
-                      "H": 120,
-                      "V": 20,
-                      "alcanceNominal_m": 22,
-                      "alturaCentro_m": 1.9,
-                      "spl_por_distancia": [
-                        {
-                          "distancia_m": 4,
-                          "spl_db": 112
-                        },
-                        {
-                          "distancia_m": 8,
-                          "spl_db": 107
-                        },
-                        {
-                          "distancia_m": 16,
-                          "spl_db": 102
-                        },
-                        {
-                          "distancia_m": 24,
-                          "spl_db": 99
-                        }
-                      ]
-                    }
-                  ],
-                  "configuracaoArray": {
-                    "modulos": 2,
-                    "H": 120,
-                    "V": 20,
-                    "alcanceNominal_m": 22,
-                    "alturaCentro_m": 1.9,
-                    "spl_por_distancia": [
-                      {
-                        "distancia_m": 4,
-                        "spl_db": 112
-                      },
-                      {
-                        "distancia_m": 8,
-                        "spl_db": 107
-                      },
-                      {
-                        "distancia_m": 16,
-                        "spl_db": 102
-                      },
-                      {
-                        "distancia_m": 24,
-                        "spl_db": 99
-                      }
-                    ]
-                  }
-                },
-                "movida": false,
-                "numero": 2
-              },
-              {
-                "id": "FF-1",
-                "papel": "front_fill",
-                "lado": "C",
-                "posicao": {
-                  "x": 3,
-                  "y": 2.8,
-                  "z": 0.3
-                },
-                "mira": {
-                  "yaw": 0,
-                  "pitch": 27.89727103094762
-                },
-                "montagem": "chao",
-                "fonte": {
-                  "tipo": "generico",
-                  "ref": "GEN-ATIVA-10",
-                  "nome": "Front-fill compacto (perfil genérico)",
-                  "cobertura": {
-                    "H": 90,
-                    "V": 60
-                  },
-                  "nivel": {
-                    "tipo": "requisito"
-                  },
-                  "meiaAltura": 0.3,
-                  "montagensPermitidas": null,
-                  "subcategoria": "10"
-                },
-                "movida": false,
-                "numero": 3
-              },
-              {
-                "id": "FF-2",
-                "papel": "front_fill",
-                "lado": "C",
-                "posicao": {
-                  "x": 9,
-                  "y": 2.8,
-                  "z": 0.3
-                },
-                "mira": {
-                  "yaw": 0,
-                  "pitch": 27.89727103094762
-                },
-                "montagem": "chao",
-                "fonte": {
-                  "tipo": "generico",
-                  "ref": "GEN-ATIVA-10",
-                  "nome": "Front-fill compacto (perfil genérico)",
-                  "cobertura": {
-                    "H": 90,
-                    "V": 60
-                  },
-                  "nivel": {
-                    "tipo": "requisito"
-                  },
-                  "meiaAltura": 0.3,
-                  "montagensPermitidas": null,
-                  "subcategoria": "10"
-                },
-                "movida": false,
-                "numero": 4
-              }
-            ],
-            "atrasos": [],
-            "frontFill": true,
-            "configArray": {
-              "modulos": 2,
-              "H": 120,
-              "V": 20,
-              "coberturaAPartirDe": 6
-            },
-            "requisitos": {
-              "principal": [
-                {
-                  "campo": "coberturaV",
-                  "operador": ">=",
-                  "valor": 10,
-                  "unidade": "graus",
-                  "texto": "Cobertura vertical publicada de pelo menos 10° numa configuração da tabela"
-                },
-                {
-                  "campo": "coberturaH",
-                  "operador": ">=",
-                  "valor": 120,
-                  "unidade": "graus",
-                  "texto": "Cobertura horizontal de referência: 120°"
-                },
-                {
-                  "campo": "alcance",
-                  "operador": ">=",
-                  "valor": 19,
-                  "unidade": "m",
-                  "texto": "Alcance nominal de pelo menos 19 m"
-                },
-                {
-                  "campo": "montagem",
-                  "operador": "em",
-                  "valor": "chao",
-                  "unidade": "",
-                  "texto": "Montagem: qualquer uma permitida pelo fabricante (o layout de referência usou chao)"
-                },
-                {
-                  "campo": "splContinuo1m",
-                  "operador": ">=",
-                  "valor": 85,
-                  "unidade": "dB SPL",
-                  "texto": "SPL contínuo publicado por distância que entregue 85 dB a 19 m"
-                }
-              ],
-              "front_fill": [
-                {
-                  "campo": "montagem",
-                  "operador": "em",
-                  "valor": "chao",
-                  "unidade": "",
-                  "texto": "Caixa compacta apoiada na boca do palco"
-                }
-              ]
-            },
-            "avisos": [
-              "O array não cobre as primeiras fileiras a partir da altura de montagem. Ele cobre a partir de 3 m da primeira fileira; front-fill adicionado."
-            ]
-          },
-          "avaliacao": {
-            "estados": [],
-            "pct": {
-              "coberto": 0.9558823529411765,
-              "borda": 0.04411764705882353,
-              "fora": 0
-            },
-            "nivel": {
-              "min": 101.11013949447067,
-              "max": 111.97416929178794,
-              "uniformidade": 10.864029797317272,
-              "pontosAvaliados": 758
-            },
-            "pontosSemNivel": 12,
-            "pontosSoGenericos": 10,
-            "capacidade": "pendente",
-            "motivoCapacidade": "O fabricante não publica SPL para toda a distância necessária. O motor não extrapola.",
-            "nivelPorLinha": []
-          }
-        },
-        {
           "produtoId": "demo-line-6",
           "nome": "Demo Line 6",
           "marca": "Demo",
@@ -1366,6 +1076,7 @@
             "O array não cobre as primeiras fileiras a partir da altura de montagem. Ele cobre a partir de 3 m da primeira fileira; front-fill adicionado.",
             "Variação de nível na área coberta de 7.3 dB (critério: até 6 dB). O modelo não atenua fora do eixo, então a variação real tende a ser diferente."
           ],
+          "splPublicado": 130,
           "faixa": {
             "minimo": 15000,
             "maximo": 25000,
@@ -1798,6 +1509,404 @@
             "motivoCapacidade": "O fabricante não publica SPL para toda a distância necessária. O motor não extrapola.",
             "nivelPorLinha": []
           }
+        },
+        {
+          "produtoId": "demo-coluna-8",
+          "nome": "Demo Coluna 8",
+          "marca": "Demo",
+          "categoria": "vertical_array",
+          "subcategoria": "coluna",
+          "porte": "intermediaria",
+          "status": "parcial",
+          "motivos": [
+            "Capacidade sonora pendente: O fabricante não publica SPL para toda a distância necessária. O motor não extrapola."
+          ],
+          "faltando": [],
+          "quantidadeCaixas": 4,
+          "avisos": [
+            "O array não cobre as primeiras fileiras a partir da altura de montagem. Ele cobre a partir de 3 m da primeira fileira; front-fill adicionado.",
+            "Variação de nível na área coberta de 10.9 dB (critério: até 6 dB). O modelo não atenua fora do eixo, então a variação real tende a ser diferente."
+          ],
+          "splPublicado": 124,
+          "faixa": {
+            "minimo": 6000,
+            "maximo": 9000,
+            "dataVerificacao": "2026-10-01",
+            "fonte": "demo:ficticio (valores inventados)",
+            "ids": [
+              "demo-fx-coluna-i"
+            ]
+          },
+          "configuracao": {
+            "arquitetura": "AR-2",
+            "variante": "base",
+            "caixas": [
+              {
+                "id": "P-L",
+                "papel": "principal",
+                "lado": "L",
+                "posicao": {
+                  "x": 0.5,
+                  "y": 2.5,
+                  "z": 1.9
+                },
+                "mira": {
+                  "yaw": 17.447188423282203,
+                  "pitch": -6.74763234811029
+                },
+                "montagem": "chao",
+                "fonte": {
+                  "tipo": "produto",
+                  "ref": "demo-coluna-8",
+                  "nome": "Demo Coluna 8",
+                  "cobertura": {
+                    "H": 120,
+                    "V": 20
+                  },
+                  "nivel": {
+                    "tipo": "tabela",
+                    "pontos": [
+                      {
+                        "distancia_m": 4,
+                        "spl_db": 112
+                      },
+                      {
+                        "distancia_m": 8,
+                        "spl_db": 107
+                      },
+                      {
+                        "distancia_m": 16,
+                        "spl_db": 102
+                      },
+                      {
+                        "distancia_m": 24,
+                        "spl_db": 99
+                      }
+                    ]
+                  },
+                  "meiaAltura": 0,
+                  "montagensPermitidas": [
+                    "chao"
+                  ],
+                  "subcategoria": "coluna",
+                  "tabelaArray": [
+                    {
+                      "modulos": 1,
+                      "H": 120,
+                      "V": 30,
+                      "alcanceNominal_m": 14,
+                      "alturaCentro_m": 1.5
+                    },
+                    {
+                      "modulos": 2,
+                      "H": 120,
+                      "V": 20,
+                      "alcanceNominal_m": 22,
+                      "alturaCentro_m": 1.9,
+                      "spl_por_distancia": [
+                        {
+                          "distancia_m": 4,
+                          "spl_db": 112
+                        },
+                        {
+                          "distancia_m": 8,
+                          "spl_db": 107
+                        },
+                        {
+                          "distancia_m": 16,
+                          "spl_db": 102
+                        },
+                        {
+                          "distancia_m": 24,
+                          "spl_db": 99
+                        }
+                      ]
+                    }
+                  ],
+                  "configuracaoArray": {
+                    "modulos": 2,
+                    "H": 120,
+                    "V": 20,
+                    "alcanceNominal_m": 22,
+                    "alturaCentro_m": 1.9,
+                    "spl_por_distancia": [
+                      {
+                        "distancia_m": 4,
+                        "spl_db": 112
+                      },
+                      {
+                        "distancia_m": 8,
+                        "spl_db": 107
+                      },
+                      {
+                        "distancia_m": 16,
+                        "spl_db": 102
+                      },
+                      {
+                        "distancia_m": 24,
+                        "spl_db": 99
+                      }
+                    ]
+                  }
+                },
+                "movida": false,
+                "numero": 1
+              },
+              {
+                "id": "P-R",
+                "papel": "principal",
+                "lado": "R",
+                "posicao": {
+                  "x": 11.5,
+                  "y": 2.5,
+                  "z": 1.9
+                },
+                "mira": {
+                  "yaw": -17.447188423282203,
+                  "pitch": -6.74763234811029
+                },
+                "montagem": "chao",
+                "fonte": {
+                  "tipo": "produto",
+                  "ref": "demo-coluna-8",
+                  "nome": "Demo Coluna 8",
+                  "cobertura": {
+                    "H": 120,
+                    "V": 20
+                  },
+                  "nivel": {
+                    "tipo": "tabela",
+                    "pontos": [
+                      {
+                        "distancia_m": 4,
+                        "spl_db": 112
+                      },
+                      {
+                        "distancia_m": 8,
+                        "spl_db": 107
+                      },
+                      {
+                        "distancia_m": 16,
+                        "spl_db": 102
+                      },
+                      {
+                        "distancia_m": 24,
+                        "spl_db": 99
+                      }
+                    ]
+                  },
+                  "meiaAltura": 0,
+                  "montagensPermitidas": [
+                    "chao"
+                  ],
+                  "subcategoria": "coluna",
+                  "tabelaArray": [
+                    {
+                      "modulos": 1,
+                      "H": 120,
+                      "V": 30,
+                      "alcanceNominal_m": 14,
+                      "alturaCentro_m": 1.5
+                    },
+                    {
+                      "modulos": 2,
+                      "H": 120,
+                      "V": 20,
+                      "alcanceNominal_m": 22,
+                      "alturaCentro_m": 1.9,
+                      "spl_por_distancia": [
+                        {
+                          "distancia_m": 4,
+                          "spl_db": 112
+                        },
+                        {
+                          "distancia_m": 8,
+                          "spl_db": 107
+                        },
+                        {
+                          "distancia_m": 16,
+                          "spl_db": 102
+                        },
+                        {
+                          "distancia_m": 24,
+                          "spl_db": 99
+                        }
+                      ]
+                    }
+                  ],
+                  "configuracaoArray": {
+                    "modulos": 2,
+                    "H": 120,
+                    "V": 20,
+                    "alcanceNominal_m": 22,
+                    "alturaCentro_m": 1.9,
+                    "spl_por_distancia": [
+                      {
+                        "distancia_m": 4,
+                        "spl_db": 112
+                      },
+                      {
+                        "distancia_m": 8,
+                        "spl_db": 107
+                      },
+                      {
+                        "distancia_m": 16,
+                        "spl_db": 102
+                      },
+                      {
+                        "distancia_m": 24,
+                        "spl_db": 99
+                      }
+                    ]
+                  }
+                },
+                "movida": false,
+                "numero": 2
+              },
+              {
+                "id": "FF-1",
+                "papel": "front_fill",
+                "lado": "C",
+                "posicao": {
+                  "x": 3,
+                  "y": 2.8,
+                  "z": 0.3
+                },
+                "mira": {
+                  "yaw": 0,
+                  "pitch": 27.89727103094762
+                },
+                "montagem": "chao",
+                "fonte": {
+                  "tipo": "generico",
+                  "ref": "GEN-ATIVA-10",
+                  "nome": "Front-fill compacto (perfil genérico)",
+                  "cobertura": {
+                    "H": 90,
+                    "V": 60
+                  },
+                  "nivel": {
+                    "tipo": "requisito"
+                  },
+                  "meiaAltura": 0.3,
+                  "montagensPermitidas": null,
+                  "subcategoria": "10"
+                },
+                "movida": false,
+                "numero": 3
+              },
+              {
+                "id": "FF-2",
+                "papel": "front_fill",
+                "lado": "C",
+                "posicao": {
+                  "x": 9,
+                  "y": 2.8,
+                  "z": 0.3
+                },
+                "mira": {
+                  "yaw": 0,
+                  "pitch": 27.89727103094762
+                },
+                "montagem": "chao",
+                "fonte": {
+                  "tipo": "generico",
+                  "ref": "GEN-ATIVA-10",
+                  "nome": "Front-fill compacto (perfil genérico)",
+                  "cobertura": {
+                    "H": 90,
+                    "V": 60
+                  },
+                  "nivel": {
+                    "tipo": "requisito"
+                  },
+                  "meiaAltura": 0.3,
+                  "montagensPermitidas": null,
+                  "subcategoria": "10"
+                },
+                "movida": false,
+                "numero": 4
+              }
+            ],
+            "atrasos": [],
+            "frontFill": true,
+            "configArray": {
+              "modulos": 2,
+              "H": 120,
+              "V": 20,
+              "coberturaAPartirDe": 6
+            },
+            "requisitos": {
+              "principal": [
+                {
+                  "campo": "coberturaV",
+                  "operador": ">=",
+                  "valor": 10,
+                  "unidade": "graus",
+                  "texto": "Cobertura vertical publicada de pelo menos 10° numa configuração da tabela"
+                },
+                {
+                  "campo": "coberturaH",
+                  "operador": ">=",
+                  "valor": 120,
+                  "unidade": "graus",
+                  "texto": "Cobertura horizontal de referência: 120°"
+                },
+                {
+                  "campo": "alcance",
+                  "operador": ">=",
+                  "valor": 19,
+                  "unidade": "m",
+                  "texto": "Alcance nominal de pelo menos 19 m"
+                },
+                {
+                  "campo": "montagem",
+                  "operador": "em",
+                  "valor": "chao",
+                  "unidade": "",
+                  "texto": "Montagem: qualquer uma permitida pelo fabricante (o layout de referência usou chao)"
+                },
+                {
+                  "campo": "splContinuo1m",
+                  "operador": ">=",
+                  "valor": 85,
+                  "unidade": "dB SPL",
+                  "texto": "SPL contínuo publicado por distância que entregue 85 dB a 19 m"
+                }
+              ],
+              "front_fill": [
+                {
+                  "campo": "montagem",
+                  "operador": "em",
+                  "valor": "chao",
+                  "unidade": "",
+                  "texto": "Caixa compacta apoiada na boca do palco"
+                }
+              ]
+            },
+            "avisos": [
+              "O array não cobre as primeiras fileiras a partir da altura de montagem. Ele cobre a partir de 3 m da primeira fileira; front-fill adicionado."
+            ]
+          },
+          "avaliacao": {
+            "estados": [],
+            "pct": {
+              "coberto": 0.9558823529411765,
+              "borda": 0.04411764705882353,
+              "fora": 0
+            },
+            "nivel": {
+              "min": 101.11013949447067,
+              "max": 111.97416929178794,
+              "uniformidade": 10.864029797317272,
+              "pontosAvaliados": 758
+            },
+            "pontosSemNivel": 12,
+            "pontosSoGenericos": 10,
+            "capacidade": "pendente",
+            "motivoCapacidade": "O fabricante não publica SPL para toda a distância necessária. O motor não extrapola.",
+            "nivelPorLinha": []
+          }
         }
       ],
       "semProdutoAdequado": false,
@@ -1805,28 +1914,49 @@
         "regra": "nao_recomendado",
         "incluido": false,
         "escolhido": {
-          "produtoId": "demo-sub-15",
-          "nome": "Demo Sub 15",
+          "produtoId": "demo-sub-18",
+          "nome": "Demo Sub 18",
           "marca": "Demo",
-          "subcategoria": "15",
-          "porte": "intermediaria",
+          "subcategoria": "18",
+          "porte": "profissional",
           "status": "compativel",
           "motivos": [],
           "faltando": [],
-          "porLado": 1,
+          "porLado": 2,
           "pareamentoFabricante": true,
           "faixa": {
-            "minimo": 4000,
-            "maximo": 6500,
+            "minimo": 8000,
+            "maximo": 13000,
             "dataVerificacao": "2026-10-01",
             "fonte": "demo:ficticio (valores inventados)",
             "ids": [
-              "demo-fx-sub15-i"
+              "demo-fx-sub18-p"
             ]
           }
         },
         "perfilGenerico": null,
         "candidatos": [
+          {
+            "produtoId": "demo-sub-18",
+            "nome": "Demo Sub 18",
+            "marca": "Demo",
+            "subcategoria": "18",
+            "porte": "profissional",
+            "status": "compativel",
+            "motivos": [],
+            "faltando": [],
+            "porLado": 2,
+            "pareamentoFabricante": true,
+            "faixa": {
+              "minimo": 8000,
+              "maximo": 13000,
+              "dataVerificacao": "2026-10-01",
+              "fonte": "demo:ficticio (valores inventados)",
+              "ids": [
+                "demo-fx-sub18-p"
+              ]
+            }
+          },
           {
             "produtoId": "demo-sub-15",
             "nome": "Demo Sub 15",
@@ -1837,7 +1967,7 @@
             "motivos": [],
             "faltando": [],
             "porLado": 1,
-            "pareamentoFabricante": true,
+            "pareamentoFabricante": false,
             "faixa": {
               "minimo": 4000,
               "maximo": 6500,
@@ -1847,30 +1977,9 @@
                 "demo-fx-sub15-i"
               ]
             }
-          },
-          {
-            "produtoId": "demo-sub-18",
-            "nome": "Demo Sub 18",
-            "marca": "Demo",
-            "subcategoria": "18",
-            "porte": "profissional",
-            "status": "compativel",
-            "motivos": [],
-            "faltando": [],
-            "porLado": 1,
-            "pareamentoFabricante": false,
-            "faixa": {
-              "minimo": 8000,
-              "maximo": 13000,
-              "dataVerificacao": "2026-10-01",
-              "fonte": "demo:ficticio (valores inventados)",
-              "ids": [
-                "demo-fx-sub18-p"
-              ]
-            }
           }
         ],
-        "porLado": 1
+        "porLado": 2
       },
       "statusValidacao": {
         "geometria": "validada",
@@ -1901,17 +2010,17 @@
       {
         "rotulo": "equilíbrio",
         "arquitetura": "AR-2",
-        "nome": "Demo Coluna 8",
-        "produtoId": "demo-coluna-8",
+        "nome": "Demo Line 6",
+        "produtoId": "demo-line-6",
         "quantidadeCaixas": 4,
         "status": "parcial",
         "faixa": {
-          "minimo": 6000,
-          "maximo": 9000,
+          "minimo": 15000,
+          "maximo": 25000,
           "dataVerificacao": "2026-10-01",
           "fonte": "demo:ficticio (valores inventados)",
           "ids": [
-            "demo-fx-coluna-i"
+            "demo-fx-line-p"
           ]
         }
       },
@@ -1961,8 +2070,8 @@
       "aplicavel": true
     },
     "investimento": {
-      "minimo": 15000,
-      "maximo": 23000,
+      "minimo": 33000,
+      "maximo": 55000,
       "referencia": "10/2026",
       "itensSemFaixa": [],
       "completo": true
@@ -1975,8 +2084,8 @@
     "conclusoes": [
       {
         "id": "nivel-alvo",
-        "titulo": "Nível sonoro necessário",
-        "texto": "Nível-alvo médio de 75 dB SPL no ouvinte, com reserva dinâmica de 10 dB. A caixa precisa entregar 85 dB na área coberta. Ajuste por ruído do local: +0 dB.",
+        "titulo": "Volume necessário",
+        "texto": "Para este uso, o som precisa chegar a cerca de 75 dB em quem está sentado, com folga de 10 dB para os momentos mais fortes. Ou seja, a caixa precisa entregar 85 dB na área do público. Somamos 0 dB por causa do barulho do local.",
         "entradas": [
           "Usos: fala/pregação (informado)",
           "Ruído com o local funcionando: facil"
@@ -2051,8 +2160,8 @@
       },
       {
         "id": "escopo",
-        "titulo": "Dentro do modelo?",
-        "texto": "O ambiente está dentro do envelope do MVP.",
+        "titulo": "O sistema consegue calcular o seu espaço?",
+        "texto": "O seu espaço está dentro do que o sistema calcula.",
         "entradas": [
           "Sala: 12,0 m de largura x 20,0 m de profundidade x 7,0 m de pé-direito (informado)",
           "Palco: 3,0 m de profundidade (padrão)",
@@ -2088,8 +2197,8 @@
       },
       {
         "id": "arquitetura",
-        "titulo": "Configuração recomendada",
-        "texto": "Recomendação: Duas colunas (vertical array) na frente, uma de cada lado do palco. Vertical array preferido: a área de público tem 17 m de profundidade e a sala tem risco alto de reverberação.",
+        "titulo": "Sistema recomendado",
+        "texto": "Recomendamos duas colunas de som na frente, uma de cada lado do palco. O público ocupa 17 m de profundidade e a sala tem bastante eco. Colunas levam o som mais longe e jogam menos som nas paredes.",
         "entradas": [
           "Sala: 12,0 m de largura x 20,0 m de profundidade x 7,0 m de pé-direito (informado)",
           "Palco: 3,0 m de profundidade (padrão)",
@@ -2114,8 +2223,8 @@
       },
       {
         "id": "caixas",
-        "titulo": "Quantidade e tipo de caixas",
-        "texto": "2 x Demo Coluna 8 (principal, apoiada no chão); 2 x Front-fill compacto (perfil genérico) (front-fill, apoiada no chão). A quantidade sai da regra da arquitetura AR-2 e do recálculo com os dados reais do produto.",
+        "titulo": "Quantas caixas e de que tipo",
+        "texto": "Você vai precisar de: 2 x Demo Line 6 (caixa principal, em pedestal); 2 x Front-fill compacto (perfil genérico) (caixa de apoio da frente, apoiada no chão). A quantidade sai do tamanho da sala e foi conferida com os dados do modelo escolhido.",
         "entradas": [
           "Sala: 12,0 m de largura x 20,0 m de profundidade x 7,0 m de pé-direito (informado)",
           "Palco: 3,0 m de profundidade (padrão)",
@@ -2142,6 +2251,11 @@
             "status": "pendente_validacao"
           },
           {
+            "id": "alturaBasePedestal",
+            "valor": 2,
+            "status": "pendente_validacao"
+          },
+          {
             "id": "distMaxPontual",
             "valor": 20,
             "status": "pendente_validacao"
@@ -2158,7 +2272,7 @@
           }
         ],
         "hipoteses": [
-          "Front-fill na boca do palco: a cobertura horizontal nominal das caixas principais não alcança as laterais da primeira fileira."
+          "As primeiras fileiras ficam muito perto e fora do ângulo das caixas principais. Por isso entra uma caixa de apoio na beira do palco."
         ],
         "limitacoes": [
           "O array é avaliado só pela tabela publicada pelo fabricante. Sem fórmula genérica e sem soma de módulos."
@@ -2167,7 +2281,7 @@
       {
         "id": "caixa:P-L",
         "titulo": "Caixa 1",
-        "texto": "Caixa 1 (principal): apoiada no chão, centro acústico a 1,90 m de altura, em x = 0,50 m e y = 2,50 m. Direção: 17° na horizontal (0° = para o fundo) e -7° na vertical. A direção horizontal mira o centro da última fileira; a inclinação mira 2/3 da profundidade da área de público.",
+        "texto": "Caixa 1 (caixa principal), em pedestal. Altura: 3,00 m do chão até o centro da caixa. Posição: 0,50 m da parede lateral e 2,50 m da parede do palco. Direção: 17° para o lado e -16° para baixo. Ela aponta para o centro da última fileira e fica levemente inclinada para baixo, mirando o público e não as paredes.",
         "entradas": [
           "Sala: 12,0 m de largura x 20,0 m de profundidade x 7,0 m de pé-direito (informado)",
           "Palco: 3,0 m de profundidade (padrão)",
@@ -2192,17 +2306,22 @@
             "id": "folgaTeto",
             "valor": 0.3,
             "status": "pendente_validacao"
+          },
+          {
+            "id": "alturaBasePedestal",
+            "valor": 2,
+            "status": "pendente_validacao"
           }
         ],
         "hipoteses": [
-          "Fonte: Demo Coluna 8"
+          "Fonte: Demo Line 6"
         ],
         "limitacoes": []
       },
       {
         "id": "caixa:P-R",
         "titulo": "Caixa 2",
-        "texto": "Caixa 2 (principal): apoiada no chão, centro acústico a 1,90 m de altura, em x = 11,50 m e y = 2,50 m. Direção: -17° na horizontal (0° = para o fundo) e -7° na vertical. A direção horizontal mira o centro da última fileira; a inclinação mira 2/3 da profundidade da área de público.",
+        "texto": "Caixa 2 (caixa principal), em pedestal. Altura: 3,00 m do chão até o centro da caixa. Posição: 11,50 m da parede lateral e 2,50 m da parede do palco. Direção: -17° para o lado e -16° para baixo. Ela aponta para o centro da última fileira e fica levemente inclinada para baixo, mirando o público e não as paredes.",
         "entradas": [
           "Sala: 12,0 m de largura x 20,0 m de profundidade x 7,0 m de pé-direito (informado)",
           "Palco: 3,0 m de profundidade (padrão)",
@@ -2227,17 +2346,22 @@
             "id": "folgaTeto",
             "valor": 0.3,
             "status": "pendente_validacao"
+          },
+          {
+            "id": "alturaBasePedestal",
+            "valor": 2,
+            "status": "pendente_validacao"
           }
         ],
         "hipoteses": [
-          "Fonte: Demo Coluna 8"
+          "Fonte: Demo Line 6"
         ],
         "limitacoes": []
       },
       {
         "id": "caixa:FF-1",
         "titulo": "Caixa 3",
-        "texto": "Caixa 3 (front-fill): apoiada no chão, centro acústico a 0,30 m de altura, em x = 3,00 m e y = 2,80 m. Direção: 0° na horizontal (0° = para o fundo) e 28° na vertical.",
+        "texto": "Caixa 3 (caixa de apoio da frente), apoiada no chão. Altura: 0,30 m do chão até o centro da caixa. Posição: 3,00 m da parede lateral e 2,80 m da parede do palco. Direção: 0° para o lado e 28° para baixo.",
         "entradas": [
           "Sala: 12,0 m de largura x 20,0 m de profundidade x 7,0 m de pé-direito (informado)",
           "Palco: 3,0 m de profundidade (padrão)",
@@ -2261,6 +2385,11 @@
           {
             "id": "folgaTeto",
             "valor": 0.3,
+            "status": "pendente_validacao"
+          },
+          {
+            "id": "alturaBasePedestal",
+            "valor": 2,
             "status": "pendente_validacao"
           }
         ],
@@ -2272,7 +2401,7 @@
       {
         "id": "caixa:FF-2",
         "titulo": "Caixa 4",
-        "texto": "Caixa 4 (front-fill): apoiada no chão, centro acústico a 0,30 m de altura, em x = 9,00 m e y = 2,80 m. Direção: 0° na horizontal (0° = para o fundo) e 28° na vertical.",
+        "texto": "Caixa 4 (caixa de apoio da frente), apoiada no chão. Altura: 0,30 m do chão até o centro da caixa. Posição: 9,00 m da parede lateral e 2,80 m da parede do palco. Direção: 0° para o lado e 28° para baixo.",
         "entradas": [
           "Sala: 12,0 m de largura x 20,0 m de profundidade x 7,0 m de pé-direito (informado)",
           "Palco: 3,0 m de profundidade (padrão)",
@@ -2297,6 +2426,11 @@
             "id": "folgaTeto",
             "valor": 0.3,
             "status": "pendente_validacao"
+          },
+          {
+            "id": "alturaBasePedestal",
+            "valor": 2,
+            "status": "pendente_validacao"
           }
         ],
         "hipoteses": [
@@ -2306,13 +2440,13 @@
       },
       {
         "id": "cobertura",
-        "titulo": "Cobertura nominal",
-        "texto": "96% da área de público fica dentro da cobertura nominal, 4% na borda e 0% fora. Cobertura nominal declarada pelo fabricante. Aproximação geométrica, não é medição.",
+        "titulo": "Onde o som chega bem",
+        "texto": "O som chega bem em 94% da área do público, mais fraco em 4% e fica fora do alcance principal em 2%. A área vem do ângulo que o fabricante declara para a caixa. É uma conta de geometria, não uma medição.",
         "entradas": [
           "Sala: 12,0 m de largura x 20,0 m de profundidade x 7,0 m de pé-direito (informado)",
           "Palco: 3,0 m de profundidade (padrão)",
           "Público: 200 pessoas, sentadas (altura do ouvinte 1,2 m)",
-          "Cobertura usada: 120° x 20° (H x V)"
+          "Cobertura usada: 100° x 30° (H x V)"
         ],
         "regra": "C5 nível A: ponto coberto se |h| <= H/2 e |v| <= V/2; borda até +10°",
         "parametros": [
@@ -2344,6 +2478,7 @@
         ],
         "hipoteses": [],
         "limitacoes": [
+          "Cobertura nominal declarada pelo fabricante. Aproximação geométrica, não é medição.",
           "Não atribui atenuação em dB fora do eixo.",
           "Sala modelada como retângulo, sem obstáculos.",
           "Não calcula reflexões, RT60 nem STI."
@@ -2351,8 +2486,8 @@
       },
       {
         "id": "capacidade",
-        "titulo": "Capacidade sonora",
-        "texto": "Recomendação geométrica disponível. Validação de capacidade sonora pendente: O fabricante não publica SPL para toda a distância necessária. O motor não extrapola.",
+        "titulo": "O volume é suficiente?",
+        "texto": "A posição das caixas está calculada. Ainda não dá para confirmar o volume: O fabricante não publica SPL para toda a distância necessária. O motor não extrapola.",
         "entradas": [
           "Requerido: 85 dB (alvo 75 + reserva 10)"
         ],
@@ -2377,8 +2512,8 @@
       },
       {
         "id": "requisitos",
-        "titulo": "Características mínimas de cada caixa",
-        "texto": "Características mínimas de cada caixa principal: Cobertura vertical publicada de pelo menos 22° numa configuração da tabela; Cobertura horizontal de referência: 100°; Alcance nominal de pelo menos 19 m; Montagem: qualquer uma permitida pelo fabricante (o layout de referência usou pedestal); SPL contínuo publicado por distância que entregue 85 dB a 19 m.",
+        "titulo": "O que a caixa precisa ter",
+        "texto": "O que a caixa principal precisa ter: Cobertura vertical publicada de pelo menos 22° numa configuração da tabela; Cobertura horizontal de referência: 100°; Alcance nominal de pelo menos 19 m; Montagem: qualquer uma permitida pelo fabricante (o layout de referência usou pedestal); SPL contínuo publicado por distância que entregue 85 dB a 19 m.",
         "entradas": [],
         "regra": "C8 passo 2: requisitos calculados para o caso",
         "parametros": [
@@ -2403,7 +2538,7 @@
       {
         "id": "produtos",
         "titulo": "Produtos do catálogo",
-        "texto": "2 produto(s) do catálogo avaliado(s): 0 compatível(is), 2 parcial(is), 0 incompatível(is), 0 não avaliável(is). Ordem: (1) status de compatibilidade, (2) menos caixas, (3) maior margem de nível até +6 dB, (4) menor faixa de investimento. Nenhuma marca recebe bônus.",
+        "texto": "Avaliamos 2 modelo(s): 0 atende(m), 2 atende(m) com dados a confirmar, 0 não atende(m) e 0 sem dados suficientes. A ordem segue só critérios técnicos: (1) se atende, (2) menos caixas, (3) mais folga de volume (até +6 dB), (4) menor investimento. Nenhuma marca ganha ponto extra.",
         "entradas": [],
         "regra": "C7 status de compatibilidade; C8 ranking",
         "parametros": [
@@ -2418,35 +2553,6 @@
         ],
         "limitacoes": [
           "Só produtos do catálogo verificado são avaliados."
-        ]
-      },
-      {
-        "id": "produto:demo-coluna-8",
-        "titulo": "Demo Coluna 8",
-        "texto": "Status: parcial. Capacidade sonora pendente: O fabricante não publica SPL para toda a distância necessária. O motor não extrapola.",
-        "entradas": [],
-        "regra": "C7 status de compatibilidade",
-        "parametros": [
-          {
-            "id": "pesoMaxPorMontagem",
-            "valor": {
-              "pedestal": 30,
-              "parede": 40,
-              "suspensa": 60,
-              "chao": 999
-            },
-            "status": "pendente_validacao"
-          },
-          {
-            "id": "uniformidadeMax",
-            "valor": 6,
-            "status": "pendente_validacao"
-          }
-        ],
-        "hipoteses": [],
-        "limitacoes": [
-          "O array não cobre as primeiras fileiras a partir da altura de montagem. Ele cobre a partir de 3 m da primeira fileira; front-fill adicionado.",
-          "Variação de nível na área coberta de 10.9 dB (critério: até 6 dB). O modelo não atenua fora do eixo, então a variação real tende a ser diferente."
         ]
       },
       {
@@ -2479,9 +2585,38 @@
         ]
       },
       {
+        "id": "produto:demo-coluna-8",
+        "titulo": "Demo Coluna 8",
+        "texto": "Status: parcial. Capacidade sonora pendente: O fabricante não publica SPL para toda a distância necessária. O motor não extrapola.",
+        "entradas": [],
+        "regra": "C7 status de compatibilidade",
+        "parametros": [
+          {
+            "id": "pesoMaxPorMontagem",
+            "valor": {
+              "pedestal": 30,
+              "parede": 40,
+              "suspensa": 60,
+              "chao": 999
+            },
+            "status": "pendente_validacao"
+          },
+          {
+            "id": "uniformidadeMax",
+            "valor": 6,
+            "status": "pendente_validacao"
+          }
+        ],
+        "hipoteses": [],
+        "limitacoes": [
+          "O array não cobre as primeiras fileiras a partir da altura de montagem. Ele cobre a partir de 3 m da primeira fileira; front-fill adicionado.",
+          "Variação de nível na área coberta de 10.9 dB (critério: até 6 dB). O modelo não atenua fora do eixo, então a variação real tende a ser diferente."
+        ]
+      },
+      {
         "id": "sub",
         "titulo": "Subwoofer",
-        "texto": "Subwoofer não recomendado para fala e música ambiente.",
+        "texto": "Não precisa de subwoofer para fala e música ambiente.",
         "entradas": [
           "Usos: fala/pregação (informado)"
         ],
@@ -2541,8 +2676,8 @@
       },
       {
         "id": "reverberacao",
-        "titulo": "Acústica da sala",
-        "texto": "Risco alto de reverberação (5 pontos). O ambiente tende a ser reverberante. Mais potência não resolve isso: priorize caixas com cobertura controlada e mire as caixas no público, não nas paredes. Tratamento acústico pode ser necessário.",
+        "titulo": "Eco da sala",
+        "texto": "Eco da sala: alto (5 de 5 pontos). A sala tende a ter muito eco. Aumentar o volume não resolve: prefira caixas que mandam o som para o público (como colunas), aponte as caixas para as pessoas e não para as paredes. Cortinas, tapetes ou painéis podem ser necessários.",
         "entradas": [
           "Superfícies: duras",
           "Palma ecoa: sim",
@@ -2581,8 +2716,8 @@
       },
       {
         "id": "pagnag",
-        "titulo": "Risco de microfonia",
-        "texto": "PAG 21,3 dB, NAG 25,4 dB, margem -4,2 dB: risco alto de microfonia. Estimativa simplificada (lei do inverso do quadrado). Não substitui teste no local.",
+        "titulo": "Risco de microfonia (apito)",
+        "texto": "Risco de microfonia (apito): alto. Folga calculada de -4,2 dB. É uma estimativa simples, pelas distâncias. Teste sempre no local.",
         "entradas": [
           "D0 (falante -> ouvinte mais distante): 18,33 m",
           "D1 (microfone -> caixa mais próxima): 3,24 m",
@@ -2618,13 +2753,14 @@
           "Microfone no centro, na frente do palco."
         ],
         "limitacoes": [
+          "Estimativa simplificada (lei do inverso do quadrado). Não substitui teste no local.",
           "Sinal de risco, não garantia."
         ]
       },
       {
         "id": "investimento",
         "titulo": "Investimento estimado",
-        "texto": "Investimento estimado em equipamentos: R$ 15.000 a R$ 23.000 (referência de mercado em 10/2026, sem instalação).",
+        "texto": "Investimento estimado em equipamentos: R$ 33.000 a R$ 55.000 (referência de preço de 10/2026, sem instalação).",
         "entradas": [],
         "regra": "C7: soma das faixas por categoria e porte; faixa vencida não aparece",
         "parametros": [
@@ -2663,6 +2799,11 @@
           "dificil": 5,
           "muito_dificil": 10
         },
+        "status": "pendente_validacao"
+      },
+      {
+        "id": "alturaBasePedestal",
+        "valor": 2,
         "status": "pendente_validacao"
       },
       {

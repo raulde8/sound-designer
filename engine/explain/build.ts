@@ -8,7 +8,7 @@ import type { Conclusao } from "./types";
 
 type Parcial = Omit<ResultadoOk, "conclusoes" | "profissional" | "parametrosPendentes">;
 
-const PAPEL: Record<string, string> = { principal: "principal", front_fill: "front-fill", reforco: "reforço/delay", sub: "subwoofer" };
+const PAPEL: Record<string, string> = { principal: "caixa principal", front_fill: "caixa de apoio da frente", reforco: "caixa de apoio do meio do salão", sub: "subwoofer" };
 const MONTAGEM: Record<string, string> = { pedestal: "em pedestal", parede: "na parede", suspensa: "suspensa", chao: "apoiada no chão" };
 const USO: Record<string, string> = {
   fala: "fala/pregação",
@@ -49,7 +49,7 @@ export function montarConclusoes(r: Parcial, ctx: CasoPreparado): { conclusoes: 
   if (a.limitadoPeloTeto) txtAlvo.push(render("teto", { teto: P.tetoAlvo.valor }));
   if (a.avisoSegurancaAuditiva) txtAlvo.push(render("segurancaAuditiva", { limiar: P.limiarSegurancaAuditiva.valor }));
   out.push(
-    c("nivel-alvo", "Nível sonoro necessário", txtAlvo.join(" "), {
+    c("nivel-alvo", "Volume necessário", txtAlvo.join(" "), {
       entradas: [...entradasUso, `Ruído com o local funcionando: ${caso.acustica.conversa?.valor ?? "não sei"}`],
       regra: "C5: maior nível-alvo entre os usos + ajuste por ruído, com teto",
       parametros: [ref(P.niveisPorUso), ref(P.ajusteRuido), ref(P.tetoAlvo), ref(P.limiarSegurancaAuditiva)],
@@ -63,7 +63,7 @@ export function montarConclusoes(r: Parcial, ctx: CasoPreparado): { conclusoes: 
   const e = r.escopo;
   const itensTxt = e.itens.filter((i) => i.nivel !== "aviso").map((i) => i.texto).join(" ");
   out.push(
-    c("escopo", "Dentro do modelo?", e.status === "suportado" ? render("escopoSuportado") : e.status === "parcial" ? render("escopoParcial", { itens: itensTxt }) : render("escopoEncaminhar", { itens: itensTxt }), {
+    c("escopo", "O sistema consegue calcular o seu espaço?", e.status === "suportado" ? render("escopoSuportado") : e.status === "parcial" ? render("escopoParcial", { itens: itensTxt }) : render("escopoEncaminhar", { itens: itensTxt }), {
       entradas: entradasSala,
       regra: "B5: envelope do MVP",
       parametros: [ref(P.envelope), ref(P.areaPorPessoa)],
@@ -83,7 +83,7 @@ export function montarConclusoes(r: Parcial, ctx: CasoPreparado): { conclusoes: 
     if (pmain.montagem === "parede" || pmain.montagem === "suspensa") paramsLayout.push(ref(P.alturaMaxParede));
 
     out.push(
-      c("arquitetura", "Configuração recomendada", render("arquitetura", { nomeSimples: rec.nomeSimples, motivo: rec.motivoEscolha }), {
+      c("arquitetura", "Sistema recomendado", render("arquitetura", { nomeSimples: rec.nomeSimples, motivo: rec.motivoEscolha }), {
         entradas: [...entradasSala, `Instalação: ${caso.instalacao.forma}, formato ${caso.instalacao.formato}, ${caso.mobilidade}`],
         regra: `C4: ${rec.arquitetura}; preferência por vertical array acima de ${P.profundidadePreferenciaArray.valor} m de profundidade ou com reverberação alta`,
         parametros: [ref(P.profundidadePreferenciaArray)],
@@ -94,7 +94,7 @@ export function montarConclusoes(r: Parcial, ctx: CasoPreparado): { conclusoes: 
 
     const lista = rec.equipamentos.map((q) => `${q.quantidade} x ${q.nome} (${PAPEL[q.papel]}, ${MONTAGEM[q.montagem]})`).join("; ");
     out.push(
-      c("caixas", "Quantidade e tipo de caixas", render("caixas", { lista, arq: rec.arquitetura, fonte: generico ? "o perfil genérico" : "os dados reais do produto" }), {
+      c("caixas", "Quantas caixas e de que tipo", render("caixas", { lista, arq: rec.arquitetura, fonte: generico ? "um perfil de referência (sem marca)" : "os dados do modelo escolhido" }), {
         entradas: entradasSala,
         regra: rec.arquitetura === "AR-1" ? "C4 AR-1: 2 caixas L/R; front-fill e reforço quando necessários" : "C4 AR-2: 1 array por lado; configuração pela tabela do fabricante",
         parametros: [...paramsLayout, ref(P.distMaxPontual), ...(cfg.frontFill ? [ref(P.faixaPrimeiraFileira), ref(P.larguraPorFrontFill)] : [])],
@@ -133,12 +133,12 @@ export function montarConclusoes(r: Parcial, ctx: CasoPreparado): { conclusoes: 
     // Cobertura
     const pc = rec.avaliacao.pct;
     out.push(
-      c("cobertura", "Cobertura nominal", `${render("cobertura", { coberto: fmt(pc.coberto * 100, 0), borda: fmt(pc.borda * 100, 0), fora: fmt(pc.fora * 100, 0) })} ${render("rotuloCobertura")}`, {
+      c("cobertura", "Onde o som chega bem", `${render("cobertura", { coberto: fmt(pc.coberto * 100, 0), borda: fmt(pc.borda * 100, 0), fora: fmt(pc.fora * 100, 0) })} ${render("rotuloCobertura")}`, {
         entradas: [...entradasSala, `Cobertura usada: ${pmain.fonte.cobertura.H}° x ${pmain.fonte.cobertura.V}° (H x V)`],
         regra: "C5 nível A: ponto coberto se |h| <= H/2 e |v| <= V/2; borda até +10°",
         parametros: [ref(P.bordaCobertura), ref(P.passoMalha), ref(P.alturaOuvinteSentado), ref(P.alturaOuvinteEmPe), ref(P.foraMaxValidada), ...(generico ? [ref(P.coberturaReferenciaPontual)] : [])],
         hipoteses: generico ? ["Cobertura de referência do perfil genérico; o produto real recalcula o layout."] : [],
-        limitacoes: ["Não atribui atenuação em dB fora do eixo.", ...limitGeo],
+        limitacoes: ["Cobertura nominal declarada pelo fabricante. Aproximação geométrica, não é medição.", "Não atribui atenuação em dB fora do eixo.", ...limitGeo],
       }),
     );
 
@@ -152,11 +152,13 @@ export function montarConclusoes(r: Parcial, ctx: CasoPreparado): { conclusoes: 
         : render("capacidadePendente", { motivo: "depende da tabela do fabricante." })
       : av.capacidade === "validada"
         ? render("capacidadeValidada", { min: fmt(av.nivel!.min), requerido: a.requerido })
-        : av.capacidade === "pendente"
+        : av.capacidade === "estimada"
+          ? render("capacidadeEstimada", { motivo: av.motivoCapacidade.replace(/^Com o dado estimado, /, "") })
+          : av.capacidade === "pendente"
           ? render("capacidadePendente", { motivo: av.motivoCapacidade })
           : render("capacidadeInsuficiente", { motivo: av.motivoCapacidade });
     out.push(
-      c("capacidade", "Capacidade sonora", `${rec.statusValidacao.geometria === "fora_do_modelo" ? render("geometriaFora") : render("geometriaDisponivel")} ${txtCap}`, {
+      c("capacidade", "O volume é suficiente?", `${rec.statusValidacao.geometria === "fora_do_modelo" ? render("geometriaFora") : render("geometriaDisponivel")} ${txtCap}`, {
         entradas: [`Requerido: ${a.requerido} dB (alvo ${a.alvo} + reserva ${a.reserva})`],
         regra: "C5 nível B: L(d) = SPL contínuo a 1 m - 20 log10(d), só dentro da cobertura nominal; cada ponto recebe a fonte mais forte",
         parametros: [ref(P.uniformidadeMax), ref(P.toleranciaNivel), ...(estimado ? [ref(P.picoParaContinuo)] : []), ...(generico ? [ref(P.tamanhoPorSplRequerido)] : [])],
@@ -168,7 +170,7 @@ export function montarConclusoes(r: Parcial, ctx: CasoPreparado): { conclusoes: 
 
     // Requisitos e produtos
     out.push(
-      c("requisitos", "Características mínimas de cada caixa", render("requisitos", { lista: rec.perfilGenerico.requisitos.map((q) => q.texto).join("; ") }), {
+      c("requisitos", "O que a caixa precisa ter", render("requisitos", { lista: rec.perfilGenerico.requisitos.map((q) => q.texto).join("; ") }), {
         regra: "C8 passo 2: requisitos calculados para o caso",
         parametros: [ref(P.pesoMaxPorMontagem), ...(generico ? [ref(P.tamanhoPorSplRequerido)] : [])],
         hipoteses: [ROTULO_PERFIL_GENERICO],
@@ -227,7 +229,7 @@ export function montarConclusoes(r: Parcial, ctx: CasoPreparado): { conclusoes: 
       const rf = cfg.caixas.find((x) => x.papel === "reforco")!;
       const at = cfg.atrasos[0]!;
       out.push(
-        c("reforco", "Reforço / delay", render("reforco", { y: fmt(rf.posicao.y), ms: fmt(at.ms), dist: fmt(at.distanciaExtra, 2), vel: P.velocidadeSom.valor }), {
+        c("reforco", "Caixas de apoio no meio do salão", render("reforco", { y: fmt(rf.posicao.y), ms: fmt(at.ms), dist: fmt(at.distanciaExtra, 2), vel: P.velocidadeSom.valor }), {
           regra: "C5: reforço na posição em que o nível cai abaixo do alvo, ou na distância máxima da fonte pontual",
           parametros: [ref(P.distMaxPontual), ref(P.toleranciaNivel), ref(P.velocidadeSom)],
           limitacoes: ["O atraso é só referência. O valor final de delay e EQ é ajustado com medição no local."],
@@ -243,8 +245,8 @@ export function montarConclusoes(r: Parcial, ctx: CasoPreparado): { conclusoes: 
   out.push(
     c(
       "reverberacao",
-      "Acústica da sala",
-      rv ? `Risco ${rv.classe === "medio" ? "médio" : rv.classe} de reverberação (${rv.pontos} pontos). ${render(rv.classe === "alto" ? "reverbAlto" : rv.classe === "medio" ? "reverbMedio" : "reverbBaixo")}${rv.estimado ? " " + render("reverbNaoSei") : ""}` : render("reverbNaoAplica"),
+      "Eco da sala",
+      rv ? `Eco da sala: ${rv.classe === "medio" ? "médio" : rv.classe} (${rv.pontos} de 5 pontos). ${render(rv.classe === "alto" ? "reverbAlto" : rv.classe === "medio" ? "reverbMedio" : "reverbBaixo")}${rv.estimado ? " " + render("reverbNaoSei") : ""}` : render("reverbNaoAplica"),
       {
         entradas: [
           `Superfícies: ${caso.acustica.superficies?.valor ?? "não sei"}`,
@@ -266,7 +268,7 @@ export function montarConclusoes(r: Parcial, ctx: CasoPreparado): { conclusoes: 
   if (pn) {
     const d = pn.distancias;
     out.push(
-      c("pagnag", "Risco de microfonia", `${render("pagNag", { pag: fmt(pn.pag), nag: fmt(pn.nag), margem: fmt(pn.margem), risco: pn.risco })} ${render("pagNagTexto")}`, {
+      c("pagnag", "Risco de microfonia (apito)", `${render("pagNag", { pag: fmt(pn.pag), nag: fmt(pn.nag), margem: fmt(pn.margem), risco: pn.risco })} ${render("pagNagTexto")}`, {
         entradas: [
           `D0 (falante -> ouvinte mais distante): ${fmt(d.D0, 2)} m`,
           `D1 (microfone -> caixa mais próxima): ${fmt(d.D1, 2)} m`,
@@ -278,7 +280,7 @@ export function montarConclusoes(r: Parcial, ctx: CasoPreparado): { conclusoes: 
         regra: "C5: PAG = 20log(D0·D1/(D2·Ds)) - 10log(NOM) - 6; NAG = 20log(D0/D3) (Biamp, Shure)",
         parametros: [ref(P.pagNag), ref(P.posicaoMicrofone)],
         hipoteses: ["Componentes omnidirecionais: pior caso.", "Microfone no centro, na frente do palco."],
-        limitacoes: ["Sinal de risco, não garantia."],
+        limitacoes: ["Estimativa simplificada (lei do inverso do quadrado). Não substitui teste no local.", "Sinal de risco, não garantia."],
       }),
     );
     if (pn.risco === "alto") prof.push("Risco alto de microfonia: teste o sistema no local com um técnico antes do uso.");
@@ -308,7 +310,7 @@ export function montarConclusoes(r: Parcial, ctx: CasoPreparado): { conclusoes: 
   if (pl) {
     const est = pl.estimados.length ? [`Presumido pelo tipo de local: ${pl.estimados.join(", ")}`] : [];
     out.push(
-      c("palco:entradas", "Canais da mesa", render("palcoEntradas", { total: pl.totalCanais, mic: pl.canaisMic, reserva: Math.round(P.reservaCanais.valor * 100), comReserva: pl.canaisComReserva, tamanho: pl.tamanhoMesa }), {
+      c("palco:entradas", "Quantos canais na mesa", render("palcoEntradas", { total: pl.totalCanais, mic: pl.canaisMic, reserva: Math.round(P.reservaCanais.valor * 100), comReserva: pl.canaisComReserva, tamanho: pl.tamanhoMesa }), {
         entradas: [...pl.entradas.map((x) => `${x.fonte}: ${x.quantidade} x ${x.canaisPorUnidade} canal(is)`), ...est],
         regra: "C6: soma das entradas + reserva, arredondada para o próximo tamanho de mesa",
         parametros: [ref(P.canaisPorInstrumento), ref(P.diPorInstrumento), ref(P.reservaCanais), ref(P.tamanhosMesaPadrao)],
@@ -329,7 +331,7 @@ export function montarConclusoes(r: Parcial, ctx: CasoPreparado): { conclusoes: 
       }),
     );
     out.push(
-      c("palco:retorno", "Retorno", render("palcoRetorno", { mix: pl.mixagens.total, inEar: pl.mixagens.inEar, monitor: pl.mixagens.monitor }), {
+      c("palco:retorno", "Retorno para os músicos", render("palcoRetorno", { mix: pl.mixagens.total, inEar: pl.mixagens.inEar, monitor: pl.mixagens.monitor }), {
         regra: "C6: in-ear com 1 receptor por músico; monitor de chão 1 por mixagem; in-ear estéreo conta 2 aux",
         hipoteses: est,
       }),
@@ -343,14 +345,14 @@ export function montarConclusoes(r: Parcial, ctx: CasoPreparado): { conclusoes: 
             ? "Use distribuidor de antenas e coordene as frequências."
             : "Encaminhe para um especialista em RF.";
     out.push(
-      c("palco:rf", "Sem fio (RF)", `${render("palcoRf", { canais: pl.rf.canais, nivel: nivelTxt })} ${pl.rf.orientacoes.join(" ")}`.trim(), {
+      c("palco:rf", "Aparelhos sem fio", `${render("palcoRf", { canais: pl.rf.canais, nivel: nivelTxt })} ${pl.rf.orientacoes.join(" ")}`.trim(), {
         regra: "C6: orientação, não coordenação de frequências",
         parametros: [ref(P.limiarCoordenacao), ref(P.limiarEspecialista), ref(P.faixaRfEvitar)],
         limitacoes: ["O MVP não verifica as frequências livres da cidade.", "Texto exato do Ato Anatel vigente a confirmar."],
       }),
     );
     out.push(
-      c("palco:acessorios", "Acessórios", render("palcoAcessorios", { mesa: "no fundo, centro", folga: Math.round(P.folgaCabo.valor * 100), comp: P.comprimentosCabo.valor.join(", ") }), {
+      c("palco:acessorios", "Cabos e acessórios", render("palcoAcessorios", { mesa: "no fundo, centro", folga: Math.round(P.folgaCabo.valor * 100), comp: P.comprimentosCabo.valor.join(", ") }), {
         regra: "C6: XLR por microfone com fio, DI, monitor e caixa ativa; pedestais e suportes por regra; 1 régua por posição; multicabo acima do limiar",
         parametros: [ref(P.folgaCabo), ref(P.comprimentosCabo), ref(P.limiarMulticabo)],
         limitacoes: ["O sistema não dimensiona a instalação elétrica."],

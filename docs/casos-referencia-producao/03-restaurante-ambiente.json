@@ -1,0 +1,1448 @@
+{
+  "caso": {
+    "id": "03-restaurante-ambiente",
+    "titulo": "Restaurante 15 x 10 x 3 m, 100 pessoas, música ambiente",
+    "esperado": "AR-1 com caixas pequenas em parede, ou aviso de que a arquitetura distribuída (fase 1.1) seria melhor; sem sub.",
+    "entrada": {
+      "trilha1": {
+        "tipoEstabelecimento": "restaurante",
+        "usos": [
+          "musica_ambiente"
+        ],
+        "dimensoes": {
+          "tipo": "medidas",
+          "comprimento": 15,
+          "largura": 10,
+          "peDireito": 3
+        },
+        "publico": {
+          "quantidade": 100,
+          "disposicao": "mesas"
+        },
+        "acustica": {
+          "superficies": "mistas",
+          "palma": "um_pouco",
+          "conversa": "facil"
+        },
+        "instalacao": {
+          "forma": "parede"
+        }
+      }
+    }
+  },
+  "resultado": {
+    "ok": true,
+    "versoes": {
+      "engineVersion": "0.1.0",
+      "catalogVersion": "cb2deb34ea05d0eb",
+      "paramsVersion": "params-v1-2026-10-29"
+    },
+    "dataReferencia": "2026-10-29",
+    "caso": {
+      "tipo": "restaurante",
+      "sala": {
+        "largura": 10,
+        "profundidade": 15,
+        "peDireito": 3
+      },
+      "salaOrigem": "usuario",
+      "profundidadePalco": 3,
+      "areaPublicoM2": 120,
+      "alturaOuvinte": 1.2,
+      "publico": 100,
+      "disposicao": "mesas",
+      "usos": [
+        "musica_ambiente"
+      ],
+      "usosOrigem": "usuario",
+      "formacao": null,
+      "ambiente": "fechado",
+      "formato": "retangular",
+      "instalacao": {
+        "forma": "parede",
+        "formato": "sem_preferencia"
+      },
+      "mobilidade": "fixa",
+      "passoMalha": 0.5,
+      "passoAumentado": false
+    },
+    "escopo": {
+      "status": "suportado",
+      "itens": [
+        {
+          "codigo": "ocupacao",
+          "nivel": "aviso",
+          "texto": "100 pessoas em mesas precisam de cerca de 150 m², mais que a área de público (120 m²). Confira as medidas."
+        }
+      ],
+      "geometriaForaDoModelo": false,
+      "recomendarProjetista": false,
+      "naoCalculado": []
+    },
+    "alvo": {
+      "alvo": 70,
+      "reserva": 6,
+      "requerido": 76,
+      "usoDominante": "musica_ambiente",
+      "ajusteRuido": 0,
+      "ruidoEstimado": false,
+      "limitadoPeloTeto": false,
+      "avisoSegurancaAuditiva": false,
+      "sub": "nao"
+    },
+    "reverb": {
+      "classe": "medio",
+      "pontos": 2,
+      "estimado": false
+    },
+    "arquiteturas": [
+      {
+        "id": "AR-1",
+        "nome": "Caixas ativas na frente (fontes pontuais)",
+        "disponivel": true
+      },
+      {
+        "id": "AR-2",
+        "nome": "Vertical array na frente (coluna ou line array compacto)",
+        "disponivel": true
+      }
+    ],
+    "recomendacao": {
+      "arquitetura": "AR-1",
+      "nome": "Caixas ativas na frente (fontes pontuais)",
+      "nomeSimples": "duas caixas de som na frente, uma de cada lado do palco",
+      "motivoEscolha": "O público ocupa 12 m de profundidade. Para essa distância, duas caixas comuns na frente resolvem bem (colunas passam a valer a pena acima de 18 m).",
+      "configuracao": {
+        "arquitetura": "AR-1",
+        "variante": "base",
+        "caixas": [
+          {
+            "id": "P-L",
+            "papel": "principal",
+            "lado": "L",
+            "posicao": {
+              "x": 0.2,
+              "y": 2.5,
+              "z": 2.4000000000000004
+            },
+            "mira": {
+              "yaw": 21.006789430771857,
+              "pitch": -7.507946324944372
+            },
+            "montagem": "parede",
+            "fonte": {
+              "tipo": "generico",
+              "ref": "GEN-ATIVA-10",
+              "nome": "Caixa ativa 10\" (perfil genérico)",
+              "cobertura": {
+                "H": 90,
+                "V": 60
+              },
+              "nivel": {
+                "tipo": "requisito"
+              },
+              "meiaAltura": 0.3,
+              "montagensPermitidas": null,
+              "subcategoria": "12"
+            },
+            "movida": false,
+            "numero": 1
+          },
+          {
+            "id": "P-R",
+            "papel": "principal",
+            "lado": "R",
+            "posicao": {
+              "x": 9.8,
+              "y": 2.5,
+              "z": 2.4000000000000004
+            },
+            "mira": {
+              "yaw": -21.006789430771857,
+              "pitch": -7.507946324944372
+            },
+            "montagem": "parede",
+            "fonte": {
+              "tipo": "generico",
+              "ref": "GEN-ATIVA-10",
+              "nome": "Caixa ativa 10\" (perfil genérico)",
+              "cobertura": {
+                "H": 90,
+                "V": 60
+              },
+              "nivel": {
+                "tipo": "requisito"
+              },
+              "meiaAltura": 0.3,
+              "montagensPermitidas": null,
+              "subcategoria": "12"
+            },
+            "movida": false,
+            "numero": 2
+          }
+        ],
+        "atrasos": [],
+        "frontFill": false,
+        "requisitos": {
+          "principal": [
+            {
+              "campo": "splContinuo1m",
+              "operador": ">=",
+              "valor": 100,
+              "unidade": "dB SPL",
+              "texto": "SPL máximo contínuo a 1 m de pelo menos 100 dB (campo livre)"
+            },
+            {
+              "campo": "montagem",
+              "operador": "em",
+              "valor": "parede",
+              "unidade": "",
+              "texto": "Montagem permitida pelo fabricante: parede"
+            },
+            {
+              "campo": "pesoMax",
+              "operador": "<=",
+              "valor": 40,
+              "unidade": "kg",
+              "texto": "Peso de até 40 kg para parede"
+            },
+            {
+              "campo": "coberturaH",
+              "operador": ">=",
+              "valor": 90,
+              "unidade": "graus",
+              "texto": "Cobertura usada no layout: 90° x 60° (H x V)"
+            }
+          ]
+        },
+        "avisos": []
+      },
+      "equipamentos": [
+        {
+          "ref": "GEN-ATIVA-10",
+          "nome": "Caixa ativa 10\" (perfil genérico)",
+          "tipo": "generico",
+          "papel": "principal",
+          "montagem": "parede",
+          "quantidade": 2,
+          "numeros": [
+            1,
+            2
+          ]
+        }
+      ],
+      "avaliacao": {
+        "pct": {
+          "coberto": 0.9333333333333333,
+          "borda": 0.04583333333333333,
+          "fora": 0.020833333333333332
+        },
+        "nivel": null,
+        "capacidade": "pendente",
+        "motivoCapacidade": "Perfil genérico: o nível é um requisito mínimo, não uma avaliação de produto."
+      },
+      "mapa": {
+        "passo": 0.5,
+        "x0": 0,
+        "y0": 3,
+        "nx": 20,
+        "ny": 24,
+        "celulas": "ffbcbbbffffffbbbcbffbbccccbbbbbbbbccccbbcccccccccbbccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccc"
+      },
+      "produto": null,
+      "perfilGenerico": {
+        "id": "GEN-ATIVA-10",
+        "categoria": "caixa_ativa",
+        "subcategoria": "10",
+        "nome": "Caixa ativa 10\" (perfil genérico)",
+        "rotulo": "Perfil genérico - especificação mínima, não é um produto.",
+        "requisitos": [
+          {
+            "campo": "splContinuo1m",
+            "operador": ">=",
+            "valor": 100,
+            "unidade": "dB SPL",
+            "texto": "SPL máximo contínuo a 1 m de pelo menos 100 dB (campo livre)"
+          },
+          {
+            "campo": "montagem",
+            "operador": "em",
+            "valor": "parede",
+            "unidade": "",
+            "texto": "Montagem permitida pelo fabricante: parede"
+          },
+          {
+            "campo": "pesoMax",
+            "operador": "<=",
+            "valor": 40,
+            "unidade": "kg",
+            "texto": "Peso de até 40 kg para parede"
+          },
+          {
+            "campo": "coberturaH",
+            "operador": ">=",
+            "valor": 90,
+            "unidade": "graus",
+            "texto": "Cobertura usada no layout: 90° x 60° (H x V)"
+          }
+        ],
+        "faixa": {
+          "minimo": 2499.94,
+          "maximo": 4592.52,
+          "dataVerificacao": "2026-10-29",
+          "fonte": "https://armer.com.br/produtos/caixa-de-som-ativa-profissional-armer-evx-10-1000w-bivolt/ (Por = preço de vitrine; De = preço regular)",
+          "ids": [
+            "fx-armer-evx10"
+          ]
+        }
+      },
+      "candidatos": [
+        {
+          "produtoId": "armer-evx15",
+          "nome": "Armer EVX 15",
+          "marca": "Armer",
+          "categoria": "caixa_ativa",
+          "subcategoria": "15",
+          "porte": "intermediaria",
+          "status": "incompativel",
+          "motivos": [
+            "O fabricante não permite a montagem escolhida (parede)."
+          ],
+          "faltando": [],
+          "quantidadeCaixas": 0,
+          "avisos": [],
+          "splPublicado": 128,
+          "faixa": {
+            "minimo": 3663.28,
+            "maximo": 5233.25,
+            "dataVerificacao": "2026-10-29",
+            "fonte": "https://armer.com.br/produtos/caixa-de-som-ativa-profissional-armer-evx-15-1400w-bivolt/ (Por = preço de vitrine; De = preço regular)",
+            "ids": [
+              "fx-armer-evx15"
+            ]
+          }
+        },
+        {
+          "produtoId": "armer-evx10",
+          "nome": "Armer EVX 10",
+          "marca": "Armer",
+          "categoria": "caixa_ativa",
+          "subcategoria": "10",
+          "porte": "intermediaria",
+          "status": "incompativel",
+          "motivos": [
+            "O fabricante não permite a montagem escolhida (parede)."
+          ],
+          "faltando": [],
+          "quantidadeCaixas": 0,
+          "avisos": [],
+          "splPublicado": 126,
+          "faixa": {
+            "minimo": 2499.94,
+            "maximo": 4592.52,
+            "dataVerificacao": "2026-10-29",
+            "fonte": "https://armer.com.br/produtos/caixa-de-som-ativa-profissional-armer-evx-10-1000w-bivolt/ (Por = preço de vitrine; De = preço regular)",
+            "ids": [
+              "fx-armer-evx10"
+            ]
+          }
+        },
+        {
+          "produtoId": "az-z1-compact-pro",
+          "nome": "AZ Audio Z1 Compact Pro",
+          "marca": "AZ Audio",
+          "categoria": "caixa_ativa",
+          "subcategoria": "6.5",
+          "porte": "entrada",
+          "status": "incompativel",
+          "motivos": [
+            "O fabricante não permite a montagem escolhida (parede)."
+          ],
+          "faltando": [],
+          "quantidadeCaixas": 0,
+          "avisos": [],
+          "splPublicado": 115,
+          "faixa": {
+            "minimo": 2119.2,
+            "maximo": 2444.38,
+            "dataVerificacao": "2026-10-29",
+            "fonte": "https://azaudio.com.br/produtos/caixa-de-som-ativa-portatil-profissional-az-audio-z1-compact-pro-bluetooth-c-bateria-recarregavel/ (Por = preço de vitrine; De = preço regular)",
+            "ids": [
+              "fx-az-z1-compact-pro"
+            ]
+          }
+        },
+        {
+          "produtoId": "armer-evx8go",
+          "nome": "Armer EVX8GO",
+          "marca": "Armer",
+          "categoria": "caixa_ativa",
+          "subcategoria": "8",
+          "porte": "entrada",
+          "status": "incompativel",
+          "motivos": [
+            "O fabricante não permite a montagem escolhida (parede)."
+          ],
+          "faltando": [],
+          "quantidadeCaixas": 0,
+          "avisos": [],
+          "splPublicado": 115,
+          "faixa": {
+            "minimo": 2389.94,
+            "maximo": 3066.59,
+            "dataVerificacao": "2026-10-29",
+            "fonte": "https://armer.com.br/produtos/caixa-de-som-ativa-profissional-8-portatil-armer-evx8go-240w-c-bateria-bluetooth-dsp/ (Por = preço de vitrine; De = preço regular)",
+            "ids": [
+              "fx-armer-evx8go"
+            ]
+          }
+        },
+        {
+          "produtoId": "armer-evx215",
+          "nome": "Armer EVX215",
+          "marca": "Armer",
+          "categoria": "caixa_ativa",
+          "subcategoria": "2x15",
+          "porte": "intermediaria",
+          "status": "nao_avaliavel",
+          "motivos": [
+            "Falta dado de geometria na ficha: montagensPermitidas."
+          ],
+          "faltando": [
+            "montagensPermitidas"
+          ],
+          "quantidadeCaixas": 0,
+          "avisos": [],
+          "splPublicado": 134
+        },
+        {
+          "produtoId": "armer-evx12",
+          "nome": "Armer EVX 12",
+          "marca": "Armer",
+          "categoria": "caixa_ativa",
+          "subcategoria": "12",
+          "porte": "intermediaria",
+          "status": "nao_avaliavel",
+          "motivos": [
+            "Falta dado de geometria na ficha: montagensPermitidas."
+          ],
+          "faltando": [
+            "montagensPermitidas"
+          ],
+          "quantidadeCaixas": 0,
+          "avisos": [],
+          "splPublicado": 127
+        }
+      ],
+      "semProdutoAdequado": true,
+      "sub": {
+        "regra": "nao_recomendado",
+        "incluido": false,
+        "escolhido": {
+          "produtoId": "armer-evx18sub",
+          "nome": "Armer EVX18SUB",
+          "marca": "Armer",
+          "subcategoria": "18",
+          "porte": "profissional",
+          "status": "parcial",
+          "motivos": [
+            "Falta na ficha: respostaFrequencia."
+          ],
+          "faltando": [
+            "respostaFrequencia"
+          ],
+          "porLado": 1,
+          "pareamentoFabricante": false,
+          "faixa": {
+            "minimo": 6399.95,
+            "maximo": 9285.64,
+            "dataVerificacao": "2026-10-29",
+            "fonte": "https://armer.com.br/produtos/caixa-de-som-profissional-subwoofer-ativo-18-armer-evx18sub-600w-para-sistema-pa/ (Por = preço de vitrine; De = preço regular)",
+            "ids": [
+              "fx-armer-evx18sub"
+            ]
+          }
+        },
+        "perfilGenerico": null,
+        "candidatos": [
+          {
+            "produtoId": "armer-evx18sub",
+            "nome": "Armer EVX18SUB",
+            "marca": "Armer",
+            "subcategoria": "18",
+            "porte": "profissional",
+            "status": "parcial",
+            "motivos": [
+              "Falta na ficha: respostaFrequencia."
+            ],
+            "faltando": [
+              "respostaFrequencia"
+            ],
+            "porLado": 1,
+            "pareamentoFabricante": false,
+            "faixa": {
+              "minimo": 6399.95,
+              "maximo": 9285.64,
+              "dataVerificacao": "2026-10-29",
+              "fonte": "https://armer.com.br/produtos/caixa-de-som-profissional-subwoofer-ativo-18-armer-evx18sub-600w-para-sistema-pa/ (Por = preço de vitrine; De = preço regular)",
+              "ids": [
+                "fx-armer-evx18sub"
+              ]
+            }
+          }
+        ],
+        "porLado": 1
+      },
+      "statusValidacao": {
+        "geometria": "validada_aproximacao",
+        "capacidade": "pendente",
+        "acustica": "medio"
+      },
+      "ajustada": false
+    },
+    "alternativas": [],
+    "pagNag": null,
+    "investimento": {
+      "minimo": 4999.88,
+      "maximo": 9185.04,
+      "referencia": "10/2026",
+      "itensSemFaixa": [],
+      "completo": true
+    },
+    "orcamento": null,
+    "palco": null,
+    "avisos": [
+      "Para música ambiente, um sistema distribuído (caixas de teto ou de parede espalhadas pelo salão) costuma dar som mais uniforme e em volume mais baixo. Essa arquitetura entra na próxima fase do sistema; consulte um profissional."
+    ],
+    "conclusoes": [
+      {
+        "id": "nivel-alvo",
+        "titulo": "Volume necessário",
+        "texto": "Para este uso, o som precisa chegar a cerca de 70 dB em quem está sentado, com folga de 6 dB para os momentos mais fortes. Ou seja, a caixa precisa entregar 76 dB na área do público. Somamos 0 dB por causa do barulho do local.",
+        "entradas": [
+          "Usos: música ambiente (informado)",
+          "Ruído com o local funcionando: facil"
+        ],
+        "regra": "C5: maior nível-alvo entre os usos + ajuste por ruído, com teto",
+        "parametros": [
+          {
+            "id": "niveisPorUso",
+            "valor": {
+              "fala": {
+                "alvo": 75,
+                "reserva": 10,
+                "sub": "nao"
+              },
+              "musica_ambiente": {
+                "alvo": 70,
+                "reserva": 6,
+                "sub": "nao"
+              },
+              "musica_primeiro_plano": {
+                "alvo": 85,
+                "reserva": 10,
+                "sub": "sim"
+              },
+              "voz_violao": {
+                "alvo": 85,
+                "reserva": 10,
+                "sub": "opcional"
+              },
+              "banda_bateria": {
+                "alvo": 95,
+                "reserva": 10,
+                "sub": "sim"
+              },
+              "dj": {
+                "alvo": 98,
+                "reserva": 10,
+                "sub": "sim"
+              },
+              "video": {
+                "alvo": 80,
+                "reserva": 15,
+                "sub": "opcional"
+              }
+            },
+            "status": "pendente_validacao"
+          },
+          {
+            "id": "ajusteRuido",
+            "valor": {
+              "facil": 0,
+              "dificil": 5,
+              "muito_dificil": 10
+            },
+            "status": "pendente_validacao"
+          },
+          {
+            "id": "tetoAlvo",
+            "valor": 100,
+            "status": "pendente_validacao"
+          },
+          {
+            "id": "limiarSegurancaAuditiva",
+            "valor": 95,
+            "status": "pendente_validacao"
+          }
+        ],
+        "hipoteses": [],
+        "limitacoes": [
+          "Nível médio contínuo de referência. Não garante limite de ruído para vizinhos nem segurança auditiva."
+        ]
+      },
+      {
+        "id": "escopo",
+        "titulo": "O sistema consegue calcular o seu espaço?",
+        "texto": "O seu espaço está dentro do que o sistema calcula.",
+        "entradas": [
+          "Sala: 10,0 m de largura x 15,0 m de profundidade x 3,0 m de pé-direito (informado)",
+          "Palco: 3,0 m de profundidade (padrão)",
+          "Público: 100 pessoas, em mesas (altura do ouvinte 1,2 m)"
+        ],
+        "regra": "B5: envelope do MVP",
+        "parametros": [
+          {
+            "id": "envelope",
+            "valor": {
+              "areaPublicoSuportada": 600,
+              "distanciaSuportada": 30,
+              "distanciaParcial": 45,
+              "peDireitoMin": 2.5,
+              "peDireitoMax": 10,
+              "publicoEncaminhar": 1000,
+              "profundidadeAbertoEncaminhar": 45
+            },
+            "status": "pendente_validacao"
+          },
+          {
+            "id": "areaPorPessoa",
+            "valor": {
+              "sentado": 0.8,
+              "em_pe": 0.5,
+              "mesas": 1.5
+            },
+            "status": "pendente_validacao"
+          }
+        ],
+        "hipoteses": [],
+        "limitacoes": []
+      },
+      {
+        "id": "arquitetura",
+        "titulo": "Sistema recomendado",
+        "texto": "Recomendamos duas caixas de som na frente, uma de cada lado do palco. O público ocupa 12 m de profundidade. Para essa distância, duas caixas comuns na frente resolvem bem (colunas passam a valer a pena acima de 18 m).",
+        "entradas": [
+          "Sala: 10,0 m de largura x 15,0 m de profundidade x 3,0 m de pé-direito (informado)",
+          "Palco: 3,0 m de profundidade (padrão)",
+          "Público: 100 pessoas, em mesas (altura do ouvinte 1,2 m)",
+          "Instalação: parede, formato sem_preferencia, fixa"
+        ],
+        "regra": "C4: AR-1; preferência por vertical array acima de 18 m de profundidade ou com reverberação alta",
+        "parametros": [
+          {
+            "id": "profundidadePreferenciaArray",
+            "valor": 18,
+            "status": "pendente_validacao"
+          }
+        ],
+        "hipoteses": [
+          "A preferência entre caixas convencionais e vertical array é uma regra inicial do produto."
+        ],
+        "limitacoes": [
+          "Sala modelada como retângulo, sem obstáculos.",
+          "Não calcula reflexões, RT60 nem STI."
+        ]
+      },
+      {
+        "id": "caixas",
+        "titulo": "Quantas caixas e de que tipo",
+        "texto": "Você vai precisar de: 2 x Caixa ativa 10\" (perfil genérico) (caixa principal, na parede). A quantidade sai do tamanho da sala e foi conferida com um perfil de referência (sem marca).",
+        "entradas": [
+          "Sala: 10,0 m de largura x 15,0 m de profundidade x 3,0 m de pé-direito (informado)",
+          "Palco: 3,0 m de profundidade (padrão)",
+          "Público: 100 pessoas, em mesas (altura do ouvinte 1,2 m)"
+        ],
+        "regra": "C4 AR-1: 2 caixas L/R; front-fill e reforço quando necessários",
+        "parametros": [
+          {
+            "id": "afastamentoParedeLateral",
+            "valor": {
+              "parede": 0.2,
+              "outras": 0.5
+            },
+            "status": "pendente_validacao"
+          },
+          {
+            "id": "recuoPalco",
+            "valor": 0.5,
+            "status": "pendente_validacao"
+          },
+          {
+            "id": "folgaTeto",
+            "valor": 0.3,
+            "status": "pendente_validacao"
+          },
+          {
+            "id": "alturaMaxParede",
+            "valor": 3.5,
+            "status": "pendente_validacao"
+          },
+          {
+            "id": "distMaxPontual",
+            "valor": 20,
+            "status": "pendente_validacao"
+          }
+        ],
+        "hipoteses": [],
+        "limitacoes": []
+      },
+      {
+        "id": "caixa:P-L",
+        "titulo": "Caixa 1",
+        "texto": "Caixa 1 (caixa principal), na parede. Altura: 2,40 m do chão até o centro da caixa. Posição: 0,20 m da parede lateral e 2,50 m da parede do palco. Direção: 21° para o lado e -8° para baixo. Ela aponta para o centro da última fileira e fica levemente inclinada para baixo, mirando o público e não as paredes.",
+        "entradas": [
+          "Sala: 10,0 m de largura x 15,0 m de profundidade x 3,0 m de pé-direito (informado)",
+          "Palco: 3,0 m de profundidade (padrão)",
+          "Público: 100 pessoas, em mesas (altura do ouvinte 1,2 m)"
+        ],
+        "regra": "C4 AR-1/AR-2: posição, altura e direção",
+        "parametros": [
+          {
+            "id": "afastamentoParedeLateral",
+            "valor": {
+              "parede": 0.2,
+              "outras": 0.5
+            },
+            "status": "pendente_validacao"
+          },
+          {
+            "id": "recuoPalco",
+            "valor": 0.5,
+            "status": "pendente_validacao"
+          },
+          {
+            "id": "folgaTeto",
+            "valor": 0.3,
+            "status": "pendente_validacao"
+          },
+          {
+            "id": "alturaMaxParede",
+            "valor": 3.5,
+            "status": "pendente_validacao"
+          }
+        ],
+        "hipoteses": [
+          "Fonte: Caixa ativa 10\" (perfil genérico) — Perfil genérico - especificação mínima, não é um produto."
+        ],
+        "limitacoes": [
+          "O sistema não dimensiona suporte, ancoragem nem estrutura."
+        ]
+      },
+      {
+        "id": "caixa:P-R",
+        "titulo": "Caixa 2",
+        "texto": "Caixa 2 (caixa principal), na parede. Altura: 2,40 m do chão até o centro da caixa. Posição: 9,80 m da parede lateral e 2,50 m da parede do palco. Direção: -21° para o lado e -8° para baixo. Ela aponta para o centro da última fileira e fica levemente inclinada para baixo, mirando o público e não as paredes.",
+        "entradas": [
+          "Sala: 10,0 m de largura x 15,0 m de profundidade x 3,0 m de pé-direito (informado)",
+          "Palco: 3,0 m de profundidade (padrão)",
+          "Público: 100 pessoas, em mesas (altura do ouvinte 1,2 m)"
+        ],
+        "regra": "C4 AR-1/AR-2: posição, altura e direção",
+        "parametros": [
+          {
+            "id": "afastamentoParedeLateral",
+            "valor": {
+              "parede": 0.2,
+              "outras": 0.5
+            },
+            "status": "pendente_validacao"
+          },
+          {
+            "id": "recuoPalco",
+            "valor": 0.5,
+            "status": "pendente_validacao"
+          },
+          {
+            "id": "folgaTeto",
+            "valor": 0.3,
+            "status": "pendente_validacao"
+          },
+          {
+            "id": "alturaMaxParede",
+            "valor": 3.5,
+            "status": "pendente_validacao"
+          }
+        ],
+        "hipoteses": [
+          "Fonte: Caixa ativa 10\" (perfil genérico) — Perfil genérico - especificação mínima, não é um produto."
+        ],
+        "limitacoes": [
+          "O sistema não dimensiona suporte, ancoragem nem estrutura."
+        ]
+      },
+      {
+        "id": "cobertura",
+        "titulo": "Onde o som chega bem",
+        "texto": "O som chega bem em 93% da área do público, mais fraco em 5% e fica fora do alcance principal em 2%. A área vem do ângulo que o fabricante declara para a caixa. É uma conta de geometria, não uma medição.",
+        "entradas": [
+          "Sala: 10,0 m de largura x 15,0 m de profundidade x 3,0 m de pé-direito (informado)",
+          "Palco: 3,0 m de profundidade (padrão)",
+          "Público: 100 pessoas, em mesas (altura do ouvinte 1,2 m)",
+          "Cobertura usada: 90° x 60° (H x V)"
+        ],
+        "regra": "C5 nível A: ponto coberto se |h| <= H/2 e |v| <= V/2; borda até +10°",
+        "parametros": [
+          {
+            "id": "bordaCobertura",
+            "valor": 10,
+            "status": "pendente_validacao"
+          },
+          {
+            "id": "passoMalha",
+            "valor": 0.5,
+            "status": "referencia"
+          },
+          {
+            "id": "alturaOuvinteSentado",
+            "valor": 1.2,
+            "status": "pendente_validacao"
+          },
+          {
+            "id": "alturaOuvinteEmPe",
+            "valor": 1.7,
+            "status": "pendente_validacao"
+          },
+          {
+            "id": "foraMaxValidada",
+            "valor": 0.05,
+            "status": "pendente_validacao"
+          },
+          {
+            "id": "coberturaReferenciaPontual",
+            "valor": {
+              "H": 90,
+              "V": 60
+            },
+            "status": "pendente_validacao"
+          }
+        ],
+        "hipoteses": [
+          "Cobertura de referência do perfil genérico; o produto real recalcula o layout."
+        ],
+        "limitacoes": [
+          "Cobertura nominal declarada pelo fabricante. Aproximação geométrica, não é medição.",
+          "Não atribui atenuação em dB fora do eixo.",
+          "Sala modelada como retângulo, sem obstáculos.",
+          "Não calcula reflexões, RT60 nem STI."
+        ]
+      },
+      {
+        "id": "capacidade",
+        "titulo": "O volume é suficiente?",
+        "texto": "A posição das caixas está calculada. A caixa precisa fazer pelo menos 100 dB a 1 metro (volume contínuo). Quando escolher o modelo, confira esse número.",
+        "entradas": [
+          "Requerido: 76 dB (alvo 70 + reserva 6)"
+        ],
+        "regra": "C5 nível B: L(d) = SPL contínuo a 1 m - 20 log10(d), só dentro da cobertura nominal; cada ponto recebe a fonte mais forte",
+        "parametros": [
+          {
+            "id": "uniformidadeMax",
+            "valor": 6,
+            "status": "pendente_validacao"
+          },
+          {
+            "id": "toleranciaNivel",
+            "valor": 3,
+            "status": "pendente_validacao"
+          },
+          {
+            "id": "tamanhoPorSplRequerido",
+            "valor": [
+              {
+                "ate": 124,
+                "tamanho": 10
+              },
+              {
+                "ate": 128,
+                "tamanho": 12
+              },
+              {
+                "ate": 999,
+                "tamanho": 15
+              }
+            ],
+            "status": "pendente_validacao"
+          }
+        ],
+        "hipoteses": [],
+        "limitacoes": [
+          "O sistema não soma fontes (sinais correlacionados): o resultado é conservador.",
+          "Só nível direto, sem contribuição da sala."
+        ]
+      },
+      {
+        "id": "requisitos",
+        "titulo": "O que a caixa precisa ter",
+        "texto": "O que a caixa principal precisa ter: SPL máximo contínuo a 1 m de pelo menos 100 dB (campo livre); Montagem permitida pelo fabricante: parede; Peso de até 40 kg para parede; Cobertura usada no layout: 90° x 60° (H x V).",
+        "entradas": [],
+        "regra": "C8 passo 2: requisitos calculados para o caso",
+        "parametros": [
+          {
+            "id": "pesoMaxPorMontagem",
+            "valor": {
+              "pedestal": 30,
+              "parede": 40,
+              "suspensa": 60,
+              "chao": 999
+            },
+            "status": "pendente_validacao"
+          },
+          {
+            "id": "tamanhoPorSplRequerido",
+            "valor": [
+              {
+                "ate": 124,
+                "tamanho": 10
+              },
+              {
+                "ate": 128,
+                "tamanho": 12
+              },
+              {
+                "ate": 999,
+                "tamanho": 15
+              }
+            ],
+            "status": "pendente_validacao"
+          }
+        ],
+        "hipoteses": [
+          "Perfil genérico - especificação mínima, não é um produto."
+        ],
+        "limitacoes": [
+          "Peso máximo por montagem não é dimensionamento estrutural."
+        ]
+      },
+      {
+        "id": "produtos",
+        "titulo": "Produtos do catálogo",
+        "texto": "Nenhum modelo do nosso catálogo atende a este requisito. Avaliamos 6 modelo(s): 0 atende(m), 0 atende(m) com dados a confirmar, 4 não atende(m) e 2 sem dados suficientes. A ordem segue só critérios técnicos: (1) se atende, (2) menos caixas, (3) mais folga de volume (até +6 dB), (4) menor investimento. Nenhuma marca ganha ponto extra.",
+        "entradas": [],
+        "regra": "C7 status de compatibilidade; C8 ranking",
+        "parametros": [
+          {
+            "id": "margemNivelMaxRanking",
+            "valor": 6,
+            "status": "pendente_validacao"
+          }
+        ],
+        "hipoteses": [
+          "Ausência de dado nunca reprova nem aprova um produto."
+        ],
+        "limitacoes": [
+          "Só produtos do catálogo verificado são avaliados."
+        ]
+      },
+      {
+        "id": "produto:armer-evx15",
+        "titulo": "Armer EVX 15",
+        "texto": "Status: incompativel. O fabricante não permite a montagem escolhida (parede).",
+        "entradas": [],
+        "regra": "C7 status de compatibilidade",
+        "parametros": [
+          {
+            "id": "pesoMaxPorMontagem",
+            "valor": {
+              "pedestal": 30,
+              "parede": 40,
+              "suspensa": 60,
+              "chao": 999
+            },
+            "status": "pendente_validacao"
+          },
+          {
+            "id": "uniformidadeMax",
+            "valor": 6,
+            "status": "pendente_validacao"
+          }
+        ],
+        "hipoteses": [],
+        "limitacoes": []
+      },
+      {
+        "id": "produto:armer-evx10",
+        "titulo": "Armer EVX 10",
+        "texto": "Status: incompativel. O fabricante não permite a montagem escolhida (parede).",
+        "entradas": [],
+        "regra": "C7 status de compatibilidade",
+        "parametros": [
+          {
+            "id": "pesoMaxPorMontagem",
+            "valor": {
+              "pedestal": 30,
+              "parede": 40,
+              "suspensa": 60,
+              "chao": 999
+            },
+            "status": "pendente_validacao"
+          },
+          {
+            "id": "uniformidadeMax",
+            "valor": 6,
+            "status": "pendente_validacao"
+          }
+        ],
+        "hipoteses": [],
+        "limitacoes": []
+      },
+      {
+        "id": "produto:az-z1-compact-pro",
+        "titulo": "AZ Audio Z1 Compact Pro",
+        "texto": "Status: incompativel. O fabricante não permite a montagem escolhida (parede).",
+        "entradas": [],
+        "regra": "C7 status de compatibilidade",
+        "parametros": [
+          {
+            "id": "pesoMaxPorMontagem",
+            "valor": {
+              "pedestal": 30,
+              "parede": 40,
+              "suspensa": 60,
+              "chao": 999
+            },
+            "status": "pendente_validacao"
+          },
+          {
+            "id": "uniformidadeMax",
+            "valor": 6,
+            "status": "pendente_validacao"
+          }
+        ],
+        "hipoteses": [],
+        "limitacoes": []
+      },
+      {
+        "id": "produto:armer-evx8go",
+        "titulo": "Armer EVX8GO",
+        "texto": "Status: incompativel. O fabricante não permite a montagem escolhida (parede).",
+        "entradas": [],
+        "regra": "C7 status de compatibilidade",
+        "parametros": [
+          {
+            "id": "pesoMaxPorMontagem",
+            "valor": {
+              "pedestal": 30,
+              "parede": 40,
+              "suspensa": 60,
+              "chao": 999
+            },
+            "status": "pendente_validacao"
+          },
+          {
+            "id": "uniformidadeMax",
+            "valor": 6,
+            "status": "pendente_validacao"
+          }
+        ],
+        "hipoteses": [],
+        "limitacoes": []
+      },
+      {
+        "id": "produto:armer-evx215",
+        "titulo": "Armer EVX215",
+        "texto": "Status: nao avaliavel. Falta dado de geometria na ficha: montagensPermitidas.",
+        "entradas": [
+          "Falta na ficha: montagensPermitidas"
+        ],
+        "regra": "C7 status de compatibilidade",
+        "parametros": [
+          {
+            "id": "pesoMaxPorMontagem",
+            "valor": {
+              "pedestal": 30,
+              "parede": 40,
+              "suspensa": 60,
+              "chao": 999
+            },
+            "status": "pendente_validacao"
+          },
+          {
+            "id": "uniformidadeMax",
+            "valor": 6,
+            "status": "pendente_validacao"
+          }
+        ],
+        "hipoteses": [],
+        "limitacoes": []
+      },
+      {
+        "id": "produto:armer-evx12",
+        "titulo": "Armer EVX 12",
+        "texto": "Status: nao avaliavel. Falta dado de geometria na ficha: montagensPermitidas.",
+        "entradas": [
+          "Falta na ficha: montagensPermitidas"
+        ],
+        "regra": "C7 status de compatibilidade",
+        "parametros": [
+          {
+            "id": "pesoMaxPorMontagem",
+            "valor": {
+              "pedestal": 30,
+              "parede": 40,
+              "suspensa": 60,
+              "chao": 999
+            },
+            "status": "pendente_validacao"
+          },
+          {
+            "id": "uniformidadeMax",
+            "valor": 6,
+            "status": "pendente_validacao"
+          }
+        ],
+        "hipoteses": [],
+        "limitacoes": []
+      },
+      {
+        "id": "sub",
+        "titulo": "Subwoofer",
+        "texto": "Não precisa de subwoofer para fala e música ambiente.",
+        "entradas": [
+          "Usos: música ambiente (informado)"
+        ],
+        "regra": "C4 AR-3: regra por uso; quantidade pelo pareamento do fabricante",
+        "parametros": [
+          {
+            "id": "niveisPorUso",
+            "valor": {
+              "fala": {
+                "alvo": 75,
+                "reserva": 10,
+                "sub": "nao"
+              },
+              "musica_ambiente": {
+                "alvo": 70,
+                "reserva": 6,
+                "sub": "nao"
+              },
+              "musica_primeiro_plano": {
+                "alvo": 85,
+                "reserva": 10,
+                "sub": "sim"
+              },
+              "voz_violao": {
+                "alvo": 85,
+                "reserva": 10,
+                "sub": "opcional"
+              },
+              "banda_bateria": {
+                "alvo": 95,
+                "reserva": 10,
+                "sub": "sim"
+              },
+              "dj": {
+                "alvo": 98,
+                "reserva": 10,
+                "sub": "sim"
+              },
+              "video": {
+                "alvo": 80,
+                "reserva": 15,
+                "sub": "opcional"
+              }
+            },
+            "status": "pendente_validacao"
+          },
+          {
+            "id": "subPorLadoPadrao",
+            "valor": 1,
+            "status": "pendente_validacao"
+          }
+        ],
+        "hipoteses": [],
+        "limitacoes": [
+          "Sem mapa de graves."
+        ]
+      },
+      {
+        "id": "reverberacao",
+        "titulo": "Eco da sala",
+        "texto": "Eco da sala: médio (2 de 5 pontos). A sala tem um pouco de eco. Aponte as caixas para o público e evite mirar em paredes lisas ou vidro.",
+        "entradas": [
+          "Superfícies: mistas",
+          "Palma ecoa: um_pouco",
+          "Volume: 450 m³",
+          "Ambiente: fechado"
+        ],
+        "regra": "C5 nível C: pontuação qualitativa",
+        "parametros": [
+          {
+            "id": "reverberacao",
+            "valor": {
+              "superficies": {
+                "duras": 2,
+                "mistas": 1,
+                "absorventes": 0
+              },
+              "palma": {
+                "sim": 2,
+                "um_pouco": 1,
+                "nao": 0
+              },
+              "volumeLimiar": 1500,
+              "pontosVolume": 1,
+              "classes": {
+                "baixoAte": 1,
+                "medioAte": 3
+              }
+            },
+            "status": "pendente_validacao"
+          }
+        ],
+        "hipoteses": [],
+        "limitacoes": [
+          "O sistema não calcula RT60 nem STI: Sabine e Eyring assumem campo difuso, e essa hipótese falha em muitas salas reais."
+        ]
+      },
+      {
+        "id": "investimento",
+        "titulo": "Investimento estimado",
+        "texto": "Investimento estimado em equipamentos: R$ 5.000 a R$ 9.185 (referência de preço de 10/2026, sem instalação).",
+        "entradas": [],
+        "regra": "C7: soma das faixas por categoria e porte; faixa vencida não aparece",
+        "parametros": [
+          {
+            "id": "validadeFaixaDias",
+            "valor": 90,
+            "status": "referencia"
+          }
+        ],
+        "hipoteses": [],
+        "limitacoes": [
+          "Não inclui instalação, frete nem acessórios sem faixa.",
+          "Não é preço de produto."
+        ]
+      }
+    ],
+    "profissional": [
+      "A capacidade sonora não foi validada com dados do fabricante: confirme o SPL com o fabricante ou com medição antes de comprar.",
+      "Este é um pré-dimensionamento. Os parâmetros marcados como 'pendente de validação' ainda não foram revisados por um projetista."
+    ],
+    "parametrosPendentes": [
+      {
+        "id": "afastamentoParedeLateral",
+        "valor": {
+          "parede": 0.2,
+          "outras": 0.5
+        },
+        "status": "pendente_validacao"
+      },
+      {
+        "id": "ajusteRuido",
+        "valor": {
+          "facil": 0,
+          "dificil": 5,
+          "muito_dificil": 10
+        },
+        "status": "pendente_validacao"
+      },
+      {
+        "id": "alturaMaxParede",
+        "valor": 3.5,
+        "status": "pendente_validacao"
+      },
+      {
+        "id": "alturaOuvinteEmPe",
+        "valor": 1.7,
+        "status": "pendente_validacao"
+      },
+      {
+        "id": "alturaOuvinteSentado",
+        "valor": 1.2,
+        "status": "pendente_validacao"
+      },
+      {
+        "id": "areaPorPessoa",
+        "valor": {
+          "sentado": 0.8,
+          "em_pe": 0.5,
+          "mesas": 1.5
+        },
+        "status": "pendente_validacao"
+      },
+      {
+        "id": "bordaCobertura",
+        "valor": 10,
+        "status": "pendente_validacao"
+      },
+      {
+        "id": "coberturaReferenciaPontual",
+        "valor": {
+          "H": 90,
+          "V": 60
+        },
+        "status": "pendente_validacao"
+      },
+      {
+        "id": "distMaxPontual",
+        "valor": 20,
+        "status": "pendente_validacao"
+      },
+      {
+        "id": "envelope",
+        "valor": {
+          "areaPublicoSuportada": 600,
+          "distanciaSuportada": 30,
+          "distanciaParcial": 45,
+          "peDireitoMin": 2.5,
+          "peDireitoMax": 10,
+          "publicoEncaminhar": 1000,
+          "profundidadeAbertoEncaminhar": 45
+        },
+        "status": "pendente_validacao"
+      },
+      {
+        "id": "folgaTeto",
+        "valor": 0.3,
+        "status": "pendente_validacao"
+      },
+      {
+        "id": "foraMaxValidada",
+        "valor": 0.05,
+        "status": "pendente_validacao"
+      },
+      {
+        "id": "limiarSegurancaAuditiva",
+        "valor": 95,
+        "status": "pendente_validacao"
+      },
+      {
+        "id": "margemNivelMaxRanking",
+        "valor": 6,
+        "status": "pendente_validacao"
+      },
+      {
+        "id": "niveisPorUso",
+        "valor": {
+          "fala": {
+            "alvo": 75,
+            "reserva": 10,
+            "sub": "nao"
+          },
+          "musica_ambiente": {
+            "alvo": 70,
+            "reserva": 6,
+            "sub": "nao"
+          },
+          "musica_primeiro_plano": {
+            "alvo": 85,
+            "reserva": 10,
+            "sub": "sim"
+          },
+          "voz_violao": {
+            "alvo": 85,
+            "reserva": 10,
+            "sub": "opcional"
+          },
+          "banda_bateria": {
+            "alvo": 95,
+            "reserva": 10,
+            "sub": "sim"
+          },
+          "dj": {
+            "alvo": 98,
+            "reserva": 10,
+            "sub": "sim"
+          },
+          "video": {
+            "alvo": 80,
+            "reserva": 15,
+            "sub": "opcional"
+          }
+        },
+        "status": "pendente_validacao"
+      },
+      {
+        "id": "pesoMaxPorMontagem",
+        "valor": {
+          "pedestal": 30,
+          "parede": 40,
+          "suspensa": 60,
+          "chao": 999
+        },
+        "status": "pendente_validacao"
+      },
+      {
+        "id": "profundidadePreferenciaArray",
+        "valor": 18,
+        "status": "pendente_validacao"
+      },
+      {
+        "id": "recuoPalco",
+        "valor": 0.5,
+        "status": "pendente_validacao"
+      },
+      {
+        "id": "reverberacao",
+        "valor": {
+          "superficies": {
+            "duras": 2,
+            "mistas": 1,
+            "absorventes": 0
+          },
+          "palma": {
+            "sim": 2,
+            "um_pouco": 1,
+            "nao": 0
+          },
+          "volumeLimiar": 1500,
+          "pontosVolume": 1,
+          "classes": {
+            "baixoAte": 1,
+            "medioAte": 3
+          }
+        },
+        "status": "pendente_validacao"
+      },
+      {
+        "id": "subPorLadoPadrao",
+        "valor": 1,
+        "status": "pendente_validacao"
+      },
+      {
+        "id": "tamanhoPorSplRequerido",
+        "valor": [
+          {
+            "ate": 124,
+            "tamanho": 10
+          },
+          {
+            "ate": 128,
+            "tamanho": 12
+          },
+          {
+            "ate": 999,
+            "tamanho": 15
+          }
+        ],
+        "status": "pendente_validacao"
+      },
+      {
+        "id": "tetoAlvo",
+        "valor": 100,
+        "status": "pendente_validacao"
+      },
+      {
+        "id": "toleranciaNivel",
+        "valor": 3,
+        "status": "pendente_validacao"
+      },
+      {
+        "id": "uniformidadeMax",
+        "valor": 6,
+        "status": "pendente_validacao"
+      }
+    ]
+  }
+}

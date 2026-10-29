@@ -24,17 +24,21 @@ async function trilha1(page: Page, o: { peDireito?: string; publico?: string } =
 
 test("jornada completa: trilha 1, resultado, trilha 2, impressão", async ({ page }) => {
   await trilha1(page);
-  await expect(page.getByTestId("arquitetura")).toContainText("Duas caixas ativas");
+  await expect(page.getByTestId("arquitetura")).toContainText("Duas caixas de som");
   await expect(page.getByTestId("lista-equipamentos")).toContainText("Demo Ativa");
   await expect(page.getByTestId("planta")).toBeVisible();
   await expect(page.getByTestId("versoes")).toContainText("parâmetros params-v1");
   // Lista de equipamentos e planta vêm do mesmo objeto: mesmo número de caixas.
-  const linhas = await page.getByTestId("lista-equipamentos").locator("tbody tr td:first-child").allInnerTexts();
-  const total = linhas.reduce((s, x) => s + Number(x), 0);
+  const qtds = await page.getByTestId("item-equipamento").evaluateAll((els) => els.map((e) => Number(e.getAttribute("data-quantidade"))));
+  const total = qtds.reduce((s, x) => s + x, 0);
   await expect(page.locator('[data-testid^="caixa-"]')).toHaveCount(total);
-  // "Por quê?" abre a explicação com parâmetros
-  await page.getByTestId("porque-arquitetura").click();
-  await expect(page.getByTestId("porque-painel-arquitetura")).toContainText("Regra aplicada");
+  // "ⓘ" abre a caixa de texto com a explicação, de onde vem e por quê
+  await page.getByTestId("porque-arquitetura").first().click();
+  await expect(page.getByTestId("porque-arquitetura-painel").first()).toContainText("Regra usada");
+  await page.keyboard.press("Escape");
+  // Botão de 3D no final
+  await page.getByTestId("abrir-3d").click();
+  await expect(page.getByTestId("vista-3d")).toBeVisible();
   // Trilha 2
   await page.getByTestId("ir-trilha2").click();
   await page.getByTestId("moveis-mais").click();
@@ -49,6 +53,7 @@ test("jornada completa: trilha 1, resultado, trilha 2, impressão", async ({ pag
   await page.getByTestId("avancar2").click();
   await expect(page.getByTestId("palco-resultado")).toBeVisible();
   await expect(page.getByTestId("mesa-tipo")).toContainText("Mesa analógica");
+  await expect(page.getByTestId("input-list")).toBeVisible();
   await expect(page.getByTestId("rf")).toContainText("Anatel");
   // Impressão: botões somem, relatório gera PDF
   await page.emulateMedia({ media: "print" });

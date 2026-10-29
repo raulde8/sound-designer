@@ -43,7 +43,7 @@ describe("casos de referência (SPEC C10)", () => {
   it("6: reflexivo -> risco alto e aviso específico, sem aumentar o alvo", () => {
     const r = caso("06");
     expect(r.reverb!.classe).toBe("alto");
-    expect(r.conclusoes.find((c) => c.id === "reverberacao")!.texto).toMatch(/Mais potência não resolve/);
+    expect(r.conclusoes.find((c) => c.id === "reverberacao")!.texto).toMatch(/Aumentar o volume não resolve/);
     expect(r.alvo.requerido).toBe(85);
   });
   it("7: mezanino -> atendido parcialmente, mezanino não calculado", () => {

@@ -9,8 +9,8 @@ Versões: motor 0.1.0, catálogo 4a2c5541d3d59c3f, parâmetros params-v1-2026-10
 ## Nível
 Alvo 95 dB + reserva 10 dB = 105 dB. Sub: sim. Aviso de segurança auditiva: não.
 
-## Recomendação: AR-1 - Duas caixas ativas na frente, uma de cada lado do palco
-A arquitetura preferida não tem produto compatível no catálogo verificado. Caixas convencionais atende com produto do catálogo.
+## Recomendação: AR-1 - duas caixas de som na frente, uma de cada lado do palco
+O tipo de sistema que seria o primeiro da lista não tem modelo que atenda no catálogo. Caixas comuns atendem com modelos do catálogo.
 
 Status: geometria validada_aproximacao; capacidade validada (Nível mínimo calculado 105.6 dB >= requerido 105 dB.); acústica medio.
 
@@ -36,18 +36,18 @@ Atrasos de referência: RF-L 53,2 ms, RF-R 53,2 ms.
 
 ### Produtos do catálogo demo
 - Demo Ativa 15 Pro: **compativel** 
+- Demo Ativa 15: **parcial** Capacidade sonora estimada: Com o dado estimado, o volume mínimo calculado (104.3 dB) fica abaixo do necessário (105 dB). A estimativa é conservadora: confirme com a ficha do fabricante.
 - Demo Ativa 12 Sem SPL: **parcial** Capacidade sonora pendente: O fabricante não publica SPL máximo.
-- Demo Ativa 10: **incompativel** Nível mínimo calculado 94.6 dB abaixo do requerido 105 dB.
 - Demo Ativa 12: **incompativel** Nível mínimo calculado 102.2 dB abaixo do requerido 105 dB.
-- Demo Ativa 15: **incompativel** Nível mínimo calculado 104.3 dB abaixo do requerido 105 dB.
-- Demo Ativa 10 Incompleta: **nao_avaliavel** Falta dado de geometria na ficha: coberturaV.
+- Demo Ativa 10: **incompativel** Nível mínimo calculado 94.6 dB abaixo do requerido 105 dB.
+- Demo Ativa 10 Incompleta: **incompativel** Nível mínimo calculado 93.6 dB abaixo do requerido 105 dB.
 
 Produto escolhido: Demo Ativa 15 Pro. Sub: recomendado, 2 por lado (Demo Sub 18).
 
 Alternativas: menor custo: Demo Ativa 12 Sem SPL (AR-1); equilíbrio: Demo Ativa 15 Pro (AR-1)
 
 ## Reverberação: classe medio (3 pontos)
-Risco médio de reverberação (3 pontos). Reverberação moderada. Mire as caixas no público e evite apontá-las para paredes lisas ou vidro.
+Eco da sala: médio (3 de 5 pontos). A sala tem um pouco de eco. Aponte as caixas para o público e evite mirar em paredes lisas ou vidro.
 
 ## PAG/NAG
 PAG 36,5 dB, NAG 27,6 dB, margem 8,8 dB: risco baixo.
@@ -58,12 +58,12 @@ R$ 65000 a R$ 109000 (ref. 10/2026).
 ## Palco
 15 canais (18 com reserva), mesa digital (Digital porque: 6 auxiliares necessários (mais de 4). Digital porque: 2 músicos com in-ear. Digital porque: 18 canais (mais de 16).). Escolhida: Demo Mesa D16.
 - 3x Microfone de mão com fio para voz parada (Demo Mic Mão)
-- 1x Microfone sem fio (de mão) para voz que anda ou pregador (Demo Sem Fio Mão)
-- 1x Kit de microfones de bateria (4 peças) (Demo Kit Bateria)
+- 1x Sistema de microfone sem fio (de mão) para quem anda pelo palco ou prega (Demo Sem Fio Mão)
+- 1x Kit de microfones de bateria (pelo menos 4 peças) (Demo Kit Bateria)
 - 1x Microfone dinâmico para instrumento (amplificador de guitarra, sopro, outros) (Demo Mic Mão)
 - 4x Direct box (violão, baixo, teclado, bateria eletrônica) (Demo DI)
-- 2x Transmissor de in-ear (Demo In-Ear)
-- 2x Receptor de in-ear (1 por músico) (Demo In-Ear)
+- 2x Transmissor de fone de retorno (in-ear) (Demo In-Ear)
+- 2x Receptor de fone de retorno (1 por músico; o fone é à parte) (Demo In-Ear)
 - 2x Monitor de chão (1 por mixagem) (Demo Ativa 10)
 - 2x Cabo XLR 10 m (Cabo XLR balanceado (perfil genérico))
 - 20x Cabo XLR 30 m (Cabo XLR balanceado (perfil genérico))

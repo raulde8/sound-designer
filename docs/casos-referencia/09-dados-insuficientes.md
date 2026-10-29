@@ -9,8 +9,8 @@ Versões: motor 0.1.0, catálogo 4a2c5541d3d59c3f, parâmetros params-v1-2026-10
 ## Nível
 Alvo 75 dB + reserva 10 dB = 85 dB. Sub: nao. Aviso de segurança auditiva: não.
 
-## Recomendação: AR-2 - Duas colunas (vertical array) na frente, uma de cada lado do palco
-Única arquitetura disponível para as respostas dadas.
+## Recomendação: AR-2 - duas colunas de som na frente, uma de cada lado do palco
+É a única opção que combina com as preferências de instalação informadas.
 
 Status: geometria validada; capacidade pendente (O fabricante não publica SPL por distância para esta configuração.); acústica medio.
 
@@ -35,7 +35,7 @@ Cobertura: 100% coberto, 0% borda, 0% fora.
 Produto escolhido: Demo Coluna 8. Sub: nao_recomendado.
 
 ## Reverberação: classe medio (2 pontos)
-Risco médio de reverberação (2 pontos). Reverberação moderada. Mire as caixas no público e evite apontá-las para paredes lisas ou vidro.
+Eco da sala: médio (2 de 5 pontos). A sala tem um pouco de eco. Aponte as caixas para o público e evite mirar em paredes lisas ou vidro.
 
 ## PAG/NAG
 PAG 23,5 dB, NAG 20,4 dB, margem 3,0 dB: risco baixo.

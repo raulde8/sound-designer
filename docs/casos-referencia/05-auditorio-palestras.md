@@ -9,8 +9,8 @@ Versões: motor 0.1.0, catálogo 4a2c5541d3d59c3f, parâmetros params-v1-2026-10
 ## Nível
 Alvo 80 dB + reserva 15 dB = 95 dB. Sub: opcional. Aviso de segurança auditiva: não.
 
-## Recomendação: AR-2 - Duas colunas (vertical array) na frente, uma de cada lado do palco
-Vertical array preferido: a área de público tem 27 m de profundidade.
+## Recomendação: AR-2 - duas colunas de som na frente, uma de cada lado do palco
+O público ocupa 27 m de profundidade. Colunas levam o som mais longe e jogam menos som nas paredes.
 
 Status: geometria validada; capacidade pendente (O fabricante não publica SPL para toda a distância necessária. O motor não extrapola.); acústica medio.
 
@@ -40,7 +40,7 @@ Produto escolhido: Demo Line 6. Sub: opcional.
 Alternativas: menor custo: Demo Ativa 10 (AR-1); equilíbrio: Demo Line 6 (AR-2); maior capacidade: Demo Ativa 15 Pro (AR-1)
 
 ## Reverberação: classe medio (3 pontos)
-Risco médio de reverberação (3 pontos). Reverberação moderada. Mire as caixas no público e evite apontá-las para paredes lisas ou vidro.
+Eco da sala: médio (3 de 5 pontos). A sala tem um pouco de eco. Aponte as caixas para o público e evite mirar em paredes lisas ou vidro.
 
 ## PAG/NAG
 PAG 12,8 dB, NAG 29,3 dB, margem -16,5 dB: risco alto.

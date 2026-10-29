@@ -125,21 +125,21 @@ export function executarMotor(entradaBruta: unknown, op: OpcoesMotor): Resultado
     let motivoEscolha =
       solucoes.length > 1
         ? sol.arquitetura === "AR-2"
-          ? `Vertical array preferido: a área de público tem ${round(profPublico, 1)} m de profundidade${ctx.reverb?.classe === "alto" ? " e a sala tem risco alto de reverberação" : ""}.`
-          : `Caixas convencionais preferidas: a área de público tem ${round(profPublico, 1)} m de profundidade (limite de preferência do vertical array: ${params.profundidadePreferenciaArray.valor} m).`
-        : `Única arquitetura disponível para as respostas dadas.`;
+          ? `O público ocupa ${round(profPublico, 1).toString().replace(".", ",")} m de profundidade${ctx.reverb?.classe === "alto" ? " e a sala tem bastante eco" : ""}. Colunas levam o som mais longe e jogam menos som nas paredes.`
+          : `O público ocupa ${round(profPublico, 1).toString().replace(".", ",")} m de profundidade. Para essa distância, duas caixas comuns na frente resolvem bem (colunas passam a valer a pena acima de ${params.profundidadePreferenciaArray.valor} m).`
+        : `É a única opção que combina com as preferências de instalação informadas.`;
     if (!temUtil(sol)) {
       const outra = solucoes.find((s) => s.arquitetura !== pref && temUtil(s));
       if (outra) {
         sol = outra;
-        motivoEscolha = `A arquitetura preferida não tem produto compatível no catálogo verificado. ${outra.arquitetura === "AR-1" ? "Caixas convencionais" : "Vertical array"} atende com produto do catálogo.`;
+        motivoEscolha = `O tipo de sistema que seria o primeiro da lista não tem modelo que atenda no catálogo. ${outra.arquitetura === "AR-1" ? "Caixas comuns" : "Colunas"} atendem com modelos do catálogo.`;
       }
     }
     if (escolhaArq && escolhaArq !== sol.arquitetura) {
       const s = solucoes.find((x) => x.arquitetura === escolhaArq);
       if (s) {
         sol = s;
-        motivoEscolha = "Arquitetura escolhida por você entre as alternativas.";
+        motivoEscolha = "Opção escolhida por você entre as alternativas.";
       }
     }
 

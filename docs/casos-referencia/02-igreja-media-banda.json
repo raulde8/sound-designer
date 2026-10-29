@@ -128,8 +128,8 @@
     "recomendacao": {
       "arquitetura": "AR-1",
       "nome": "Caixas ativas na frente (fontes pontuais)",
-      "nomeSimples": "Duas caixas ativas na frente, uma de cada lado do palco",
-      "motivoEscolha": "A arquitetura preferida não tem produto compatível no catálogo verificado. Caixas convencionais atende com produto do catálogo.",
+      "nomeSimples": "duas caixas de som na frente, uma de cada lado do palco",
+      "motivoEscolha": "O tipo de sistema que seria o primeiro da lista não tem modelo que atenda no catálogo. Caixas comuns atendem com modelos do catálogo.",
       "configuracao": {
         "arquitetura": "AR-1",
         "variante": "reforco",
@@ -606,6 +606,7 @@
           "A distância até a última fileira (23.6 m) passa de 20 m. Par de reforço adicionado.",
           "Variação de nível na área coberta de 19.4 dB (critério: até 6 dB). O modelo não atenua fora do eixo, então a variação real tende a ser diferente."
         ],
+        "splPublicado": 131,
         "faixa": {
           "minimo": 7000,
           "maximo": 12000,
@@ -962,6 +963,7 @@
             "A distância até a última fileira (23.6 m) passa de 20 m. Par de reforço adicionado.",
             "Variação de nível na área coberta de 19.4 dB (critério: até 6 dB). O modelo não atenua fora do eixo, então a variação real tende a ser diferente."
           ],
+          "splPublicado": 131,
           "faixa": {
             "minimo": 7000,
             "maximo": 12000,
@@ -1256,6 +1258,323 @@
           "margemNivel": 0.6281846379930016
         },
         {
+          "produtoId": "demo-ativa-15",
+          "nome": "Demo Ativa 15",
+          "marca": "Demo",
+          "categoria": "caixa_ativa",
+          "subcategoria": "15",
+          "porte": "intermediaria",
+          "status": "parcial",
+          "motivos": [
+            "Capacidade sonora estimada: Com o dado estimado, o volume mínimo calculado (104.3 dB) fica abaixo do necessário (105 dB). A estimativa é conservadora: confirme com a ficha do fabricante."
+          ],
+          "faltando": [],
+          "quantidadeCaixas": 4,
+          "avisos": [
+            "O fabricante publica só SPL de pico. Contínuo estimado = pico - 6 dB.",
+            "A distância até a última fileira (23.6 m) passa de 20 m. Par de reforço adicionado.",
+            "Variação de nível na área coberta de 16.6 dB (critério: até 6 dB). O modelo não atenua fora do eixo, então a variação real tende a ser diferente."
+          ],
+          "splPublicado": 134,
+          "faixa": {
+            "minimo": 3800,
+            "maximo": 6000,
+            "dataVerificacao": "2026-10-01",
+            "fonte": "demo:ficticio (valores inventados)",
+            "ids": [
+              "demo-fx-ativa15-i"
+            ]
+          },
+          "configuracao": {
+            "arquitetura": "AR-1",
+            "variante": "reforco",
+            "caixas": [
+              {
+                "id": "P-L",
+                "papel": "principal",
+                "lado": "L",
+                "posicao": {
+                  "x": 0.5,
+                  "y": 2.5,
+                  "z": 2.36
+                },
+                "mira": {
+                  "yaw": 17.281498371816646,
+                  "pitch": -4.1769414719321905
+                },
+                "montagem": "pedestal",
+                "fonte": {
+                  "tipo": "produto",
+                  "ref": "demo-ativa-15",
+                  "nome": "Demo Ativa 15",
+                  "cobertura": {
+                    "H": 90,
+                    "V": 50
+                  },
+                  "nivel": {
+                    "tipo": "pontual",
+                    "spl1m": 128,
+                    "estimado": true,
+                    "aviso": "O fabricante publica só SPL de pico. Contínuo estimado = pico - 6 dB."
+                  },
+                  "meiaAltura": 0.36,
+                  "montagensPermitidas": [
+                    "pedestal",
+                    "suspensa",
+                    "chao"
+                  ],
+                  "subcategoria": "15",
+                  "spl": {
+                    "valor": 134,
+                    "unidade": "dB SPL @1m",
+                    "condicaoMedicao": "pico_campo_livre",
+                    "fonte": "demo:ficticio (dado inventado para demonstração; não é ficha de fabricante)",
+                    "dataVerificacao": "2026-10-01",
+                    "status": "declarado_fabricante"
+                  }
+                },
+                "movida": false,
+                "numero": 1
+              },
+              {
+                "id": "P-R",
+                "papel": "principal",
+                "lado": "R",
+                "posicao": {
+                  "x": 14.5,
+                  "y": 2.5,
+                  "z": 2.36
+                },
+                "mira": {
+                  "yaw": -17.281498371816646,
+                  "pitch": -4.1769414719321905
+                },
+                "montagem": "pedestal",
+                "fonte": {
+                  "tipo": "produto",
+                  "ref": "demo-ativa-15",
+                  "nome": "Demo Ativa 15",
+                  "cobertura": {
+                    "H": 90,
+                    "V": 50
+                  },
+                  "nivel": {
+                    "tipo": "pontual",
+                    "spl1m": 128,
+                    "estimado": true,
+                    "aviso": "O fabricante publica só SPL de pico. Contínuo estimado = pico - 6 dB."
+                  },
+                  "meiaAltura": 0.36,
+                  "montagensPermitidas": [
+                    "pedestal",
+                    "suspensa",
+                    "chao"
+                  ],
+                  "subcategoria": "15",
+                  "spl": {
+                    "valor": 134,
+                    "unidade": "dB SPL @1m",
+                    "condicaoMedicao": "pico_campo_livre",
+                    "fonte": "demo:ficticio (dado inventado para demonstração; não é ficha de fabricante)",
+                    "dataVerificacao": "2026-10-01",
+                    "status": "declarado_fabricante"
+                  }
+                },
+                "movida": false,
+                "numero": 2
+              },
+              {
+                "id": "RF-L",
+                "papel": "reforco",
+                "lado": "L",
+                "posicao": {
+                  "x": 0.5,
+                  "y": 15.25,
+                  "z": 2.36
+                },
+                "mira": {
+                  "yaw": 35.67640822186198,
+                  "pitch": -8.248621994496302
+                },
+                "montagem": "pedestal",
+                "fonte": {
+                  "tipo": "produto",
+                  "ref": "demo-ativa-15",
+                  "nome": "Demo Ativa 15",
+                  "cobertura": {
+                    "H": 90,
+                    "V": 50
+                  },
+                  "nivel": {
+                    "tipo": "pontual",
+                    "spl1m": 128,
+                    "estimado": true,
+                    "aviso": "O fabricante publica só SPL de pico. Contínuo estimado = pico - 6 dB."
+                  },
+                  "meiaAltura": 0.36,
+                  "montagensPermitidas": [
+                    "pedestal",
+                    "suspensa",
+                    "chao"
+                  ],
+                  "subcategoria": "15",
+                  "spl": {
+                    "valor": 134,
+                    "unidade": "dB SPL @1m",
+                    "condicaoMedicao": "pico_campo_livre",
+                    "fonte": "demo:ficticio (dado inventado para demonstração; não é ficha de fabricante)",
+                    "dataVerificacao": "2026-10-01",
+                    "status": "declarado_fabricante"
+                  }
+                },
+                "movida": false,
+                "numero": 3
+              },
+              {
+                "id": "RF-R",
+                "papel": "reforco",
+                "lado": "R",
+                "posicao": {
+                  "x": 14.5,
+                  "y": 15.25,
+                  "z": 2.36
+                },
+                "mira": {
+                  "yaw": -35.67640822186198,
+                  "pitch": -8.248621994496302
+                },
+                "montagem": "pedestal",
+                "fonte": {
+                  "tipo": "produto",
+                  "ref": "demo-ativa-15",
+                  "nome": "Demo Ativa 15",
+                  "cobertura": {
+                    "H": 90,
+                    "V": 50
+                  },
+                  "nivel": {
+                    "tipo": "pontual",
+                    "spl1m": 128,
+                    "estimado": true,
+                    "aviso": "O fabricante publica só SPL de pico. Contínuo estimado = pico - 6 dB."
+                  },
+                  "meiaAltura": 0.36,
+                  "montagensPermitidas": [
+                    "pedestal",
+                    "suspensa",
+                    "chao"
+                  ],
+                  "subcategoria": "15",
+                  "spl": {
+                    "valor": 134,
+                    "unidade": "dB SPL @1m",
+                    "condicaoMedicao": "pico_campo_livre",
+                    "fonte": "demo:ficticio (dado inventado para demonstração; não é ficha de fabricante)",
+                    "dataVerificacao": "2026-10-01",
+                    "status": "declarado_fabricante"
+                  }
+                },
+                "movida": false,
+                "numero": 4
+              }
+            ],
+            "atrasos": [
+              {
+                "caixaId": "RF-L",
+                "referenciaId": "P-L",
+                "distanciaExtra": 12.75,
+                "ms": 37.2
+              },
+              {
+                "caixaId": "RF-R",
+                "referenciaId": "P-R",
+                "distanciaExtra": 12.75,
+                "ms": 37.2
+              }
+            ],
+            "frontFill": false,
+            "requisitos": {
+              "principal": [
+                {
+                  "campo": "splContinuo1m",
+                  "operador": ">=",
+                  "valor": 131,
+                  "unidade": "dB SPL",
+                  "texto": "SPL máximo contínuo a 1 m de pelo menos 131 dB (campo livre)"
+                },
+                {
+                  "campo": "montagem",
+                  "operador": "em",
+                  "valor": "pedestal",
+                  "unidade": "",
+                  "texto": "Montagem: qualquer uma permitida pelo fabricante (o layout de referência usou pedestal)"
+                },
+                {
+                  "campo": "pesoMax",
+                  "operador": "<=",
+                  "valor": 30,
+                  "unidade": "kg",
+                  "texto": "Peso de até 30 kg para pedestal"
+                },
+                {
+                  "campo": "coberturaH",
+                  "operador": ">=",
+                  "valor": 90,
+                  "unidade": "graus",
+                  "texto": "Cobertura usada no layout: 90° x 50° (H x V)"
+                }
+              ],
+              "reforco": [
+                {
+                  "campo": "splContinuo1m",
+                  "operador": ">=",
+                  "valor": 130,
+                  "unidade": "dB SPL",
+                  "texto": "SPL máximo contínuo a 1 m de pelo menos 130 dB (campo livre)"
+                },
+                {
+                  "campo": "montagem",
+                  "operador": "em",
+                  "valor": "pedestal",
+                  "unidade": "",
+                  "texto": "Montagem: qualquer uma permitida pelo fabricante (o layout de referência usou pedestal)"
+                },
+                {
+                  "campo": "pesoMax",
+                  "operador": "<=",
+                  "valor": 30,
+                  "unidade": "kg",
+                  "texto": "Peso de até 30 kg para pedestal"
+                }
+              ]
+            },
+            "avisos": [
+              "O fabricante publica só SPL de pico. Contínuo estimado = pico - 6 dB.",
+              "A distância até a última fileira (23.6 m) passa de 20 m. Par de reforço adicionado."
+            ]
+          },
+          "avaliacao": {
+            "estados": [],
+            "pct": {
+              "coberto": 0.9287878787878788,
+              "borda": 0.03484848484848485,
+              "fora": 0.03636363636363636
+            },
+            "nivel": {
+              "min": 104.27142103187288,
+              "max": 120.87510242456474,
+              "uniformidade": 16.60368139269187,
+              "pontosAvaliados": 1226
+            },
+            "pontosSemNivel": 0,
+            "pontosSoGenericos": 0,
+            "capacidade": "estimada",
+            "motivoCapacidade": "Com o dado estimado, o volume mínimo calculado (104.3 dB) fica abaixo do necessário (105 dB). A estimativa é conservadora: confirme com a ficha do fabricante.",
+            "nivelPorLinha": []
+          },
+          "margemNivel": -0.728578968127124
+        },
+        {
           "produtoId": "demo-ativa-12-sem-spl",
           "nome": "Demo Ativa 12 Sem SPL",
           "marca": "Demo",
@@ -1525,314 +1844,6 @@
           }
         },
         {
-          "produtoId": "demo-ativa-10",
-          "nome": "Demo Ativa 10",
-          "marca": "Demo",
-          "categoria": "caixa_ativa",
-          "subcategoria": "10",
-          "porte": "entrada",
-          "status": "incompativel",
-          "motivos": [
-            "Nível mínimo calculado 94.6 dB abaixo do requerido 105 dB."
-          ],
-          "faltando": [],
-          "quantidadeCaixas": 4,
-          "avisos": [
-            "A distância até a última fileira (23.8 m) passa de 20 m. Par de reforço adicionado."
-          ],
-          "faixa": {
-            "minimo": 1500,
-            "maximo": 2500,
-            "dataVerificacao": "2026-10-01",
-            "fonte": "demo:ficticio (valores inventados)",
-            "ids": [
-              "demo-fx-ativa10-e"
-            ]
-          },
-          "configuracao": {
-            "arquitetura": "AR-1",
-            "variante": "reforco",
-            "caixas": [
-              {
-                "id": "P-L",
-                "papel": "principal",
-                "lado": "L",
-                "posicao": {
-                  "x": 0.2,
-                  "y": 2.5,
-                  "z": 3.5
-                },
-                "mira": {
-                  "yaw": 17.975366865392044,
-                  "pitch": -8.208087394166911
-                },
-                "montagem": "parede",
-                "fonte": {
-                  "tipo": "produto",
-                  "ref": "demo-ativa-10",
-                  "nome": "Demo Ativa 10",
-                  "cobertura": {
-                    "H": 90,
-                    "V": 60
-                  },
-                  "nivel": {
-                    "tipo": "pontual",
-                    "spl1m": 121,
-                    "estimado": false
-                  },
-                  "meiaAltura": 0.26,
-                  "montagensPermitidas": [
-                    "pedestal",
-                    "parede",
-                    "chao"
-                  ],
-                  "subcategoria": "10",
-                  "spl": {
-                    "valor": 121,
-                    "unidade": "dB SPL @1m",
-                    "condicaoMedicao": "continuo_campo_livre",
-                    "fonte": "demo:ficticio (dado inventado para demonstração; não é ficha de fabricante)",
-                    "dataVerificacao": "2026-10-01",
-                    "status": "declarado_fabricante"
-                  }
-                },
-                "movida": false,
-                "numero": 1
-              },
-              {
-                "id": "P-R",
-                "papel": "principal",
-                "lado": "R",
-                "posicao": {
-                  "x": 14.8,
-                  "y": 2.5,
-                  "z": 3.5
-                },
-                "mira": {
-                  "yaw": -17.975366865392044,
-                  "pitch": -8.208087394166911
-                },
-                "montagem": "parede",
-                "fonte": {
-                  "tipo": "produto",
-                  "ref": "demo-ativa-10",
-                  "nome": "Demo Ativa 10",
-                  "cobertura": {
-                    "H": 90,
-                    "V": 60
-                  },
-                  "nivel": {
-                    "tipo": "pontual",
-                    "spl1m": 121,
-                    "estimado": false
-                  },
-                  "meiaAltura": 0.26,
-                  "montagensPermitidas": [
-                    "pedestal",
-                    "parede",
-                    "chao"
-                  ],
-                  "subcategoria": "10",
-                  "spl": {
-                    "valor": 121,
-                    "unidade": "dB SPL @1m",
-                    "condicaoMedicao": "continuo_campo_livre",
-                    "fonte": "demo:ficticio (dado inventado para demonstração; não é ficha de fabricante)",
-                    "dataVerificacao": "2026-10-01",
-                    "status": "declarado_fabricante"
-                  }
-                },
-                "movida": false,
-                "numero": 2
-              },
-              {
-                "id": "RF-L",
-                "papel": "reforco",
-                "lado": "L",
-                "posicao": {
-                  "x": 0.2,
-                  "y": 5.25,
-                  "z": 3.5
-                },
-                "mira": {
-                  "yaw": 20.285333434232715,
-                  "pitch": -9.305188781010582
-                },
-                "montagem": "parede",
-                "fonte": {
-                  "tipo": "produto",
-                  "ref": "demo-ativa-10",
-                  "nome": "Demo Ativa 10",
-                  "cobertura": {
-                    "H": 90,
-                    "V": 60
-                  },
-                  "nivel": {
-                    "tipo": "pontual",
-                    "spl1m": 121,
-                    "estimado": false
-                  },
-                  "meiaAltura": 0.26,
-                  "montagensPermitidas": [
-                    "pedestal",
-                    "parede",
-                    "chao"
-                  ],
-                  "subcategoria": "10",
-                  "spl": {
-                    "valor": 121,
-                    "unidade": "dB SPL @1m",
-                    "condicaoMedicao": "continuo_campo_livre",
-                    "fonte": "demo:ficticio (dado inventado para demonstração; não é ficha de fabricante)",
-                    "dataVerificacao": "2026-10-01",
-                    "status": "declarado_fabricante"
-                  }
-                },
-                "movida": false,
-                "numero": 3
-              },
-              {
-                "id": "RF-R",
-                "papel": "reforco",
-                "lado": "R",
-                "posicao": {
-                  "x": 14.8,
-                  "y": 5.25,
-                  "z": 3.5
-                },
-                "mira": {
-                  "yaw": -20.28533343423272,
-                  "pitch": -9.305188781010582
-                },
-                "montagem": "parede",
-                "fonte": {
-                  "tipo": "produto",
-                  "ref": "demo-ativa-10",
-                  "nome": "Demo Ativa 10",
-                  "cobertura": {
-                    "H": 90,
-                    "V": 60
-                  },
-                  "nivel": {
-                    "tipo": "pontual",
-                    "spl1m": 121,
-                    "estimado": false
-                  },
-                  "meiaAltura": 0.26,
-                  "montagensPermitidas": [
-                    "pedestal",
-                    "parede",
-                    "chao"
-                  ],
-                  "subcategoria": "10",
-                  "spl": {
-                    "valor": 121,
-                    "unidade": "dB SPL @1m",
-                    "condicaoMedicao": "continuo_campo_livre",
-                    "fonte": "demo:ficticio (dado inventado para demonstração; não é ficha de fabricante)",
-                    "dataVerificacao": "2026-10-01",
-                    "status": "declarado_fabricante"
-                  }
-                },
-                "movida": false,
-                "numero": 4
-              }
-            ],
-            "atrasos": [
-              {
-                "caixaId": "RF-L",
-                "referenciaId": "P-L",
-                "distanciaExtra": 2.75,
-                "ms": 8
-              },
-              {
-                "caixaId": "RF-R",
-                "referenciaId": "P-R",
-                "distanciaExtra": 2.75,
-                "ms": 8
-              }
-            ],
-            "frontFill": false,
-            "requisitos": {
-              "principal": [
-                {
-                  "campo": "splContinuo1m",
-                  "operador": ">=",
-                  "valor": 129,
-                  "unidade": "dB SPL",
-                  "texto": "SPL máximo contínuo a 1 m de pelo menos 129 dB (campo livre)"
-                },
-                {
-                  "campo": "montagem",
-                  "operador": "em",
-                  "valor": "parede",
-                  "unidade": "",
-                  "texto": "Montagem: qualquer uma permitida pelo fabricante (o layout de referência usou parede)"
-                },
-                {
-                  "campo": "pesoMax",
-                  "operador": "<=",
-                  "valor": 40,
-                  "unidade": "kg",
-                  "texto": "Peso de até 40 kg para parede"
-                },
-                {
-                  "campo": "coberturaH",
-                  "operador": ">=",
-                  "valor": 90,
-                  "unidade": "graus",
-                  "texto": "Cobertura usada no layout: 90° x 60° (H x V)"
-                }
-              ],
-              "reforco": [
-                {
-                  "campo": "splContinuo1m",
-                  "operador": ">=",
-                  "valor": 133,
-                  "unidade": "dB SPL",
-                  "texto": "SPL máximo contínuo a 1 m de pelo menos 133 dB (campo livre)"
-                },
-                {
-                  "campo": "montagem",
-                  "operador": "em",
-                  "valor": "parede",
-                  "unidade": "",
-                  "texto": "Montagem: qualquer uma permitida pelo fabricante (o layout de referência usou parede)"
-                },
-                {
-                  "campo": "pesoMax",
-                  "operador": "<=",
-                  "valor": 40,
-                  "unidade": "kg",
-                  "texto": "Peso de até 40 kg para parede"
-                }
-              ]
-            },
-            "avisos": [
-              "A distância até a última fileira (23.8 m) passa de 20 m. Par de reforço adicionado."
-            ]
-          },
-          "avaliacao": {
-            "estados": [],
-            "pct": {
-              "coberto": 0.9136363636363637,
-              "borda": 0.045454545454545456,
-              "fora": 0.04090909090909091
-            },
-            "nivel": {
-              "min": 94.6126870381012,
-              "max": 109.55659346836401,
-              "uniformidade": 14.943906430262814,
-              "pontosAvaliados": 1206
-            },
-            "pontosSemNivel": 0,
-            "pontosSoGenericos": 0,
-            "capacidade": "insuficiente",
-            "motivoCapacidade": "Nível mínimo calculado 94.6 dB abaixo do requerido 105 dB.",
-            "nivelPorLinha": []
-          }
-        },
-        {
           "produtoId": "demo-ativa-12",
           "nome": "Demo Ativa 12",
           "marca": "Demo",
@@ -1848,6 +1859,7 @@
           "avisos": [
             "A distância até a última fileira (23.8 m) passa de 20 m. Par de reforço adicionado."
           ],
+          "splPublicado": 126,
           "faixa": {
             "minimo": 3000,
             "maximo": 5000,
@@ -2145,29 +2157,29 @@
           }
         },
         {
-          "produtoId": "demo-ativa-15",
-          "nome": "Demo Ativa 15",
+          "produtoId": "demo-ativa-10",
+          "nome": "Demo Ativa 10",
           "marca": "Demo",
           "categoria": "caixa_ativa",
-          "subcategoria": "15",
-          "porte": "intermediaria",
+          "subcategoria": "10",
+          "porte": "entrada",
           "status": "incompativel",
           "motivos": [
-            "Nível mínimo calculado 104.3 dB abaixo do requerido 105 dB."
+            "Nível mínimo calculado 94.6 dB abaixo do requerido 105 dB."
           ],
           "faltando": [],
           "quantidadeCaixas": 4,
           "avisos": [
-            "O fabricante publica só SPL de pico. Contínuo estimado = pico - 6 dB.",
-            "A distância até a última fileira (23.6 m) passa de 20 m. Par de reforço adicionado."
+            "A distância até a última fileira (23.8 m) passa de 20 m. Par de reforço adicionado."
           ],
+          "splPublicado": 121,
           "faixa": {
-            "minimo": 3800,
-            "maximo": 6000,
+            "minimo": 1500,
+            "maximo": 2500,
             "dataVerificacao": "2026-10-01",
             "fonte": "demo:ficticio (valores inventados)",
             "ids": [
-              "demo-fx-ativa15-i"
+              "demo-fx-ativa10-e"
             ]
           },
           "configuracao": {
@@ -2179,40 +2191,39 @@
                 "papel": "principal",
                 "lado": "L",
                 "posicao": {
-                  "x": 0.5,
+                  "x": 0.2,
                   "y": 2.5,
-                  "z": 2.36
+                  "z": 3.5
                 },
                 "mira": {
-                  "yaw": 17.281498371816646,
-                  "pitch": -4.1769414719321905
+                  "yaw": 17.975366865392044,
+                  "pitch": -8.208087394166911
                 },
-                "montagem": "pedestal",
+                "montagem": "parede",
                 "fonte": {
                   "tipo": "produto",
-                  "ref": "demo-ativa-15",
-                  "nome": "Demo Ativa 15",
+                  "ref": "demo-ativa-10",
+                  "nome": "Demo Ativa 10",
                   "cobertura": {
                     "H": 90,
-                    "V": 50
+                    "V": 60
                   },
                   "nivel": {
                     "tipo": "pontual",
-                    "spl1m": 128,
-                    "estimado": true,
-                    "aviso": "O fabricante publica só SPL de pico. Contínuo estimado = pico - 6 dB."
+                    "spl1m": 121,
+                    "estimado": false
                   },
-                  "meiaAltura": 0.36,
+                  "meiaAltura": 0.26,
                   "montagensPermitidas": [
                     "pedestal",
-                    "suspensa",
+                    "parede",
                     "chao"
                   ],
-                  "subcategoria": "15",
+                  "subcategoria": "10",
                   "spl": {
-                    "valor": 134,
+                    "valor": 121,
                     "unidade": "dB SPL @1m",
-                    "condicaoMedicao": "pico_campo_livre",
+                    "condicaoMedicao": "continuo_campo_livre",
                     "fonte": "demo:ficticio (dado inventado para demonstração; não é ficha de fabricante)",
                     "dataVerificacao": "2026-10-01",
                     "status": "declarado_fabricante"
@@ -2226,40 +2237,39 @@
                 "papel": "principal",
                 "lado": "R",
                 "posicao": {
-                  "x": 14.5,
+                  "x": 14.8,
                   "y": 2.5,
-                  "z": 2.36
+                  "z": 3.5
                 },
                 "mira": {
-                  "yaw": -17.281498371816646,
-                  "pitch": -4.1769414719321905
+                  "yaw": -17.975366865392044,
+                  "pitch": -8.208087394166911
                 },
-                "montagem": "pedestal",
+                "montagem": "parede",
                 "fonte": {
                   "tipo": "produto",
-                  "ref": "demo-ativa-15",
-                  "nome": "Demo Ativa 15",
+                  "ref": "demo-ativa-10",
+                  "nome": "Demo Ativa 10",
                   "cobertura": {
                     "H": 90,
-                    "V": 50
+                    "V": 60
                   },
                   "nivel": {
                     "tipo": "pontual",
-                    "spl1m": 128,
-                    "estimado": true,
-                    "aviso": "O fabricante publica só SPL de pico. Contínuo estimado = pico - 6 dB."
+                    "spl1m": 121,
+                    "estimado": false
                   },
-                  "meiaAltura": 0.36,
+                  "meiaAltura": 0.26,
                   "montagensPermitidas": [
                     "pedestal",
-                    "suspensa",
+                    "parede",
                     "chao"
                   ],
-                  "subcategoria": "15",
+                  "subcategoria": "10",
                   "spl": {
-                    "valor": 134,
+                    "valor": 121,
                     "unidade": "dB SPL @1m",
-                    "condicaoMedicao": "pico_campo_livre",
+                    "condicaoMedicao": "continuo_campo_livre",
                     "fonte": "demo:ficticio (dado inventado para demonstração; não é ficha de fabricante)",
                     "dataVerificacao": "2026-10-01",
                     "status": "declarado_fabricante"
@@ -2273,40 +2283,39 @@
                 "papel": "reforco",
                 "lado": "L",
                 "posicao": {
-                  "x": 0.5,
-                  "y": 15.25,
-                  "z": 2.36
+                  "x": 0.2,
+                  "y": 5.25,
+                  "z": 3.5
                 },
                 "mira": {
-                  "yaw": 35.67640822186198,
-                  "pitch": -8.248621994496302
+                  "yaw": 20.285333434232715,
+                  "pitch": -9.305188781010582
                 },
-                "montagem": "pedestal",
+                "montagem": "parede",
                 "fonte": {
                   "tipo": "produto",
-                  "ref": "demo-ativa-15",
-                  "nome": "Demo Ativa 15",
+                  "ref": "demo-ativa-10",
+                  "nome": "Demo Ativa 10",
                   "cobertura": {
                     "H": 90,
-                    "V": 50
+                    "V": 60
                   },
                   "nivel": {
                     "tipo": "pontual",
-                    "spl1m": 128,
-                    "estimado": true,
-                    "aviso": "O fabricante publica só SPL de pico. Contínuo estimado = pico - 6 dB."
+                    "spl1m": 121,
+                    "estimado": false
                   },
-                  "meiaAltura": 0.36,
+                  "meiaAltura": 0.26,
                   "montagensPermitidas": [
                     "pedestal",
-                    "suspensa",
+                    "parede",
                     "chao"
                   ],
-                  "subcategoria": "15",
+                  "subcategoria": "10",
                   "spl": {
-                    "valor": 134,
+                    "valor": 121,
                     "unidade": "dB SPL @1m",
-                    "condicaoMedicao": "pico_campo_livre",
+                    "condicaoMedicao": "continuo_campo_livre",
                     "fonte": "demo:ficticio (dado inventado para demonstração; não é ficha de fabricante)",
                     "dataVerificacao": "2026-10-01",
                     "status": "declarado_fabricante"
@@ -2320,40 +2329,39 @@
                 "papel": "reforco",
                 "lado": "R",
                 "posicao": {
-                  "x": 14.5,
-                  "y": 15.25,
-                  "z": 2.36
+                  "x": 14.8,
+                  "y": 5.25,
+                  "z": 3.5
                 },
                 "mira": {
-                  "yaw": -35.67640822186198,
-                  "pitch": -8.248621994496302
+                  "yaw": -20.28533343423272,
+                  "pitch": -9.305188781010582
                 },
-                "montagem": "pedestal",
+                "montagem": "parede",
                 "fonte": {
                   "tipo": "produto",
-                  "ref": "demo-ativa-15",
-                  "nome": "Demo Ativa 15",
+                  "ref": "demo-ativa-10",
+                  "nome": "Demo Ativa 10",
                   "cobertura": {
                     "H": 90,
-                    "V": 50
+                    "V": 60
                   },
                   "nivel": {
                     "tipo": "pontual",
-                    "spl1m": 128,
-                    "estimado": true,
-                    "aviso": "O fabricante publica só SPL de pico. Contínuo estimado = pico - 6 dB."
+                    "spl1m": 121,
+                    "estimado": false
                   },
-                  "meiaAltura": 0.36,
+                  "meiaAltura": 0.26,
                   "montagensPermitidas": [
                     "pedestal",
-                    "suspensa",
+                    "parede",
                     "chao"
                   ],
-                  "subcategoria": "15",
+                  "subcategoria": "10",
                   "spl": {
-                    "valor": 134,
+                    "valor": 121,
                     "unidade": "dB SPL @1m",
-                    "condicaoMedicao": "pico_campo_livre",
+                    "condicaoMedicao": "continuo_campo_livre",
                     "fonte": "demo:ficticio (dado inventado para demonstração; não é ficha de fabricante)",
                     "dataVerificacao": "2026-10-01",
                     "status": "declarado_fabricante"
@@ -2367,14 +2375,14 @@
               {
                 "caixaId": "RF-L",
                 "referenciaId": "P-L",
-                "distanciaExtra": 12.75,
-                "ms": 37.2
+                "distanciaExtra": 2.75,
+                "ms": 8
               },
               {
                 "caixaId": "RF-R",
                 "referenciaId": "P-R",
-                "distanciaExtra": 12.75,
-                "ms": 37.2
+                "distanciaExtra": 2.75,
+                "ms": 8
               }
             ],
             "frontFill": false,
@@ -2383,78 +2391,77 @@
                 {
                   "campo": "splContinuo1m",
                   "operador": ">=",
-                  "valor": 131,
+                  "valor": 129,
                   "unidade": "dB SPL",
-                  "texto": "SPL máximo contínuo a 1 m de pelo menos 131 dB (campo livre)"
+                  "texto": "SPL máximo contínuo a 1 m de pelo menos 129 dB (campo livre)"
                 },
                 {
                   "campo": "montagem",
                   "operador": "em",
-                  "valor": "pedestal",
+                  "valor": "parede",
                   "unidade": "",
-                  "texto": "Montagem: qualquer uma permitida pelo fabricante (o layout de referência usou pedestal)"
+                  "texto": "Montagem: qualquer uma permitida pelo fabricante (o layout de referência usou parede)"
                 },
                 {
                   "campo": "pesoMax",
                   "operador": "<=",
-                  "valor": 30,
+                  "valor": 40,
                   "unidade": "kg",
-                  "texto": "Peso de até 30 kg para pedestal"
+                  "texto": "Peso de até 40 kg para parede"
                 },
                 {
                   "campo": "coberturaH",
                   "operador": ">=",
                   "valor": 90,
                   "unidade": "graus",
-                  "texto": "Cobertura usada no layout: 90° x 50° (H x V)"
+                  "texto": "Cobertura usada no layout: 90° x 60° (H x V)"
                 }
               ],
               "reforco": [
                 {
                   "campo": "splContinuo1m",
                   "operador": ">=",
-                  "valor": 130,
+                  "valor": 133,
                   "unidade": "dB SPL",
-                  "texto": "SPL máximo contínuo a 1 m de pelo menos 130 dB (campo livre)"
+                  "texto": "SPL máximo contínuo a 1 m de pelo menos 133 dB (campo livre)"
                 },
                 {
                   "campo": "montagem",
                   "operador": "em",
-                  "valor": "pedestal",
+                  "valor": "parede",
                   "unidade": "",
-                  "texto": "Montagem: qualquer uma permitida pelo fabricante (o layout de referência usou pedestal)"
+                  "texto": "Montagem: qualquer uma permitida pelo fabricante (o layout de referência usou parede)"
                 },
                 {
                   "campo": "pesoMax",
                   "operador": "<=",
-                  "valor": 30,
+                  "valor": 40,
                   "unidade": "kg",
-                  "texto": "Peso de até 30 kg para pedestal"
+                  "texto": "Peso de até 40 kg para parede"
                 }
               ]
             },
             "avisos": [
-              "O fabricante publica só SPL de pico. Contínuo estimado = pico - 6 dB.",
-              "A distância até a última fileira (23.6 m) passa de 20 m. Par de reforço adicionado."
+              "A distância até a última fileira (23.8 m) passa de 20 m. Par de reforço adicionado."
             ]
           },
           "avaliacao": {
             "estados": [],
             "pct": {
-              "coberto": 0.9287878787878788,
-              "borda": 0.03484848484848485,
-              "fora": 0.03636363636363636
+              "coberto": 0.9136363636363637,
+              "borda": 0.045454545454545456,
+              "fora": 0.04090909090909091
             },
             "nivel": {
-              "min": 104.27142103187288,
-              "max": 120.87510242456474,
-              "uniformidade": 16.60368139269187,
-              "pontosAvaliados": 1226
+              "min": 94.6126870381012,
+              "max": 109.55659346836401,
+              "uniformidade": 14.943906430262814,
+              "pontosAvaliados": 1206
             },
             "pontosSemNivel": 0,
             "pontosSoGenericos": 0,
             "capacidade": "insuficiente",
-            "motivoCapacidade": "Nível mínimo calculado 104.3 dB abaixo do requerido 105 dB.",
+            "motivoCapacidade": "Nível mínimo calculado 94.6 dB abaixo do requerido 105 dB.",
             "nivelPorLinha": []
           }
         },
@@ -2465,15 +2472,18 @@
           "categoria": "caixa_ativa",
           "subcategoria": "10",
           "porte": "entrada",
-          "status": "nao_avaliavel",
+          "status": "incompativel",
           "motivos": [
-            "Falta dado de geometria na ficha: coberturaV."
+            "Nível mínimo calculado 93.6 dB abaixo do requerido 105 dB."
           ],
           "faltando": [
-            "coberturaV"
+            "respostaFrequencia"
           ],
-          "quantidadeCaixas": 0,
-          "avisos": [],
+          "quantidadeCaixas": 4,
+          "avisos": [
+            "A distância até a última fileira (23.8 m) passa de 20 m. Par de reforço adicionado."
+          ],
+          "splPublicado": 120,
           "faixa": {
             "minimo": 1500,
             "maximo": 2500,
@@ -2482,6 +2492,296 @@
             "ids": [
               "demo-fx-ativa10-e"
             ]
+          },
+          "configuracao": {
+            "arquitetura": "AR-1",
+            "variante": "reforco",
+            "caixas": [
+              {
+                "id": "P-L",
+                "papel": "principal",
+                "lado": "L",
+                "posicao": {
+                  "x": 0.2,
+                  "y": 2.5,
+                  "z": 3.5
+                },
+                "mira": {
+                  "yaw": 17.975366865392044,
+                  "pitch": -8.208087394166911
+                },
+                "montagem": "parede",
+                "fonte": {
+                  "tipo": "produto",
+                  "ref": "demo-ativa-10-incompleta",
+                  "nome": "Demo Ativa 10 Incompleta",
+                  "cobertura": {
+                    "H": 90,
+                    "V": 60
+                  },
+                  "nivel": {
+                    "tipo": "pontual",
+                    "spl1m": 120,
+                    "estimado": false
+                  },
+                  "meiaAltura": 0.3,
+                  "montagensPermitidas": [
+                    "pedestal",
+                    "parede"
+                  ],
+                  "subcategoria": "10",
+                  "spl": {
+                    "valor": 120,
+                    "unidade": "dB SPL @1m",
+                    "condicaoMedicao": "continuo_campo_livre",
+                    "fonte": "demo:ficticio (dado inventado para demonstração; não é ficha de fabricante)",
+                    "dataVerificacao": "2026-10-01",
+                    "status": "declarado_fabricante"
+                  },
+                  "estimativas": [
+                    "O fabricante não publica o ângulo de cobertura. Usamos 90° x 60° (valor de referência de caixas de duas vias, pendente de confirmação)."
+                  ]
+                },
+                "movida": false,
+                "numero": 1
+              },
+              {
+                "id": "P-R",
+                "papel": "principal",
+                "lado": "R",
+                "posicao": {
+                  "x": 14.8,
+                  "y": 2.5,
+                  "z": 3.5
+                },
+                "mira": {
+                  "yaw": -17.975366865392044,
+                  "pitch": -8.208087394166911
+                },
+                "montagem": "parede",
+                "fonte": {
+                  "tipo": "produto",
+                  "ref": "demo-ativa-10-incompleta",
+                  "nome": "Demo Ativa 10 Incompleta",
+                  "cobertura": {
+                    "H": 90,
+                    "V": 60
+                  },
+                  "nivel": {
+                    "tipo": "pontual",
+                    "spl1m": 120,
+                    "estimado": false
+                  },
+                  "meiaAltura": 0.3,
+                  "montagensPermitidas": [
+                    "pedestal",
+                    "parede"
+                  ],
+                  "subcategoria": "10",
+                  "spl": {
+                    "valor": 120,
+                    "unidade": "dB SPL @1m",
+                    "condicaoMedicao": "continuo_campo_livre",
+                    "fonte": "demo:ficticio (dado inventado para demonstração; não é ficha de fabricante)",
+                    "dataVerificacao": "2026-10-01",
+                    "status": "declarado_fabricante"
+                  },
+                  "estimativas": [
+                    "O fabricante não publica o ângulo de cobertura. Usamos 90° x 60° (valor de referência de caixas de duas vias, pendente de confirmação)."
+                  ]
+                },
+                "movida": false,
+                "numero": 2
+              },
+              {
+                "id": "RF-L",
+                "papel": "reforco",
+                "lado": "L",
+                "posicao": {
+                  "x": 0.2,
+                  "y": 5.25,
+                  "z": 3.5
+                },
+                "mira": {
+                  "yaw": 20.285333434232715,
+                  "pitch": -9.305188781010582
+                },
+                "montagem": "parede",
+                "fonte": {
+                  "tipo": "produto",
+                  "ref": "demo-ativa-10-incompleta",
+                  "nome": "Demo Ativa 10 Incompleta",
+                  "cobertura": {
+                    "H": 90,
+                    "V": 60
+                  },
+                  "nivel": {
+                    "tipo": "pontual",
+                    "spl1m": 120,
+                    "estimado": false
+                  },
+                  "meiaAltura": 0.3,
+                  "montagensPermitidas": [
+                    "pedestal",
+                    "parede"
+                  ],
+                  "subcategoria": "10",
+                  "spl": {
+                    "valor": 120,
+                    "unidade": "dB SPL @1m",
+                    "condicaoMedicao": "continuo_campo_livre",
+                    "fonte": "demo:ficticio (dado inventado para demonstração; não é ficha de fabricante)",
+                    "dataVerificacao": "2026-10-01",
+                    "status": "declarado_fabricante"
+                  },
+                  "estimativas": [
+                    "O fabricante não publica o ângulo de cobertura. Usamos 90° x 60° (valor de referência de caixas de duas vias, pendente de confirmação)."
+                  ]
+                },
+                "movida": false,
+                "numero": 3
+              },
+              {
+                "id": "RF-R",
+                "papel": "reforco",
+                "lado": "R",
+                "posicao": {
+                  "x": 14.8,
+                  "y": 5.25,
+                  "z": 3.5
+                },
+                "mira": {
+                  "yaw": -20.28533343423272,
+                  "pitch": -9.305188781010582
+                },
+                "montagem": "parede",
+                "fonte": {
+                  "tipo": "produto",
+                  "ref": "demo-ativa-10-incompleta",
+                  "nome": "Demo Ativa 10 Incompleta",
+                  "cobertura": {
+                    "H": 90,
+                    "V": 60
+                  },
+                  "nivel": {
+                    "tipo": "pontual",
+                    "spl1m": 120,
+                    "estimado": false
+                  },
+                  "meiaAltura": 0.3,
+                  "montagensPermitidas": [
+                    "pedestal",
+                    "parede"
+                  ],
+                  "subcategoria": "10",
+                  "spl": {
+                    "valor": 120,
+                    "unidade": "dB SPL @1m",
+                    "condicaoMedicao": "continuo_campo_livre",
+                    "fonte": "demo:ficticio (dado inventado para demonstração; não é ficha de fabricante)",
+                    "dataVerificacao": "2026-10-01",
+                    "status": "declarado_fabricante"
+                  },
+                  "estimativas": [
+                    "O fabricante não publica o ângulo de cobertura. Usamos 90° x 60° (valor de referência de caixas de duas vias, pendente de confirmação)."
+                  ]
+                },
+                "movida": false,
+                "numero": 4
+              }
+            ],
+            "atrasos": [
+              {
+                "caixaId": "RF-L",
+                "referenciaId": "P-L",
+                "distanciaExtra": 2.75,
+                "ms": 8
+              },
+              {
+                "caixaId": "RF-R",
+                "referenciaId": "P-R",
+                "distanciaExtra": 2.75,
+                "ms": 8
+              }
+            ],
+            "frontFill": false,
+            "requisitos": {
+              "principal": [
+                {
+                  "campo": "splContinuo1m",
+                  "operador": ">=",
+                  "valor": 129,
+                  "unidade": "dB SPL",
+                  "texto": "SPL máximo contínuo a 1 m de pelo menos 129 dB (campo livre)"
+                },
+                {
+                  "campo": "montagem",
+                  "operador": "em",
+                  "valor": "parede",
+                  "unidade": "",
+                  "texto": "Montagem: qualquer uma permitida pelo fabricante (o layout de referência usou parede)"
+                },
+                {
+                  "campo": "pesoMax",
+                  "operador": "<=",
+                  "valor": 40,
+                  "unidade": "kg",
+                  "texto": "Peso de até 40 kg para parede"
+                },
+                {
+                  "campo": "coberturaH",
+                  "operador": ">=",
+                  "valor": 90,
+                  "unidade": "graus",
+                  "texto": "Cobertura usada no layout: 90° x 60° (H x V)"
+                }
+              ],
+              "reforco": [
+                {
+                  "campo": "splContinuo1m",
+                  "operador": ">=",
+                  "valor": 133,
+                  "unidade": "dB SPL",
+                  "texto": "SPL máximo contínuo a 1 m de pelo menos 133 dB (campo livre)"
+                },
+                {
+                  "campo": "montagem",
+                  "operador": "em",
+                  "valor": "parede",
+                  "unidade": "",
+                  "texto": "Montagem: qualquer uma permitida pelo fabricante (o layout de referência usou parede)"
+                },
+                {
+                  "campo": "pesoMax",
+                  "operador": "<=",
+                  "valor": 40,
+                  "unidade": "kg",
+                  "texto": "Peso de até 40 kg para parede"
+                }
+              ]
+            },
+            "avisos": [
+              "A distância até a última fileira (23.8 m) passa de 20 m. Par de reforço adicionado."
+            ]
+          },
+          "avaliacao": {
+            "estados": [],
+            "pct": {
+              "coberto": 0.9136363636363637,
+              "borda": 0.045454545454545456,
+              "fora": 0.04090909090909091
+            },
+            "nivel": {
+              "min": 93.6126870381012,
+              "max": 108.55659346836401,
+              "uniformidade": 14.943906430262814,
+              "pontosAvaliados": 1206
+            },
+            "pontosSemNivel": 0,
+            "pontosSoGenericos": 0,
+            "capacidade": "insuficiente",
+            "motivoCapacidade": "Nível mínimo calculado 93.6 dB abaixo do requerido 105 dB.",
+            "nivelPorLinha": []
           }
         }
       ],
@@ -2675,6 +2975,113 @@
     },
     "orcamento": null,
     "palco": {
+      "inputList": [
+        {
+          "canal": 1,
+          "fonte": "Bateria - bumbo",
+          "captacao": "Microfone de bumbo",
+          "pedestal": "Pedestal baixo",
+          "phantom": false
+        },
+        {
+          "canal": 2,
+          "fonte": "Bateria - caixa",
+          "captacao": "Microfone dinâmico",
+          "pedestal": "Clamp na caixa",
+          "phantom": false
+        },
+        {
+          "canal": 3,
+          "fonte": "Bateria - overhead esquerdo",
+          "captacao": "Microfone condensador",
+          "pedestal": "Girafa alta",
+          "phantom": true
+        },
+        {
+          "canal": 4,
+          "fonte": "Bateria - overhead direito",
+          "captacao": "Microfone condensador",
+          "pedestal": "Girafa alta",
+          "phantom": true
+        },
+        {
+          "canal": 5,
+          "fonte": "Baixo",
+          "captacao": "Direct box",
+          "pedestal": "-",
+          "phantom": false
+        },
+        {
+          "canal": 6,
+          "fonte": "Guitarra",
+          "captacao": "Microfone dinâmico no amplificador",
+          "pedestal": "Pedestal baixo",
+          "phantom": false
+        },
+        {
+          "canal": 7,
+          "fonte": "Teclado L",
+          "captacao": "Direct box",
+          "pedestal": "-",
+          "phantom": false
+        },
+        {
+          "canal": 8,
+          "fonte": "Teclado R",
+          "captacao": "Direct box",
+          "pedestal": "-",
+          "phantom": false
+        },
+        {
+          "canal": 9,
+          "fonte": "Violão",
+          "captacao": "Direct box",
+          "pedestal": "-",
+          "phantom": false
+        },
+        {
+          "canal": 10,
+          "fonte": "Voz sem fio (pregador)",
+          "captacao": "Receptor sem fio",
+          "pedestal": "-",
+          "phantom": false
+        },
+        {
+          "canal": 11,
+          "fonte": "Voz 1",
+          "captacao": "Microfone de mão com fio",
+          "pedestal": "Pedestal girafa",
+          "phantom": false
+        },
+        {
+          "canal": 12,
+          "fonte": "Voz 2",
+          "captacao": "Microfone de mão com fio",
+          "pedestal": "Pedestal girafa",
+          "phantom": false
+        },
+        {
+          "canal": 13,
+          "fonte": "Voz 3",
+          "captacao": "Microfone de mão com fio",
+          "pedestal": "Pedestal girafa",
+          "phantom": false
+        },
+        {
+          "canal": 14,
+          "fonte": "Computador / playback L",
+          "captacao": "Cabo de linha (P2/RCA para P10)",
+          "pedestal": "-",
+          "phantom": false
+        },
+        {
+          "canal": 15,
+          "fonte": "Computador / playback R",
+          "captacao": "Cabo de linha (P2/RCA para P10)",
+          "pedestal": "-",
+          "phantom": false
+        }
+      ],
       "estimados": [],
       "entradas": [
         {
@@ -2907,16 +3314,17 @@
         },
         {
           "id": "voz-sem-fio",
-          "descricao": "Microfone sem fio (de mão) para voz que anda ou pregador",
+          "descricao": "Sistema de microfone sem fio (de mão) para quem anda pelo palco ou prega",
           "quantidade": 1,
           "ref": "demo-sem-fio-mao",
           "nome": "Demo Sem Fio Mão",
           "tipo": "produto",
-          "estimado": false
+          "estimado": false,
+          "detalhe": "1 microfone(s) sem fio; 1 microfone(s) por sistema"
         },
         {
           "id": "kit-bateria",
-          "descricao": "Kit de microfones de bateria (4 peças)",
+          "descricao": "Kit de microfones de bateria (pelo menos 4 peças)",
           "quantidade": 1,
           "ref": "demo-kit-bateria",
           "nome": "Demo Kit Bateria",
@@ -2936,7 +3344,7 @@
       "retorno": [
         {
           "id": "in-ear-tx",
-          "descricao": "Transmissor de in-ear",
+          "descricao": "Transmissor de fone de retorno (in-ear)",
           "quantidade": 2,
           "ref": "demo-in-ear",
           "nome": "Demo In-Ear",
@@ -2946,7 +3354,7 @@
         },
         {
           "id": "in-ear-rx",
-          "descricao": "Receptor de in-ear (1 por músico)",
+          "descricao": "Receptor de fone de retorno (1 por músico; o fone é à parte)",
           "quantidade": 2,
           "ref": "demo-in-ear",
           "nome": "Demo In-Ear",
@@ -3055,8 +3463,8 @@
     "conclusoes": [
       {
         "id": "nivel-alvo",
-        "titulo": "Nível sonoro necessário",
-        "texto": "Nível-alvo médio de 95 dB SPL no ouvinte, com reserva dinâmica de 10 dB. A caixa precisa entregar 105 dB na área coberta. Uso misto: vale o maior nível-alvo entre os usos (banda com bateria). Ajuste por ruído do local: +0 dB.",
+        "titulo": "Volume necessário",
+        "texto": "Para este uso, o som precisa chegar a cerca de 95 dB em quem está sentado, com folga de 10 dB para os momentos mais fortes. Ou seja, a caixa precisa entregar 105 dB na área do público. Como o local tem mais de um uso, valeu o mais exigente (banda com bateria). Somamos 0 dB por causa do barulho do local.",
         "entradas": [
           "Usos: banda ao vivo, fala/pregação (informado)",
           "Formação da banda: banda_bateria",
@@ -3132,8 +3540,8 @@
       },
       {
         "id": "escopo",
-        "titulo": "Dentro do modelo?",
-        "texto": "O ambiente está dentro do envelope do MVP.",
+        "titulo": "O sistema consegue calcular o seu espaço?",
+        "texto": "O seu espaço está dentro do que o sistema calcula.",
         "entradas": [
           "Sala: 15,0 m de largura x 25,0 m de profundidade x 6,0 m de pé-direito (informado)",
           "Palco: 3,0 m de profundidade (padrão)",
@@ -3169,8 +3577,8 @@
       },
       {
         "id": "arquitetura",
-        "titulo": "Configuração recomendada",
-        "texto": "Recomendação: Duas caixas ativas na frente, uma de cada lado do palco. A arquitetura preferida não tem produto compatível no catálogo verificado. Caixas convencionais atende com produto do catálogo.",
+        "titulo": "Sistema recomendado",
+        "texto": "Recomendamos duas caixas de som na frente, uma de cada lado do palco. O tipo de sistema que seria o primeiro da lista não tem modelo que atenda no catálogo. Caixas comuns atendem com modelos do catálogo.",
         "entradas": [
           "Sala: 15,0 m de largura x 25,0 m de profundidade x 6,0 m de pé-direito (informado)",
           "Palco: 3,0 m de profundidade (padrão)",
@@ -3195,8 +3603,8 @@
       },
       {
         "id": "caixas",
-        "titulo": "Quantidade e tipo de caixas",
-        "texto": "2 x Demo Ativa 15 Pro (principal, em pedestal); 2 x Demo Ativa 15 Pro (reforço/delay, em pedestal); 4 x Demo Sub 18 (subwoofer, apoiada no chão). A quantidade sai da regra da arquitetura AR-1 e do recálculo com os dados reais do produto.",
+        "titulo": "Quantas caixas e de que tipo",
+        "texto": "Você vai precisar de: 2 x Demo Ativa 15 Pro (caixa principal, em pedestal); 2 x Demo Ativa 15 Pro (caixa de apoio do meio do salão, em pedestal); 4 x Demo Sub 18 (subwoofer, apoiada no chão). A quantidade sai do tamanho da sala e foi conferida com os dados do modelo escolhido.",
         "entradas": [
           "Sala: 15,0 m de largura x 25,0 m de profundidade x 6,0 m de pé-direito (informado)",
           "Palco: 3,0 m de profundidade (padrão)",
@@ -3239,7 +3647,7 @@
       {
         "id": "caixa:P-L",
         "titulo": "Caixa 1",
-        "texto": "Caixa 1 (principal): em pedestal, centro acústico a 2,37 m de altura, em x = 0,50 m e y = 2,50 m. Direção: 17° na horizontal (0° = para o fundo) e -4° na vertical. A direção horizontal mira o centro da última fileira; a inclinação mira 2/3 da profundidade da área de público.",
+        "texto": "Caixa 1 (caixa principal), em pedestal. Altura: 2,37 m do chão até o centro da caixa. Posição: 0,50 m da parede lateral e 2,50 m da parede do palco. Direção: 17° para o lado e -4° para baixo. Ela aponta para o centro da última fileira e fica levemente inclinada para baixo, mirando o público e não as paredes.",
         "entradas": [
           "Sala: 15,0 m de largura x 25,0 m de profundidade x 6,0 m de pé-direito (informado)",
           "Palco: 3,0 m de profundidade (padrão)",
@@ -3279,7 +3687,7 @@
       {
         "id": "caixa:P-R",
         "titulo": "Caixa 2",
-        "texto": "Caixa 2 (principal): em pedestal, centro acústico a 2,37 m de altura, em x = 14,50 m e y = 2,50 m. Direção: -17° na horizontal (0° = para o fundo) e -4° na vertical. A direção horizontal mira o centro da última fileira; a inclinação mira 2/3 da profundidade da área de público.",
+        "texto": "Caixa 2 (caixa principal), em pedestal. Altura: 2,37 m do chão até o centro da caixa. Posição: 14,50 m da parede lateral e 2,50 m da parede do palco. Direção: -17° para o lado e -4° para baixo. Ela aponta para o centro da última fileira e fica levemente inclinada para baixo, mirando o público e não as paredes.",
         "entradas": [
           "Sala: 15,0 m de largura x 25,0 m de profundidade x 6,0 m de pé-direito (informado)",
           "Palco: 3,0 m de profundidade (padrão)",
@@ -3319,7 +3727,7 @@
       {
         "id": "caixa:RF-L",
         "titulo": "Caixa 3",
-        "texto": "Caixa 3 (reforço/delay): em pedestal, centro acústico a 2,37 m de altura, em x = 0,50 m e y = 20,75 m. Direção: 59° na horizontal (0° = para o fundo) e -12° na vertical. A direção horizontal mira o centro da última fileira; a inclinação mira 2/3 da profundidade da área de público.",
+        "texto": "Caixa 3 (caixa de apoio do meio do salão), em pedestal. Altura: 2,37 m do chão até o centro da caixa. Posição: 0,50 m da parede lateral e 20,75 m da parede do palco. Direção: 59° para o lado e -12° para baixo. Ela aponta para o centro da última fileira e fica levemente inclinada para baixo, mirando o público e não as paredes.",
         "entradas": [
           "Sala: 15,0 m de largura x 25,0 m de profundidade x 6,0 m de pé-direito (informado)",
           "Palco: 3,0 m de profundidade (padrão)",
@@ -3359,7 +3767,7 @@
       {
         "id": "caixa:RF-R",
         "titulo": "Caixa 4",
-        "texto": "Caixa 4 (reforço/delay): em pedestal, centro acústico a 2,37 m de altura, em x = 14,50 m e y = 20,75 m. Direção: -59° na horizontal (0° = para o fundo) e -12° na vertical. A direção horizontal mira o centro da última fileira; a inclinação mira 2/3 da profundidade da área de público.",
+        "texto": "Caixa 4 (caixa de apoio do meio do salão), em pedestal. Altura: 2,37 m do chão até o centro da caixa. Posição: 14,50 m da parede lateral e 20,75 m da parede do palco. Direção: -59° para o lado e -12° para baixo. Ela aponta para o centro da última fileira e fica levemente inclinada para baixo, mirando o público e não as paredes.",
         "entradas": [
           "Sala: 15,0 m de largura x 25,0 m de profundidade x 6,0 m de pé-direito (informado)",
           "Palco: 3,0 m de profundidade (padrão)",
@@ -3399,7 +3807,7 @@
       {
         "id": "caixa:SUB-L-1",
         "titulo": "Caixa 5",
-        "texto": "Caixa 5 (subwoofer): apoiada no chão, centro acústico a 0,30 m de altura, em x = 1,40 m e y = 2,50 m. Direção: 0° na horizontal (0° = para o fundo) e 0° na vertical. O comportamento dos graves depende da sala. Ajuste no local.",
+        "texto": "Caixa 5 (subwoofer), apoiada no chão. Altura: 0,30 m do chão até o centro da caixa. Posição: 1,40 m da parede lateral e 2,50 m da parede do palco. Direção: 0° para o lado e 0° para baixo. O grave se comporta diferente em cada sala: ajuste no local.",
         "entradas": [
           "Sala: 15,0 m de largura x 25,0 m de profundidade x 6,0 m de pé-direito (informado)",
           "Palco: 3,0 m de profundidade (padrão)",
@@ -3421,7 +3829,7 @@
       {
         "id": "caixa:SUB-L-2",
         "titulo": "Caixa 6",
-        "texto": "Caixa 6 (subwoofer): apoiada no chão, centro acústico a 0,30 m de altura, em x = 2,30 m e y = 2,50 m. Direção: 0° na horizontal (0° = para o fundo) e 0° na vertical. O comportamento dos graves depende da sala. Ajuste no local.",
+        "texto": "Caixa 6 (subwoofer), apoiada no chão. Altura: 0,30 m do chão até o centro da caixa. Posição: 2,30 m da parede lateral e 2,50 m da parede do palco. Direção: 0° para o lado e 0° para baixo. O grave se comporta diferente em cada sala: ajuste no local.",
         "entradas": [
           "Sala: 15,0 m de largura x 25,0 m de profundidade x 6,0 m de pé-direito (informado)",
           "Palco: 3,0 m de profundidade (padrão)",
@@ -3443,7 +3851,7 @@
       {
         "id": "caixa:SUB-R-1",
         "titulo": "Caixa 7",
-        "texto": "Caixa 7 (subwoofer): apoiada no chão, centro acústico a 0,30 m de altura, em x = 13,60 m e y = 2,50 m. Direção: 0° na horizontal (0° = para o fundo) e 0° na vertical. O comportamento dos graves depende da sala. Ajuste no local.",
+        "texto": "Caixa 7 (subwoofer), apoiada no chão. Altura: 0,30 m do chão até o centro da caixa. Posição: 13,60 m da parede lateral e 2,50 m da parede do palco. Direção: 0° para o lado e 0° para baixo. O grave se comporta diferente em cada sala: ajuste no local.",
         "entradas": [
           "Sala: 15,0 m de largura x 25,0 m de profundidade x 6,0 m de pé-direito (informado)",
           "Palco: 3,0 m de profundidade (padrão)",
@@ -3465,7 +3873,7 @@
       {
         "id": "caixa:SUB-R-2",
         "titulo": "Caixa 8",
-        "texto": "Caixa 8 (subwoofer): apoiada no chão, centro acústico a 0,30 m de altura, em x = 12,70 m e y = 2,50 m. Direção: 0° na horizontal (0° = para o fundo) e 0° na vertical. O comportamento dos graves depende da sala. Ajuste no local.",
+        "texto": "Caixa 8 (subwoofer), apoiada no chão. Altura: 0,30 m do chão até o centro da caixa. Posição: 12,70 m da parede lateral e 2,50 m da parede do palco. Direção: 0° para o lado e 0° para baixo. O grave se comporta diferente em cada sala: ajuste no local.",
         "entradas": [
           "Sala: 15,0 m de largura x 25,0 m de profundidade x 6,0 m de pé-direito (informado)",
           "Palco: 3,0 m de profundidade (padrão)",
@@ -3486,8 +3894,8 @@
       },
       {
         "id": "cobertura",
-        "titulo": "Cobertura nominal",
-        "texto": "90% da área de público fica dentro da cobertura nominal, 4% na borda e 5% fora. Cobertura nominal declarada pelo fabricante. Aproximação geométrica, não é medição.",
+        "titulo": "Onde o som chega bem",
+        "texto": "O som chega bem em 90% da área do público, mais fraco em 4% e fica fora do alcance principal em 5%. A área vem do ângulo que o fabricante declara para a caixa. É uma conta de geometria, não uma medição.",
         "entradas": [
           "Sala: 15,0 m de largura x 25,0 m de profundidade x 6,0 m de pé-direito (informado)",
           "Palco: 3,0 m de profundidade (padrão)",
@@ -3524,6 +3932,7 @@
         ],
         "hipoteses": [],
         "limitacoes": [
+          "Cobertura nominal declarada pelo fabricante. Aproximação geométrica, não é medição.",
           "Não atribui atenuação em dB fora do eixo.",
           "Sala modelada como retângulo, sem obstáculos.",
           "Não calcula reflexões, RT60 nem STI."
@@ -3531,8 +3940,8 @@
       },
       {
         "id": "capacidade",
-        "titulo": "Capacidade sonora",
-        "texto": "Recomendação geométrica disponível. Capacidade sonora validada com dados do fabricante: nível mínimo calculado 105,6 dB, requerido 105 dB.",
+        "titulo": "O volume é suficiente?",
+        "texto": "A posição das caixas está calculada. O volume é suficiente pelos dados do fabricante: no ponto mais distante chega a 105,6 dB e o necessário é 105 dB.",
         "entradas": [
           "Requerido: 105 dB (alvo 95 + reserva 10)"
         ],
@@ -3557,8 +3966,8 @@
       },
       {
         "id": "requisitos",
-        "titulo": "Características mínimas de cada caixa",
-        "texto": "Características mínimas de cada caixa principal: SPL máximo contínuo a 1 m de pelo menos 133 dB (campo livre); Montagem: qualquer uma permitida pelo fabricante (o layout de referência usou parede); Peso de até 40 kg para parede; Cobertura usada no layout: 90° x 60° (H x V).",
+        "titulo": "O que a caixa precisa ter",
+        "texto": "O que a caixa principal precisa ter: SPL máximo contínuo a 1 m de pelo menos 133 dB (campo livre); Montagem: qualquer uma permitida pelo fabricante (o layout de referência usou parede); Peso de até 40 kg para parede; Cobertura usada no layout: 90° x 60° (H x V).",
         "entradas": [],
         "regra": "C8 passo 2: requisitos calculados para o caso",
         "parametros": [
@@ -3583,7 +3992,7 @@
       {
         "id": "produtos",
         "titulo": "Produtos do catálogo",
-        "texto": "6 produto(s) do catálogo avaliado(s): 1 compatível(is), 1 parcial(is), 3 incompatível(is), 1 não avaliável(is). Ordem: (1) status de compatibilidade, (2) menos caixas, (3) maior margem de nível até +6 dB, (4) menor faixa de investimento. Nenhuma marca recebe bônus.",
+        "texto": "Avaliamos 6 modelo(s): 1 atende(m), 2 atende(m) com dados a confirmar, 3 não atende(m) e 0 sem dados suficientes. A ordem segue só critérios técnicos: (1) se atende, (2) menos caixas, (3) mais folga de volume (até +6 dB), (4) menor investimento. Nenhuma marca ganha ponto extra.",
         "entradas": [],
         "regra": "C7 status de compatibilidade; C8 ranking",
         "parametros": [
@@ -3630,12 +4039,10 @@
         ]
       },
       {
-        "id": "produto:demo-ativa-12-sem-spl",
-        "titulo": "Demo Ativa 12 Sem SPL",
-        "texto": "Status: parcial. Capacidade sonora pendente: O fabricante não publica SPL máximo.",
-        "entradas": [
-          "Falta na ficha: splMax"
-        ],
+        "id": "produto:demo-ativa-15",
+        "titulo": "Demo Ativa 15",
+        "texto": "Status: parcial. Capacidade sonora estimada: Com o dado estimado, o volume mínimo calculado (104.3 dB) fica abaixo do necessário (105 dB). A estimativa é conservadora: confirme com a ficha do fabricante.",
+        "entradas": [],
         "regra": "C7 status de compatibilidade",
         "parametros": [
           {
@@ -3656,14 +4063,18 @@
         ],
         "hipoteses": [],
         "limitacoes": [
-          "A distância até a última fileira (23.8 m) passa de 20 m. Par de reforço adicionado."
+          "O fabricante publica só SPL de pico. Contínuo estimado = pico - 6 dB.",
+          "A distância até a última fileira (23.6 m) passa de 20 m. Par de reforço adicionado.",
+          "Variação de nível na área coberta de 16.6 dB (critério: até 6 dB). O modelo não atenua fora do eixo, então a variação real tende a ser diferente."
         ]
       },
       {
-        "id": "produto:demo-ativa-10",
-        "titulo": "Demo Ativa 10",
-        "texto": "Status: incompativel. Nível mínimo calculado 94.6 dB abaixo do requerido 105 dB.",
-        "entradas": [],
+        "id": "produto:demo-ativa-12-sem-spl",
+        "titulo": "Demo Ativa 12 Sem SPL",
+        "texto": "Status: parcial. Capacidade sonora pendente: O fabricante não publica SPL máximo.",
+        "entradas": [
+          "Falta na ficha: splMax"
+        ],
         "regra": "C7 status de compatibilidade",
         "parametros": [
           {
@@ -3716,9 +4127,9 @@
         ]
       },
       {
-        "id": "produto:demo-ativa-15",
-        "titulo": "Demo Ativa 15",
-        "texto": "Status: incompativel. Nível mínimo calculado 104.3 dB abaixo do requerido 105 dB.",
+        "id": "produto:demo-ativa-10",
+        "titulo": "Demo Ativa 10",
+        "texto": "Status: incompativel. Nível mínimo calculado 94.6 dB abaixo do requerido 105 dB.",
         "entradas": [],
         "regra": "C7 status de compatibilidade",
         "parametros": [
@@ -3740,16 +4151,15 @@
         ],
         "hipoteses": [],
         "limitacoes": [
-          "O fabricante publica só SPL de pico. Contínuo estimado = pico - 6 dB.",
-          "A distância até a última fileira (23.6 m) passa de 20 m. Par de reforço adicionado."
+          "A distância até a última fileira (23.8 m) passa de 20 m. Par de reforço adicionado."
         ]
       },
       {
         "id": "produto:demo-ativa-10-incompleta",
         "titulo": "Demo Ativa 10 Incompleta",
-        "texto": "Status: nao avaliavel. Falta dado de geometria na ficha: coberturaV.",
+        "texto": "Status: incompativel. Nível mínimo calculado 93.6 dB abaixo do requerido 105 dB.",
         "entradas": [
-          "Falta na ficha: coberturaV"
+          "Falta na ficha: respostaFrequencia"
         ],
         "regra": "C7 status de compatibilidade",
         "parametros": [
@@ -3770,12 +4180,14 @@
           }
         ],
         "hipoteses": [],
-        "limitacoes": []
+        "limitacoes": [
+          "A distância até a última fileira (23.8 m) passa de 20 m. Par de reforço adicionado."
+        ]
       },
       {
         "id": "sub",
         "titulo": "Subwoofer",
-        "texto": "Subwoofer recomendado: o uso inclui banda com bateria. 2 por lado (pareamento publicado pelo fabricante), no chão, ao lado das caixas principais. O comportamento dos graves depende da sala. Ajuste no local.",
+        "texto": "Recomendamos subwoofer porque o uso inclui banda com bateria, que pede grave forte. 2 por lado (pareamento publicado pelo fabricante), no chão, ao lado das caixas principais. O grave se comporta diferente em cada sala: ajuste no local.",
         "entradas": [
           "Usos: banda ao vivo, fala/pregação (informado)",
           "Formação da banda: banda_bateria"
@@ -3836,8 +4248,8 @@
       },
       {
         "id": "reforco",
-        "titulo": "Reforço / delay",
-        "texto": "Par de reforço em y = 20,8 m. Atraso de referência: 53,2 ms (18,25 m / 343 m/s). Referência inicial. O valor final é ajustado com medição no local.",
+        "titulo": "Caixas de apoio no meio do salão",
+        "texto": "Para quem senta longe, colocamos um segundo par de caixas a 20,8 m do palco. Atraso inicial sugerido: 53,2 ms. Esse valor é só um ponto de partida e deve ser ajustado no local.",
         "entradas": [],
         "regra": "C5: reforço na posição em que o nível cai abaixo do alvo, ou na distância máxima da fonte pontual",
         "parametros": [
@@ -3864,8 +4276,8 @@
       },
       {
         "id": "reverberacao",
-        "titulo": "Acústica da sala",
-        "texto": "Risco médio de reverberação (3 pontos). Reverberação moderada. Mire as caixas no público e evite apontá-las para paredes lisas ou vidro.",
+        "titulo": "Eco da sala",
+        "texto": "Eco da sala: médio (3 de 5 pontos). A sala tem um pouco de eco. Aponte as caixas para o público e evite mirar em paredes lisas ou vidro.",
         "entradas": [
           "Superfícies: mistas",
           "Palma ecoa: um_pouco",
@@ -3904,8 +4316,8 @@
       },
       {
         "id": "pagnag",
-        "titulo": "Risco de microfonia",
-        "texto": "PAG 36,5 dB, NAG 27,6 dB, margem 8,8 dB: risco baixo de microfonia. Estimativa simplificada (lei do inverso do quadrado). Não substitui teste no local.",
+        "titulo": "Risco de microfonia (apito)",
+        "texto": "Risco de microfonia (apito): baixo. Folga calculada de 8,8 dB. É uma estimativa simples, pelas distâncias. Teste sempre no local.",
         "entradas": [
           "D0 (falante -> ouvinte mais distante): 23,55 m",
           "D1 (microfone -> caixa mais próxima): 7,05 m",
@@ -3941,13 +4353,14 @@
           "Microfone no centro, na frente do palco."
         ],
         "limitacoes": [
+          "Estimativa simplificada (lei do inverso do quadrado). Não substitui teste no local.",
           "Sinal de risco, não garantia."
         ]
       },
       {
         "id": "investimento",
         "titulo": "Investimento estimado",
-        "texto": "Investimento estimado em equipamentos: R$ 65.000 a R$ 109.000 (referência de mercado em 10/2026, sem instalação).",
+        "texto": "Investimento estimado em equipamentos: R$ 65.000 a R$ 109.000 (referência de preço de 10/2026, sem instalação).",
         "entradas": [],
         "regra": "C7: soma das faixas por categoria e porte; faixa vencida não aparece",
         "parametros": [
@@ -3965,8 +4378,8 @@
       },
       {
         "id": "palco:entradas",
-        "titulo": "Canais da mesa",
-        "texto": "15 canais (13 de microfone). Com 20% de reserva: 18. Mesa de 18 canais.",
+        "titulo": "Quantos canais na mesa",
+        "texto": "Vocês vão usar 15 canais na mesa (13 de microfone ou direct box). Com folga de 20%: 18. Mesa sugerida: 18 canais ou mais.",
         "entradas": [
           "Voz (com fio): 3 x 1 canal(is)",
           "Voz (sem fio): 1 x 1 canal(is)",
@@ -4074,7 +4487,7 @@
       {
         "id": "palco:microfones",
         "titulo": "Microfones",
-        "texto": "3 x Microfone de mão com fio para voz parada; 1 x Microfone sem fio (de mão) para voz que anda ou pregador; 1 x Kit de microfones de bateria (4 peças); 1 x Microfone dinâmico para instrumento (amplificador de guitarra, sopro, outros).",
+        "texto": "3 x Microfone de mão com fio para voz parada; 1 x Sistema de microfone sem fio (de mão) para quem anda pelo palco ou prega; 1 x Kit de microfones de bateria (pelo menos 4 peças); 1 x Microfone dinâmico para instrumento (amplificador de guitarra, sopro, outros).",
         "entradas": [],
         "regra": "C6: voz parada com fio; voz que anda ou pregador sem fio; instrumento com saída de linha usa DI",
         "parametros": [],
@@ -4083,8 +4496,8 @@
       },
       {
         "id": "palco:retorno",
-        "titulo": "Retorno",
-        "texto": "4 mixagem(ns): 2 in-ear e 2 monitor de chão.",
+        "titulo": "Retorno para os músicos",
+        "texto": "4 músico(s) com retorno próprio: 2 com fone (in-ear) e 2 com caixa no chão.",
         "entradas": [],
         "regra": "C6: in-ear com 1 receptor por músico; monitor de chão 1 por mixagem; in-ear estéreo conta 2 aux",
         "parametros": [],
@@ -4093,8 +4506,8 @@
       },
       {
         "id": "palco:rf",
-        "titulo": "Sem fio (RF)",
-        "texto": "3 canal(is) sem fio. Siga as orientações básicas. Use apenas equipamento homologado pela Anatel. Evite a faixa de 698-806 MHz, destinada à telefonia móvel (4G/5G). Prefira sistemas da mesma família/fabricante, com varredura automática de frequência. Mantenha linha de visada entre o transmissor e a antena. Afaste as antenas dos transmissores de in-ear das antenas dos receptores de microfone. O espectro livre varia por cidade. O sistema não verifica as frequências locais.",
+        "titulo": "Aparelhos sem fio",
+        "texto": "3 aparelho(s) sem fio. Siga as orientações básicas. Use apenas equipamento homologado pela Anatel. Evite a faixa de 698-806 MHz, destinada à telefonia móvel (4G/5G). Prefira sistemas da mesma família/fabricante, com varredura automática de frequência. Mantenha linha de visada entre o transmissor e a antena. Afaste as antenas dos transmissores de in-ear das antenas dos receptores de microfone. O espectro livre varia por cidade. O sistema não verifica as frequências locais.",
         "entradas": [],
         "regra": "C6: orientação, não coordenação de frequências",
         "parametros": [
@@ -4125,8 +4538,8 @@
       },
       {
         "id": "palco:acessorios",
-        "titulo": "Acessórios",
-        "texto": "Cabos com comprimento medido na planta (mesa no fundo, centro) + 20% de folga, arredondado para 5, 10, 15, 20, 30 m.",
+        "titulo": "Cabos e acessórios",
+        "texto": "Medimos na planta a distância da mesa (no fundo, centro) até cada ponto, somamos 20% de folga e arredondamos para os tamanhos de cabo vendidos (5, 10, 15, 20, 30 m).",
         "entradas": [],
         "regra": "C6: XLR por microfone com fio, DI, monitor e caixa ativa; pedestais e suportes por regra; 1 régua por posição; multicabo acima do limiar",
         "parametros": [

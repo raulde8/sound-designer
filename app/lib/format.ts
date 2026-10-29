@@ -28,5 +28,5 @@ export const STATUS_ACUSTICA: Record<string, string> = {
   nao_aplicavel: "Acústica: classe não se aplica (ambiente não fechado)",
 };
 
-export const PAPEL: Record<string, string> = { principal: "Principal", front_fill: "Front-fill", reforco: "Reforço / delay", sub: "Subwoofer" };
-export const MONTAGEM: Record<string, string> = { pedestal: "Pedestal", parede: "Parede", suspensa: "Suspensa", chao: "No chão" };
+export const PAPEL: Record<string, string> = { principal: "Caixa principal", front_fill: "Caixa de apoio da frente", reforco: "Caixa de apoio do meio do salão", sub: "Subwoofer" };
+export const MONTAGEM: Record<string, string> = { pedestal: "em pedestal (tripé)", parede: "na parede, com suporte", suspensa: "suspensa", chao: "apoiada no chão" };

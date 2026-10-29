@@ -83,7 +83,7 @@ export function Planta({ largura: W, profundidade: D, profundidadePalco, configu
         {/* Palco */}
         <rect x={0} y={0} width={W} height={profundidadePalco} fill="#eef0f4" stroke="#6b7489" strokeWidth={0.05} />
         <text x={W / 2} y={Math.max(f * 1.2, profundidadePalco / 2)} fontSize={f} textAnchor="middle" fill="#4a5468">
-          PALCO
+          PALCO / ALTAR
         </text>
         <text x={W / 2} y={D + pad * 0.7} fontSize={f * 0.85} textAnchor="middle" fill="#6b7489">
           fundo · {fmt(W)} m x {fmt(D)} m
@@ -92,7 +92,7 @@ export function Planta({ largura: W, profundidade: D, profundidadePalco, configu
           <g>
             <circle cx={sx(microfone.x)} cy={microfone.y} r={f * 0.25} fill="#1b2230" />
             <text x={sx(microfone.x) + f * 0.4} y={microfone.y + f * 0.3} fontSize={f * 0.7} fill="#1b2230">
-              mic
+              microfone
             </text>
           </g>
         ) : null}
@@ -100,7 +100,7 @@ export function Planta({ largura: W, profundidade: D, profundidadePalco, configu
           <g>
             <rect x={sx(mesa.x) - f * 0.6} y={mesa.y - f * 0.35} width={f * 1.2} height={f * 0.7} fill="#1b2230" />
             <text x={sx(mesa.x)} y={mesa.y - f * 0.6} fontSize={f * 0.7} textAnchor="middle" fill="#1b2230">
-              mesa
+              mesa de som
             </text>
           </g>
         ) : null}
@@ -148,14 +148,14 @@ export function Planta({ largura: W, profundidade: D, profundidadePalco, configu
                 onMover?.(c.id, Math.min(W, Math.max(0, atual.x + d[0]!)), Math.min(D, Math.max(0, atual.y + d[1]!)));
               }}
             >
-              {c.papel !== "sub" ? <line x1={x} y1={y} x2={x - Math.sin(yaw) * len} y2={y + Math.cos(yaw) * len} stroke="#0e6464" strokeWidth={f * 0.12} markerEnd="" /> : null}
-              {c.papel !== "sub" ? <circle cx={x - Math.sin(yaw) * len} cy={y + Math.cos(yaw) * len} r={f * 0.15} fill="#0e6464" /> : null}
+              {c.papel !== "sub" ? <line x1={x} y1={y} x2={x - Math.sin(yaw) * len} y2={y + Math.cos(yaw) * len} stroke="#0e7c78" strokeWidth={f * 0.12} markerEnd="" /> : null}
+              {c.papel !== "sub" ? <circle cx={x - Math.sin(yaw) * len} cy={y + Math.cos(yaw) * len} r={f * 0.15} fill="#0e7c78" /> : null}
               {c.papel === "sub" ? (
                 <rect x={x - r} y={y - r} width={2 * r} height={2 * r} fill="#1b2230" stroke="#fff" strokeWidth={f * 0.06} />
               ) : (
-                <circle cx={x} cy={y} r={r} fill={c.papel === "reforco" ? "#ffffff" : "#0e6464"} stroke="#0e6464" strokeWidth={f * 0.1} />
+                <circle cx={x} cy={y} r={r} fill={c.papel === "reforco" ? "#ffffff" : "#0e7c78"} stroke="#0e7c78" strokeWidth={f * 0.1} />
               )}
-              <text x={x} y={y + f * 0.18} fontSize={f * 0.55} textAnchor="middle" fill={c.papel === "reforco" ? "#0e6464" : "#ffffff"} fontWeight={700}>
+              <text x={x} y={y + f * 0.18} fontSize={f * 0.55} textAnchor="middle" fill={c.papel === "reforco" ? "#0e7c78" : "#ffffff"} fontWeight={700}>
                 {c.numero}
               </text>
               {c.papel !== "sub" ? (
@@ -172,7 +172,7 @@ export function Planta({ largura: W, profundidade: D, profundidadePalco, configu
           <svg width="18" height="14" aria-hidden="true">
             <rect width="18" height="14" fill="#d7e9e3" stroke="#999" />
           </svg>
-          Coberto
+          Som chega bem
         </span>
         <span>
           <svg width="18" height="14" aria-hidden="true">
@@ -183,26 +183,26 @@ export function Planta({ largura: W, profundidade: D, profundidadePalco, configu
             </defs>
             <rect width="18" height="14" fill="url(#lgB)" stroke="#999" />
           </svg>
-          Borda (até 10° fora)
+          Som chega mais fraco
         </span>
         <span>
           <svg width="18" height="14" aria-hidden="true">
             <path d="M0 0 L18 14 M18 0 L0 14" stroke="#b9bfca" />
             <rect width="18" height="14" fill="none" stroke="#999" />
           </svg>
-          Fora da cobertura nominal
+          Fora do alcance principal
         </span>
         <span>
           <svg width="14" height="14" aria-hidden="true">
-            <circle cx="7" cy="7" r="6" fill="#0e6464" />
+            <circle cx="7" cy="7" r="6" fill="#0e7c78" />
           </svg>
-          Caixa (número, altura e direção)
+          Caixa (número, altura e para onde aponta)
         </span>
         <span>
           <svg width="14" height="14" aria-hidden="true">
-            <circle cx="7" cy="7" r="5.5" fill="#fff" stroke="#0e6464" strokeWidth="2" />
+            <circle cx="7" cy="7" r="5.5" fill="#fff" stroke="#0e7c78" strokeWidth="2" />
           </svg>
-          Reforço / delay
+          Caixa de apoio do meio do salão
         </span>
         <span>
           <svg width="14" height="14" aria-hidden="true">
@@ -212,7 +212,7 @@ export function Planta({ largura: W, profundidade: D, profundidadePalco, configu
         </span>
       </div>
       <p className="ajuda" style={{ marginTop: 6 }}>
-        Cobertura nominal declarada pelo fabricante. Aproximação geométrica, não é medição. A cobertura é avaliada a {fmt(mapa.passo, 2)} m de resolução, na altura do ouvinte.
+        Cobertura nominal declarada pelo fabricante. Aproximação geométrica, não é medição. Avaliado a cada {fmt(mapa.passo, 2)} m, na altura da cabeça do público.
       </p>
     </div>
   );

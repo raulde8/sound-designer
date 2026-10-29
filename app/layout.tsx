@@ -1,6 +1,7 @@
 import type { Metadata, Viewport } from "next";
 import Link from "next/link";
 import { APP_NAME } from "@engine/version";
+import { Logo } from "./components/Logo";
 import "./globals.css";
 
 export const metadata: Metadata = {
@@ -17,6 +18,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <header className="topo">
           <div className="container">
             <Link href="/" className="marca">
+              <Logo />
               {APP_NAME}
             </Link>
             <nav>
@@ -26,7 +28,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         </header>
         <main>{children}</main>
         <footer className="rodape">
-          <p>Recomendamos por critérios técnicos. Pré-dimensionamento: não substitui projeto nem medição no local.</p>
+          <p>Recomendamos por critérios técnicos. É um pré-projeto: não substitui o ajuste no local nem um projetista de som.</p>
           <p>
             <Link href="/termos/">Termos e privacidade</Link>
           </p>

@@ -8,11 +8,12 @@ import type { ResultadoOk } from "../engine/result";
 
 /** Roda os 10 casos de referência no catálogo demo e salva a saída em docs/casos-referencia/. */
 const DATA = process.env.DATA_REFERENCIA ?? "2026-10-29";
-const cat = montarSnapshot("demo", lerDadosBrutos("demo"));
-const dir = join(RAIZ, "docs", "casos-referencia");
+const MODO = process.env.CATALOG_MODE === "producao" ? "producao" : "demo";
+const cat = montarSnapshot(MODO, lerDadosBrutos(MODO));
+const dir = join(RAIZ, "docs", MODO === "demo" ? "casos-referencia" : "casos-referencia-producao");
 mkdirSync(dir, { recursive: true });
 const f1 = (v: number) => v.toFixed(1).replace(".", ",");
-const indice: string[] = ["# Casos de referência (SPEC C10)", "", `Catálogo demo ${cat.version}, parâmetros ${PARAMS_VERSION_ATUAL}, data de referência ${DATA}. Gerado por \`npm run casos\`.`, "", "| Caso | Esperado (SPEC) | Obtido |", "|---|---|---|"];
+const indice: string[] = ["# Casos de referência (SPEC C10)", "", `Catálogo ${MODO} ${cat.version}, parâmetros ${PARAMS_VERSION_ATUAL}, data de referência ${DATA}. Gerado por \`npm run casos\`.`, "", "| Caso | Esperado (SPEC) | Obtido |", "|---|---|---|"];
 
 for (const c of CASOS) {
   const r = executarMotor(c.entrada, { catalogo: cat, paramsVersion: PARAMS_VERSION_ATUAL, dataReferencia: DATA });
@@ -45,7 +46,7 @@ function resumo(c: (typeof CASOS)[number], r: ResultadoOk): string {
     L.push("", `Cobertura: ${Math.round(rec.avaliacao.pct.coberto * 100)}% coberto, ${Math.round(rec.avaliacao.pct.borda * 100)}% borda, ${Math.round(rec.avaliacao.pct.fora * 100)}% fora.`);
     if (rec.configuracao.atrasos.length) L.push(`Atrasos de referência: ${rec.configuracao.atrasos.map((a) => `${a.caixaId} ${f1(a.ms)} ms`).join(", ")}.`);
     L.push("", "### Requisitos (perfil genérico)", ...rec.perfilGenerico.requisitos.map((q) => `- ${q.texto}`), "");
-    L.push("### Produtos do catálogo demo", ...rec.candidatos.map((p) => `- ${p.nome}: **${p.status}** ${p.motivos.join(" ")}`), "");
+    L.push(`### Produtos do catálogo ${MODO}`, ...rec.candidatos.map((p) => `- ${p.nome}: **${p.status}** ${p.motivos.join(" ")}`), "");
     L.push(`Produto escolhido: ${rec.produto ? rec.produto.nome : "nenhum (perfil genérico)"}. Sub: ${rec.sub.regra}${rec.sub.incluido ? `, ${rec.sub.porLado} por lado (${rec.sub.escolhido?.nome ?? "perfil genérico"})` : ""}.`, "");
     if (r.alternativas.length) L.push("Alternativas: " + r.alternativas.map((a) => `${a.rotulo}: ${a.nome} (${a.arquitetura})`).join("; "), "");
   } else L.push("## Nenhuma arquitetura disponível", ...r.arquiteturas.map((a) => `- ${a.id}: ${a.motivo ?? "disponível"}`), "");

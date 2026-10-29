@@ -6,6 +6,7 @@ import { Trilha1Schema } from "@engine/input/schema";
 import { normalizarTrilha1 } from "@engine/input/normalize";
 import { PARAMS_V1 } from "@engine/params";
 import { Escolha, Multipla, Numero } from "./Campos";
+import { Info } from "./Info";
 import { IconeForma, IconeFormato } from "./Ilustracoes";
 import { analytics } from "@/lib/analytics";
 import { apagarRascunho, codificar, lerRascunho, salvarRascunho } from "@/lib/state";
@@ -128,6 +129,20 @@ export function errosDe(r: RascunhoT1, completar: boolean): { campo: string; men
 
 const PASSOS = ["Local", "Uso", "Medidas", "Formato", "Palco", "Público", "Estruturas", "Ambiente", "Acústica", "Instalação"];
 
+/** Por que cada pergunta existe e o que ela muda (SPEC B2). */
+const POR_QUE: string[] = [
+  "O tipo de local sugere os usos e a ocupação mais comuns. Se você responder “não sei” depois, usamos o mais comum para este tipo de local.",
+  "Fala, música de fundo e banda pedem volumes bem diferentes. O uso também decide se precisa de subwoofer (grave forte).",
+  "As medidas definem a distância até a última fileira, quantas caixas são necessárias e a altura delas. Se não souber, escolha um tamanho parecido: o resultado fica marcado como estimado.",
+  "O sistema calcula salas retangulares. Em L ou irregular, ele calcula a parte principal e avisa o que ficou de fora.",
+  "As caixas ficam junto do palco. A profundidade do palco define onde começa o público e onde ficam os microfones.",
+  "A quantidade de pessoas e se ficam sentadas ou em pé mudam a altura dos ouvidos e a área ocupada.",
+  "Mezanino, colunas grandes e salas ligadas ficam fora do cálculo simples. Saber disso evita uma recomendação errada.",
+  "Em ambiente aberto não há eco de paredes, e a avaliação de eco não vale.",
+  "Paredes duras e eco forte deixam a voz confusa. Barulho de fundo pede mais volume. Responda do jeito que você percebe o local.",
+  "A forma de instalar limita a altura das caixas e os modelos possíveis. Se não tiver preferência, o sistema escolhe.",
+];
+
 export function Trilha1() {
   const router = useRouter();
   const [r, setR] = useState<RascunhoT1>({});
@@ -216,6 +231,11 @@ export function Trilha1() {
         </div>
         <div className="progresso" aria-hidden="true">
           <div style={{ width: `${((passo + 1) / PASSOS.length) * 100}%` }} />
+        </div>
+        <div className="nao-imprimir" style={{ float: "right" }}>
+          <Info titulo="Por que perguntamos" rotulo="por que perguntamos" testId={`porque-pergunta-${passo}`}>
+            <span className="p">{POR_QUE[passo]}</span>
+          </Info>
         </div>
         <Passo passo={passo} r={r} set={set} erroCampo={erroCampo} />
         {mostrarErros && !obrigatorioOk ? (

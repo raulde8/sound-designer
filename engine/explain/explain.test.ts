@@ -26,21 +26,23 @@ describe("explicações", () => {
     expect(r.parametrosPendentes.map((p) => p.id)).toContain("niveisPorUso");
   });
   it("texto do PAG/NAG traz o aviso obrigatório", () => {
-    expect(r.conclusoes.find((c) => c.id === "pagnag")!.texto).toMatch(/Não substitui teste no local/);
+    const c = r.conclusoes.find((x) => x.id === "pagnag")!;
+    expect(c.texto).toMatch(/Teste sempre no local/);
+    expect(c.limitacoes).toContain("Estimativa simplificada (lei do inverso do quadrado). Não substitui teste no local.");
   });
   it("cobertura traz o rótulo obrigatório", () => {
-    expect(r.conclusoes.find((c) => c.id === "cobertura")!.texto).toMatch(/Aproximação geométrica, não é medição/);
+    expect(r.conclusoes.find((c) => c.id === "cobertura")!.limitacoes).toContain("Cobertura nominal declarada pelo fabricante. Aproximação geométrica, não é medição.");
   });
   it("sem palavras proibidas de neutralidade em nenhum template", () => {
     const tudo = Object.values(TEMPLATES).join(" ").toLowerCase();
     for (const p of ["independente", "imparcial", "sem vínculo"]) expect(tudo).not.toContain(p);
   });
-  it("render substitui placeholders", () => expect(render("teto", { teto: 100 })).toBe("O alvo foi limitado ao teto de 100 dB."));
+  it("render substitui placeholders", () => expect(render("teto", { teto: 100 })).toBe("Limitamos o volume a 100 dB, por segurança."));
   it("sala reverberante: aviso específico, sem aumentar o nível", () => {
     const base = rodar({ trilha1: { ...IGREJA_PEQUENA.trilha1, acustica: { superficies: "absorventes", palma: "nao", conversa: "facil" } } });
     const rev = rodar({ trilha1: { ...IGREJA_PEQUENA.trilha1, acustica: { superficies: "duras", palma: "sim", conversa: "facil" } } });
     expect(rev.reverb!.classe).toBe("alto");
-    expect(rev.conclusoes.find((c) => c.id === "reverberacao")!.texto).toMatch(/Mais potência não resolve/);
+    expect(rev.conclusoes.find((c) => c.id === "reverberacao")!.texto).toMatch(/Aumentar o volume não resolve/);
     expect(rev.alvo.requerido).toBe(base.alvo.requerido);
   });
 });

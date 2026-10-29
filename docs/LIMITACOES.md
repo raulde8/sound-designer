@@ -14,9 +14,11 @@
 - **Nenhum resultado foi validado por especialista nem em campo.** Não houve comparação com EASE Focus, medição de instalações reais nem teste de usabilidade (SPEC C10 E).
 - Exemplo numérico da Biamp: não reproduzido (fonte bloqueada). Fixture pendente em `engine/acoustics/fixtures/biamp-pag-nag.json`.
 - Texto da Anatel sobre a faixa 698-806 MHz: não confirmado.
-- Catálogo de produção: vazio. Os comportamentos com produtos reais só foram exercitados com o catálogo demo fictício.
+- Catálogo de produção: 23 produtos Armer/AZ. **Nenhum é "compatível"**: nenhuma caixa publica ângulo de cobertura nem condição de medição do SPL, e os arrays não publicam tabela por configuração. Tudo o que depende disso é estimativa marcada na UI. Para chegar a "compatível", o dono do produto precisa incluir esses campos (template CSV).
+- EVX12 e EVX215 ficam "sem dados suficientes" (montagem e peso não publicados). Mesas de som, DI, pedestais e cabos não estão no catálogo: aparecem como itens sem marca.
 
 ## 3. Não implementado (fora do MVP ou adiado)
+- A visualização 3D é ilustrativa (sem cálculo acústico) e depende de WebGL no aparelho.
 - AR-4 (teto) e AR-5 (parede distribuída): só a interface `ArchitectureGenerator`.
 - RT60, STI, mapa de graves, valores finais de delay/EQ, coordenação de RF, dimensionamento estrutural e elétrico (SPEC B6).
 - Ambientes em L/irregulares: só o retângulo principal é calculado ("atendido parcialmente").
