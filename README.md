@@ -52,7 +52,7 @@ Cada build gera `catalog/snapshots/<modo>-<hash>.json`. **Faça commit desses ar
 
 ## Deploy
 O build é estático (`output: "export"`): a pasta `out/` pode ir para qualquer hospedagem de arquivos estáticos (Vercel, Netlify, Cloudflare Pages, S3 + CDN). Não há banco, servidor nem segredo.
-- Vercel: comando de build `npm run build`, diretório de saída `out`.
+- Vercel: o `vercel.json` já define preset "Other", build `npm run build:demo` e saída `out` (a demo). Para produção, troque `buildCommand` para `npm run build`. O preset Next.js do Vercel não serve para o build estático: ele procura arquivos de servidor e falha.
 - Outro host: `npm run build` e publique `out/`.
 Nada foi publicado em produção por este trabalho.
 
